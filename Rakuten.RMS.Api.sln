@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D107B969-B675-43F1-90F9-47D6B2085F03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rakuten.RMS.Api", "src\Rakuten.RMS.Api\Rakuten.RMS.Api.csproj", "{5DEAD4CE-B507-4589-8589-D8C8A204A63A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9CBB66B9-614A-4CDA-8A5F-BF4E7071CC88}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{486233A6-46D1-417A-BBD8-183A9DE8D900}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DEAD4CE-B507-4589-8589-D8C8A204A63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DEAD4CE-B507-4589-8589-D8C8A204A63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DEAD4CE-B507-4589-8589-D8C8A204A63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DEAD4CE-B507-4589-8589-D8C8A204A63A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5DEAD4CE-B507-4589-8589-D8C8A204A63A} = {D107B969-B675-43F1-90F9-47D6B2085F03}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29EB78FD-0E22-45CA-8105-5BC66C4CB112}
+	EndGlobalSection
+EndGlobal

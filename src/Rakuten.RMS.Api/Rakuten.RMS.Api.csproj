@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DEAD4CE-B507-4589-8589-D8C8A204A63A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rakuten.RMS.Api</RootNamespace>
+    <AssemblyName>Rakuten.RMS.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CabinetAPI\CabinetAPI.cs" />
+    <Compile Include="CabinetAPI\Models.cs" />
+    <Compile Include="CategoryAPI20\CategoryAPI20.cs" />
+    <Compile Include="CategoryAPI20\Models.cs" />
+    <Compile Include="CategoryAPI\CategoryAPI.cs" />
+    <Compile Include="InventoryAPI20\Models.cs" />
+    <Compile Include="InventoryAPI20\RakutenInventoryServiceV2.cs" />
+    <Compile Include="InventoryAPI21\RakutenInventoryServiceV21.cs" />
+    <Compile Include="ItemAPI20\InventoryRelatedSettings.cs" />
+    <Compile Include="ItemAPI20\ItemAPI20.cs" />
+    <Compile Include="ItemAPI20\ItemAPI2Model.cs" />
+    <Compile Include="ItemAPI20\RequiredAttribute.cs" />
+    <Compile Include="ItemAPI\ItemAPI.cs" />
+    <Compile Include="ItemAPI\ItemModel.cs" />
+    <Compile Include="LicenseManagementAPI\LicenseManagementAPI.cs" />
+    <Compile Include="NavigationAPI20\Models.cs" />
+    <Compile Include="NavigationAPI20\NavigationAPI20.cs" />
+    <Compile Include="RakutenPayOrderAPI\RakutenPayOrderService.cs" />
+    <Compile Include="RakutenPayOrderAPI\Models.cs" />
+    <Compile Include="ProductAPI\ProductAPI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REST\JSON\ErrorResponseException.cs" />
+    <Compile Include="REST\JSON\ResultBase.cs" />
+    <Compile Include="REST\JSON\ResultError.cs" />
+    <Compile Include="REST\XML\ErrorResult.cs" />
+    <Compile Include="ServiceProvider.cs" />
+    <Compile Include="REST\XML\XmlStatus.cs" />
+    <Compile Include="REST\XML\EndpointDefinitionAttribute.cs" />
+    <Compile Include="REST\XML\RakutenApiXmlClientBase.cs" />
+    <Compile Include="REST\JSON\RakutenApiJsonClientBase.cs" />
+    <Compile Include="REST\XML\ResultBase.cs" />
+    <Compile Include="ShopAPI\DelvdateNumber.cs" />
+    <Compile Include="ShopAPI\Models.cs" />
+    <Compile Include="ShopAPI\OperationLeadTime.cs" />
+    <Compile Include="ShopAPI\ShopAPI.cs" />
+    <Compile Include="ShopAPI\TopDisplayBizModel.cs" />
+    <Compile Include="ShopPageAPI\ShopPageAPI.cs" />
+    <Compile Include="SystemEventNotificationService\Models.cs" />
+    <Compile Include="SystemEventNotificationService\Notification.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CouponAPI\" />
+    <Folder Include="InquiryManagementAPI\" />
+    <Folder Include="ItemBundleAPI\" />
+    <Folder Include="PurchaseItemAPI\" />
+    <Folder Include="ReserveAPI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
