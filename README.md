@@ -34,6 +34,14 @@ https://opensource.org/license/mit/
 
 - .NET Framework 4.8
 - Newtonsoft Json.NET (latest version)
+- (Python.NET)
+
+## TODO
+
+- レスポンスメッセージに埋もれているメソッドの戻り値を直接返すようにする。成功、エラーメッセージは
+  GetResponse() で別途取得できるようにオリジナルのAPIから構造変更。
+  エラーは Exception へ移行
+
 
 ## 使い方
 
@@ -41,27 +49,111 @@ https://opensource.org/license/mit/
 
 ServiceProvider クラスがクライアントの認証情報とカテゴリ別のAPIへアクセスするクラスへのアクセスを提供します。
 
-各カテゴリ別のAPI群へのアクセスは ServiceProvider のメソッドからオブジェクトを取得します。
+```csharp
+var provider = new ServiceProvider( serviceSecret, licenseKey );
+```
 
-特定の注文番号を指定して注文データを取得する例。
+serviceSecret と licenseKey はRMSのAPI設定から取得できる認証用の文字列です。
+
+
+各カテゴリ別のAPI群へのアクセスは ServiceProvider のメソッドからオブジェクトを取得します。APIの分類別にアクセスするためのクラスが対応します。
+
+| RMS WEB API カテゴリ | ServiceProvider メソッド | 対応クラス |
+|:---|:---|:---
+| 商品API<br/>	商品API 2.0（ItemAPI 2.0）| GetItemAPI20() | ItemAPI20.ItemAPI20
+| カテゴリAPI<br/>	カテゴリAPI 2.0（CategoryAPI 2.0）| GetCategoryAPI20() | CategoryAPI20.CategoryAPI20
+| 在庫API	在庫API 2.1（InventoryAPI 2.1）| GetInventoryAPI21() | InventoryAPI21.RakutenInventoryServiceV21
+| 在庫API 2.0（InventoryAPI 2.0）| GetInventoryAPI20() | InventoryAPI20.RakutenInventoryServiceV2
+| ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0）| GetNavigationAPI20() | NavigationAPI20.NavigationAPI20
+| 組み合わせ販売API（ItemBundleAPI））| GetItemBundleAPI() | (未実装)
+| R-CabinetAPI（CabinetAPI）| GetCabinetAPI() | CabinetAPI.CabinetAPI
+| 製品API（ProductAPI）| GetProductAPI() | ProductAPI.ProductAPI
+| 楽天ペイ受注API（RakutenPayOrderAPI）| GetRakutenPayOrderAPI() | RakutenPayOrderAPI.RakutenPayOrderService
+| 購入商品API（PurchaseItemAPI）  | GetPurchaseItemAPI() | (未実装)
+| 購入申込API（ReserveAPI）  | GetReserveAPI() | (未実装)
+| 問い合わせ管理API（InquiryManagementAPI）  | GetInquiryManagementAPI() | (未実装)
+| 店舗情報API（ShopAPI）| GetShopAPI() | ShopAPI.ShopAPI
+| 店舗ページAPI（ShopPageAPI）| GetShopPageAPI() | (未実装)
+| クーポンAPI（CouponAPI）| GetCouponAPI() | (未実装)
+| ライセンス管理API（LicenseManagementAPI）| GetLicenseManagementAPI() | LicenseManagementAPI.LicenseManagementAPI
+
+API呼び出しメソッドは、基本的にサービスのエンドポイントで定義されている名前を尊重し、C# 形式、また　[動詞][目的語] (GetItemなど)の順になるように定義しなおしています。
+
+
+## コードサンプル
+
+### 特定の注文番号を指定して注文データを取得する例
 
 ```csharp
 using Rakuten.RMS.Api;
 
-var provider = new ServiceProvider( serviceSecret, licenseKey );
+var provider = new ServiceProvider( "SPxxxxxxxxxxxxxxxxx","SLxxxxxxxxxxxxxx" );
 var orderApi = provider.GetRakutenPayOrderAPI();
-var orderList = orderApi.GetOrder( new [] { "1234-1234-1234" } );
+var orderList = orderApi.GetOrder( new [] { "123456-12341234-1234567890" } );
 ```
+
+### Python から利用する方法
+
+Python.NET を使用して Python からAPIにアクセスることができます。
+
+- .NET のランタイムバージョンによっては、ServicePointManager を通じて
+  SSL/TLS プロトコル対応を明示する必要があります。
+- .NET の IList, IEnumerable, ICollection などとの変換をサポートするため Python.Runtime.Codecs の使用を登録します。
+
+```python
+import clr
+import pythonnet
+import Python.Runtime
+from System.Net import ServicePointManager, SecurityProtocolType 
+
+# Rakuten.RMS.Api.DLL への参照
+clr.AddReference('Rakuten.RMS.Api')
+
+from Rakuten.RMS.Api import ServiceProvider
+from Rakuten.RMS.Api.RakutenPayOrderAPI import SearchOrderRequest
+
+# TLS 1.2 対応
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12
+
+# IList, IEnumerable, ICollection の変換処理対応
+Python.Runtime.Codecs.ListDecoder.Register()
+Python.Runtime.Codecs.SequenceDecoder.Register()
+Python.Runtime.Codecs.IterableDecoder.Register()
+
+sp = ServiceProvider('SPxxxxxxxxxxxxxxxxx','SLxxxxxxxxxxxxxx')
+api = sp.GetRakutenPayOrderAPI()
+
+orders = api.GetOrder( ["123456-12341234-1234567890"])
+
+```
+
 
 ### システム通知イベント
 
-ASP.NETの HTTP ハンドラ内でメッセージの読み込みに対応します。メッセージのハンドリングはメソッドのコールバック内で、開発者が記述します。
+２種類ある通知メッセージに対応する２つのハンドラーが用意されています。いずれも、ASP.NETの HTTP ハンドラ内でメッセージの読み込みに対応します。
+メッセージのハンドリングはメソッドのコールバック内で、開発者が記述します。
+
+注文通知系
+
+```csharp
+public static void HandleOrderNoify(HttpRequest request, HttpResponse response, Func<OrderNotifyModel, ResultCode> handler)
+```
+
+システム情報系
+
+```csharp
+public static void HandleSystemInfoNotify(HttpRequest request, HttpResponse response, Func<SystemNotifyModel, ResultCode> handler)
+```
+
+#### 例
 
 ```csharp
 Notification.HandleOrderNoify(HttpContext.Current.Request, HttpContext.Current.Response,
-(model) => {
-    var orderNumbers = model.OrderInfoNotifyModel.Select(m => m.OrderNumber).ToList();
-});
+    (model) => {
+        // 任意の実装
+        var orderNumbers = model.OrderInfoNotifyModel.Select(m => m.OrderNumber).ToList();
+    }
+);
 ```
 
 ## 実装状況
@@ -79,7 +171,6 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 | |items.patch   |〇
 | |items.delete   |〇
 | |items.search   |×
-| |items.upsert   |〇
 ||items.inventory-related-settings.get   |〇
 ||items.inventory-related-settings.update   |〇
 |商品API（ItemAPI）|-  |-
@@ -252,6 +343,7 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 
 | API   |   メソッド|   実装
 | --- | --- | ---
-|システムイベント通知サービス（System Event Notification Service）
+|システムイベント通知サービス（System Event Notification Service）| HandleOrderNoify | 〇
+| | HandleSystemInfoNotify | 〇
 
 
