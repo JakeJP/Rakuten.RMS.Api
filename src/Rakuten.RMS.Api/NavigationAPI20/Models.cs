@@ -19,16 +19,16 @@ namespace Rakuten.RMS.Api.NavigationAPI20
     public class Genre : BaseGenre
     {
 
-        public List<BaseGenre> ancestors { get; set; }
-        public List<BaseGenre> siblings { get; set; }
-        public List<BaseGenre> children { get; set; }
+        public IList<BaseGenre> ancestors { get; set; }
+        public IList<BaseGenre> siblings { get; set; }
+        public IList<BaseGenre> children { get; set; }
     }
     public class BaseGenre
     {
         public long genreId { get; set; }
-        public List<long> genreIdPath { get; set; }
+        public IList<long> genreIdPath { get; set; }
         public string nameJa { get; set; }
-        public List<string> nameJaPath { get; set; }
+        public IList<string> nameJaPath { get; set; }
 
         public int level { get; set; }
         public bool lowest { get; set; }
@@ -36,11 +36,11 @@ namespace Rakuten.RMS.Api.NavigationAPI20
     }
     public class GenreWithAttributes : Genre
     {
-        public List<Attribute> attributes { get; set; }
+        public IList<Attribute> attributes { get; set; }
     }
     public class GenreWithAttributesAndDictionary : Genre
     {
-        public List<AttributeWithDictionaryValues> attributes { get; set; }
+        public IList<AttributeWithDictionaryValues> attributes { get; set; }
     }
     public class Property
     {
@@ -72,12 +72,12 @@ namespace Rakuten.RMS.Api.NavigationAPI20
         public float? maxValue { get; set; }
         public string dateFormat { get; set; }
         public string unit { get; set; }
-        public List<string> subUnits { get; set; }
+        public IList<string> subUnits { get; set; }
         public AttributeProperty properties { get; set; }
     }
     public class AttributeWithDictionaryValues : Attribute
     {
-        public List<DictionaryValue> dictionaryValues { get; set; }
+        public IList<DictionaryValue> dictionaryValues { get; set; }
     }
     public class DictionaryValue
     {

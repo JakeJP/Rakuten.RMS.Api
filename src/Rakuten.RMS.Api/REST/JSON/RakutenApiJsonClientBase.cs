@@ -39,6 +39,8 @@ namespace Rakuten.RMS.Api.JSON
                 catch (WebException wex)
                 {
                     response = (HttpWebResponse)wex.Response;
+                    if (response == null)
+                        throw wex;
                 }
                 using (var rst = response.GetResponseStream())
                 using (var _rd = new System.IO.StreamReader(rst))

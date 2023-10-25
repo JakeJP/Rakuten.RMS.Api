@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Serialization;
 using Rakuten.RMS.Api.XML;
 
 namespace Rakuten.RMS.Api.ShopAPI
@@ -8,23 +9,27 @@ namespace Rakuten.RMS.Api.ShopAPI
         public ShopAPI(ServiceProvider provider) : base(provider)
         {
         }
+        protected override XmlSerializerNamespaces GetNamespaces()
+        {
+            var ns = new XmlSerializerNamespaces();
+            ns.Add("shopbiz", "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource");
+            return ns;
+        }
+        public TopDisplayBizModel GetTopDisplay()
+            => Get<ShopBizApiResponse<TopDisplayBizModel>>("https://api.rms.rakuten.co.jp/es/1.0/shop/topDisplay").Result;
 
-        public ShopBizApiResponse<TopDisplayBizModel> GetTopDisplay()
-        {
-            return Get<ShopBizApiResponse<TopDisplayBizModel>>("https://api.rms.rakuten.co.jp/es/1.0/shop/topDisplay");
-        }
-        public void EditTopDisplay()
-        {
-            throw new NotImplementedException();
-        }
-        public void GetShopLayoutImage()
-        {
-            throw new NotImplementedException();
-        }
-        public void EditShopLayoutImage()
-        {
-            throw new NotImplementedException();
-        }
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/topDisplay", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditTopDisplay(TopDisplay model)
+            => Post<ShopBizApiResponse>(new TopDisplayBizModelRequest { updateModel = model });
+
+        public ShopLayoutImageBizModel GetShopLayoutImage()
+            => Get<ShopBizApiResponse<ShopLayoutImageBizModel>>("https://api.rms.rakuten.co.jp/es/1.0/shop/shopLayoutImage")
+                .Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopLayoutImage", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditShopLayoutImage(ShopLayoutImage model)
+            => Post<ShopBizApiResponse>(new ShopLayoutImageBizModelForEdit { insertModel = model });
+
         public void GetShopLayoutCommon()
         {
             throw new NotImplementedException();
@@ -71,12 +76,13 @@ namespace Rakuten.RMS.Api.ShopAPI
         /// <summary>
         /// RMS WEB SERVICE : shop.delvdateMaster.get
         /// </summary>
-        public ShopBizApiResponse<DelvdateMasterBizModel> GetDelvdateMaster(string delvdateNumber = null)
+        public DelvdateMasterBizModel GetDelvdateMaster(string delvdateNumber = null)
         {
             var url = @"https://api.rms.rakuten.co.jp/es/1.0/shop/delvdateMaster";
             if (!string.IsNullOrEmpty(delvdateNumber))
                 url += "?delvdateNumber=" + delvdateNumber;
-            return Get<ShopBizApiResponse<DelvdateMasterBizModel>>(url);
+            var response = Get<ShopBizApiResponse<DelvdateMasterBizModel>>(url);
+            return response.Result;
         }
         public void GetDeliverySetInfo()
         {
@@ -235,12 +241,12 @@ namespace Rakuten.RMS.Api.ShopAPI
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ShopBizApiResponse<OperationLeadTimeBizModel> GetOperationLeadTime(int? id = null)
+        public OperationLeadTimeBizModel GetOperationLeadTime(int? id = null)
         {
             var url = "https://api.rms.rakuten.co.jp/es/1.0/shop/operationLeadTime";
             if (id.HasValue)
                 url += "?operationLeadTimeId=" + id.ToString();
-            return Get<ShopBizApiResponse<OperationLeadTimeBizModel>>(url);
+            return Get<ShopBizApiResponse<OperationLeadTimeBizModel>>(url).Result;
         }
 
         public void GetShipFrom()

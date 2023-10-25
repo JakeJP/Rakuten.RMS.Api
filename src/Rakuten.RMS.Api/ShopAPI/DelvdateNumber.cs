@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Rakuten.RMS.Api.JSON;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace Rakuten.RMS.Api.ShopAPI
@@ -11,7 +12,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     }
     [XmlType(TypeName = "delvdateMasterBizModel", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
 
-    public class DelvdateMasterBizModel
+    public class DelvdateMasterBizModel : BizResponseResultBase
     {
         [XmlArray("delvdateMasterList", Namespace = "")]
         [XmlArrayItem("delvdateMaster", Namespace = "")]

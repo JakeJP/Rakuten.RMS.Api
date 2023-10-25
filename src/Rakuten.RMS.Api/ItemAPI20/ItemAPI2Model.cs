@@ -115,7 +115,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
 
         }
         [DisplayName("商品画像")]
-        public List<Image> images { get; set; }
+        public IList<Image> images { get; set; }
         [DisplayName("白背景画像")]
         public WhiteBgImage whiteBgImage { get; set; }
         public enum VideoType
@@ -146,7 +146,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         [DisplayName("ジャンルID")]
         public string genreId { get; set; }
         [DisplayName("非製品属性タグID")]
-        public List<long> tags { get; set; }
+        public IList<long> tags { get; set; }
         [DisplayName("倉庫指定")]
         public bool hideItem { get; set; }
         [DisplayName("在庫設定なし")]
@@ -170,7 +170,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             public bool? required { get; set; }
             [Required(conditional: true)]
             [DisplayName("Select/Checkbox用選択肢リスト")]
-            public List<OptionSelection> selections { get; set; }
+            public IList<OptionSelection> selections { get; set; }
         }
         public class OptionSelection
         {
@@ -325,7 +325,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [DisplayName("バリエーション項目")]
             public List<Value> values { get; set; }
         }
-        public List<VariantSelector> variantSelectors { get; set; }
+        public IList<VariantSelector> variantSelectors { get; set; }
         public class Variant
         {
             //public string variantId { get; set; }
@@ -334,7 +334,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [DisplayName("SKU情報")]
             public Dictionary<string, string> selectorValues { get; set; }
             [DisplayName("SKU画像")]
-            public List<Image> images { get; set; }
+            public IList<Image> images { get; set; }
             [DisplayName("在庫戻しフラグ")]
             public bool? restockOnCancel { get; set; }
             [DisplayName("在庫切れ時の注文受付")]
@@ -405,7 +405,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [DisplayName("定期購入販売価格設定")]
             public SubscriptionPrice subscriptionPrice { get; set; }
             [DisplayName("セット商品用カタログID")]
-            public List<string> articleNumberForSet { get; set; }
+            public IList<string> articleNumberForSet { get; set; }
             [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
             public class ArticleNumber
             {
@@ -467,7 +467,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
 
             }
             [DisplayName("送料区分1（ローカル）")]
-            public List<Spec> specs { get; set; }
+            public IList<Spec> specs { get; set; }
             public class Attribute
             {
                 [Required]
@@ -475,12 +475,12 @@ namespace Rakuten.RMS.Api.ItemAPI20
                 public string name { get; set; }
                 [Required]
                 [DisplayName("属性情報（実値）")]
-                public List<string> values { get; set; }
+                public IList<string> values { get; set; }
                 [DisplayName("単位")]
                 public string unit { get; set; }
 
             }
-            public List<Attribute> attributes { get; set; }
+            public IList<Attribute> attributes { get; set; }
         }
 
         public virtual Dictionary<string, Variant> variants { get; set; }

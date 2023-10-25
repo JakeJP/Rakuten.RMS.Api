@@ -17,8 +17,8 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// 800: キャンセル確定待ち
         /// 900: キャンセル確定
         /// </summary>
-        public List<int> orderProgressList { get; set; }
-        public List<int> subStatusIdList { get; set; }
+        public IList<int> orderProgressList { get; set; }
+        public IList<int> subStatusIdList { get; set; }
         /// <summary>
         /// 以下のいずれか
         /// 1: 注文日
@@ -31,7 +31,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public int dateType { get; set; }
         public DateTime startDatetime { get; set; }
         public DateTime endDatetime { get; set; }
-        public List<int> orderTypeList { get; set; }
+        public IList<int> orderTypeList { get; set; }
         public int? settlementMethod { get; set; }
         public string deliveryName { get; set; }
         /// <summary>
@@ -130,7 +130,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// リクエストページ番号
         /// </summary>
         public int requestPage { get; set; }
-        public List<SortModel> SortModelList { get; set; }
+        public IList<SortModel> SortModelList { get; set; }
     }
     public class SortModel
     {
@@ -151,8 +151,8 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 
     public class SearchOrderResponse
     {
-        public List<MessageModel> MessageModelList { get; set; }
-        public List<string> orderNumberList { get; set; }
+        public IList<MessageModel> MessageModelList { get; set; }
+        public IList<string> orderNumberList { get; set; }
         public PaginationResponseModel PaginationResponseModel { get; set; }
     }
     public class MessageModel
@@ -191,8 +191,8 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 
     public class GetOrderResponse
     {
-        public List<OrderMessageModel> MessageModelList { get; set; }
-        public List<OrderModel> OrderModelList { get; set; }
+        public IList<OrderMessageModel> MessageModelList { get; set; }
+        public IList<OrderModel> OrderModelList { get; set; }
     }
     public class OrderMessageModel : MessageModel
     {
@@ -261,9 +261,9 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public PointModel PointModel { get; set; }
         public WrappingModel WrappingModel1 { get; set; }
         public WrappingModel WrappingModel2 { get; set; }
-        public List<PackageModel> PackageModelList { get; set; }
-        public List<CouponModel> CouponModelList { get; set; }
-        public List<ChangeReasonModel> ChangeReasonModelList { get; set; }
+        public IList<PackageModel> PackageModelList { get; set; }
+        public IList<CouponModel> CouponModelList { get; set; }
+        public IList<ChangeReasonModel> ChangeReasonModelList { get; set; }
     }
     public class OrdererModel
     {
@@ -399,11 +399,11 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <summary>
         /// 商品モデルリスト
         /// </summary>
-        public List<ItemModel> ItemModelList { get; set; }
+        public IList<ItemModel> ItemModelList { get; set; }
         /// <summary>
         /// 発送モデルリスト
         /// </summary>
-        public List<ShippingModel> ShippingModelList { get; set; }
+        public IList<ShippingModel> ShippingModelList { get; set; }
         /// <summary>
         /// コンビニ配送モデル 
         /// 配送方法がコンビニ、郵便局受取の場合、参照可能
@@ -502,7 +502,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// ※Request Parameterの「version」に「4」以降の値を指定すると取得可能
         /// </summary>
         public int isSingleItemShipping { get; set; }
-        public List<SkuModel> SkuModelList { get; set; }
+        public IList<SkuModel> SkuModelList { get; set; }
     }
     public class ShippingModel
     {
@@ -617,20 +617,20 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     // ConfirmOrder
     public class ConfirmOrderResponse
     {
-        public List<OrderMessageModel> MessageModelList { get; set; }
+        public IList<OrderMessageModel> MessageModelList { get; set; }
     }
     ///
 
     // UpdateOrderShipping
     public class UpdateOrderShippingResponse
     {
-        public List<OrderShippingMessageModel> MessageModelList { get; set; }
+        public IList<OrderShippingMessageModel> MessageModelList { get; set; }
     }
 
     public class BasketidModel
     {
         public int basketId { get; set; }
-        public List<ShippingModel> ShippingModelList { get; set; }
+        public IList<ShippingModel> ShippingModelList { get; set; }
         public class ShippingModel
         {
             public long? shippingDetailId { get; set; }
@@ -690,20 +690,20 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     // GetPayment
     public class GetPaymentResponse
     {
-        public List<OrderMessageModel> MessageModelList { get; set; }
+        public IList<OrderMessageModel> MessageModelList { get; set; }
         public OrderModel OrderModel { get; set; }
 
     }
     //
     public class GetSubStatusListResponse
     {
-        public List<MessageModel> MessageModelList { get; set; }
-        public List<StatusModel> StatusModelList { get; set; }
+        public IList<MessageModel> MessageModelList { get; set; }
+        public IList<StatusModel> StatusModelList { get; set; }
     }
     public class StatusModel
     {
         public int orderProgress { get; set; }
-        public List<SubStatusModel> SubStatusModelList { get; set; }
+        public IList<SubStatusModel> SubStatusModelList { get; set; }
     }
     public class SubStatusModel
     {
@@ -714,13 +714,13 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     // UpdateOrderSubStatus
     public class UpdateOrderSubStatusResponse
     {
-        public List<OrderMessageModel> MessageModelList { get; set; }
+        public IList<OrderMessageModel> MessageModelList { get; set; }
     }
 
     // UpdateOrderShippingAsync
     public class UpdateOrderShippingAsyncResponse
     {
-        public List<MessageModel> MessageModelList { get; set; }
+        public IList<MessageModel> MessageModelList { get; set; }
         public class MessageModel : OrderMessageModel
         {
             public string requestId { get; set; }
@@ -732,13 +732,13 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     public class OrderShippingModel
     {
         public string orderNumber { get; set; }
-        public List<BasketidModel> BasketidModelList { get; set; }
+        public IList<BasketidModel> BasketidModelList { get; set; }
     }
 
     // CancelOrderAfterShipping
     public class CancelOrderAfterShippingResponse
     {
-        public List<OrderMessageModel> MessageModelList { get; set; }
+        public IList<OrderMessageModel> MessageModelList { get; set; }
     }
 
     /// <summary>

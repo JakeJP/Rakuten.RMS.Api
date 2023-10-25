@@ -14,6 +14,13 @@ namespace Rakuten.RMS.Api.LicenseManagementAPI
         
             => GetRequest<LicenseResult>($"https://api.rms.rakuten.co.jp/es/1.0/license-management/license-key/expiry-date?licenseKey={licenseKey}").expiryDate;
 
+        /// <summary>
+        /// 現在接続に使用している licenseKey の有効期限を取得。
+        /// </summary>
+        /// <returns></returns>
+        public DateTime GetExpiryDate()
+            => GetRequest<LicenseResult>($"https://api.rms.rakuten.co.jp/es/1.0/license-management/license-key/expiry-date?licenseKey={provider.LicenseKey}").expiryDate;
+
         protected class LicenseResult
         {
             public DateTime expiryDate { get; set; }

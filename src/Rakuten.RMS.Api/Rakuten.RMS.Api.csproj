@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Rakuten.RMS.Api.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -46,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CabinetAPI\CabinetAPI.cs" />
+    <Compile Include="CabinetAPI\FileModel.cs" />
+    <Compile Include="CabinetAPI\FolderModel.cs" />
     <Compile Include="CabinetAPI\Models.cs" />
+    <Compile Include="CabinetAPI\UpdateFileResponse.cs" />
     <Compile Include="CategoryAPI20\CategoryAPI20.cs" />
     <Compile Include="CategoryAPI20\Models.cs" />
     <Compile Include="CategoryAPI\CategoryAPI.cs" />
@@ -69,7 +73,10 @@
     <Compile Include="REST\JSON\ErrorResponseException.cs" />
     <Compile Include="REST\JSON\ResultBase.cs" />
     <Compile Include="REST\JSON\ResultError.cs" />
+    <Compile Include="REST\RakutenRMSApiException.cs" />
+    <Compile Include="REST\XML\ErrorResponseException.cs" />
     <Compile Include="REST\XML\ErrorResult.cs" />
+    <Compile Include="REST\XML\XmlStatusException.cs" />
     <Compile Include="ServiceProvider.cs" />
     <Compile Include="REST\XML\XmlStatus.cs" />
     <Compile Include="REST\XML\EndpointDefinitionAttribute.cs" />
@@ -80,6 +87,7 @@
     <Compile Include="ShopAPI\Models.cs" />
     <Compile Include="ShopAPI\OperationLeadTime.cs" />
     <Compile Include="ShopAPI\ShopAPI.cs" />
+    <Compile Include="ShopAPI\ShopLayoutImageBizModel.cs" />
     <Compile Include="ShopAPI\TopDisplayBizModel.cs" />
     <Compile Include="ShopPageAPI\ShopPageAPI.cs" />
     <Compile Include="SystemEventNotificationService\Models.cs" />

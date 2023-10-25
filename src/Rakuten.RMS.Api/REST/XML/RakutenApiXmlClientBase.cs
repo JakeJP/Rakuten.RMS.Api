@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Serialization;
 
@@ -52,6 +53,8 @@ namespace Rakuten.RMS.Api.XML
             catch (WebException wex)
             {
                 response = (HttpWebResponse)wex.Response;
+                if (response == null)
+                    throw wex;
             }
             if (response != null && response.ContentType != null && 
                 new[] { "application/xml", "text/xml" }.Any( m => response.ContentType.StartsWith(m)))
@@ -59,7 +62,9 @@ namespace Rakuten.RMS.Api.XML
                 using (var rst = response.GetResponseStream())
                 using (var _rd = new System.IO.StreamReader(rst))
                 {
-                    if (response.StatusCode == HttpStatusCode.OK)
+                    if (response.StatusCode == HttpStatusCode.OK 
+                        || response.StatusCode == HttpStatusCode.BadRequest
+                        || response.StatusCode == HttpStatusCode.Unauthorized )
                     {
                         return (TResult)sz.Deserialize(_rd);
                     }
@@ -67,7 +72,7 @@ namespace Rakuten.RMS.Api.XML
                     {
                         sz = new XmlSerializer(typeof(ErrorResult));
                         var errorResult = (ErrorResult)sz.Deserialize(_rd);
-                        throw new Exception(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
+                        throw new ErrorResponseException(errorResult);
                     }
                 }
             }
@@ -81,50 +86,65 @@ namespace Rakuten.RMS.Api.XML
             }
 
         }
-        protected TResult Post<TResult>(object request, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null)
+        protected virtual XmlSerializerNamespaces GetNamespaces() => null;
+        protected TResult Post<TResult>(object request, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null, XmlSerializerNamespaces namespaces = null)
         {
             var method = GetType().GetMethod(methodName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
             var endpoint = (EndpointDefinitionAttribute)method.GetCustomAttributes(typeof(EndpointDefinitionAttribute), true).First();
-            return PostInternal<TResult>(endpoint.Url, request);
+            return PostInternal<TResult>(endpoint.Url, request, namespaces ?? GetNamespaces() );
         }
 
-        private TResult PostInternal<TResult>(string url, object request)
+        private TResult PostInternal<TResult>(string url, object request, XmlSerializerNamespaces namespaces )
         {
             var req = (HttpWebRequest)WebRequest.Create(url);
-            req.ContentType = "application/json; charset=utf-8";
+            req.ContentType = "application/xml; charset=utf-8";
             req.Method = "POST";
             req.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
             var sz = new XmlSerializer(request.GetType());
+#if DEBUG
             var sb = new StringBuilder();
             using (var sw = new System.IO.StringWriter(sb))
             {
-                sz.Serialize(sw, request);
+                sz.Serialize(sw, request, namespaces);
                 sw.Flush();
                 sw.Close();
             }
+#endif
 
             using (var st = req.GetRequestStream())
             {
                 using (var wt = new System.IO.StreamWriter(st, new UTF8Encoding(false)))
                 {
-                    wt.Write(sb.ToString());
+                    sz.Serialize(wt, request, namespaces);
                     wt.Flush();
                     wt.Close();
                 }
-                WebResponse response;
+                HttpWebResponse response;
                 try
                 {
-                    response = req.GetResponse();
+                    response = (HttpWebResponse)req.GetResponse();
 
                 }
                 catch (WebException wex)
                 {
-                    response = wex.Response;
+                    if (wex.Response == null)
+                        throw wex;
+                    response = (HttpWebResponse)wex.Response;
                 }
                 using (var rst = response.GetResponseStream())
+                using (var sr = new StreamReader(rst))
                 {
-                    sz = new XmlSerializer(typeof(TResult));
-                    return (TResult)sz.Deserialize(rst);
+                    if( response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.BadRequest)
+                    {
+                        sz = new XmlSerializer(typeof(TResult));
+                        return (TResult)sz.Deserialize(sr);
+                    }
+                    else
+                    {
+                        sz = new XmlSerializer(typeof(ErrorResult));
+                        var errorResult = (ErrorResult)sz.Deserialize(sr);
+                        throw new Exception(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
+                    }
                 }
             }
         }

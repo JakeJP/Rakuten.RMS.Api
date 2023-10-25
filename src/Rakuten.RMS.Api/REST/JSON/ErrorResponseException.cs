@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rakuten.RMS.Api.JSON
 {
-    public class ErrorResponseException : Exception
+    public class ErrorResponseException : RakutenRMSApiException
     {
         public ResultBase Errors { get; set; }
         public ErrorResponseException(ResultBase error)

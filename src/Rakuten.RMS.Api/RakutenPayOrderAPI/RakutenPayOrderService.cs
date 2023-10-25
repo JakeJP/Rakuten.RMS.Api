@@ -15,53 +15,6 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         {
             return PostRequest<SearchOrderResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/searchOrder/", request);
         }
-#if false
-        TResult PostRequest<TResult>(string url, object request, string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
-        {
-            var req = (HttpWebRequest)WebRequest.Create(url);
-            req.ContentType = "application/json; charset=utf-8";
-            req.Method = "POST";
-            req.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
-            var sz = new JsonSerializer();
-            sz.NullValueHandling = NullValueHandling.Ignore;
-            sz.DateFormatString = dateFormtString;
-            var sb = new StringBuilder();
-            using (var sw = new System.IO.StringWriter(sb))
-            {
-                sz.Serialize(sw, request);
-                sw.Flush();
-                sw.Close();
-            }
-
-            using (var st = req.GetRequestStream())
-            {
-                using (var wt = new System.IO.StreamWriter(st, new UTF8Encoding(false)))
-                {
-                    wt.Write(sb.ToString());
-                    wt.Flush();
-                    wt.Close();
-                }
-                WebResponse response;
-                try
-                {
-                    response = req.GetResponse();
-
-                }
-                catch (WebException wex)
-                {
-                    response = wex.Response;
-                }
-                using (var rst = response.GetResponseStream())
-                using (var _rd = new System.IO.StreamReader(rst))
-                using (var rd = new JsonTextReader(_rd))
-                {
-                    return sz.Deserialize<TResult>(rd);
-                }
-            }
-
-
-        }
-#endif
         /// <summary>
         /// version:
         /// 3: 消費税増税対応
@@ -79,7 +32,6 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
                 "https://api.rms.rakuten.co.jp/es/2.0/order/getOrder/",
                 new { orderNumberList = orderNumberList, version = version.ToString() });
         }
-
         /// <summary>
         /// この機能を利用すると、楽天ペイ注文の「注文確認」を行うことができます。こちらは同期処理となります。
         /// </summary>
@@ -256,36 +208,5 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
                     changeReasonDetailApply = changeReasonDetailApply
                 })?.MessageModelList;
         }
-
-        //
-#if false
-        public void ListNewOrders(System.Data.DataTable table, IEnumerable<int> subStatusList = null)
-        {
-            var res = SearchOrder(new SearchOrderRequest
-            {
-                orderProgressList = new List<int> { { 100 } },
-                subStatusIdList = subStatusList != null ? new List<int>(subStatusList) : null,
-                dateType = 1, /*注文日*/
-                startDatetime = DateTime.Today.AddDays(-30),
-                endDatetime = DateTime.Now,
-                PaginationRequestModel = new PaginationRequestModel
-                {
-                    requestPage = 1,
-                    requestRecordsAmount = 1000
-                }
-            });
-            if (!table.Columns.Contains("OrderNumber")) table.Columns.Add("OrderNumber");
-            //if (res.errorCode != "E10-001") checkError(res);
-            if (res.orderNumberList != null)
-            {
-                foreach (var om in res.orderNumberList)
-                {
-                    var row = table.NewRow();
-                    row["OrderNumber"] = om;
-                    table.Rows.Add(row);
-                }
-            }
-        }
-#endif
     }
 }
