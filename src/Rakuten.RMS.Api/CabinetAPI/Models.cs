@@ -108,7 +108,7 @@ namespace Rakuten.RMS.Api.CabinetAPI
         public class file
         {
             [XmlElement("fileId")]
-            public int FileId { get; set; }
+            public long FileId { get; set; }
         }
 
     }
@@ -155,9 +155,9 @@ namespace Rakuten.RMS.Api.CabinetAPI
             public class FileModel
             {
                 [XmlElement("fileId")]
-                public int FileId { get; set; }
+                public long FileId { get; set; }
                 [XmlElement("folderId")]
-                public int FolderId { get; set; }
+                public long FolderId { get; set; }
             }
         }
     }
@@ -185,9 +185,9 @@ namespace Rakuten.RMS.Api.CabinetAPI
         }
         public class file
         {
-            public int fileId { get; set; }
             public string fileName { get; set; }
             public long? folderId { get; set; }
+            public string filePath { get; set; }
             public bool? overWrite { get; set; }
         }
     }
@@ -204,7 +204,7 @@ namespace Rakuten.RMS.Api.CabinetAPI
         }
         public class file
         {
-            public int fileId { get; set; }
+            public long fileId { get; set; }
             public string fileName { get; set; }
             public string filePath { get; set; }
         }
@@ -225,7 +225,7 @@ namespace Rakuten.RMS.Api.CabinetAPI
                 [XmlElement("directoryName")]
                 public string DirectoryName { get; set; }
                 [XmlElement("upperFolderId")]
-                public int? UpperFolderId { get; set; }
+                public long? UpperFolderId { get; set; }
             }
         }
     }

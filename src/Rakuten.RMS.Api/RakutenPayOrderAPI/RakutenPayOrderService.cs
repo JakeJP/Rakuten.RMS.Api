@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Text;
 using Newtonsoft.Json;
@@ -7,6 +8,9 @@ using Rakuten.RMS.Api.JSON;
 
 namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 {
+    /// <summary>
+    /// 楽天ペイ受注API（RakutenPayOrderAPI）
+    /// </summary>
     public class RakutenPayOrderService : RakutenApiJsonClientBase
     {
         internal RakutenPayOrderService(ServiceProvider provider) : base(provider) { }
@@ -16,15 +20,16 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
             return PostRequest<SearchOrderResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/searchOrder/", request);
         }
         /// <summary>
-        /// version:
+        /// 複数の注文番号を指定して注文の詳細を取得する。
+        /// </summary>
+        /// <param name="orderNumberList">注文番号</param>
+        /// <param name="version">
         /// 3: 消費税増税対応
         /// 4: 共通の送料込みライン対応
         /// 5: 領収書、前払い期限版
         /// 6: 顧客・配送対応注意表示詳細対応
         /// 7: SKU対応
-        /// </summary>
-        /// <param name="orderNumberList"></param>
-        /// <param name="version"></param>
+        /// </param>
         /// <returns></returns>
         public GetOrderResponse GetOrder(IEnumerable<string> orderNumberList, int version = 7)
         {
@@ -33,7 +38,29 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
                 new { orderNumberList = orderNumberList, version = version.ToString() });
         }
         /// <summary>
-        /// この機能を利用すると、楽天ペイ注文の「注文確認」を行うことができます。こちらは同期処理となります。
+        /// １つの注文詳細を取得。
+        /// </summary>
+        /// <param name="orderNumber">注文番号</param>
+        /// <param name="version">
+        /// 3: 消費税増税対応<br/>
+        /// 4: 共通の送料込みライン対応<br/>
+        /// 5: 領収書、前払い期限版<br/>
+        /// 6: 顧客・配送対応注意表示詳細対応<br/>
+        /// 7: SKU対応
+        /// </param>
+        /// <returns></returns>
+        /// <exception cref="RakutenRMSApiException"></exception>
+        public OrderModel GetOrder( string orderNumber, int version = 7)
+        {
+            var res = GetOrder(new[] { orderNumber }, version);
+            if (res.MessageModelList != null && res.MessageModelList.Any(m => m.messageType == "ERROR"))
+                throw new RakutenRMSApiException(
+                                        string.Join(", ", res.MessageModelList.Select(m => m.ToString()) ));
+
+            return res.OrderModelList.FirstOrDefault();
+        }
+        /// <summary>
+        /// 楽天ペイ注文の「注文確認」を行うことができます。こちらは同期処理となります。
         /// </summary>
         /// <param name="orderNumberList">注文番号リスト 最大 100 件まで指定可能</param>
         /// <returns></returns>
@@ -46,7 +73,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <summary>
         /// １注文の配送情報の更新が可能。発送が完了した注文の、伝票番号、出荷日を登録して、注文を締める。
         /// </summary>
-        /// <param name="orderNumber"></param>
+        /// <param name="orderNumber">注文番号</param>
         /// <param name="BasketidModelList"></param>
         /// <returns></returns>
         public IEnumerable<OrderShippingMessageModel> UpdateOrderShipping(string orderNumber, IEnumerable<BasketidModel> BasketidModelList)
@@ -56,17 +83,15 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
                 dateFormtString: "yyyy'-'MM'-'dd")?.MessageModelList;
         }
         /// <summary>
-        /// 以下の情報を更新可能
         /// ・配送方法（宅急便・国際配送・ゆうパック・自社配送・バイク便・その他配送方法１・その他配送方法２・その他配送方法３
         /// </summary>
-        /// <param name="orderNumber"></param>
+        /// <param name="orderNumber">注文番号</param>
         /// <param name="deliveryName"></param>
         public IEnumerable<OrderMessageModel> UpdateOrderDelivery(string orderNumber, string deliveryName)
         {
             throw new NotImplementedException();
         }
         /// <summary>
-        /// 以下の情報を更新可能
         /// ・注文者 - 名前
         /// ・注文者 - フリガナ
         /// ・注文者 - 住所
@@ -75,7 +100,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// ・注文者 - 性別
         /// ・注文者 - 誕生日
         /// </summary>
-        /// <param name="orderNumber"></param>
+        /// <param name="orderNumber">注文番号</param>
         /// <param name="ordererModel"></param>
         /// <returns></returns>
         public IEnumerable<OrderMessageModel> UpdateOrderOrderer(string orderNumber, OrdererModel ordererModel)
@@ -113,33 +138,33 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <summary>
         /// 注文番号を指定して、支払明細情報を取得する。
         /// </summary>
-        /// <param name="orderNumber"></param>
+        /// <param name="orderNumber">注文番号</param>
         /// <returns></returns>
         public GetPaymentResponse GetPayment(string orderNumber)
         {
             throw new NotImplementedException();
         }
         /// <summary>
-        /// 次のステータスの注文にのみ有効
-        /// ・100: 注文確認待ち
-        /// ・200: 楽天処理中
-        /// ・300: 発送待ち
+        /// 次のステータスの注文にのみ有効<br/>
+        /// ・100: 注文確認待ち<br/>
+        /// ・200: 楽天処理中<br/>
+        /// ・300: 発送待ち<br/>
         /// </summary>
         /// <param name="orderNumber">注文番号 キャンセル申請対象の受注番号。</param>
-        /// <param name="inventoryRestoreType">在庫連動区分 0: 商品設定に合わせる 1: 在庫連動する 2: 在庫連動しない</param>
-        /// <param name="changeReasonDetailApply">キャンセル理由
-        /// (お客様都合による)
-        /// 1: キャンセル
-        /// 2: 受取後の返品
-        /// 3: 長期不在による受取拒否
-        /// 4: 未入金
-        /// 5: 代引決済の受取拒否
-        /// 6: その他
-        /// (店舗都合による)
-        /// 8: 欠品
-        /// 10: その他
-        /// 13: 発送遅延
-        /// 14: 顧客・配送対応注意表示
+        /// <param name="inventoryRestoreType">在庫連動区分<br/> 0: 商品設定に合わせる<br/> 1: 在庫連動する<br/> 2: 在庫連動しない<br/></param>
+        /// <param name="changeReasonDetailApply">キャンセル理由<br/>
+        /// (お客様都合による)<br/>
+        /// 1: キャンセル<br/>
+        /// 2: 受取後の返品<br/>
+        /// 3: 長期不在による受取拒否<br/>
+        /// 4: 未入金<br/>
+        /// 5: 代引決済の受取拒否<br/>
+        /// 6: その他<br/>
+        /// (店舗都合による)<br/>
+        /// 8: 欠品<br/>
+        /// 10: その他<br/>
+        /// 13: 発送遅延<br/>
+        /// 14: 顧客・配送対応注意表示<br/>
         /// 15: 返品（破損・品間違い） </param>
         /// <returns></returns>
         public IEnumerable<OrderMessageModel> CancelOrder(string orderNumber, int inventoryRestoreType, int changeReasonDetailApply)

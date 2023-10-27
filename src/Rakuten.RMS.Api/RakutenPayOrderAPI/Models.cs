@@ -158,9 +158,9 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     public class MessageModel
     {
         /// <summary>
-        /// 以下のいずれか
         /// ・INFO
         /// ・ERROR
+        /// ・WARNING
         /// </summary>
         public string messageType { get; set; }
         /// <summary>

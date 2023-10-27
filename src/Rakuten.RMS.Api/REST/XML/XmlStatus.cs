@@ -3,6 +3,11 @@ using System.Xml.Serialization;
 
 namespace Rakuten.RMS.Api.XML
 {
+    public enum SystemStatus
+    {
+        OK,
+        NG
+    }
     public class XmlStatus
     {
         [XmlElement("interfaceId")]
@@ -11,7 +16,7 @@ namespace Rakuten.RMS.Api.XML
         /// OK or NG
         /// </summary>
         [XmlElement("systemStatus")]
-        public string SystemStatus { get; set; }
+        public SystemStatus SystemStatus { get; set; }
         [XmlElement("message")]
         public string Message { get; set; }
         [XmlElement("requestId")]

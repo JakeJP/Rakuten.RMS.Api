@@ -119,100 +119,87 @@ namespace Rakuten.RMS.Api.XML
                     wt.Flush();
                     wt.Close();
                 }
-                HttpWebResponse response;
-                try
-                {
-                    response = (HttpWebResponse)req.GetResponse();
-
-                }
-                catch (WebException wex)
-                {
-                    if (wex.Response == null)
-                        throw wex;
-                    response = (HttpWebResponse)wex.Response;
-                }
-                using (var rst = response.GetResponseStream())
-                using (var sr = new StreamReader(rst))
-                {
-                    if( response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.BadRequest)
-                    {
-                        sz = new XmlSerializer(typeof(TResult));
-                        return (TResult)sz.Deserialize(sr);
-                    }
-                    else
-                    {
-                        sz = new XmlSerializer(typeof(ErrorResult));
-                        var errorResult = (ErrorResult)sz.Deserialize(sr);
-                        throw new Exception(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
-                    }
-                }
             }
+            return HandleResponse<TResult>(req);
         }
 
 
         protected TResult PostFile<TResult>(string url, Stream fileStream /*string file*/, string paramName, string contentType, NameValueCollection nvc)
         {
             string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
+            byte[] firstboundarybytes = System.Text.Encoding.ASCII.GetBytes("--" + boundary + "\r\n");
             byte[] boundarybytes = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "\r\n");
 
-            HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(url);
+            var wr = (HttpWebRequest)WebRequest.Create(url);
             wr.ContentType = "multipart/form-data; boundary=" + boundary;
             wr.Method = "POST";
-            wr.KeepAlive = true;
-            wr.Credentials = System.Net.CredentialCache.DefaultCredentials;
+            wr.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
+            //wr.Credentials = System.Net.CredentialCache.DefaultCredentials;
 
             Stream rs = wr.GetRequestStream();
 
             string formdataTemplate = "Content-Disposition: form-data; name=\"{0}\"\r\n\r\n{1}";
+            int line = 0;
             foreach (string key in nvc.Keys)
             {
                 if (key == paramName) continue;
-                rs.Write(boundarybytes, 0, boundarybytes.Length);
+                if( line++ == 0 )
+                    rs.Write(firstboundarybytes, 0, firstboundarybytes.Length);
+                else
+                    rs.Write(boundarybytes, 0, boundarybytes.Length);
                 string formitem = string.Format(formdataTemplate, key, nvc[key]);
                 byte[] formitembytes = System.Text.Encoding.UTF8.GetBytes(formitem);
                 rs.Write(formitembytes, 0, formitembytes.Length);
             }
-            rs.Write(boundarybytes, 0, boundarybytes.Length);
-
-            string headerTemplate = "Content-Disposition: form-data; name=\"{0}\"; filename=\"{1}\"\r\nContent-Type: {2}\r\n\r\n";
-            string header = string.Format(headerTemplate, paramName, nvc[paramName], contentType);
-            byte[] headerbytes = System.Text.Encoding.UTF8.GetBytes(header);
-            rs.Write(headerbytes, 0, headerbytes.Length);
-
-#if true
-            byte[] buffer = new byte[4096];
-            int bytesRead = 0;
-            while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) != 0)
+            if( fileStream != null)
             {
-                rs.Write(buffer, 0, bytesRead);
+                rs.Write(boundarybytes, 0, boundarybytes.Length);
+
+                string headerTemplate = "Content-Disposition: form-data; name=\"{0}\"; filename=\"{1}\"\r\nContent-Type: {2}\r\n\r\n";
+                string header = string.Format(headerTemplate, paramName, nvc[paramName], contentType);
+                byte[] headerbytes = System.Text.Encoding.UTF8.GetBytes(header);
+                rs.Write(headerbytes, 0, headerbytes.Length);
+
+                fileStream.CopyTo(rs);
             }
-#else
-            FileStream fileStream = new FileStream(file, FileMode.Open, FileAccess.Read);
-            byte[] buffer = new byte[4096];
-            int bytesRead = 0;
-            while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) != 0)
-            {
-                rs.Write(buffer, 0, bytesRead);
-            }
-            fileStream.Close();
-#endif
 
             byte[] trailer = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "--\r\n");
             rs.Write(trailer, 0, trailer.Length);
             rs.Close();
 
-            WebResponse wresp = null;
-            TResult result;
-
-            wresp = wr.GetResponse();
-            using (var rst = wresp.GetResponseStream())
+            return HandleResponse<TResult>(wr);
+        }
+    
+    
+        private TResult HandleResponse<TResult>( HttpWebRequest req)
+        {
+            HttpWebResponse response;
+            try
             {
-                var sz = new XmlSerializer(typeof(TResult));
-                result = (TResult)sz.Deserialize(rst);
-            }
-            wr = null;
+                response = (HttpWebResponse)req.GetResponse();
 
-            return result;
+            }
+            catch (WebException wex)
+            {
+                if (wex.Response == null)
+                    throw wex;
+                response = (HttpWebResponse)wex.Response;
+            }
+            using (var rst = response.GetResponseStream())
+            using (var sr = new StreamReader(rst))
+            {
+                if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.BadRequest)
+                {
+                    var sz = new XmlSerializer(typeof(TResult));
+                    return (TResult)sz.Deserialize(sr);
+                }
+                else
+                {
+                    var sz = new XmlSerializer(typeof(ErrorResult));
+                    var errorResult = (ErrorResult)sz.Deserialize(sr);
+                    throw new Exception(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
+                }
+            }
         }
     }
 }
