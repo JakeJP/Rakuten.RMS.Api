@@ -15,18 +15,6 @@ public class ItemAPI20 : Rakuten.RMS.Api.JSON.RakutenApiJsonClientBase
 
 Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase) → [ItemAPI20](./rakuten.rms.api.itemapi20.itemapi20)
 
-## Constructors
-
-### **ItemAPI20(ServiceProvider)**
-
-```csharp
-public ItemAPI20(ServiceProvider provider)
-```
-
-#### Parameters
-
-`provider` [ServiceProvider](./rakuten.rms.api.serviceprovider)<br>
-
 ## Methods
 
 ### **Get(String)**
@@ -35,7 +23,7 @@ items.get
  商品管理番号を指定し、商品情報を取得
 
 ```csharp
-public GetItem Get(string manageNumber)
+public Item Get(string manageNumber)
 ```
 
 #### Parameters
@@ -45,7 +33,7 @@ public GetItem Get(string manageNumber)
 
 #### Returns
 
-[GetItem](./rakuten.rms.api.itemapi20.getitem)<br>
+[Item](./rakuten.rms.api.itemapi20.item)<br>
 
 #### Exceptions
 
@@ -121,18 +109,43 @@ public ResultBase Delete(string manageNumber)
 
 [ArgumentNullException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception)<br>
 
-### **Search()**
+### **Search(SearchCondition)**
 
 items.search
  指定した条件から通常商品・予約商品・定期購入商品の商品情報を検索
 
 ```csharp
-public void Search()
+public SearchResult Search(SearchCondition condition)
 ```
+
+#### Parameters
+
+`condition` [SearchCondition](./rakuten.rms.api.itemapi20.searchcondition)<br>
+
+#### Returns
+
+[SearchResult](./rakuten.rms.api.itemapi20.searchresult)<br>
 
 #### Exceptions
 
 [NotImplementedException](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception)<br>
+
+### **SearchAll(SearchCondition)**
+
+Search のページングを内蔵したバージョン
+
+```csharp
+public IEnumerable<Item> SearchAll(SearchCondition condition)
+```
+
+#### Parameters
+
+`condition` [SearchCondition](./rakuten.rms.api.itemapi20.searchcondition)<br>
+検索条件
+
+#### Returns
+
+[IEnumerable&lt;Item&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
 
 ### **GetInventoryRelatedSettings(String)**
 

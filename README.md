@@ -56,22 +56,22 @@ serviceSecret と licenseKey はRMSのAPI設定から取得できる認証用の
 
 | RMS WEB API カテゴリ | ServiceProvider メソッド | 対応クラス |
 |:---|:---|:---
-| 商品API<br/>	商品API 2.0（ItemAPI 2.0）| GetItemAPI20() | ItemAPI20.ItemAPI20
+| 商品API<br/>	[商品API 2.0（ItemAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/ItemAPI20)| GetItemAPI20() | [ItemAPI20.ItemAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.itemapi20.itemapi20)
 | カテゴリAPI<br/>	[カテゴリAPI 2.0（CategoryAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/CategoryAPI20)| GetCategoryAPI20() | [CategoryAPI20.CategoryAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.categoryapi20.categoryapi20)
-| 在庫API	在庫API 2.1（InventoryAPI 2.1）| GetInventoryAPI21() | InventoryAPI21.RakutenInventoryServiceV21
+| 在庫API	在庫API 2.1（InventoryAPI 2.1）| GetInventoryAPI21() | [InventoryAPI21.RakutenInventoryServiceV21](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi21.rakuteninventoryservicev21)
 | 在庫API 2.0（InventoryAPI 2.0）| GetInventoryAPI20() | [InventoryAPI20.RakutenInventoryServiceV2](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
 | ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0）| GetNavigationAPI20() | [NavigationAPI20.NavigationAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.navigationapi20.navigationapi20)
 | 組み合わせ販売API（ItemBundleAPI））| GetItemBundleAPI() | (未実装)
-| [R-CabinetAPI（CabinetAPI）](https://jakejp.github.io/Rakuten.RMS.Api/CabinetAPI) | GetCabinetAPI() | CabinetAPI.CabinetAPI
+| [R-CabinetAPI（CabinetAPI）](https://jakejp.github.io/Rakuten.RMS.Api/CabinetAPI) | GetCabinetAPI() | [CabinetAPI.CabinetAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.cabinetapi.cabinetapi)
 | 製品API（ProductAPI）| GetProductAPI() | ProductAPI.ProductAPI
-| 楽天ペイ受注API（RakutenPayOrderAPI）| GetRakutenPayOrderAPI() | RakutenPayOrderAPI.RakutenPayOrderService
+| 楽天ペイ受注API（RakutenPayOrderAPI）| GetRakutenPayOrderAPI() | [RakutenPayOrderAPI.RakutenPayOrderService](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
 | 購入商品API（PurchaseItemAPI）  | GetPurchaseItemAPI() | (未実装)
 | 購入申込API（ReserveAPI）  | GetReserveAPI() | (未実装)
 | 問い合わせ管理API（InquiryManagementAPI）  | GetInquiryManagementAPI() | (未実装)
-| 店舗情報API（ShopAPI）| GetShopAPI() | ShopAPI.ShopAPI
+| 店舗情報API（ShopAPI）| GetShopAPI() | [ShopAPI.ShopAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.shopapi.shopapi)
 | 店舗ページAPI（ShopPageAPI）| GetShopPageAPI() | (未実装)
 | クーポンAPI（CouponAPI）| GetCouponAPI() | (未実装)
-| ライセンス管理API（LicenseManagementAPI）| GetLicenseManagementAPI() | LicenseManagementAPI.LicenseManagementAPI
+| ライセンス管理API（LicenseManagementAPI）| GetLicenseManagementAPI() | [LicenseManagementAPI.LicenseManagementAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.licensemanagementapi.licensemanagementapi)
 
 API呼び出しメソッドは、基本的にサービスのエンドポイントで定義されている名前を尊重し、C# 形式、また　[動詞][目的語] (GetItemなど)の順になるように定義しなおしています。
 
@@ -121,6 +121,7 @@ api = sp.GetRakutenPayOrderAPI()
 orders = api.GetOrder( ["123456-12341234-1234567890"])
 
 ```
+[Python.NET 環境の構築の詳細](https://jakejp.github.io/Rakuten.RMS.Api/Python)
 
 [そのほかの Python サンプルコードはこちら](./tree/main/samples/python)
 

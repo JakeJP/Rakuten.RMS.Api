@@ -82,17 +82,17 @@ public OrderModel GetOrder(string orderNumber, int version)
 
 [RakutenRMSApiException](./rakuten.rms.api.rakutenrmsapiexception)<br>
 
-### **ConfirmOrder(IEnumerable&lt;String&gt;)**
+### **ConfirmOrder(IList&lt;String&gt;)**
 
 楽天ペイ注文の「注文確認」を行うことができます。こちらは同期処理となります。
 
 ```csharp
-public IEnumerable<OrderMessageModel> ConfirmOrder(IEnumerable<string> orderNumberList)
+public IEnumerable<OrderMessageModel> ConfirmOrder(IList<string> orderNumberList)
 ```
 
 #### Parameters
 
-`orderNumberList` [IEnumerable&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+`orderNumberList` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 注文番号リスト 最大 100 件まで指定可能
 
 #### Returns

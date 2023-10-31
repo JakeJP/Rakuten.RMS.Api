@@ -12,18 +12,6 @@ public class ProductAPI : Rakuten.RMS.Api.XML.RakutenApiXmlClientBase
 
 Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [ProductAPI](./rakuten.rms.api.productapi.productapi)
 
-## Constructors
-
-### **ProductAPI(ServiceProvider)**
-
-```csharp
-public ProductAPI(ServiceProvider provider)
-```
-
-#### Parameters
-
-`provider` [ServiceProvider](./rakuten.rms.api.serviceprovider)<br>
-
 ## Methods
 
 ### **Search(String, String, String, String, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**

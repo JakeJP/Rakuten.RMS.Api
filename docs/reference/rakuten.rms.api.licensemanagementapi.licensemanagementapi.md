@@ -12,18 +12,6 @@ public class LicenseManagementAPI : Rakuten.RMS.Api.JSON.RakutenApiJsonClientBas
 
 Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase) → [LicenseManagementAPI](./rakuten.rms.api.licensemanagementapi.licensemanagementapi)
 
-## Constructors
-
-### **LicenseManagementAPI(ServiceProvider)**
-
-```csharp
-public LicenseManagementAPI(ServiceProvider serviceProvider)
-```
-
-#### Parameters
-
-`serviceProvider` [ServiceProvider](./rakuten.rms.api.serviceprovider)<br>
-
 ## Methods
 
 ### **GetExpiryDate(String)**

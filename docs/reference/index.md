@@ -132,9 +132,9 @@
 
 ## Rakuten.RMS.Api.ItemAPI20
 
-[GetItem](./rakuten.rms.api.itemapi20.getitem)
-
 [InventoryRelatedSettings](./rakuten.rms.api.itemapi20.inventoryrelatedsettings)
+
+[Item](./rakuten.rms.api.itemapi20.item)
 
 [ItemAPI20](./rakuten.rms.api.itemapi20.itemapi20)
 
@@ -143,6 +143,12 @@
 [PatchItem](./rakuten.rms.api.itemapi20.patchitem)
 
 [RequiredAttribute](./rakuten.rms.api.itemapi20.requiredattribute)
+
+[SearchCondition](./rakuten.rms.api.itemapi20.searchcondition)
+
+[SearchResult](./rakuten.rms.api.itemapi20.searchresult)
+
+[SearchSortKey](./rakuten.rms.api.itemapi20.searchsortkey)
 
 [UpsertItem](./rakuten.rms.api.itemapi20.upsertitem)
 
