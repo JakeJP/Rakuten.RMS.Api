@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rakuten.RMS.Api
 {
+    /// <summary>
+    /// APIが返すエラーを保持するベースクラス。APIがXML、JSONに応じ、また、エラーの形式によって派生クラスがその内容を保持する。
+    /// このライブラリの設計方針としては、基本的に正常時以外は Exception が発生。HTTPレベルのエラーは WebException などが発生する場合もある。
+    /// </summary>
     public class RakutenRMSApiException : Exception
     {
         public RakutenRMSApiException() { }

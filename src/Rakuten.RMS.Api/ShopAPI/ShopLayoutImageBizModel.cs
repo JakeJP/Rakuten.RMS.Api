@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace Rakuten.RMS.Api.ShopAPI
 {
     [XmlType(TypeName = "shopLayoutImageBizModel", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
-    public class ShopLayoutImageBizModel : BizResponseResultBase
+    public class ShopLayoutImageBizModel
     {
         [XmlElement(Namespace = "")]
         public ShopLayoutImage shopLayoutImage { get; set; }

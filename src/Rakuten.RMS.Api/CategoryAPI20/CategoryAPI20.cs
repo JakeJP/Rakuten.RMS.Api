@@ -72,7 +72,7 @@ namespace Rakuten.RMS.Api.CategoryAPI20
     public class CategoryAPI20 : RakutenApiJsonClientBase
     {
 
-        public CategoryAPI20( ServiceProvider serviceProvider ) : base( serviceProvider )
+        internal CategoryAPI20( ServiceProvider serviceProvider ) : base( serviceProvider )
         {
         }
         /// <summary>
@@ -99,10 +99,11 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         /// カテゴリ情報を登録
         /// </summary>
         /// <param name="category"></param>
-        /// <returns></returns>
+        /// <returns>カテゴリID</returns>
         public string InsertShopCategory(NewCategory category)
         {
-            return PostRequest<InsertCategoryResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-categories", category, method: "POST").categoryId;
+            return PostRequest<InsertCategoryResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-categories", category, method: "POST")
+                .categoryId;
         }
         /// <summary>
         /// カテゴリIDを指定しカテゴリ情報を更新
@@ -114,7 +115,7 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         {
             return PostRequest<ResultBase>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-categories/category-ids/{categoryId}",
                 category,
-                method: "POST");
+                method: "PUT");
 
         }
         /// <summary>
@@ -161,17 +162,24 @@ namespace Rakuten.RMS.Api.CategoryAPI20
             if (categoryfields != null && categoryfields.Length > 0) qs["categoryfields"] = string.Join(",", categoryfields.Select(m => m.ToString()));
             return GetRequest<CategoryTreeResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-category-trees/category-set-ids/{categorySetId}", queryParameters: qs);
         }
-        public void UpsertCategoryTrees(string categorySetId )
+
+        public void UpsertCategoryTree(string categorySetId, IList<CategoryIdWithChildren> tree )
         {
-            throw new NotImplementedException();
+            var res = PostRequest<ResultBase>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-category-trees/category-set-ids/{categorySetId}",
+                new { children = tree },
+                method: "PUT");
+            // res == null (NoContent means sucess)
+            if (res != null && res.errors != null && res.errors.Any())
+                throw new ErrorResponseException(res);
         }
         /// <summary>
         /// すべてのカテゴリセット情報を取得
         /// </summary>
         /// <returns></returns>
-        public CategorySetKeyListResult GetCategorySetLists()
+        public IList<string> GetCategorySetIdList()
         {
-            return GetRequest<CategorySetKeyListResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-category-set-lists");
+            return GetRequest<CategorySetKeyListResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-category-set-lists")
+                .categorySetKeyList;
         }
         /// <summary>
         /// すべてのカテゴリセット情報を取得.取得したいカテゴリセット情報を指定する場合。
@@ -179,15 +187,67 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         /// <param name="categorysetfields"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public CategorySetFieldsResult GetCategorySetLists(params CategorySetField[] categorysetfields )
+        public IList<CategorySet> GetCategorySetList(params CategorySetField[] categorysetfields )
         {
+            // ※ ドキュメントと齟齬。categoryfields はオプション扱いとの記述だが、空にすると categorySetList が null.
             if (categorysetfields == null || categorysetfields.Length == 0)
                 throw new ArgumentException("categorysetfields must have one or more elements.");
             var qs = new NameValueCollection();
-            qs["categorysetfields"] = string.Join(",", categorysetfields.Select(m=>m.ToString()));
-            return GetRequest<CategorySetFieldsResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-category-set-lists",
+            if(categorysetfields != null && categorysetfields.Length > 0)
+                qs["categorysetfields"] = string.Join(",", categorysetfields.Select(m=>m.ToString()));
+            var res = GetRequest<CategorySetFieldsResult>($"https://api.rms.rakuten.co.jp/es/2.0/categories/shop-category-set-lists",
                 queryParameters: qs);
-        }
+            if (res.errors != null && res.errors.Any())
+                throw new ErrorResponseException(res);
 
+            return res.categorySetList;
+        }
+        // followings are renamed and reconsidered version of method
+        public CategorySet GetCategorySet( string categorySetId )
+        {
+            return GetCategoryTrees(categorySetId, new[] {
+                CategorySetField.TITLE,
+                CategorySetField.CATEGORY_SET_FEATURES,
+                CategorySetField.CREATED,
+                CategorySetField.UPDATED }, null).categorySet;
+        }
+        public IList<CategorySet> GetAllCategorySet()
+        {
+            return GetCategorySetList(
+                CategorySetField.TITLE,
+                CategorySetField.UPDATED,
+                CategorySetField.CREATED,
+                CategorySetField.CATEGORY_SET_FEATURES );
+        }
+        public CategoryTree GetCategoryTree( string categorySetId )
+        {
+            var res = GetCategoryTrees(categorySetId,
+                null,
+                new[] { CategoryField.CATEGORY_SET_ID, CategoryField.TITLE, CategoryField.CATEGORY_FEATURES, CategoryField.DESCRIPTION,
+                CategoryField.ADDITIONALDESCRIPTION, CategoryField.IMAGES, CategoryField.LAYOUT, CategoryField.CREATED, CategoryField.UPDATED });
+            return res.rootNode.children;
+        }
+        public void UpdateCategoryTree(string categorySetId, IList<CategoryIdWithChildren> tree)
+            => UpsertCategoryTree(categorySetId, tree);
+
+        public Category GetCategory(string categoryId, bool breadcrumb = false)
+        {
+            var res = GetShopCategories(categoryId, breadcrumb: breadcrumb,
+                categorysetfields: null,
+                new[] {
+                    CategoryField.CATEGORY_SET_ID,
+                    CategoryField.ADDITIONALDESCRIPTION,
+                    CategoryField.DESCRIPTION,
+                    CategoryField.ADDITIONALDESCRIPTION,
+                    CategoryField.LAYOUT,
+                    CategoryField.UPDATED
+                    }
+                );
+            return res;
+        }
+        public string CreateCategory(NewCategory category)
+            => InsertShopCategory(category);
+        public void UpdateCategory(string categoryId, NewCategory category)
+            => UpdateShopCategory(categoryId, category);
     }
 }

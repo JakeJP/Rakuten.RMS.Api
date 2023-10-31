@@ -3,9 +3,12 @@ using System.Xml;
 using System.Xml.Serialization;
 namespace Rakuten.RMS.Api.CategoryAPI
 {
+    /// <summary>
+    /// カテゴリAPI 2.0（CategoryAPI 2.0）
+    /// </summary>
     public class CategoryAPI : RakutenApiXmlClientBase
     {
-        public CategoryAPI(ServiceProvider provider) : base(provider)
+        internal CategoryAPI(ServiceProvider provider) : base(provider)
         {
         }
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/categoryapi/shop/categorysets/get", EndpointHttpMethod.GET)]

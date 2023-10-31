@@ -10,9 +10,9 @@ namespace Rakuten.RMS.Api.ShopAPI
         public string delvdateCaption { get; set; }
         public long appointDays { get; set; }
     }
-    [XmlType(TypeName = "delvdateMasterBizModel", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
+    [XmlType(TypeName = "delvdateMasterBizModel", Namespace = ShopAPI.ModelNamespace)]
 
-    public class DelvdateMasterBizModel : BizResponseResultBase
+    public class DelvdateMasterBizModel 
     {
         [XmlArray("delvdateMasterList", Namespace = "")]
         [XmlArrayItem("delvdateMaster", Namespace = "")]

@@ -4,8 +4,8 @@ namespace Rakuten.RMS.Api.ShopAPI
 {
 
 
-    [XmlType(TypeName = "topDisplayBizModel", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
-    public class TopDisplayBizModel : BizResponseResultBase
+    [XmlType(TypeName = "topDisplayBizModel", Namespace = ShopAPI.ModelNamespace)]
+    public class TopDisplayBizModel
     {
         [XmlElement(Namespace = "")]
         public TopDisplay topDisplay { get; set; }
@@ -23,7 +23,7 @@ namespace Rakuten.RMS.Api.ShopAPI
         public string lowerText { get; set; }
     }
 
-    [XmlRoot("topDisplayBizModel", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
+    [XmlRoot("topDisplayBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class TopDisplayBizModelRequest
     {
         [XmlElement("updateModel", Namespace = "")]

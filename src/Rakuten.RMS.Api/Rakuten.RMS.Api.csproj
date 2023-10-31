@@ -85,8 +85,11 @@
     <Compile Include="REST\XML\ResultBase.cs" />
     <Compile Include="ShopAPI\DelvdateNumber.cs" />
     <Compile Include="ShopAPI\Models.cs" />
+    <Compile Include="ShopAPI\NaviButtonBizModel.cs" />
+    <Compile Include="ShopAPI\NaviButtonInfoBizModel.cs" />
     <Compile Include="ShopAPI\OperationLeadTime.cs" />
     <Compile Include="ShopAPI\ShopAPI.cs" />
+    <Compile Include="ShopAPI\ShopLayoutCommonBizModel.cs" />
     <Compile Include="ShopAPI\ShopLayoutImageBizModel.cs" />
     <Compile Include="ShopAPI\TopDisplayBizModel.cs" />
     <Compile Include="ShopPageAPI\ShopPageAPI.cs" />

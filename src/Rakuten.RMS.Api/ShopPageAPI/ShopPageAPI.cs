@@ -9,7 +9,7 @@ namespace Rakuten.RMS.Api.ShopPageAPI
 {
     public class ShopPageAPI : RakutenApiXmlClientBase
     {
-        public ShopPageAPI(ServiceProvider serviceProvider) : base(serviceProvider) { }
+        internal ShopPageAPI(ServiceProvider serviceProvider) : base(serviceProvider) { }
 
     }
 }

@@ -3,8 +3,8 @@ using System.Xml.Serialization;
 
 namespace Rakuten.RMS.Api.ShopAPI
 {
-    [XmlType(TypeName = "operationLeadTimeBizModel", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
-    public class OperationLeadTimeBizModel : BizResponseResultBase
+    [XmlType(TypeName = "operationLeadTimeBizModel", Namespace = ShopAPI.ModelNamespace)]
+    public class OperationLeadTimeBizModel
     {
         [XmlArray("operationLeadTimeList", Namespace = "")]
         [XmlArrayItem("operationLeadTime", Namespace = "")]

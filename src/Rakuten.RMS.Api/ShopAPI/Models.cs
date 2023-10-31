@@ -8,35 +8,42 @@ using Rakuten.RMS.Api.XML;
 
 namespace Rakuten.RMS.Api.ShopAPI
 {
+    public class ShopBizApiException : RakutenRMSApiException
+    {
+        public ShopBizApiResponse Response { get; set; }
+        public ShopBizApiException(ShopBizApiResponse response)
+        {
+            Response = response;
+        }
+    }
+#if false
     public abstract class BizResponseResultBase
     {
         internal ShopBizApiResponse response;
         public ShopBizApiResponse GetResponse() => response;
     }
+#endif
     [XmlRoot("shopBizApiResponse", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
-    public class ShopBizApiResponse
+    public class ShopBizApiResponse<TResultMessage> where TResultMessage : ResultMessage
     {
         [XmlElement("resultCode", Namespace = "")]
         public string resultCode { get; set; }
         [XmlArray("resultMessageList", Namespace = "")]
         [XmlArrayItem("resultMessage", Namespace = "")]
-        public List<ResultMessage> resultMessageList { get; set; }
+        public List<TResultMessage> resultMessageList { get; set; }
     }
     [XmlRoot("shopBizApiResponse", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
-    public class ShopBizApiResponse<TResult> : ShopBizApiResponse where TResult : BizResponseResultBase
+    public class ShopBizApiResponse : ShopBizApiResponse<ResultMessage>
+    {
+    }
+    [XmlRoot("shopBizApiResponse", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
+    public class ShopBizApiResponseWithResult<TResult,TResultMessage> : ShopBizApiResponse<TResultMessage> where TResultMessage : ResultMessage 
     {
         [XmlElement("result", Namespace = "")]
-        public TResult Result 
-        {
-            get => _result; 
-            set 
-            {
-                _result = value;
-                if( _result is BizResponseResultBase)
-                    ((BizResponseResultBase)_result).response = this; 
-            }
-        }
-        protected TResult _result;
+        public TResult Result { get; set; }
     }
-
+    [XmlRoot("shopBizApiResponse", Namespace = "http://rakuten.co.jp/rms/mall/shop/biz/api/model/resource")]
+    public class ShopBizApiResponseWithResult<TResult> : ShopBizApiResponseWithResult<TResult,ResultMessage>
+    {
+    }
 }

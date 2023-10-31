@@ -17,7 +17,7 @@ namespace Rakuten.RMS.Api.XML
         {
             this.provider = provider;
         }
-        protected TResult Get<TResult>(string url, NameValueCollection queryParameters = null )
+        protected virtual TResult Get<TResult>(string url, NameValueCollection queryParameters = null )
         {
             var qs = queryParameters != null ? string.Join("&", queryParameters.Keys.Cast<string>()
                         .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
@@ -31,14 +31,9 @@ namespace Rakuten.RMS.Api.XML
         {
             var method = GetType().GetMethod(methodName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
             var endpoint = (EndpointDefinitionAttribute)method.GetCustomAttributes(typeof(EndpointDefinitionAttribute), true).First();
-            var qs = queryParameters != null ? string.Join("&", queryParameters.Keys.Cast<string>()
-                        .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
-                        .Select(k => k + "=" + queryParameters[k])) : null;
-            var url = string.IsNullOrEmpty(qs) ? endpoint.Url : endpoint.Url + "?" + qs;
-
-            return GetInternal<TResult>(url);
+            return Get<TResult>(endpoint.Url, queryParameters);
         }
-        protected TResult GetInternal<TResult>(string url, string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
+        private TResult GetInternal<TResult>(string url, string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
         {
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.Method = "GET";
@@ -87,7 +82,7 @@ namespace Rakuten.RMS.Api.XML
 
         }
         protected virtual XmlSerializerNamespaces GetNamespaces() => null;
-        protected TResult Post<TResult>(object request, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null, XmlSerializerNamespaces namespaces = null)
+        protected virtual TResult Post<TResult>(object request, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null, XmlSerializerNamespaces namespaces = null)
         {
             var method = GetType().GetMethod(methodName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
             var endpoint = (EndpointDefinitionAttribute)method.GetCustomAttributes(typeof(EndpointDefinitionAttribute), true).First();
@@ -124,7 +119,7 @@ namespace Rakuten.RMS.Api.XML
         }
 
 
-        protected TResult PostFile<TResult>(string url, Stream fileStream /*string file*/, string paramName, string contentType, NameValueCollection nvc)
+        protected virtual TResult PostFile<TResult>(string url, Stream fileStream /*string file*/, string paramName, string contentType, NameValueCollection nvc)
         {
             string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
             byte[] firstboundarybytes = System.Text.Encoding.ASCII.GetBytes("--" + boundary + "\r\n");
@@ -169,8 +164,8 @@ namespace Rakuten.RMS.Api.XML
 
             return HandleResponse<TResult>(wr);
         }
-    
-    
+
+
         private TResult HandleResponse<TResult>( HttpWebRequest req)
         {
             HttpWebResponse response;
