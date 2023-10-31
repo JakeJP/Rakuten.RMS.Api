@@ -36,14 +36,10 @@ https://opensource.org/license/mit/
 - Newtonsoft Json.NET (latest version)
 - (Python.NET)
 
-## TODO
-
-- レスポンスメッセージに埋もれているメソッドの戻り値を直接返すようにする。成功、エラーメッセージは
-  GetResponse() で別途取得できるようにオリジナルのAPIから構造変更。
-  エラーは Exception へ移行
-
 
 ## 使い方
+
+[詳細なドキュメントはこちら](https://jakejp.github.io/Rakuten.RMS.Api/)
 
 ### API
 
@@ -61,12 +57,12 @@ serviceSecret と licenseKey はRMSのAPI設定から取得できる認証用の
 | RMS WEB API カテゴリ | ServiceProvider メソッド | 対応クラス |
 |:---|:---|:---
 | 商品API<br/>	商品API 2.0（ItemAPI 2.0）| GetItemAPI20() | ItemAPI20.ItemAPI20
-| カテゴリAPI<br/>	カテゴリAPI 2.0（CategoryAPI 2.0）| GetCategoryAPI20() | CategoryAPI20.CategoryAPI20
+| カテゴリAPI<br/>	[カテゴリAPI 2.0（CategoryAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/CategoryAPI20)| GetCategoryAPI20() | [CategoryAPI20.CategoryAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.categoryapi20.categoryapi20)
 | 在庫API	在庫API 2.1（InventoryAPI 2.1）| GetInventoryAPI21() | InventoryAPI21.RakutenInventoryServiceV21
-| 在庫API 2.0（InventoryAPI 2.0）| GetInventoryAPI20() | InventoryAPI20.RakutenInventoryServiceV2
-| ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0）| GetNavigationAPI20() | NavigationAPI20.NavigationAPI20
+| 在庫API 2.0（InventoryAPI 2.0）| GetInventoryAPI20() | [InventoryAPI20.RakutenInventoryServiceV2](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
+| ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0）| GetNavigationAPI20() | [NavigationAPI20.NavigationAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.navigationapi20.navigationapi20)
 | 組み合わせ販売API（ItemBundleAPI））| GetItemBundleAPI() | (未実装)
-| R-CabinetAPI（CabinetAPI）| GetCabinetAPI() | CabinetAPI.CabinetAPI
+| [R-CabinetAPI（CabinetAPI）](https://jakejp.github.io/Rakuten.RMS.Api/CabinetAPI) | GetCabinetAPI() | CabinetAPI.CabinetAPI
 | 製品API（ProductAPI）| GetProductAPI() | ProductAPI.ProductAPI
 | 楽天ペイ受注API（RakutenPayOrderAPI）| GetRakutenPayOrderAPI() | RakutenPayOrderAPI.RakutenPayOrderService
 | 購入商品API（PurchaseItemAPI）  | GetPurchaseItemAPI() | (未実装)
@@ -110,7 +106,6 @@ from System.Net import ServicePointManager, SecurityProtocolType
 clr.AddReference('Rakuten.RMS.Api')
 
 from Rakuten.RMS.Api import ServiceProvider
-from Rakuten.RMS.Api.RakutenPayOrderAPI import SearchOrderRequest
 
 # TLS 1.2 対応
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12
@@ -127,6 +122,7 @@ orders = api.GetOrder( ["123456-12341234-1234567890"])
 
 ```
 
+[そのほかの Python サンプルコードはこちら](./tree/main/samples/python)
 
 ### システム通知イベント
 
@@ -181,7 +177,7 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||category.item-mappings.upsert |×
 ||category.item-mappings.delete |×
 ||category.category-trees.get |〇
-||category.category-trees.upsert |×
+||category.category-trees.upsert |〇
 ||category.category-set-lists.get |〇
 |カテゴリAPI（CategoryAPI）| - | -
 |在庫API	在庫API 2.1（InventoryAPI 2.1）|inventories.variants.get   |〇
@@ -198,7 +194,6 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||inventories.bulk.upsert   |〇
 |在庫API（InventoryAPI） | - | - 
 |ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0））|version.get   |〇
-||version.get   |〇
 ||genres.get   |〇
 ||genres.attributes.get   |〇
 ||genres.attributes.dictionaryValues.get |〇
@@ -259,16 +254,16 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 
 | API   |   メソッド|   実装
 | --- | --- | ---
-|店舗情報API（ShopAPI）|	shop.topDisplay.get	| ×
-||	shop.topDisplay.edit	| ×
-||	shop.shopLayoutImage.get	| ×
-||	shop.shopLayoutImage.edit	| ×
-||	shop.shopLayoutCommon.get	| ×
-||	shop.shopLayoutCommon.edit	| ×
-||	shop.naviButtonInfo.get	| ×
-||	shop.naviButtonInfo.edit	| ×
-||	shop.naviButton.get	| ×
-||	shop.naviButton.edit	| ×
+|店舗情報API（ShopAPI）|	shop.topDisplay.get	| 〇
+||	shop.topDisplay.edit	| 〇
+||	shop.shopLayoutImage.get	| 〇
+||	shop.shopLayoutImage.edit	| 〇
+||	shop.shopLayoutCommon.get	| 〇
+||	shop.shopLayoutCommon.edit	| 〇
+||	shop.naviButtonInfo.get	| 〇
+||	shop.naviButtonInfo.edit	| 〇
+||	shop.naviButton.get	| 〇
+||	shop.naviButton.edit	| 〇
 ||	shop.layoutTextSmall.get	| ×
 ||	shop.layoutLossLeader.get	| ×
 ||	shop.layoutItemMap.get	| ×
@@ -346,4 +341,11 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 |システムイベント通知サービス（System Event Notification Service）| HandleOrderNoify | 〇
 | | HandleSystemInfoNotify | 〇
 
+
+## TODO
+
+- レスポンスメッセージに埋もれているメソッドの戻り値を直接返すようにする。成功、エラーメッセージは
+  GetResponse() で別途取得できるようにオリジナルのAPIから構造変更。
+  エラーは Exception へ移行
+- 実装途中のプロジェクトのため、メソッドの引数、戻り値など、破壊的な変更が起こりえます。
 
