@@ -1,5 +1,8 @@
 ﻿using Rakuten.RMS.Api.JSON;
 using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Security.Policy;
 
 namespace Rakuten.RMS.Api.ItemAPI20
 {
@@ -9,7 +12,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
     /// </summary>
     public class ItemAPI20 : RakutenApiJsonClientBase
     {
-        public ItemAPI20(ServiceProvider provider) : base(provider)
+        internal ItemAPI20(ServiceProvider provider) : base(provider)
         {
         }
         /// <summary>
@@ -19,11 +22,11 @@ namespace Rakuten.RMS.Api.ItemAPI20
         /// <param name="manageNumber">商品管理番号</param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public GetItem Get(string manageNumber)
+        public Item Get(string manageNumber)
         {
             if (string.IsNullOrEmpty(manageNumber))
                 throw new ArgumentNullException("manageNumber");
-            return GetRequest<GetItem>(
+            return GetRequest<Item>(
                 $"https://api.rms.rakuten.co.jp/es/2.0/items/manage-numbers/{manageNumber}");
         }
         /// <summary>
@@ -80,9 +83,40 @@ namespace Rakuten.RMS.Api.ItemAPI20
         /// 指定した条件から通常商品・予約商品・定期購入商品の商品情報を検索
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void Search()
+        public SearchResult Search( SearchCondition condition )
         {
-            throw new NotImplementedException();
+            var qs = new System.Collections.Specialized.NameValueCollection();
+            if( condition != null)
+            {
+                foreach (var p in typeof(SearchCondition).GetProperties())
+                {
+                    var v = p.GetValue(condition, null)?.ToString();
+                    if (!string.IsNullOrEmpty(v))
+                        qs[p.Name] = v;
+                }
+            }
+            return GetRequest<SearchResult>("https://api.rms.rakuten.co.jp/es/2.0/items/search", queryParameters: qs);
+        }
+        /// <summary>
+        /// Search のページングを内蔵したバージョン
+        /// </summary>
+        /// <param name="condition">検索条件</param>
+        /// <returns></returns>
+        public IEnumerable<SearchResult.Item> SearchAll(SearchCondition condition)
+        {
+            if (condition == null)
+                throw new ArgumentNullException("condition");
+            condition.offset = condition.offset ?? 0;
+            condition.hits = condition.hits ?? 10;
+            while (true)
+            {
+                var result = Search(condition);
+                foreach (var item in result.results)
+                    yield return item;
+                if (result.offset + condition.hits >= result.numFound)
+                    yield break;
+                condition.offset += condition.hits;
+            }
         }
         /// <summary>
         /// items.inventory-related-settings.get

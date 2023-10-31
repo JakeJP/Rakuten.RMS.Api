@@ -6,7 +6,7 @@ namespace Rakuten.RMS.Api.ProductAPI
 {
     public class ProductAPI : RakutenApiXmlClientBase
     {
-        public ProductAPI(ServiceProvider provider) : base(provider)
+        internal ProductAPI(ServiceProvider provider) : base(provider)
         {
 
         }

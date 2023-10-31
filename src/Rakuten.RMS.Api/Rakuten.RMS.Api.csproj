@@ -61,6 +61,7 @@
     <Compile Include="ItemAPI20\ItemAPI20.cs" />
     <Compile Include="ItemAPI20\ItemAPI2Model.cs" />
     <Compile Include="ItemAPI20\RequiredAttribute.cs" />
+    <Compile Include="ItemAPI20\SearchCondition.cs" />
     <Compile Include="ItemAPI\ItemAPI.cs" />
     <Compile Include="ItemAPI\ItemModel.cs" />
     <Compile Include="LicenseManagementAPI\LicenseManagementAPI.cs" />

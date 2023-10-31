@@ -33,7 +33,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             public new int? asurakuDeliveryId { get; set; }
         }
     }
-    public class GetItem : ItemCommon
+    public class Item : ItemCommon
     {
         /// <summary>
         /// 商品管理番号

@@ -64,8 +64,10 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// </summary>
         /// <param name="orderNumberList">注文番号リスト 最大 100 件まで指定可能</param>
         /// <returns></returns>
-        public IEnumerable<OrderMessageModel> ConfirmOrder(IEnumerable<string> orderNumberList)
+        public IEnumerable<OrderMessageModel> ConfirmOrder(IList<string> orderNumberList)
         {
+            if (orderNumberList.Count > 100)
+                throw new InvalidOperationException("Number of orders must be up to 100.");
             var res = PostRequest<ConfirmOrderResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/confirmOrder/",
                 new { orderNumberList = orderNumberList });
             return res?.MessageModelList;
