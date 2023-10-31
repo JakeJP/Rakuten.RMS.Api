@@ -15,6 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{486233A6-46D1-417A-BBD8-183A9DE8D900}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{35808088-8AE8-4BEE-8E0F-DB9B3984888C}"
+	ProjectSection(SolutionItems) = preProject
+		docs\CabinetAPI.md = docs\CabinetAPI.md
+		docs\CategoryAPI20.md = docs\CategoryAPI20.md
+		docs\index.md = docs\index.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
