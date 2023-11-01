@@ -21,6 +21,7 @@ APIを通じて商品、注文、在庫などほとんどの管理を行うこ�
 
 ## 履歴
 
+- 2023-11-01 ドキュメント類追加
 - 2023-09-30 最初のコミット
 
 ## Copyright and license
@@ -64,7 +65,7 @@ serviceSecret と licenseKey はRMSのAPI設定から取得できる認証用の
 | 組み合わせ販売API（ItemBundleAPI））| GetItemBundleAPI() | (未実装)
 | [R-CabinetAPI（CabinetAPI）](https://jakejp.github.io/Rakuten.RMS.Api/CabinetAPI) | GetCabinetAPI() | [CabinetAPI.CabinetAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.cabinetapi.cabinetapi)
 | 製品API（ProductAPI）| GetProductAPI() | ProductAPI.ProductAPI
-| 楽天ペイ受注API（RakutenPayOrderAPI）| GetRakutenPayOrderAPI() | [RakutenPayOrderAPI.RakutenPayOrderService](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
+| [楽天ペイ受注API（RakutenPayOrderAPI）](https://jakejp.github.io/Rakuten.RMS.Api/RakutenPayOrderAPI)| GetRakutenPayOrderAPI() | [RakutenPayOrderAPI.RakutenPayOrderService](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
 | 購入商品API（PurchaseItemAPI）  | GetPurchaseItemAPI() | (未実装)
 | 購入申込API（ReserveAPI）  | GetReserveAPI() | (未実装)
 | 問い合わせ管理API（InquiryManagementAPI）  | GetInquiryManagementAPI() | (未実装)
@@ -167,7 +168,7 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 | |items.upsert   |〇
 | |items.patch   |〇
 | |items.delete   |〇
-| |items.search   |×
+| |items.search   |〇
 ||items.inventory-related-settings.get   |〇
 ||items.inventory-related-settings.update   |〇
 |商品API（ItemAPI）|-  |-

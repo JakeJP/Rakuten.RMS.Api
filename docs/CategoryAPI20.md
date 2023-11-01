@@ -68,3 +68,35 @@ tree パラメーターは通常 CategoryIdTree オブジェクトで、Category
 ### void UpdateCategory(string categoryId, NewCategory category)
 
 １カテゴリの詳細情報を更新。
+
+## サンプルコード
+
+### カテゴリーツリーを列挙(python)
+
+デフォルトの CategorySet である "0" のカテゴリツリーを取得
+
+```python
+sp = ServiceProvider # 初期化部分省略
+api = sp.GetCategoryAPI20()
+
+tree = api.GetCategoryTree("0")
+```
+
+### 新しいカテゴリを登録(python)
+
+```python
+from Rakuten.RMS.Api.CategoryAPI20 import NewCategory
+
+category = NewCategory()
+category.categorySetId = setId
+category.title = "TEST Category"
+categoryId = api.CreateCategory(category)
+```
+
+### `tree` から更新用の **CategoryIdTree** を作成、新しいカテゴリを追加して更新(python)
+
+```python
+id_tree = tree.ToCategoryIdTree()
+id_tree[0].Add(categoryId) # 最初のカテゴリの子供として登録
+api.UpdateCategoryTree("0", id_tree)
+```

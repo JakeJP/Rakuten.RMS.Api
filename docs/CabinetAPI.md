@@ -15,3 +15,17 @@ for f in api.GetAllFolders():
     for file in api.GetAllFiles(f.FolderId):
         print("-- [", file.FileId, "] ", file.FileName, file.FilePath, file.FileUrl, file.FileSize )
 ```
+
+### ファイルをアップロード(python)
+
+```python
+from System.IO import File
+
+fs = File.OpenRead("test.jpg")
+fileId = api.InsertFile( 0, "test", fs )
+
+fs = File.OpenRead("test.jpg")
+res = api.UpdateFile(fileId, None, None, "abcd.jpg")
+
+res = api.DeleteFile(fileId)
+```

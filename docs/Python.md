@@ -43,7 +43,6 @@ Python.Runtime.Codecs.SequenceDecoder.Register()
 Python.Runtime.Codecs.IterableDecoder.Register()
 
 parser = argparse.ArgumentParser()
-#parser.add_argument("testcase")
 parser.add_argument("-ss", "--serviceSecret", help="serviceSecret", required=True)
 parser.add_argument("-lk", "--licenseKey", help="licenseKey", required=True)
 args = parser.parse_args()
