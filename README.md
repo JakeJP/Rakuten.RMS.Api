@@ -59,14 +59,14 @@ serviceSecret と licenseKey はRMSのAPI設定から取得できる認証用の
 |:---|:---|:---
 | 商品API<br/>	[商品API 2.0（ItemAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/ItemAPI20)| GetItemAPI20() | [ItemAPI20.ItemAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.itemapi20.itemapi20)
 | カテゴリAPI<br/>	[カテゴリAPI 2.0（CategoryAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/CategoryAPI20)| GetCategoryAPI20() | [CategoryAPI20.CategoryAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.categoryapi20.categoryapi20)
-| 在庫API	在庫API 2.1（InventoryAPI 2.1）| GetInventoryAPI21() | [InventoryAPI21.RakutenInventoryServiceV21](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi21.rakuteninventoryservicev21)
-| 在庫API 2.0（InventoryAPI 2.0）| GetInventoryAPI20() | [InventoryAPI20.RakutenInventoryServiceV2](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
+| [在庫API	在庫API 2.1（InventoryAPI 2.1）](https://jakejp.github.io/Rakuten.RMS.Api/InventoryAPI21)| GetInventoryAPI21() | [InventoryAPI21.RakutenInventoryServiceV21](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi21.rakuteninventoryservicev21)
+| [在庫API 2.0（InventoryAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/InventoryAPI21)| GetInventoryAPI20() | [InventoryAPI20.RakutenInventoryServiceV2](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
 | ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0）| GetNavigationAPI20() | [NavigationAPI20.NavigationAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.navigationapi20.navigationapi20)
 | 組み合わせ販売API（ItemBundleAPI））| GetItemBundleAPI() | (未実装)
 | [R-CabinetAPI（CabinetAPI）](https://jakejp.github.io/Rakuten.RMS.Api/CabinetAPI) | GetCabinetAPI() | [CabinetAPI.CabinetAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.cabinetapi.cabinetapi)
-| 製品API（ProductAPI）| GetProductAPI() | ProductAPI.ProductAPI
+| [製品API（ProductAPI）](https://jakejp.github.io/Rakuten.RMS.Api/ProductAPI)| GetProductAPI() | [ProductAPI.ProductAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.productapi.productapi)
 | [楽天ペイ受注API（RakutenPayOrderAPI）](https://jakejp.github.io/Rakuten.RMS.Api/RakutenPayOrderAPI)| GetRakutenPayOrderAPI() | [RakutenPayOrderAPI.RakutenPayOrderService](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
-| 購入商品API（PurchaseItemAPI）  | GetPurchaseItemAPI() | (未実装)
+| [購入商品API（PurchaseItemAPI）](https://jakejp.github.io/Rakuten.RMS.Api/PurchaseItemAPI)  | GetPurchaseItemAPI() | [PurchaseItemAPI.PurchaseItemAPI]()
 | 購入申込API（ReserveAPI）  | GetReserveAPI() | (未実装)
 | 問い合わせ管理API（InquiryManagementAPI）  | GetInquiryManagementAPI() | (未実装)
 | 店舗情報API（ShopAPI）| GetShopAPI() | [ShopAPI.ShopAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.shopapi.shopapi)
@@ -171,7 +171,6 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 | |items.search   |〇
 ||items.inventory-related-settings.get   |〇
 ||items.inventory-related-settings.update   |〇
-|商品API（ItemAPI）|-  |-
 |カテゴリAPI	カテゴリAPI 2.0（CategoryAPI 2.0）| category.shop-categories.get  |〇
 ||category.shop-categories.insert |〇
 ||category.shop-categories.update |〇
@@ -181,17 +180,16 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||category.category-trees.get |〇
 ||category.category-trees.upsert |〇
 ||category.category-set-lists.get |〇
-|カテゴリAPI（CategoryAPI）| - | -
 |在庫API	在庫API 2.1（InventoryAPI 2.1）|inventories.variants.get   |〇
 ||inventories.variants.upsert   |〇
 ||inventories.variants.delete   |〇
-||inventories.bulk.get.range   |×
+||inventories.bulk.get.range   |〇
 ||inventories.bulk.get   |〇
 ||inventories.bulk.upsert   |〇
 |在庫API 2.0（InventoryAPI 2.0）|inventories.variants.get   |〇
 ||inventories.variants.upsert   |〇
 ||inventories.variants.delete   |〇
-||inventories.bulk.get.range   |×
+||inventories.bulk.get.range   |〇
 ||inventories.bulk.get   |〇
 ||inventories.bulk.upsert   |〇
 |在庫API（InventoryAPI） | - | - 
@@ -199,7 +197,6 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||genres.get   |〇
 ||genres.attributes.get   |〇
 ||genres.attributes.dictionaryValues.get |〇
-|ジャンル・タグ検索API（NavigationAPI）|-   |-
 |組み合わせ販売API（ItemBundleAPI））|ItemBundle.create   |×
 ||ItemBundle.delete   |×
 ||ItemBundle.getBundleList  |×
@@ -214,7 +211,7 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||cabinet.file.insert  |〇
 ||cabinet.file.update  |〇
 ||cabinet.folder.insert  |〇
-|製品API（ProductAPI）|product.search  |×
+|製品API（ProductAPI）|product.search  |〇
 
 ### 受注・問い合わせ管理
 
@@ -239,17 +236,17 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||simulateCouponAmount |〇
 ||getPayment|×
 |購入商品API（PurchaseItemAPI）  |searchOrderItem|×
-|| getOrderItem|×
+|| getOrderItem|〇
 |購入申込API（ReserveAPI）  |reserve.infoList.get|×
 ||reserve.earlyCommit.update|×
 |問い合わせ管理API（InquiryManagementAPI）  |inquirymngapi.counts.get|×
-||inquirymngapi.inquiries.get|×
-||inquirymngapi.inquiry.get|×
-||inquirymngapi.reply.post|×
-||inquirymngapi.attachment.post|×
-||inquirymngapi.attachment.get|×
-||inquirymngapi.inquiries.patch.read|×
-||inquirymngapi.inquiries.patch.complete/incomplete|×
+||inquirymngapi.inquiries.get|〇
+||inquirymngapi.inquiry.get|〇
+||inquirymngapi.reply.post|〇
+||inquirymngapi.attachment.post|〇
+||inquirymngapi.attachment.get|〇
+||inquirymngapi.inquiries.patch.read|〇
+||inquirymngapi.inquiries.patch.complete/incomplete|〇
 
 
 ### 店舗情報
