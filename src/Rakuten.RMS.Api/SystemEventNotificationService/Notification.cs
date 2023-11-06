@@ -5,29 +5,46 @@ using System.Xml.Serialization;
 
 namespace Rakuten.RMS.Api.SystemEventNotification
 {
-    /*
-    正常終了
-    N-000-000   正常終了しました
-
-        異常終了
-    E-400-100   配信情報に不正な値が含まれています
-    E-400-101   認証キーが一致しません
-    E-400-900   配信情報の受信処理で予期せぬエラーが発生しました
-    */
     public enum ResultCode
     {
+        /// <summary>
+        /// N-000-000   正常終了しました
+        /// </summary>
         Successful,
+        /// <summary>
+        /// E-400-100   配信情報に不正な値が含まれています
+        /// </summary>
         IllegalValues,
+        /// <summary>
+        /// E-400-101   認証キーが一致しません
+        /// </summary>
         AuthMismatch,
+        /// <summary>
+        /// E-400-900   配信情報の受信処理で予期せぬエラーが発生しました
+        /// </summary>
         UnexpectedError
     }
-
+    /// <summary>
+    /// システム通知イベント ハンドラー
+    /// </summary>
     public class Notification
     {
+        /// <summary>
+        /// HandleOrderNoify
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="response"></param>
+        /// <param name="handler"></param>
         public static void HandleOrderNoify(HttpRequest request, HttpResponse response, Func<OrderNotifyModel, ResultCode> handler)
         {
             Handle(request, response, handler);
         }
+        /// <summary>
+        /// HandleSystemInfoNotify
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="response"></param>
+        /// <param name="handler"></param>
         public static void HandleSystemInfoNotify(HttpRequest request, HttpResponse response, Func<SystemNotifyModel, ResultCode> handler)
         {
             Handle(request, response, handler);

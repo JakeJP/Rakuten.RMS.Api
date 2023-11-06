@@ -15,4 +15,13 @@ namespace Rakuten.RMS.Api.JSON
         }
         public override string Message => string.Join(", ", Errors.errors.Select(s => string.Format("{0} - {1}", s.code, s.message)));
     }
+    public class ErrorResponseException<TResult> : RakutenRMSApiException
+    {
+        public TResult Error { get; set; }
+        public ErrorResponseException(TResult error)
+        {
+            Error = error;
+        }
+        public override string Message => Error.ToString();
+    }
 }

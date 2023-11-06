@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 {
-
-    public class SearchOrderRequest
+    [DecodableObject]
+    public class SearchOrderItemRequest
     {
         /// <summary>
         /// 100: 注文確認待ち
@@ -32,15 +32,6 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public DateTime startDatetime { get; set; }
         public DateTime endDatetime { get; set; }
         public IList<int> orderTypeList { get; set; }
-        public int? settlementMethod { get; set; }
-        public string deliveryName { get; set; }
-        /// <summary>
-        /// 以下のいずれか
-        /// 0: お荷物伝票番号の指定の有無によらず取得
-        /// 1: お荷物伝票番号が未指定のものだけを取得
-        /// </summary>
-        public int? shippingNumberBlankFlag { get; set; }
-        /// 以下のいずれか
         /// 0: なし
         /// 1: 商品名
         /// 2: 商品番号
@@ -50,11 +41,23 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// 6: 送付先お名前
         public int? searchKeywordType { get; set; }
         /// <summary>
-        /// 以下の入力チェックが適用されます
         /// ・機種依存文字などの不正文字以外
         /// ・全角、半角にかかわらず32文字以下
         /// </summary>
         public string searchKeyword { get; set; }
+        public PaginationRequestModel PaginationRequestModel { get; set; }
+    }
+    [DecodableObject]
+    public class SearchOrderRequest : SearchOrderItemRequest
+    {
+        public int? settlementMethod { get; set; }
+        public string deliveryName { get; set; }
+        /// <summary>
+        /// 以下のいずれか
+        /// 0: お荷物伝票番号の指定の有無によらず取得
+        /// 1: お荷物伝票番号が未指定のものだけを取得
+        /// </summary>
+        public int? shippingNumberBlankFlag { get; set; }
         /// <summary>
         /// 以下のいずれか
         /// 0: PC/モバイル
@@ -118,8 +121,8 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// 1: 海外カゴ注文のものだけを取得
         /// </summary>
         public int? overseasFlag { get; set; }
-        public PaginationRequestModel PaginationRequestModel { get; set; }
     }
+    [DecodableObject]
     public class PaginationRequestModel
     {
         /// <summary>
@@ -132,6 +135,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public int requestPage { get; set; }
         public IList<SortModel> SortModelList { get; set; }
     }
+    [DecodableObject]
     public class SortModel
     {
         /// <summary>
@@ -174,16 +178,16 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <summary>
         /// 総結果数
         /// </summary>
-        public int totalRecordsAmount { get; set; }
+        public int? totalRecordsAmount { get; set; }
         /// <summary>
         /// 総ページ数
         /// </summary>
-        public int totalPages { get; set; }
+        public int? totalPages { get; set; }
         /// <summary>
         /// リクエストページ番号
         /// リクエストされたページ数
         /// </summary>
-        public int requestPage { get; set; }
+        public int? requestPage { get; set; }
 
     }
 
@@ -194,6 +198,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public IList<OrderMessageModel> MessageModelList { get; set; }
         public IList<OrderModel> OrderModelList { get; set; }
     }
+    [DecodableObject]
     public class OrderMessageModel : MessageModel
     {
         public string orderNumber { get; set; }
@@ -265,6 +270,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public IList<CouponModel> CouponModelList { get; set; }
         public IList<ChangeReasonModel> ChangeReasonModelList { get; set; }
     }
+    [DecodableObject]
     public class OrdererModel
     {
         public string zipCode1 { get; set; }
@@ -626,7 +632,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     {
         public IList<OrderShippingMessageModel> MessageModelList { get; set; }
     }
-
+    [DecodableObject]
     public class BasketidModel
     {
         public int basketId { get; set; }

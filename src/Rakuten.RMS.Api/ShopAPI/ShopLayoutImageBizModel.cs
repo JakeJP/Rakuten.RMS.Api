@@ -13,6 +13,7 @@ namespace Rakuten.RMS.Api.ShopAPI
         [XmlElement(Namespace = "")]
         public ShopLayoutImage shopLayoutImage { get; set; }
     }
+    [DecodableObject]
     public class ShopLayoutImage
     {
         public string signboardPath { get; set; }

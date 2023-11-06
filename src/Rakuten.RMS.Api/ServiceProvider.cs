@@ -59,15 +59,19 @@ namespace Rakuten.RMS.Api
         /// <returns></returns>
         public InventoryAPI20.RakutenInventoryServiceV2 GetInventoryAPI20()
             => new InventoryAPI20.RakutenInventoryServiceV2(this);
+#if false
         public void GetInventoryAPI() => throw new NotImplementedException();
+#endif
         /// <summary>
         /// ナビゲーションAPI ジャンル・商品属性情報検索API（NavigationAPI 2.0）
         /// </summary>
         /// <returns></returns>
         public NavigationAPI20.NavigationAPI20 GetNavigationAPI20()
             => new NavigationAPI20.NavigationAPI20(this);
+#if false
         public void GetNavigationAPI()
             => throw new NotImplementedException();
+#endif
         /// <summary>
         /// 組み合わせ販売API（ItemBundleAPI））
         /// </summary>
@@ -94,17 +98,17 @@ namespace Rakuten.RMS.Api
         /// 購入商品API（PurchaseItemAPI）
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void GetPurchaseItemAPI() => throw new NotImplementedException();
+        public PurchaseItemAPI.PurchaseItemAPI GetPurchaseItemAPI() => new PurchaseItemAPI.PurchaseItemAPI(this);
         /// <summary>
         /// 購入申込API（ReserveAPI）
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void GetReserveAPI() => throw new NotImplementedException();
+        public ReserveAPI.ReserveAPI GetReserveAPI() => new ReserveAPI.ReserveAPI(this);
         /// <summary>
         /// 問い合わせ管理API（InquiryManagementAPI）
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void GetInquiryManagementAPI() => throw new NotImplementedException();
+        public InquiryManagementAPI.InquiryManagementAPI GetInquiryManagementAPI() => new InquiryManagementAPI.InquiryManagementAPI(this);
         /// <summary>
         /// 店舗情報API（ShopAPI）
         /// </summary>

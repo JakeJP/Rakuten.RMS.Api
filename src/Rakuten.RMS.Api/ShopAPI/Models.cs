@@ -11,7 +11,8 @@ namespace Rakuten.RMS.Api.ShopAPI
     public class ShopBizApiException : RakutenRMSApiException
     {
         public ShopBizApiResponse Response { get; set; }
-        public ShopBizApiException(ShopBizApiResponse response)
+        public ShopBizApiException(ShopBizApiResponse response) : base(string.Format("[{0}] {1}", response.resultCode, 
+            string.Join(", ", response.resultMessageList.Select(s => string.Format("{0}:{1}", s.code, s.message )))))
         {
             Response = response;
         }

@@ -13,7 +13,7 @@ namespace Rakuten.RMS.Api.NavigationAPI20
         internal NavigationAPI20( ServiceProvider serviceProvider ) : base(serviceProvider ) { }
         public Version GetVersion()
             => GetRequest<VersionResult>($"https://api.rms.rakuten.co.jp/es/2.0/navigation/version")?.version;
-        public GenreResult GetGenres(long genreId, bool? showAncestors = null, bool? showSiblings = null, bool? showChildren = null )
+        public GenreResult GetGenres(long genreId = 0, bool? showAncestors = null, bool? showSiblings = null, bool? showChildren = null )
         {
             var url = $"https://api.rms.rakuten.co.jp/es/2.0/navigation/genres/{genreId}";
             var qs = new NameValueCollection();

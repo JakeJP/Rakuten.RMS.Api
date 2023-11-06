@@ -5,6 +5,7 @@ using static Rakuten.RMS.Api.ItemAPI20.ItemCommon;
 
 namespace Rakuten.RMS.Api.ItemAPI20
 {
+    [DecodableObject]
     public class InventoryRelatedSettings
     {
         [Required]

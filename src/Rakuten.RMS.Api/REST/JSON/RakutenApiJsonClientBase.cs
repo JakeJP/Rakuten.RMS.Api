@@ -4,18 +4,21 @@ using System.Net;
 using System.Text;
 using System.Collections.Specialized;
 using System.Linq;
+using Rakuten.RMS.Api.XML;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Rakuten.RMS.Api.JSON
 {
-    public class RakutenApiJsonClientBase
+    public class RakutenApiJsonClientBase : REST.RakutenApiClientBaseCommon
     {
-        protected ServiceProvider provider;
-        protected RakutenApiJsonClientBase(ServiceProvider provider)
+        protected RakutenApiJsonClientBase(ServiceProvider provider) : base(provider)
         {
-            this.provider = provider;
         }
-
         protected TResult GetRequest<TResult>(string url, string method = "GET", NameValueCollection queryParameters = null)
+            => GetRequest<TResult, ResultBase>(url, method, queryParameters);
+
+        protected TResult GetRequest<TResult,TErrorResult>(string url, string method = "GET", NameValueCollection queryParameters = null)
         {
             if( queryParameters != null && queryParameters.Count > 0)
             {
@@ -27,34 +30,14 @@ namespace Rakuten.RMS.Api.JSON
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.Method = method;
             req.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
-            var sz = new JsonSerializer();
 
-            {
-                HttpWebResponse response;
-                try
-                {
-                    response = (HttpWebResponse)req.GetResponse();
-
-                }
-                catch (WebException wex)
-                {
-                    response = (HttpWebResponse)wex.Response;
-                    if (response == null)
-                        throw wex;
-                }
-                using (var rst = response.GetResponseStream())
-                using (var _rd = new System.IO.StreamReader(rst))
-                using (var rd = new JsonTextReader(_rd))
-                {
-                    if (response.StatusCode == HttpStatusCode.OK || typeof(TResult).IsAssignableFrom(typeof(ResultBase)))
-                        return sz.Deserialize<TResult>(rd);
-                    else
-                        throw new ErrorResponseException(sz.Deserialize<ResultBase>(rd));
-                }
-            }
+            return HandleResponse<TResult,TErrorResult>(req);
 
         }
         protected TResult PostRequest<TResult>(string url, object request, string method = "POST", string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
+            => PostRequest<TResult, ResultBase>(url, request, method, dateFormtString);
+
+        protected TResult PostRequest<TResult,TErrorResult>(string url, object request, string method = "POST", string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
         {
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.ContentType = "application/json; charset=utf-8";
@@ -79,34 +62,64 @@ namespace Rakuten.RMS.Api.JSON
                     wt.Flush();
                     wt.Close();
                 }
-                WebResponse response;
-                try
-                {
-                    response = req.GetResponse();
+            }
+            return HandleResponse<TResult, TErrorResult>(req);
+               
+        }
+        protected TResult HandleResponse<TResult>(HttpWebRequest req)
+            => HandleResponse<TResult, ResultBase>(req);
 
-                }
-                catch (WebException wex)
+        protected override TResult HandleResponse<TResult,TErrorResult>(HttpWebRequest req)
+        {
+            HttpWebResponse response;
+            try
+            {
+                response = (HttpWebResponse)req.GetResponse();
+
+            }
+            catch (WebException wex)
+            {
+                response = (HttpWebResponse)wex.Response;
+                if (response == null)
+                    throw wex;
+            }
+            using (var rst = response.GetResponseStream())
+            {
+                if (typeof(TResult).IsAssignableFrom(typeof(Stream)))
+                    return (TResult)(object)rst;
+
+                using (var _rd = new StreamReader(rst))
                 {
-                    response = wex.Response;
-                }
-                using (var rst = response.GetResponseStream())
-                using (var _rd = new System.IO.StreamReader(rst))
-                {
-                    if (response.ContentType == "text/html")
+                    var ct = (response.ContentType ?? "").Split(";".ToCharArray(), 2, StringSplitOptions.RemoveEmptyEntries ).FirstOrDefault();
+                    if( ct == "application/json")
+                    {
+                        using (var rd = new JsonTextReader(_rd))
+                        {
+                            var sz = new JsonSerializer();
+
+                            if ( (int)response.StatusCode >= 200 && (int)response.StatusCode < 300 )
+                                return sz.Deserialize<TResult>(rd);
+                            else 
+                            {
+                                if( typeof(ResultBase).IsAssignableFrom(typeof(TResult)))
+                                    return sz.Deserialize<TResult>(rd);
+                                else if (typeof(ResultBase).IsAssignableFrom(typeof(TErrorResult)))
+                                    throw new ErrorResponseException((ResultBase)(object)sz.Deserialize<TErrorResult>(rd));
+                                else
+                                    throw new ErrorResponseException<TErrorResult>(sz.Deserialize<TErrorResult>(rd));
+                            }
+                            
+                        }
+                    }
+                    else
                     {
                         var text = _rd.ReadToEnd();
                         throw new Exception(text);
                     }
-                    else
-                    {
-                        using (var rd = new JsonTextReader(_rd))
-                        {
-                            return sz.Deserialize<TResult>(rd);
-                        }
-                    }
                 }
             }
         }
+
     }
 #if SYSTEMJSON // if not using Newtonsoft JSON.NET
     public class DictionaryConverter : JsonConverter

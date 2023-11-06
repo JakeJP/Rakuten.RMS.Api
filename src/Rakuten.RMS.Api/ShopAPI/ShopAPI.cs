@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Net;
 using System.Xml.Serialization;
 using Rakuten.RMS.Api.XML;
 
@@ -16,16 +17,26 @@ namespace Rakuten.RMS.Api.ShopAPI
         internal ShopAPI(ServiceProvider provider) : base(provider)
         {
         }
-        protected override TResult Get<TResult>(string url, NameValueCollection queryParameters = null)
+        protected override TResult HandleResponse<TResult, TErrorResult>(HttpWebRequest req)
         {
-            var result = base.Get<TResult>(url, queryParameters);
-            if (result is ShopBizApiResponse)
+            try
             {
-                LastResult = result as ShopBizApiResponse;
-                if (LastResult.resultCode != "N000")
-                    throw new ShopBizApiException(LastResult);
+                var result = base.HandleResponse<TResult, ShopBizApiResponse>(req);
+                if (result is ShopBizApiResponse)
+                {
+                    LastResult = result as ShopBizApiResponse;
+                    if (LastResult.resultCode != "N000")
+                        throw new ShopBizApiException(LastResult);
+                }
+                return result;
             }
-            return result;
+            catch( RakutenRMSApiException ex)
+            {
+                if (ex.Error is ShopBizApiResponse)
+                    throw new ShopBizApiException((ShopBizApiResponse)ex.Error);
+                else
+                    throw ex;
+            }
         }
         public ShopBizApiResponse LastResult { get; protected set; }
         protected override XmlSerializerNamespaces GetNamespaces()

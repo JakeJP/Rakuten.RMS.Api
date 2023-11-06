@@ -6,11 +6,13 @@ using System.ComponentModel;
 
 namespace Rakuten.RMS.Api.ItemAPI20
 {
+    [DecodableObject]
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class UpsertItem : ItemCommon
     {
 
     }
+    [DecodableObject]
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class PatchItem : ItemCommon
     {

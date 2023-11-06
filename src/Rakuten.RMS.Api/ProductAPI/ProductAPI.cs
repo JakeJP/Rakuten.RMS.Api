@@ -1,6 +1,7 @@
 ﻿using Rakuten.RMS.Api.XML;
 using System;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace Rakuten.RMS.Api.ProductAPI
 {
@@ -10,77 +11,39 @@ namespace Rakuten.RMS.Api.ProductAPI
         {
 
         }
+        public IEnumerable<SearchResponse.Product> SearchAll(SearchCondition condition)
+        {
+            while (true)
+            {
+                var result = Search(condition);
+                if (result?.Status?.SystemStatus != SystemStatus.OK )
+                    throw new XmlStatusException(result.Status);
+
+                foreach( var r in result.productSearchResult.Products )
+                    yield return r;
+                if (result.productSearchResult.Pagination.numFound <= result.productSearchResult.Pagination.offset +
+                    result.productSearchResult.Products.Count)
+                    break;
+                condition.offset = (condition.offset ?? 0) + (condition.limit ?? 30);
+                condition.limit = (condition.limit ?? 30);
+            }
+        }
+
+        /// <summary>
+        /// keyword だけで検索する簡易版
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public IEnumerable<SearchResponse.Product> SearchAll(string keyword)
+            => SearchAll(new SearchCondition { keyword = keyword });
+
+        /// <summary>
+        /// APIへの直接呼出し
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/2.0/product/search", EndpointHttpMethod.GET)]
-        public SearchResponse Search(string productId = null, string keyword = null, string genreId = null, string makerName = null, DateTime? releaseDateFrom = null, DateTime? releaseDataTo = null, string sortBy = null, int? offset = null, int? limit = null)
-        {
-            return Get<SearchResponse>(new System.Collections.Specialized.NameValueCollection
-            {
-                { "productId", productId },
-                {"keyword", keyword },
-                { "genreId", genreId},
-                {"makerName", makerName },
-                {"releaseDateFrom", releaseDateFrom?.ToString("G") },
-                {"releaseDateTo", releaseDataTo?.ToString("G") },
-                {"sortBy",sortBy },
-                {"offset",offset.ToString() },
-                {"limit", limit.ToString() }
-            });
-        }
-        [XmlRoot("result")]
-        public class SearchResponse : ResultBase
-        {
-            public class productSearchResult
-            {
-                [XmlElement("pagination")]
-                public pagination Pagination { get; set; }
-                [XmlArray("products")]
-                [XmlArrayItem("product")]
-                public product[] Products { get; set; }
-            }
-            public class pagination
-            {
-                [XmlElement("numFound")]
-                public int numFound { get; set; }
-                [XmlElement("offset")]
-                public int offset { get; set; }
-
-            }
-            public class product
-            {
-                [XmlElement("productId")]
-                public string productId { get; set; }
-                public string productNo { get; set; }
-                public int reviewCount { get; set; }
-                public decimal reviewAverage { get; set; }
-                public string reviewUrlPC { get; set; }
-                public string reviewUrlMobile { get; set; }
-                public int rank { get; set; }
-                public int rankTargetGenreId { get; set; }
-                public int rankTargetProductCount { get; set; }
-                public string genreId { get; set; }
-                public string genreName { get; set; }
-                public string productName { get; set; }
-                public string releaseDateDisp { get; set; }
-                public string detailInfo { get; set; }
-                public string brandName { get; set; }
-                public string standardPrice { get; set; }
-                [XmlIgnore]
-                public bool isOpenPrice { get; set; }
-                [XmlElement("isOpenPrice")]
-                public int isOpenPriceRaw { get; set; }
-                public int taxCategory { get; set; }
-                [XmlIgnore]
-                public DateTime releaseDate => DateTime.Parse(releaseDateRaw);
-                [XmlElement("releaseDate")]
-                public string releaseDateRaw { get; set; }
-                public string makerName { get; set; }
-                [XmlIgnore]
-                public DateTime updateDate => DateTime.Parse(updateDateRaw);
-                [XmlElement("updateDate")]
-                public string updateDateRaw { get; set; }
-            }
-
-
-        }
+        public SearchResponse Search(SearchCondition condition)
+            => Get<SearchResponse>(condition.ToNameValueCollection());
     }
 }

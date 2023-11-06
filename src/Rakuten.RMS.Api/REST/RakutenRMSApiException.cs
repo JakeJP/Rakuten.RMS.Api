@@ -8,7 +8,12 @@ namespace Rakuten.RMS.Api
     /// </summary>
     public class RakutenRMSApiException : Exception
     {
+        public object Error { get; set; }
         public RakutenRMSApiException() { }
         public RakutenRMSApiException(string message) : base(message) { }
+        public RakutenRMSApiException(string message, object error ) : base(message)
+        {
+            Error = error;
+        }
     }
 }

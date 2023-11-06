@@ -66,12 +66,12 @@ namespace Rakuten.RMS.Api.SystemEventNotification
         public DateTime OrderDate { get; set; }
 
 
-        [XmlElement("orderType")]
         ///半角数字最大1桁
         /// 1：通常購入
         /// 4：定期購入
         /// 5：頒布会
         /// 6：予約商品
+        [XmlElement("orderType")]
         public int OrderType { get; set; }
 
         [XmlElement("basketModel")]

@@ -10,6 +10,7 @@ using static Rakuten.RMS.Api.ItemAPI20.SearchResult;
 
 namespace Rakuten.RMS.Api.ItemAPI20
 {
+    [DecodableObject]
     public class SearchCondition
     {
         public string title { get; set; }

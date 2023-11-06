@@ -48,9 +48,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -63,6 +61,8 @@
     <Compile Include="CategoryAPI20\CategoryAPI20.cs" />
     <Compile Include="CategoryAPI20\Models.cs" />
     <Compile Include="CategoryAPI\CategoryAPI.cs" />
+    <Compile Include="InquiryManagementAPI\InquiryManagementAPI.cs" />
+    <Compile Include="InquiryManagementAPI\Models.cs" />
     <Compile Include="InventoryAPI20\Models.cs" />
     <Compile Include="InventoryAPI20\RakutenInventoryServiceV2.cs" />
     <Compile Include="InventoryAPI21\RakutenInventoryServiceV21.cs" />
@@ -76,13 +76,19 @@
     <Compile Include="LicenseManagementAPI\LicenseManagementAPI.cs" />
     <Compile Include="NavigationAPI20\Models.cs" />
     <Compile Include="NavigationAPI20\NavigationAPI20.cs" />
+    <Compile Include="ProductAPI\Models.cs" />
+    <Compile Include="DecodableObjectAttribute.cs" />
+    <Compile Include="PurchaseItemAPI\PurchaseItemAPI.cs" />
     <Compile Include="RakutenPayOrderAPI\RakutenPayOrderService.cs" />
     <Compile Include="RakutenPayOrderAPI\Models.cs" />
     <Compile Include="ProductAPI\ProductAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReserveAPI\Models.cs" />
+    <Compile Include="ReserveAPI\ReserveAPI.cs" />
     <Compile Include="REST\JSON\ErrorResponseException.cs" />
     <Compile Include="REST\JSON\ResultBase.cs" />
     <Compile Include="REST\JSON\ResultError.cs" />
+    <Compile Include="REST\RakutenApiClientBaseCommon.cs" />
     <Compile Include="REST\RakutenRMSApiException.cs" />
     <Compile Include="REST\XML\ErrorResponseException.cs" />
     <Compile Include="REST\XML\ErrorResult.cs" />
@@ -108,10 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CouponAPI\" />
-    <Folder Include="InquiryManagementAPI\" />
     <Folder Include="ItemBundleAPI\" />
-    <Folder Include="PurchaseItemAPI\" />
-    <Folder Include="ReserveAPI\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

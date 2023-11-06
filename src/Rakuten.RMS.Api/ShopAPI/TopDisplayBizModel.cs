@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
         [XmlElement(Namespace = "")]
         public TopDisplay topDisplay { get; set; }
     }
+    [DecodableObject]
     public class TopDisplay
     {
         public int? layoutCommonId { get; set; }

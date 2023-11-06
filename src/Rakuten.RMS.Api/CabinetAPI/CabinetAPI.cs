@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Specialized;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Xml.Serialization;
 using Rakuten.RMS.Api.XML;
@@ -334,7 +333,7 @@ namespace Rakuten.RMS.Api.CabinetAPI
 
             string contentType = "image/jpeg";
             var res = PostFile<UpdateFileResponse>("https://api.rms.rakuten.co.jp/es/1.0/cabinet/file/update", file, "file", contentType,
-                new System.Collections.Specialized.NameValueCollection {
+                new NameValueCollection {
                     {"file", "file.jpg"},
                     {"xml", sb.ToString() }
                 });

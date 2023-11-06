@@ -118,6 +118,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
                 condition.offset += condition.hits;
             }
         }
+
         /// <summary>
         /// items.inventory-related-settings.get
         /// 商品管理番号を指定し、納期に関する設定などを取得

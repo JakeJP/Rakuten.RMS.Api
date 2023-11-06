@@ -12,6 +12,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     {
         public NaviButton naviButton { get; set; }
     }
+    [DecodableObject]
     public class NaviButton
     {
         public long intervalWidth { get; set; }
@@ -19,6 +20,7 @@ namespace Rakuten.RMS.Api.ShopAPI
         public int buttonCols { get; set; }
         public int buttonColsPosition { get; set; }
     }
+    [DecodableObject]
     [XmlType(TypeName = "naviButtonBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class NaviButtonBizModelRequest
     {

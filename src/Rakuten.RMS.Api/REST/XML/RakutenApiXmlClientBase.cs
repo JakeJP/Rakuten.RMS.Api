@@ -6,22 +6,21 @@ using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Web;
 using System.Xml.Serialization;
 
 namespace Rakuten.RMS.Api.XML
 {
-    public abstract class RakutenApiXmlClientBase
+    public abstract class RakutenApiXmlClientBase : REST.RakutenApiClientBaseCommon
     {
-        ServiceProvider provider;
-        protected RakutenApiXmlClientBase(ServiceProvider provider)
+        protected RakutenApiXmlClientBase(ServiceProvider provider) : base(provider)
         {
-            this.provider = provider;
         }
         protected virtual TResult Get<TResult>(string url, NameValueCollection queryParameters = null )
         {
             var qs = queryParameters != null ? string.Join("&", queryParameters.Keys.Cast<string>()
                         .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
-                        .Select(k => k + "=" + queryParameters[k])) : null;
+                        .Select(k => k + "=" + HttpUtility.UrlEncode(queryParameters[k]))) : null;
             if (!string.IsNullOrEmpty(qs))
                 url += "?" + qs;
             return GetInternal<TResult>(url);
@@ -39,47 +38,8 @@ namespace Rakuten.RMS.Api.XML
             req.Method = "GET";
             req.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
             req.Accept = "application/xml";
-            var sz = new XmlSerializer(typeof(TResult));
-            HttpWebResponse response;
-            try
-            {
-                response = (HttpWebResponse)req.GetResponse();
-            }
-            catch (WebException wex)
-            {
-                response = (HttpWebResponse)wex.Response;
-                if (response == null)
-                    throw wex;
-            }
-            if (response != null && response.ContentType != null && 
-                new[] { "application/xml", "text/xml" }.Any( m => response.ContentType.StartsWith(m)))
-            {
-                using (var rst = response.GetResponseStream())
-                using (var _rd = new System.IO.StreamReader(rst))
-                {
-                    if (response.StatusCode == HttpStatusCode.OK 
-                        || response.StatusCode == HttpStatusCode.BadRequest
-                        || response.StatusCode == HttpStatusCode.Unauthorized )
-                    {
-                        return (TResult)sz.Deserialize(_rd);
-                    }
-                    else
-                    {
-                        sz = new XmlSerializer(typeof(ErrorResult));
-                        var errorResult = (ErrorResult)sz.Deserialize(_rd);
-                        throw new ErrorResponseException(errorResult);
-                    }
-                }
-            }
-            else
-            {
-                using (var rst = response.GetResponseStream())
-                using (var _rd = new StreamReader(rst))
-                {
-                    throw new Exception(_rd.ReadToEnd());
-                }
-            }
 
+            return HandleResponse<TResult, ErrorResult>(req);
         }
         protected virtual XmlSerializerNamespaces GetNamespaces() => null;
         protected virtual TResult Post<TResult>(object request, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null, XmlSerializerNamespaces namespaces = null)
@@ -115,58 +75,9 @@ namespace Rakuten.RMS.Api.XML
                     wt.Close();
                 }
             }
-            return HandleResponse<TResult>(req);
+            return HandleResponse<TResult,ErrorResult>(req);
         }
-
-
-        protected virtual TResult PostFile<TResult>(string url, Stream fileStream /*string file*/, string paramName, string contentType, NameValueCollection nvc)
-        {
-            string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
-            byte[] firstboundarybytes = System.Text.Encoding.ASCII.GetBytes("--" + boundary + "\r\n");
-            byte[] boundarybytes = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "\r\n");
-
-            var wr = (HttpWebRequest)WebRequest.Create(url);
-            wr.ContentType = "multipart/form-data; boundary=" + boundary;
-            wr.Method = "POST";
-            wr.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
-            //wr.Credentials = System.Net.CredentialCache.DefaultCredentials;
-
-            Stream rs = wr.GetRequestStream();
-
-            string formdataTemplate = "Content-Disposition: form-data; name=\"{0}\"\r\n\r\n{1}";
-            int line = 0;
-            foreach (string key in nvc.Keys)
-            {
-                if (key == paramName) continue;
-                if( line++ == 0 )
-                    rs.Write(firstboundarybytes, 0, firstboundarybytes.Length);
-                else
-                    rs.Write(boundarybytes, 0, boundarybytes.Length);
-                string formitem = string.Format(formdataTemplate, key, nvc[key]);
-                byte[] formitembytes = System.Text.Encoding.UTF8.GetBytes(formitem);
-                rs.Write(formitembytes, 0, formitembytes.Length);
-            }
-            if( fileStream != null)
-            {
-                rs.Write(boundarybytes, 0, boundarybytes.Length);
-
-                string headerTemplate = "Content-Disposition: form-data; name=\"{0}\"; filename=\"{1}\"\r\nContent-Type: {2}\r\n\r\n";
-                string header = string.Format(headerTemplate, paramName, nvc[paramName], contentType);
-                byte[] headerbytes = System.Text.Encoding.UTF8.GetBytes(header);
-                rs.Write(headerbytes, 0, headerbytes.Length);
-
-                fileStream.CopyTo(rs);
-            }
-
-            byte[] trailer = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "--\r\n");
-            rs.Write(trailer, 0, trailer.Length);
-            rs.Close();
-
-            return HandleResponse<TResult>(wr);
-        }
-
-
-        private TResult HandleResponse<TResult>( HttpWebRequest req)
+        protected override TResult HandleResponse<TResult,TErrorResult>( HttpWebRequest req)
         {
             HttpWebResponse response;
             try
@@ -180,19 +91,44 @@ namespace Rakuten.RMS.Api.XML
                     throw wex;
                 response = (HttpWebResponse)wex.Response;
             }
-            using (var rst = response.GetResponseStream())
-            using (var sr = new StreamReader(rst))
+            var ct = (response.ContentType ?? "").Split(";".ToCharArray(), 2, StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
+            if (new[] { "application/xml", "text/xml" }.Any(c => c == ct))
             {
-                if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.BadRequest)
+                using (var rst = response.GetResponseStream())
+                using (var sr = new StreamReader(rst))
                 {
-                    var sz = new XmlSerializer(typeof(TResult));
-                    return (TResult)sz.Deserialize(sr);
+                    if ((int)response.StatusCode >= 200 && (int)response.StatusCode < 300)
+                    {// successful
+                        var sz = new XmlSerializer(typeof(TResult));
+                        return (TResult)sz.Deserialize(sr);
+                    }
+                    else
+                    {
+                        var allText = sr.ReadToEnd();
+                        using (var ssr = new StringReader(allText))
+                        {
+                            if (typeof(ErrorResult).IsAssignableFrom(typeof(TErrorResult)))
+                            {
+                                var sz = new XmlSerializer(typeof(ErrorResult));
+                                var errorResult = (ErrorResult)sz.Deserialize(ssr);
+                                throw new RakutenRMSApiException(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
+                            }
+                            else
+                            {
+                                var sz = new XmlSerializer(typeof(TErrorResult));
+                                var errorResult = (TErrorResult)sz.Deserialize(ssr);
+                                throw new RakutenRMSApiException(errorResult.ToString(), errorResult);
+                            }
+                        }
+                    }
                 }
-                else
+            }
+            else
+            {
+                using (var rst = response.GetResponseStream())
+                using (var _rd = new StreamReader(rst))
                 {
-                    var sz = new XmlSerializer(typeof(ErrorResult));
-                    var errorResult = (ErrorResult)sz.Deserialize(sr);
-                    throw new Exception(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
+                    throw new RakutenRMSApiException(_rd.ReadToEnd());
                 }
             }
         }

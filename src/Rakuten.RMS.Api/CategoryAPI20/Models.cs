@@ -54,6 +54,7 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         public CategorySet categorySet { get; set; }
         public List<CategoryInBreadcrumbs> breadcrumbList { get; set; }
     }
+    [DecodableObject]
     public class NewCategory
     {
         public string categorySetId { get; set; }
@@ -147,6 +148,7 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         public DateTime updated { get; set; }
 
     }
+    [DecodableObject]
     public class CategoryIdWithChildren
     {
         public CategoryIdWithChildren() { }
@@ -160,10 +162,10 @@ namespace Rakuten.RMS.Api.CategoryAPI20
             var list = children ?? (children = new List<CategoryIdWithChildren>());
             list.Add(child);
         }
-        public void Add(string categoryId)
+        public void Add(string categoryId, IList<CategoryIdWithChildren> children = null )
         {
-            var list = children ?? (children = new List<CategoryIdWithChildren>());
-            list.Add(new CategoryIdWithChildren { categoryId = categoryId, children = null});
+            var list = this.children ?? (this.children = new List<CategoryIdWithChildren>());
+            list.Add(new CategoryIdWithChildren { categoryId = categoryId, children = children });
         }
 
         public string categoryId { get; set; }

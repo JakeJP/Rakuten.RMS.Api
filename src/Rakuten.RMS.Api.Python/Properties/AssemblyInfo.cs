@@ -1,14 +1,15 @@
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Rakuten.RMS.Api")]
-[assembly: AssemblyDescription("Rakuten RMS API access client library")]
+[assembly: AssemblyTitle("Rakuten.RMS.Api.Python")]
+[assembly: AssemblyDescription("Rakuten RMS API access client library Python.NET extension")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Rakuten.RMS.Api")]
+[assembly: AssemblyProduct("Rakuten.RMS.Api.Python")]
 [assembly: AssemblyCopyright("Copyright © 2023 Yokinsoft")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5dead4ce-b507-4589-8589-d8c8a204a63a")]
+[assembly: Guid("4b96b124-25a4-4b19-8fdb-0f05c6333df8")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.23.1106.31")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.23.1106.6")]
