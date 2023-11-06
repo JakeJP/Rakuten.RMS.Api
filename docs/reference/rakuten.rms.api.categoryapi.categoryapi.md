@@ -12,7 +12,7 @@ Namespace: Rakuten.RMS.Api.CategoryAPI
 public class CategoryAPI : Rakuten.RMS.Api.XML.RakutenApiXmlClientBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [CategoryAPI](./rakuten.rms.api.categoryapi.categoryapi)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [CategoryAPI](./rakuten.rms.api.categoryapi.categoryapi)
 
 ## Methods
 

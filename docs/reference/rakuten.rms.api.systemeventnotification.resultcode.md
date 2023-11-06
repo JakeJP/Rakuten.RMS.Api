@@ -17,6 +17,10 @@ Implements [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icom
 
 | Name | Value | Description |
 | --- | --: | --- |
+| Successful | 0 | N-000-000 正常終了しました |
+| IllegalValues | 1 | E-400-100 配信情報に不正な値が含まれています |
+| AuthMismatch | 2 | E-400-101 認証キーが一致しません |
+| UnexpectedError | 3 | E-400-900 配信情報の受信処理で予期せぬエラーが発生しました |
 
 ---
 

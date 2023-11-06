@@ -12,7 +12,7 @@ Namespace: Rakuten.RMS.Api.CategoryAPI20
 public class CategoryAPI20 : Rakuten.RMS.Api.JSON.RakutenApiJsonClientBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase) → [CategoryAPI20](./rakuten.rms.api.categoryapi20.categoryapi20)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase) → [CategoryAPI20](./rakuten.rms.api.categoryapi20.categoryapi20)
 
 ## Methods
 

@@ -114,12 +114,6 @@ public RakutenInventoryServiceV2 GetInventoryAPI20()
 
 [RakutenInventoryServiceV2](./rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)<br>
 
-### **GetInventoryAPI()**
-
-```csharp
-public void GetInventoryAPI()
-```
-
 ### **GetNavigationAPI20()**
 
 ナビゲーションAPI ジャンル・商品属性情報検索API（NavigationAPI 2.0）
@@ -131,12 +125,6 @@ public NavigationAPI20 GetNavigationAPI20()
 #### Returns
 
 [NavigationAPI20](./rakuten.rms.api.navigationapi20.navigationapi20)<br>
-
-### **GetNavigationAPI()**
-
-```csharp
-public void GetNavigationAPI()
-```
 
 ### **GetItemBundleAPI()**
 
@@ -191,8 +179,12 @@ public RakutenPayOrderService GetRakutenPayOrderAPI()
 購入商品API（PurchaseItemAPI）
 
 ```csharp
-public void GetPurchaseItemAPI()
+public PurchaseItemAPI GetPurchaseItemAPI()
 ```
+
+#### Returns
+
+[PurchaseItemAPI](./rakuten.rms.api.purchaseitemapi.purchaseitemapi)<br>
 
 #### Exceptions
 
@@ -203,8 +195,12 @@ public void GetPurchaseItemAPI()
 購入申込API（ReserveAPI）
 
 ```csharp
-public void GetReserveAPI()
+public ReserveAPI GetReserveAPI()
 ```
+
+#### Returns
+
+[ReserveAPI](./rakuten.rms.api.reserveapi.reserveapi)<br>
 
 #### Exceptions
 
@@ -215,8 +211,12 @@ public void GetReserveAPI()
 問い合わせ管理API（InquiryManagementAPI）
 
 ```csharp
-public void GetInquiryManagementAPI()
+public InquiryManagementAPI GetInquiryManagementAPI()
 ```
+
+#### Returns
+
+[InquiryManagementAPI](./rakuten.rms.api.inquirymanagementapi.inquirymanagementapi)<br>
 
 #### Exceptions
 

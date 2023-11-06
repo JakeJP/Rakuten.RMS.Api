@@ -94,6 +94,26 @@ public List<ResultError> errors { get; set; }
 public InventorySkuUpsert()
 ```
 
+### **InventorySkuUpsert(String, String, UpsertMode, Int32, OperationLeadTime, IList&lt;Int32&gt;)**
+
+```csharp
+public InventorySkuUpsert(string manageNumber, string variantId, UpsertMode mode, int quantity, OperationLeadTime operationLeadTime, IList<int> shipFromIds)
+```
+
+#### Parameters
+
+`manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`variantId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`mode` [UpsertMode](./rakuten.rms.api.inventoryapi20.upsertmode)<br>
+
+`quantity` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+`operationLeadTime` [OperationLeadTime](./rakuten.rms.api.inventoryapi20.operationleadtime)<br>
+
+`shipFromIds` [IList&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
 ---
 
 [`< Back`](./)

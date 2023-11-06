@@ -25,6 +25,16 @@ public XmlStatus Status { get; set; }
 
 [XmlStatus](./rakuten.rms.api.xml.xmlstatus)<br>
 
+### **Error**
+
+```csharp
+public object Error { get; set; }
+```
+
+#### Property Value
+
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
+
 ### **TargetSite**
 
 ```csharp

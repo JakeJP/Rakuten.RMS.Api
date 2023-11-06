@@ -29,14 +29,9 @@
 sp = ServiceProvider # 初期設定省略
 api = sp.GetItemAPI20()
 
-from Rakuten.RMS.Api.ItemAPI20 import SearchCondition
-
-search = SearchCondition()
-search.manageNumber = ""
-
-result = api.SearchAll( search )
+result = api.SearchAll( {"manageNumber": ""} )
 for item in result:
-    print( "[", item.item.manageNumber, "] [", item.item.itemNumber, "]", item.item.title )
+    print( f"[{item.item.manageNumber}] [{item.item.itemNumber}] {item.item.title}" )
 
 ```
 

@@ -25,6 +25,16 @@ public ShopBizApiResponse Response { get; set; }
 
 [ShopBizApiResponse](./rakuten.rms.api.shopapi.shopbizapiresponse)<br>
 
+### **Error**
+
+```csharp
+public object Error { get; set; }
+```
+
+#### Property Value
+
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
+
 ### **TargetSite**
 
 ```csharp

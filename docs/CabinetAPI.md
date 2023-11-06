@@ -25,7 +25,7 @@ fs = File.OpenRead("test.jpg")
 fileId = api.InsertFile( 0, "test", fs )
 
 fs = File.OpenRead("test.jpg")
-res = api.UpdateFile(fileId, None, None, "abcd.jpg")
+res = api.UpdateFile(fileId, filePath = "abcd.jpg")
 
 res = api.DeleteFile(fileId)
 ```

@@ -28,6 +28,29 @@ foreach( var orderNumber in searchResult.orderNumberList)
 ```
 
 ### 検索から最初の１注文の詳細を取得(python)
+```python
+sp = ServiceProvider # 初期化部分省略
+api = sp.GetRakutenPayOrderAPI()
+
+result = api.SearchOrder({
+    "dateType": 1,
+    "orderProgressList": [100,200,300],
+    "startDatetime", datetime.datetime.now() + datetime.timedelta(-60),
+    "endDatetime": datetime.datetime.now() })
+
+for m in result.MessageModelList:
+    print(m.messageType, m.messageCode, m.message)
+
+if( result.orderNumberList ):
+    # 0番目の注文詳細を取得
+    orders = api.GetOrder( [result.orderNumberList[0]] )
+    for order in orders.OrderModelList:
+        # order に１注文の詳細が格納
+        ...
+
+```
+
+Python 拡張ライブラリを使わない場合
 
 ```python
 sp = ServiceProvider # 初期化部分省略

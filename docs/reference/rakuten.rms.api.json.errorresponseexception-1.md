@@ -2,28 +2,32 @@
 
 ---
 
-# ErrorResponseException
+# ErrorResponseException&lt;TResult&gt;
 
-Namespace: Rakuten.RMS.Api.XML
+Namespace: Rakuten.RMS.Api.JSON
 
 ```csharp
-public class ErrorResponseException : Rakuten.RMS.Api.RakutenRMSApiException, System.Runtime.Serialization.ISerializable
+public class ErrorResponseException<TResult> : Rakuten.RMS.Api.RakutenRMSApiException, System.Runtime.Serialization.ISerializable
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception) → [RakutenRMSApiException](./rakuten.rms.api.rakutenrmsapiexception) → [ErrorResponseException](./rakuten.rms.api.xml.errorresponseexception)<br>
+#### Type Parameters
+
+`TResult`<br>
+
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception) → [RakutenRMSApiException](./rakuten.rms.api.rakutenrmsapiexception) → [ErrorResponseException&lt;TResult&gt;](./rakuten.rms.api.json.errorresponseexception-1)<br>
 Implements [ISerializable](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.iserializable)
 
 ## Properties
 
-### **Errors**
+### **Error**
 
 ```csharp
-public ErrorResult Errors { get; set; }
+public TResult Error { get; set; }
 ```
 
 #### Property Value
 
-[ErrorResult](./rakuten.rms.api.xml.errorresult)<br>
+TResult<br>
 
 ### **Message**
 
@@ -117,15 +121,15 @@ public string StackTrace { get; }
 
 ## Constructors
 
-### **ErrorResponseException(ErrorResult)**
+### **ErrorResponseException(TResult)**
 
 ```csharp
-public ErrorResponseException(ErrorResult error)
+public ErrorResponseException(TResult error)
 ```
 
 #### Parameters
 
-`error` [ErrorResult](./rakuten.rms.api.xml.errorresult)<br>
+`error` TResult<br>
 
 ---
 

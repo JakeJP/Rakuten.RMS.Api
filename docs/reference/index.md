@@ -2,6 +2,8 @@
 
 ## Rakuten.RMS.Api
 
+[DecodableObjectAttribute](./rakuten.rms.api.decodableobjectattribute)
+
 [RakutenRMSApiException](./rakuten.rms.api.rakutenrmsapiexception)
 
 [ServiceProvider](./rakuten.rms.api.serviceprovider)
@@ -92,6 +94,28 @@
 
 [NewCategory](./rakuten.rms.api.categoryapi20.newcategory)
 
+## Rakuten.RMS.Api.InquiryManagementAPI
+
+[CountResponse](./rakuten.rms.api.inquirymanagementapi.countresponse)
+
+[GetInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.getinquiriesresponse)
+
+[GetInquiryResponse](./rakuten.rms.api.inquirymanagementapi.getinquiryresponse)
+
+[Inquiry](./rakuten.rms.api.inquirymanagementapi.inquiry)
+
+[InquiryErrorResponse](./rakuten.rms.api.inquirymanagementapi.inquiryerrorresponse)
+
+[InquiryManagementAPI](./rakuten.rms.api.inquirymanagementapi.inquirymanagementapi)
+
+[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)
+
+[PostAttachmentResponse](./rakuten.rms.api.inquirymanagementapi.postattachmentresponse)
+
+[ReplyResponse](./rakuten.rms.api.inquirymanagementapi.replyresponse)
+
+[ReplyResult](./rakuten.rms.api.inquirymanagementapi.replyresult)
+
 ## Rakuten.RMS.Api.InventoryAPI20
 
 [BulkGetResult](./rakuten.rms.api.inventoryapi20.bulkgetresult)
@@ -158,6 +182,8 @@
 
 [ErrorResponseException](./rakuten.rms.api.json.errorresponseexception)
 
+[ErrorResponseException&lt;TResult&gt;](./rakuten.rms.api.json.errorresponseexception-1)
+
 [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase)
 
 [ResultBase](./rakuten.rms.api.json.resultbase)
@@ -203,6 +229,14 @@
 ## Rakuten.RMS.Api.ProductAPI
 
 [ProductAPI](./rakuten.rms.api.productapi.productapi)
+
+[SearchCondition](./rakuten.rms.api.productapi.searchcondition)
+
+[SearchResponse](./rakuten.rms.api.productapi.searchresponse)
+
+## Rakuten.RMS.Api.PurchaseItemAPI
+
+[PurchaseItemAPI](./rakuten.rms.api.purchaseitemapi.purchaseitemapi)
 
 ## Rakuten.RMS.Api.RakutenPayOrderAPI
 
@@ -250,6 +284,8 @@
 
 [RakutenPayOrderService](./rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
 
+[SearchOrderItemRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderitemrequest)
+
 [SearchOrderRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderrequest)
 
 [SearchOrderResponse](./rakuten.rms.api.rakutenpayorderapi.searchorderresponse)
@@ -275,6 +311,16 @@
 [UpdateOrderSubStatusResponse](./rakuten.rms.api.rakutenpayorderapi.updateordersubstatusresponse)
 
 [WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)
+
+## Rakuten.RMS.Api.ReserveAPI
+
+[InfoListRequest](./rakuten.rms.api.reserveapi.infolistrequest)
+
+[ReserveAPI](./rakuten.rms.api.reserveapi.reserveapi)
+
+## Rakuten.RMS.Api.REST
+
+[RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon)
 
 ## Rakuten.RMS.Api.ShopAPI
 

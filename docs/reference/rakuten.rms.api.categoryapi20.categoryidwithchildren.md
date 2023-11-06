@@ -66,15 +66,17 @@ public void Add(CategoryIdWithChildren child)
 
 `child` [CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)<br>
 
-### **Add(String)**
+### **Add(String, IList&lt;CategoryIdWithChildren&gt;)**
 
 ```csharp
-public void Add(string categoryId)
+public void Add(string categoryId, IList<CategoryIdWithChildren> children)
 ```
 
 #### Parameters
 
 `categoryId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`children` [IList&lt;CategoryIdWithChildren&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
 ---
 

@@ -12,7 +12,7 @@ R-CabinetAPI（CabinetAPI）
 public class CabinetAPI : Rakuten.RMS.Api.XML.RakutenApiXmlClientBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [CabinetAPI](./rakuten.rms.api.cabinetapi.cabinetapi)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [CabinetAPI](./rakuten.rms.api.cabinetapi.cabinetapi)
 
 ## Methods
 

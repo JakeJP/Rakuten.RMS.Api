@@ -85,12 +85,7 @@ tree = api.GetCategoryTree("0")
 ### 新しいカテゴリを登録(python)
 
 ```python
-from Rakuten.RMS.Api.CategoryAPI20 import NewCategory
-
-category = NewCategory()
-category.categorySetId = setId
-category.title = "TEST Category"
-categoryId = api.CreateCategory(category)
+categoryId = api.CreateCategory({ "categorySetId": "0", "title": "TEST Cateogry" })
 ```
 
 ### `tree` から更新用の **CategoryIdTree** を作成、新しいカテゴリを追加して更新(python)

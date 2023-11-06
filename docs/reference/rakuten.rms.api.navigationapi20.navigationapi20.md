@@ -12,7 +12,7 @@ Namespace: Rakuten.RMS.Api.NavigationAPI20
 public class NavigationAPI20 : Rakuten.RMS.Api.JSON.RakutenApiJsonClientBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase) → [NavigationAPI20](./rakuten.rms.api.navigationapi20.navigationapi20)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase) → [NavigationAPI20](./rakuten.rms.api.navigationapi20.navigationapi20)
 
 ## Methods
 

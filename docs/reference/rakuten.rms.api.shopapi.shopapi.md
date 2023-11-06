@@ -12,7 +12,7 @@ GetLastResult()
 public class ShopAPI : Rakuten.RMS.Api.XML.RakutenApiXmlClientBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [ShopAPI](./rakuten.rms.api.shopapi.shopapi)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [ShopAPI](./rakuten.rms.api.shopapi.shopapi)
 
 ## Fields
 
@@ -36,21 +36,21 @@ public ShopBizApiResponse LastResult { get; protected set; }
 
 ## Methods
 
-### **Get&lt;TResult&gt;(String, NameValueCollection)**
+### **HandleResponse&lt;TResult, TErrorResult&gt;(HttpWebRequest)**
 
 ```csharp
-protected TResult Get<TResult>(string url, NameValueCollection queryParameters)
+protected TResult HandleResponse<TResult, TErrorResult>(HttpWebRequest req)
 ```
 
 #### Type Parameters
 
 `TResult`<br>
 
+`TErrorResult`<br>
+
 #### Parameters
 
-`url` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`queryParameters` NameValueCollection<br>
+`req` HttpWebRequest<br>
 
 #### Returns
 

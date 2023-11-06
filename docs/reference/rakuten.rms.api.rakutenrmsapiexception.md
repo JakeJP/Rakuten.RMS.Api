@@ -18,6 +18,16 @@ Implements [ISerializable](https://docs.microsoft.com/en-us/dotnet/api/system.ru
 
 ## Properties
 
+### **Error**
+
+```csharp
+public object Error { get; set; }
+```
+
+#### Property Value
+
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
+
 ### **TargetSite**
 
 ```csharp
@@ -115,6 +125,18 @@ public RakutenRMSApiException(string message)
 #### Parameters
 
 `message` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### **RakutenRMSApiException(String, Object)**
+
+```csharp
+public RakutenRMSApiException(string message, object error)
+```
+
+#### Parameters
+
+`message` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`error` [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
 
 ---
 

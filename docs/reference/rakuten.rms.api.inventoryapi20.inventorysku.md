@@ -52,6 +52,18 @@ public List<ResultError> errors { get; set; }
 public InventorySku()
 ```
 
+### **InventorySku(String, String)**
+
+```csharp
+public InventorySku(string manageNumber, string variantId)
+```
+
+#### Parameters
+
+`manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`variantId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ---
 
 [`< Back`](./)

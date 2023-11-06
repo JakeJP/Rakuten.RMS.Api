@@ -19,24 +19,24 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 総結果数
 
 ```csharp
-public int totalRecordsAmount { get; set; }
+public Nullable<int> totalRecordsAmount { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
 ### **totalPages**
 
 総ページ数
 
 ```csharp
-public int totalPages { get; set; }
+public Nullable<int> totalPages { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
 ### **requestPage**
 
@@ -44,12 +44,12 @@ public int totalPages { get; set; }
  リクエストされたページ数
 
 ```csharp
-public int requestPage { get; set; }
+public Nullable<int> requestPage { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
 ## Constructors
 

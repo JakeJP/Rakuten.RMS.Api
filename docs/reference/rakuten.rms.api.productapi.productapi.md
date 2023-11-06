@@ -10,39 +10,55 @@ Namespace: Rakuten.RMS.Api.ProductAPI
 public class ProductAPI : Rakuten.RMS.Api.XML.RakutenApiXmlClientBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [ProductAPI](./rakuten.rms.api.productapi.productapi)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase) → [ProductAPI](./rakuten.rms.api.productapi.productapi)
 
 ## Methods
 
-### **Search(String, String, String, String, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
+### **SearchAll(SearchCondition)**
 
 ```csharp
-public SearchResponse Search(string productId, string keyword, string genreId, string makerName, Nullable<DateTime> releaseDateFrom, Nullable<DateTime> releaseDataTo, string sortBy, Nullable<int> offset, Nullable<int> limit)
+public IEnumerable<Product> SearchAll(SearchCondition condition)
 ```
 
 #### Parameters
 
-`productId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`keyword` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`genreId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`makerName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`releaseDateFrom` [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`releaseDataTo` [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`sortBy` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+`condition` [SearchCondition](./rakuten.rms.api.productapi.searchcondition)<br>
 
 #### Returns
 
-[SearchResponse](./rakuten.rms.api.productapi.productapi.searchresponse)<br>
+[IEnumerable&lt;Product&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+
+### **SearchAll(String)**
+
+keyword だけで検索する簡易版
+
+```csharp
+public IEnumerable<Product> SearchAll(string keyword)
+```
+
+#### Parameters
+
+`keyword` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+#### Returns
+
+[IEnumerable&lt;Product&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+
+### **Search(SearchCondition)**
+
+APIへの直接呼出し
+
+```csharp
+public SearchResponse Search(SearchCondition condition)
+```
+
+#### Parameters
+
+`condition` [SearchCondition](./rakuten.rms.api.productapi.searchcondition)<br>
+
+#### Returns
+
+[SearchResponse](./rakuten.rms.api.productapi.searchresponse)<br>
 
 ---
 

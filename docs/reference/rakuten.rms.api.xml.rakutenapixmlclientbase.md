@@ -7,10 +7,10 @@
 Namespace: Rakuten.RMS.Api.XML
 
 ```csharp
-public abstract class RakutenApiXmlClientBase
+public abstract class RakutenApiXmlClientBase : Rakuten.RMS.Api.REST.RakutenApiClientBaseCommon
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon) → [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase)
 
 ## Methods
 
@@ -86,27 +86,21 @@ protected TResult Post<TResult>(object request, string methodName, XmlSerializer
 
 TResult<br>
 
-### **PostFile&lt;TResult&gt;(String, Stream, String, String, NameValueCollection)**
+### **HandleResponse&lt;TResult, TErrorResult&gt;(HttpWebRequest)**
 
 ```csharp
-protected TResult PostFile<TResult>(string url, Stream fileStream, string paramName, string contentType, NameValueCollection nvc)
+protected TResult HandleResponse<TResult, TErrorResult>(HttpWebRequest req)
 ```
 
 #### Type Parameters
 
 `TResult`<br>
 
+`TErrorResult`<br>
+
 #### Parameters
 
-`url` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`fileStream` [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream)<br>
-
-`paramName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`contentType` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`nvc` NameValueCollection<br>
+`req` HttpWebRequest<br>
 
 #### Returns
 
