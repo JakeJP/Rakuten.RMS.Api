@@ -25,6 +25,7 @@ APIを通じて商品、注文、在庫などほとんどの管理を行うこ�
 ServiceProvider クラスがクライアントの認証情報とカテゴリ別のAPIへアクセスするクラスへのアクセスを提供します。
 
 ```csharp
+namespace Rakuten.RMS.Api;
 var provider = new ServiceProvider( serviceSecret, licenseKey );
 ```
 
@@ -110,6 +111,13 @@ APIグループごとに、設計上の違いから、メソッドの命名方�
 [RakutenPayOrderAPI](./RakutenPayOrderAPI)
 
 [RakutenPayOrderService クラスリファレンス](./reference/rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
+
+
+## Rakuten.RMS.Api.PurchaseItemAPI
+
+[購入商品API（PurchaseItemAPI）](./PurchaseItemAPI)
+
+[PurchaseItemAPI クラスリファレンス](./reference/rakuten.rms.api.purchaseitemapi.purchaseitemapi)
 
 ## Rakuten.RMS.Api.ShopAPI
 

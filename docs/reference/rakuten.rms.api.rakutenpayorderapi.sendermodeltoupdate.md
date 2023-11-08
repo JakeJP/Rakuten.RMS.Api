@@ -2,29 +2,17 @@
 
 ---
 
-# SenderModel
+# SenderModelToUpdate
 
 Namespace: Rakuten.RMS.Api.RakutenPayOrderAPI
 
 ```csharp
-public class SenderModel : SenderModelToUpdate
+public class SenderModelToUpdate
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [SenderModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.sendermodeltoupdate) → [SenderModel](./rakuten.rms.api.rakutenpayorderapi.sendermodel)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [SenderModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.sendermodeltoupdate)
 
 ## Properties
-
-### **isolatedIslandFlag**
-
-version=2
-
-```csharp
-public Nullable<int> isolatedIslandFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
 ### **zipCode1**
 
@@ -148,10 +136,10 @@ public string phoneNumber3 { get; set; }
 
 ## Constructors
 
-### **SenderModel()**
+### **SenderModelToUpdate()**
 
 ```csharp
-public SenderModel()
+public SenderModelToUpdate()
 ```
 
 ---

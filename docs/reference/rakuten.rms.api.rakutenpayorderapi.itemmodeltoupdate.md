@@ -2,163 +2,17 @@
 
 ---
 
-# ItemModel
+# ItemModelToUpdate
 
 Namespace: Rakuten.RMS.Api.RakutenPayOrderAPI
 
 ```csharp
-public class ItemModel : ItemModelToUpdate
+public class ItemModelToUpdate
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [ItemModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.itemmodeltoupdate) → [ItemModel](./rakuten.rms.api.rakutenpayorderapi.itemmodel)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [ItemModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.itemmodeltoupdate)
 
 ## Properties
-
-### **itemId**
-
-```csharp
-public int itemId { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **manageNumber**
-
-```csharp
-public string manageNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **pointRate**
-
-```csharp
-public int pointRate { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **pointType**
-
-```csharp
-public int pointType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **inventoryType**
-
-```csharp
-public int inventoryType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **delvdateInfo**
-
-```csharp
-public string delvdateInfo { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **restoreInventoryFlag**
-
-在庫連動オプション
- 0: 商品の設定に従う
- 1: 在庫連動する
- 2: 在庫連動しない
-
-```csharp
-public int restoreInventoryFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **dealFlag**
-
-version=2
-
-```csharp
-public int dealFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **drugFlag**
-
-version=2
-
-```csharp
-public int drugFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **deleteItemFlag**
-
-商品削除フラグ
- 0: 商品を削除しない
- 1: 商品を削除する
-
-```csharp
-public int deleteItemFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **priceTaxIncl**
-
-商品毎税込価格
- ・税込商品の場合：
- 商品単価＝商品毎税込価格
- ・税別商品の場合：
- 商品単価＝税別価格
- 商品毎税込単価＝税込価格（商品単価* (1+税率））
- 端数処理は、店舗設定に準ずる
-
-```csharp
-public int priceTaxIncl { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **isSingleItemShipping**
-
-以下のいずれか
- 0: 単品配送ではない
- 1: 単品配送である
- ※Request Parameterの「version」に「4」以降の値を指定すると取得可能
-
-```csharp
-public int isSingleItemShipping { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
 ### **itemDetailId**
 
@@ -307,10 +161,10 @@ public IList<SkuModel> SkuModelList { get; set; }
 
 ## Constructors
 
-### **ItemModel()**
+### **ItemModelToUpdate()**
 
 ```csharp
-public ItemModel()
+public ItemModelToUpdate()
 ```
 
 ---

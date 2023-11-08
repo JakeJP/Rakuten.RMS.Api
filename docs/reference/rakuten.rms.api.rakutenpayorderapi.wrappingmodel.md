@@ -67,12 +67,12 @@ public int includeTaxFlag { get; set; }
 ラッピング削除フラグ
 
 ```csharp
-public int deleteWrappingFlag { get; set; }
+public Nullable<int> deleteWrappingFlag { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
 ## Constructors
 

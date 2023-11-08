@@ -450,6 +450,16 @@ public string _operator { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### **Operator**
+
+```csharp
+public string Operator { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ### **mailPlugSentence**
 
 ```csharp

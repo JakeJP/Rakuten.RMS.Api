@@ -88,7 +88,13 @@
 
 [CategoryWithBreadcrumbs](./rakuten.rms.api.categoryapi20.categorywithbreadcrumbs)
 
+[CategoryWithBreadcrumsForMapping](./rakuten.rms.api.categoryapi20.categorywithbreadcrumsformapping)
+
 [CategoryWithChildren](./rakuten.rms.api.categoryapi20.categorywithchildren)
+
+[GetItemMappingResponse](./rakuten.rms.api.categoryapi20.getitemmappingresponse)
+
+[GetItemMappingWithBreadcrumbResponse](./rakuten.rms.api.categoryapi20.getitemmappingwithbreadcrumbresponse)
 
 [Layout](./rakuten.rms.api.categoryapi20.layout)
 
@@ -240,15 +246,15 @@
 
 ## Rakuten.RMS.Api.RakutenPayOrderAPI
 
-[BasketidModel](./rakuten.rms.api.rakutenpayorderapi.basketidmodel)
+[AdditionalFeeModel](./rakuten.rms.api.rakutenpayorderapi.additionalfeemodel)
 
-[CancelOrderAfterShippingResponse](./rakuten.rms.api.rakutenpayorderapi.cancelorderaftershippingresponse)
+[BasketidModel](./rakuten.rms.api.rakutenpayorderapi.basketidmodel)
 
 [ChangeReasonModel](./rakuten.rms.api.rakutenpayorderapi.changereasonmodel)
 
-[ConfirmOrderResponse](./rakuten.rms.api.rakutenpayorderapi.confirmorderresponse)
-
 [CouponModel](./rakuten.rms.api.rakutenpayorderapi.couponmodel)
+
+[CouponModelBase](./rakuten.rms.api.rakutenpayorderapi.couponmodelbase)
 
 [DeliveryCVSModel](./rakuten.rms.api.rakutenpayorderapi.deliverycvsmodel)
 
@@ -262,13 +268,21 @@
 
 [ItemModel](./rakuten.rms.api.rakutenpayorderapi.itemmodel)
 
+[ItemModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.itemmodeltoupdate)
+
 [MessageModel](./rakuten.rms.api.rakutenpayorderapi.messagemodel)
 
 [OrdererModel](./rakuten.rms.api.rakutenpayorderapi.orderermodel)
 
 [OrderMessageModel](./rakuten.rms.api.rakutenpayorderapi.ordermessagemodel)
 
+[OrderMessageResponse](./rakuten.rms.api.rakutenpayorderapi.ordermessageresponse)
+
 [OrderModel](./rakuten.rms.api.rakutenpayorderapi.ordermodel)
+
+[OrderModelForPayment](./rakuten.rms.api.rakutenpayorderapi.ordermodelforpayment)
+
+[OrderSenderRequest](./rakuten.rms.api.rakutenpayorderapi.ordersenderrequest)
 
 [OrderShippingMessageModel](./rakuten.rms.api.rakutenpayorderapi.ordershippingmessagemodel)
 
@@ -280,9 +294,25 @@
 
 [PaginationResponseModel](./rakuten.rms.api.rakutenpayorderapi.paginationresponsemodel)
 
+[PaymentBankModel](./rakuten.rms.api.rakutenpayorderapi.paymentbankmodel)
+
+[PaymentCardModel](./rakuten.rms.api.rakutenpayorderapi.paymentcardmodel)
+
+[PaymentModel](./rakuten.rms.api.rakutenpayorderapi.paymentmodel)
+
+[PaymentMultiModel](./rakuten.rms.api.rakutenpayorderapi.paymentmultimodel)
+
+[PaymentPayAfterModel](./rakuten.rms.api.rakutenpayorderapi.paymentpayaftermodel)
+
+[PaymentPaypalModel](./rakuten.rms.api.rakutenpayorderapi.paymentpaypalmodel)
+
 [PointModel](./rakuten.rms.api.rakutenpayorderapi.pointmodel)
 
 [RakutenPayOrderService](./rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
+
+[RefundModel](./rakuten.rms.api.rakutenpayorderapi.refundmodel)
+
+[ResultShippingModel](./rakuten.rms.api.rakutenpayorderapi.resultshippingmodel)
 
 [SearchOrderItemRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderitemrequest)
 
@@ -291,6 +321,8 @@
 [SearchOrderResponse](./rakuten.rms.api.rakutenpayorderapi.searchorderresponse)
 
 [SenderModel](./rakuten.rms.api.rakutenpayorderapi.sendermodel)
+
+[SenderModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.sendermodeltoupdate)
 
 [SettlementModel](./rakuten.rms.api.rakutenpayorderapi.settlementmodel)
 
@@ -304,11 +336,19 @@
 
 [SubStatusModel](./rakuten.rms.api.rakutenpayorderapi.substatusmodel)
 
+[UpdateOrderMemoRequest](./rakuten.rms.api.rakutenpayorderapi.updateordermemorequest)
+
+[UpdateOrderMemoResponse](./rakuten.rms.api.rakutenpayorderapi.updateordermemoresponse)
+
+[UpdateOrderRemarksRequest](./rakuten.rms.api.rakutenpayorderapi.updateorderremarksrequest)
+
+[UpdateOrderRemarksResponse](./rakuten.rms.api.rakutenpayorderapi.updateorderremarksresponse)
+
 [UpdateOrderShippingAsyncResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingasyncresponse)
 
 [UpdateOrderShippingResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresponse)
 
-[UpdateOrderSubStatusResponse](./rakuten.rms.api.rakutenpayorderapi.updateordersubstatusresponse)
+[UpdateOrderShippingResultResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresultresponse)
 
 [WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)
 
@@ -316,7 +356,13 @@
 
 [InfoListRequest](./rakuten.rms.api.reserveapi.infolistrequest)
 
+[InfoListResponse](./rakuten.rms.api.reserveapi.infolistresponse)
+
 [ReserveAPI](./rakuten.rms.api.reserveapi.reserveapi)
+
+[ReserveKeyListModel](./rakuten.rms.api.reserveapi.reservekeylistmodel)
+
+[ReserveUpdateResponse](./rakuten.rms.api.reserveapi.reserveupdateresponse)
 
 ## Rakuten.RMS.Api.REST
 

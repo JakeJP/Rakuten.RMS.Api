@@ -58,7 +58,7 @@ sp = ServiceProvider(args.serviceSecret, args.licenseKey)
 RakutenPay 注文APIを取得して、注文を検索する例:
 
 ```python
-orderApi = sp.GetRakutenPayOrderAPI()
+api = sp.GetRakutenPayOrderAPI()
 
 from Rakuten.RMS.Api.RakutenPayOrderAPI import SearchOrderRequest
 from System import DateTime

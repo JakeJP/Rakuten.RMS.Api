@@ -123,7 +123,7 @@ public IEnumerable<OrderShippingMessageModel> UpdateOrderShipping(string orderNu
 ・配送方法（宅急便・国際配送・ゆうパック・自社配送・バイク便・その他配送方法１・その他配送方法２・その他配送方法３
 
 ```csharp
-public IEnumerable<OrderMessageModel> UpdateOrderDelivery(string orderNumber, string deliveryName)
+public IList<OrderMessageModel> UpdateOrderDelivery(string orderNumber, string deliveryName)
 ```
 
 #### Parameters
@@ -132,12 +132,13 @@ public IEnumerable<OrderMessageModel> UpdateOrderDelivery(string orderNumber, st
 注文番号
 
 `deliveryName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+店舗設定で設定した配送方法を指定
 
 #### Returns
 
-[IEnumerable&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IList&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **UpdateOrderOrderer(String, OrdererModel)**
+### **UpdateOrderOrderer(String, OrdererModel, Nullable&lt;Int32&gt;)**
 
 ・注文者 - 名前
  ・注文者 - フリガナ
@@ -148,7 +149,7 @@ public IEnumerable<OrderMessageModel> UpdateOrderDelivery(string orderNumber, st
  ・注文者 - 誕生日
 
 ```csharp
-public IEnumerable<OrderMessageModel> UpdateOrderOrderer(string orderNumber, OrdererModel ordererModel)
+public IList<OrderMessageModel> UpdateOrderOrderer(string orderNumber, OrdererModel ordererModel, Nullable<int> reductionReason)
 ```
 
 #### Parameters
@@ -158,16 +159,35 @@ public IEnumerable<OrderMessageModel> UpdateOrderOrderer(string orderNumber, Ord
 
 `ordererModel` [OrdererModel](./rakuten.rms.api.rakutenpayorderapi.orderermodel)<br>
 
+`reductionReason` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+以下のいずれか
+ (お客様都合による)
+ 1: キャンセル
+ 2: 受取後の返品
+ 3: 長期不在による受取拒否
+ 4: 未入金
+ 5: 代引決済の受取拒否
+ 6: その他
+ (店舗都合による)
+ 8: 欠品
+ 10: その他
+ 13: 発送遅延
+ 14: 顧客・配送対応注意表示
+ 15: 返品（破損・品間違い）
+ ※以下の条件で必須。
+ 1. 減額変更時
+ 2. 楽天市場共通の後払い決済 かつ 発送完了報告後の変更時
+
 #### Returns
 
-[IEnumerable&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IList&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **UpdateOrderRemarks(String, String, Int32)**
+### **UpdateOrderRemarks(String, String, Nullable&lt;Int32&gt;)**
 
 以下の情報を更新可能・備考・ギフト配送（希望する・希望しない）
 
 ```csharp
-public IEnumerable<OrderMessageModel> UpdateOrderRemarks(string orderNumber, string remarks, int giftCheck)
+public IList<Message> UpdateOrderRemarks(string orderNumber, string remarks, Nullable<int> giftCheck)
 ```
 
 #### Parameters
@@ -178,24 +198,42 @@ public IEnumerable<OrderMessageModel> UpdateOrderRemarks(string orderNumber, str
 `remarks` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 コメント
 
-`giftCheck` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+`giftCheck` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 ギフト配送 0: 希望しない 1: 希望する
 
 #### Returns
 
-[IEnumerable&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IList&lt;Message&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **UpdateOrderSender()**
+### **UpdateOrderSender(OrderSenderRequest)**
 
 ```csharp
-public IEnumerable<OrderMessageModel> UpdateOrderSender()
+public IList<OrderMessageModel> UpdateOrderSender(OrderSenderRequest request)
 ```
+
+#### Parameters
+
+`request` [OrderSenderRequest](./rakuten.rms.api.rakutenpayorderapi.ordersenderrequest)<br>
 
 #### Returns
 
-[IEnumerable&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IList&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **UpdateOrderMemo()**
+### **UpdateOrderSenderAfterShipping(OrderSenderRequest)**
+
+```csharp
+public IList<OrderMessageModel> UpdateOrderSenderAfterShipping(OrderSenderRequest request)
+```
+
+#### Parameters
+
+`request` [OrderSenderRequest](./rakuten.rms.api.rakutenpayorderapi.ordersenderrequest)<br>
+
+#### Returns
+
+[IList&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+### **UpdateOrderMemo(UpdateOrderMemoRequest)**
 
 以下の情報を更新可能
  ・ひとことメモ
@@ -207,21 +245,31 @@ public IEnumerable<OrderMessageModel> UpdateOrderSender()
  ・サブステータスID
 
 ```csharp
-public void UpdateOrderMemo()
+public IList<Message> UpdateOrderMemo(UpdateOrderMemoRequest request)
 ```
 
-### **GetPayment(String)**
+#### Parameters
+
+`request` [UpdateOrderMemoRequest](./rakuten.rms.api.rakutenpayorderapi.updateordermemorequest)<br>
+
+#### Returns
+
+[IList&lt;Message&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+### **GetPayment(String, Int32)**
 
 注文番号を指定して、支払明細情報を取得する。
 
 ```csharp
-public GetPaymentResponse GetPayment(string orderNumber)
+public GetPaymentResponse GetPayment(string orderNumber, int version)
 ```
 
 #### Parameters
 
 `orderNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 注文番号
+
+`version` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
 #### Returns
 
@@ -310,6 +358,20 @@ public UpdateOrderShippingAsyncResponse UpdateOrderShippingAsync(IEnumerable<Ord
 
 [UpdateOrderShippingAsyncResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingasyncresponse)<br>
 
+### **GetResultUpdateOrderShippingAsync(String)**
+
+```csharp
+public UpdateOrderShippingResultResponse GetResultUpdateOrderShippingAsync(string requestId)
+```
+
+#### Parameters
+
+`requestId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+#### Returns
+
+[UpdateOrderShippingResultResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresultresponse)<br>
+
 ### **CancelOrderAfterShipping(String, Int32, Int32)**
 
 注文キャンセル（発送後）
@@ -322,7 +384,7 @@ public UpdateOrderShippingAsyncResponse UpdateOrderShippingAsync(IEnumerable<Ord
  ※キャンセル確定までを一括で行いますので、商品が返品されたことを確認後に実施してください。
 
 ```csharp
-public IEnumerable<OrderMessageModel> CancelOrderAfterShipping(string orderNumber, int inventoryRestoreType, int changeReasonDetailApply)
+public IList<OrderMessageModel> CancelOrderAfterShipping(string orderNumber, int inventoryRestoreType, int changeReasonDetailApply)
 ```
 
 #### Parameters
@@ -356,7 +418,7 @@ public IEnumerable<OrderMessageModel> CancelOrderAfterShipping(string orderNumbe
 
 #### Returns
 
-[IEnumerable&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IList&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
 ---
 

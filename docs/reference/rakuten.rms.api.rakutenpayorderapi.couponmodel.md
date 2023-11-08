@@ -7,32 +7,12 @@
 Namespace: Rakuten.RMS.Api.RakutenPayOrderAPI
 
 ```csharp
-public class CouponModel
+public class CouponModel : CouponModelBase
 ```
 
-Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [CouponModel](./rakuten.rms.api.rakutenpayorderapi.couponmodel)
+Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [CouponModelBase](./rakuten.rms.api.rakutenpayorderapi.couponmodelbase) → [CouponModel](./rakuten.rms.api.rakutenpayorderapi.couponmodel)
 
 ## Properties
-
-### **couponCode**
-
-```csharp
-public string couponCode { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **itemId**
-
-```csharp
-public int itemId { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
 ### **couponName**
 
@@ -74,26 +54,6 @@ public DateTime expiryDate { get; set; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **couponPrice**
-
-```csharp
-public int couponPrice { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **couponUnit**
-
-```csharp
-public int couponUnit { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
 ### **couponTotalPrice**
 
 クーポン利用金額
@@ -119,6 +79,46 @@ public long itemDetailId { get; set; }
 #### Property Value
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+### **couponCode**
+
+```csharp
+public string couponCode { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### **itemId**
+
+```csharp
+public int itemId { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### **couponPrice**
+
+```csharp
+public int couponPrice { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### **couponUnit**
+
+```csharp
+public int couponUnit { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
 ## Constructors
 

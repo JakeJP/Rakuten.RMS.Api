@@ -80,12 +80,12 @@ public ResultBase UpdateShopCategory(string categoryId, NewCategory category)
 
 [ResultBase](./rakuten.rms.api.json.resultbase)<br>
 
-### **GetItemMappings(String, Nullable&lt;Boolean&gt;, CategorySetField[], CategoryField[])**
+### **GetItemMappings(String, CategorySetField[], CategoryField[])**
 
 商品管理番号を指定し、カテゴリとの紐付き情報を取得
 
 ```csharp
-public void GetItemMappings(string manageNumber, Nullable<bool> breadcrumb, CategorySetField[] categorysetfields, CategoryField[] categoryfields)
+public GetItemMappingResponse GetItemMappings(string manageNumber, CategorySetField[] categorysetfields, CategoryField[] categoryfields)
 ```
 
 #### Parameters
@@ -93,34 +93,68 @@ public void GetItemMappings(string manageNumber, Nullable<bool> breadcrumb, Cate
 `manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 商品管理番号
 
-`breadcrumb` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-パンくずリスト
-
 `categorysetfields` [CategorySetField[]](./rakuten.rms.api.categoryapi20.categorysetfield)<br>
 カテゴリセットフィールド
 
 `categoryfields` [CategoryField[]](./rakuten.rms.api.categoryapi20.categoryfield)<br>
 カテゴリフィールド
 
-#### Exceptions
+#### Returns
 
-[NotImplementedException](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception)<br>
+[GetItemMappingResponse](./rakuten.rms.api.categoryapi20.getitemmappingresponse)<br>
 
-### **UpsertItemMappings(String)**
-
-指定した商品管理番号の表示先カテゴリの登録や変更
+### **GetItemMappingsWithBreadcrumbs(String, CategorySetField[], CategoryField[])**
 
 ```csharp
-public void UpsertItemMappings(string manageNumber)
+public GetItemMappingWithBreadcrumbResponse GetItemMappingsWithBreadcrumbs(string manageNumber, CategorySetField[] categorysetfields, CategoryField[] categoryfields)
 ```
 
 #### Parameters
 
 `manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+`categorysetfields` [CategorySetField[]](./rakuten.rms.api.categoryapi20.categorysetfield)<br>
+
+`categoryfields` [CategoryField[]](./rakuten.rms.api.categoryapi20.categoryfield)<br>
+
+#### Returns
+
+[GetItemMappingWithBreadcrumbResponse](./rakuten.rms.api.categoryapi20.getitemmappingwithbreadcrumbresponse)<br>
+
+### **UpsertItemMappings(String, IList&lt;String&gt;, String)**
+
+指定した商品管理番号の表示先カテゴリの登録や変更
+ 複数カテゴリへのマッピング時
+
+```csharp
+public void UpsertItemMappings(string manageNumber, IList<string> categoryIds, string mainPluralCategoryId)
+```
+
+#### Parameters
+
+`manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`categoryIds` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+`mainPluralCategoryId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 #### Exceptions
 
 [NotImplementedException](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception)<br>
+
+### **UpsertItemMappings(String, String)**
+
+1カテゴリ - 1商品 モードの時の呼び出し。
+
+```csharp
+public void UpsertItemMappings(string manageNumber, string categoryId)
+```
+
+#### Parameters
+
+`manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`categoryId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
 ### **DeleteItemMappings(String)**
 
