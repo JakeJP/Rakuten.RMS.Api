@@ -62,13 +62,13 @@ serviceSecret と licenseKey はRMSのAPI設定から取得できる認証用の
 | [在庫API	在庫API 2.1（InventoryAPI 2.1）](https://jakejp.github.io/Rakuten.RMS.Api/InventoryAPI21)| GetInventoryAPI21() | [InventoryAPI21.RakutenInventoryServiceV21](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi21.rakuteninventoryservicev21)
 | [在庫API 2.0（InventoryAPI 2.0）](https://jakejp.github.io/Rakuten.RMS.Api/InventoryAPI21)| GetInventoryAPI20() | [InventoryAPI20.RakutenInventoryServiceV2](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
 | ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0）| GetNavigationAPI20() | [NavigationAPI20.NavigationAPI20](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.navigationapi20.navigationapi20)
-| 組み合わせ販売API（ItemBundleAPI））| GetItemBundleAPI() | (未実装)
+| 組み合わせ販売API（ItemBundleAPI）| GetItemBundleAPI() | (未実装)
 | [R-CabinetAPI（CabinetAPI）](https://jakejp.github.io/Rakuten.RMS.Api/CabinetAPI) | GetCabinetAPI() | [CabinetAPI.CabinetAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.cabinetapi.cabinetapi)
 | [製品API（ProductAPI）](https://jakejp.github.io/Rakuten.RMS.Api/ProductAPI)| GetProductAPI() | [ProductAPI.ProductAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.productapi.productapi)
 | [楽天ペイ受注API（RakutenPayOrderAPI）](https://jakejp.github.io/Rakuten.RMS.Api/RakutenPayOrderAPI)| GetRakutenPayOrderAPI() | [RakutenPayOrderAPI.RakutenPayOrderService](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
 | [購入商品API（PurchaseItemAPI）](https://jakejp.github.io/Rakuten.RMS.Api/PurchaseItemAPI)  | GetPurchaseItemAPI() | [PurchaseItemAPI.PurchaseItemAPI]()
-| 購入申込API（ReserveAPI）  | GetReserveAPI() | (未実装)
-| 問い合わせ管理API（InquiryManagementAPI）  | GetInquiryManagementAPI() | (未実装)
+| [購入申込API（ReserveAPI）](https://jakejp.github.io/Rakuten.RMS.Api/PurchaseItemAPI)  | GetReserveAPI() | [PurchaseItemAPI.PurchaseItemAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.purchaseitemapi.purchaseitemapi)
+| 問い合わせ管理API（InquiryManagementAPI）  | GetInquiryManagementAPI() | [InquiryManagementAPI.InquiryManagementAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.inquirymanagementapi.inquirymanagementapi)
 | 店舗情報API（ShopAPI）| GetShopAPI() | [ShopAPI.ShopAPI](https://jakejp.github.io/Rakuten.RMS.Api/reference/rakuten.rms.api.shopapi.shopapi)
 | 店舗ページAPI（ShopPageAPI）| GetShopPageAPI() | (未実装)
 | クーポンAPI（CouponAPI）| GetCouponAPI() | (未実装)
@@ -122,9 +122,8 @@ api = sp.GetRakutenPayOrderAPI()
 orders = api.GetOrder( ["123456-12341234-1234567890"])
 
 ```
-[Python.NET 環境の構築の詳細](https://jakejp.github.io/Rakuten.RMS.Api/Python)
+[Python.NET 環境の構築と使用方法の詳細](https://jakejp.github.io/Rakuten.RMS.Api/Python)
 
-[そのほかの Python サンプルコードはこちら](./tree/main/samples/python)
 
 ### システム通知イベント
 
@@ -174,9 +173,9 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 |カテゴリAPI	カテゴリAPI 2.0（CategoryAPI 2.0）| category.shop-categories.get  |〇
 ||category.shop-categories.insert |〇
 ||category.shop-categories.update |〇
-||category.item-mappings.get |×
-||category.item-mappings.upsert |×
-||category.item-mappings.delete |×
+||category.item-mappings.get |〇
+||category.item-mappings.upsert |〇
+||category.item-mappings.delete |〇
 ||category.category-trees.get |〇
 ||category.category-trees.upsert |〇
 ||category.category-set-lists.get |〇
@@ -192,7 +191,6 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||inventories.bulk.get.range   |〇
 ||inventories.bulk.get   |〇
 ||inventories.bulk.upsert   |〇
-|在庫API（InventoryAPI） | - | - 
 |ナビゲーションAPI	ジャンル・商品属性情報検索API（NavigationAPI 2.0））|version.get   |〇
 ||genres.get   |〇
 ||genres.attributes.get   |〇
@@ -225,21 +223,21 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 ||getResultUpdateOrderShippingAsync   |〇
 ||getSubStatusList   |〇
 ||updateOrderSubStatus   |〇
-||updateOrderMemo   |×
+||updateOrderMemo   |〇
 ||updateOrderRemarks   |〇
-||updateOrderSender   |×
+||updateOrderSender   |〇
 ||updateOrderSenderAfterShipping   |〇
-||cancelOrder   |×
+||cancelOrder   |〇
 ||cancelOrderAfterShipping   |〇
-||updateOrderOrderer   |×
-||updateOrderDelivery   |×
+||updateOrderOrderer   |〇
+||updateOrderDelivery   |〇
 ||simulateCouponAmount |〇
-||getPayment|×
-|購入商品API（PurchaseItemAPI）  |searchOrderItem|×
+||getPayment|〇
+|購入商品API（PurchaseItemAPI）  |searchOrderItem|〇
 || getOrderItem|〇
-|購入申込API（ReserveAPI）  |reserve.infoList.get|×
-||reserve.earlyCommit.update|×
-|問い合わせ管理API（InquiryManagementAPI）  |inquirymngapi.counts.get|×
+|購入申込API（ReserveAPI）  |reserve.infoList.get|〇
+||reserve.earlyCommit.update|〇
+|問い合わせ管理API（InquiryManagementAPI）  |inquirymngapi.counts.get|〇
 ||inquirymngapi.inquiries.get|〇
 ||inquirymngapi.inquiry.get|〇
 ||inquirymngapi.reply.post|〇
@@ -343,8 +341,5 @@ SOAP形式など旧来のAPIや廃止されたAPIの実装は省略します。
 
 ## TODO
 
-- レスポンスメッセージに埋もれているメソッドの戻り値を直接返すようにする。成功、エラーメッセージは
-  GetResponse() で別途取得できるようにオリジナルのAPIから構造変更。
-  エラーは Exception へ移行
 - 実装途中のプロジェクトのため、メソッドの引数、戻り値など、破壊的な変更が起こりえます。
 
