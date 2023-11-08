@@ -125,19 +125,55 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         /// <param name="breadcrumb">パンくずリスト</param>
         /// <param name="categorysetfields">カテゴリセットフィールド</param>
         /// <param name="categoryfields">カテゴリフィールド</param>
-        /// <exception cref="NotImplementedException"></exception>
-        public void GetItemMappings( string manageNumber, bool? breadcrumb = null, CategorySetField[] categorysetfields = null, CategoryField[] categoryfields = null)
+        public GetItemMappingResponse GetItemMappings( string manageNumber, CategorySetField[] categorysetfields = null, CategoryField[] categoryfields = null)
         {
-            throw new NotImplementedException();
+            var qs = new NameValueCollection();
+            if (categorysetfields != null) qs["categorysetfields"] = string.Join(",", categorysetfields.Select(m => m.ToString()));
+            if(categoryfields != null) qs["categoryfields"] = string.Join(",", categorysetfields.Select(m => m.ToString()));
+            return GetRequest<GetItemMappingResponse>($"https://api.rms.rakuten.co.jp/es/2.0/categories/item-mappings/manage-numbers/{manageNumber}",
+                queryParameters: qs);
         }
+        public GetItemMappingWithBreadcrumbResponse GetItemMappingsWithBreadcrumbs(string manageNumber, CategorySetField[] categorysetfields = null, CategoryField[] categoryfields = null)
+        {
+            var qs = new NameValueCollection();
+            qs["breadcrumb"] = "true";
+            if (categorysetfields != null) qs["categorysetfields"] = string.Join(",", categorysetfields.Select(m => m.ToString()));
+            if (categoryfields != null) qs["categoryfields"] = string.Join(",", categorysetfields.Select(m => m.ToString()));
+            return GetRequest<GetItemMappingWithBreadcrumbResponse>($"https://api.rms.rakuten.co.jp/es/2.0/categories/item-mappings/manage-numbers/{manageNumber}",
+                queryParameters: qs);
+        }
+
         /// <summary>
         /// 指定した商品管理番号の表示先カテゴリの登録や変更
+        /// 複数カテゴリへのマッピング時
         /// </summary>
         /// <param name="manageNumber"></param>
         /// <exception cref="NotImplementedException"></exception>
-        public void UpsertItemMappings(string manageNumber )
+        public void UpsertItemMappings(string manageNumber, IList<string> categoryIds, string mainPluralCategoryId )
         {
-            throw new NotImplementedException();
+            if(categoryIds == null || categoryIds.Count == 0  )
+                throw new ArgumentNullException("categoryIds");
+            if (categoryIds.Count > 1)
+            {
+                if( mainPluralCategoryId == null || !categoryIds.Contains(mainPluralCategoryId))
+                    throw new ArgumentException("mainPluralCategoryId must be included in categoryIds.");
+            }
+            //    
+            var result = PostRequest<ResultBase>($"https://api.rms.rakuten.co.jp/es/2.0/categories/item-mappings/manage-numbers/{manageNumber}",
+                string.IsNullOrEmpty(mainPluralCategoryId) ?
+                new { categoryIds, mainPluralCategoryId } :
+                (object)new { categoryIds }, method:"PUT");
+            if (result != null && result.errors != null && result.errors.Any())
+                throw new ErrorResponseException(result);
+        }
+        /// <summary>
+        /// 1カテゴリ - 1商品 モードの時の呼び出し。
+        /// </summary>
+        /// <param name="manageNumber"></param>
+        /// <param name="categoryId"></param>
+        public void UpsertItemMappings(string manageNumber, string categoryId )
+        {
+            UpsertItemMappings(manageNumber, categoryIds: new[] { categoryId }, mainPluralCategoryId: null);
         }
         /// <summary>
         /// 指定した商品管理番号を表示先カテゴリから削除
@@ -146,7 +182,10 @@ namespace Rakuten.RMS.Api.CategoryAPI20
         /// <exception cref="NotImplementedException"></exception>
         public void DeleteItemMappings( string manageNumber ) 
         {
-            throw new NotImplementedException();
+            var result = PostRequest<ResultBase>($"https://api.rms.rakuten.co.jp/es/2.0/categories/item-mappings/manage-numbers/{manageNumber}",
+                new { manageNumber }, method: "DELETE");
+            if (result.errors != null && result.errors.Any())
+                throw new ErrorResponseException(result);
         }
         /// <summary>
         /// カテゴリセットIDを指定しカテゴリツリー情報を取得

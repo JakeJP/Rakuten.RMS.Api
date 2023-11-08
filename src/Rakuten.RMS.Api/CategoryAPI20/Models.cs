@@ -82,6 +82,7 @@ namespace Rakuten.RMS.Api.CategoryAPI20
     {
         public List<CategoryInBreadcrumbs> breadcrumbList {  get; set; }
     }
+
     public class CategoryWithChildren
     {
         //public string categoryId { get; set; }

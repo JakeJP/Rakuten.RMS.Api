@@ -59,6 +59,7 @@
     <Compile Include="CabinetAPI\Models.cs" />
     <Compile Include="CabinetAPI\UpdateFileResponse.cs" />
     <Compile Include="CategoryAPI20\CategoryAPI20.cs" />
+    <Compile Include="CategoryAPI20\ItemMappingModel.cs" />
     <Compile Include="CategoryAPI20\Models.cs" />
     <Compile Include="CategoryAPI\CategoryAPI.cs" />
     <Compile Include="InquiryManagementAPI\InquiryManagementAPI.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="ProductAPI\Models.cs" />
     <Compile Include="DecodableObjectAttribute.cs" />
     <Compile Include="PurchaseItemAPI\PurchaseItemAPI.cs" />
+    <Compile Include="RakutenPayOrderAPI\OrderModel.cs" />
     <Compile Include="RakutenPayOrderAPI\RakutenPayOrderService.cs" />
     <Compile Include="RakutenPayOrderAPI\Models.cs" />
     <Compile Include="ProductAPI\ProductAPI.cs" />

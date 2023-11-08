@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Rakuten.RMS.Api.NavigationAPI20;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 {
@@ -203,430 +207,81 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     {
         public string orderNumber { get; set; }
     }
-    public class OrderModel
-    {
-        public string orderNumber { get; set; }
-        public int orderProgress { get; set; }
-        public int? subStatusId { get; set; }
-        public string subStatusName { get; set; }
-        public DateTime orderDatetime { get; set; }
-        public DateTime? shopOrderCfmDatetime { get; set; }
-        public DateTime? orderFixDatetime { get; set; }
-        public DateTime? shippingInstDatetime { get; set; }
-        public DateTime? shippingCmplRptDatetime { get; set; }
-        public DateTime? cancelDueDate { get; set; }
-        public DateTime? deliveryDate { get; set; }
-        public int? shippingTerm { get; set; }
-        public string remarks { get; set; }
-        public int giftCheckFlag { get; set; }
-        public int severalSenderFlag { get; set; }
-        public int equalSenderFlag { get; set; }
-        public int isolatedIslandFlag { get; set; }
-        public int rakutenMemberFlag { get; set; }
-        public int carrierCode { get; set; }
-        public int emailCarrierCode { get; set; }
-        public int orderType { get; set; }
-        public string reserveNumber { get; set; }
-        public int? reserveDeliveryCount { get; set; }
-        public int cautionDisplayType { get; set; }
-        public int rakutenConfirmFlag { get; set; }
-        public int goodsPrice { get; set; }
-        public int goodsTax { get; set; }
-        public int postagePrice { get; set; }
-        public int deliveryPrice { get; set; }
-        /// <summary>
-        /// version=2
-        /// </summary>
-        public int paymentCharge { get; set; }
-        public int totalPrice { get; set; }
-        public int requestPrice { get; set; }
-        public int couponAllTotalPrice { get; set; }
-        public int couponShopPrice { get; set; }
-        public int couponOtherPrice { get; set; }
-        /// <summary>
-        /// versiion=2
-        /// </summary>
-        public int additionalFeeOccurAmountToUser { get; set; }
-        /// <summary>
-        /// versiion=2
-        /// </summary>
-        public int additionalFeeOccurAmountToShop { get; set; }
-        public int asurakuFlag { get; set; }
-        public int drugFlag { get; set; }
-        public int dealFlag { get; set; }
-        public int membershipType { get; set; }
-        public string memo { get; set; }
-        public string _operator { get; set; }
-        public string mailPlugSentence { get; set; }
-        public int modifyFlag { get; set; }
-        public int isTaxRecalc { get; set; }
-        public OrdererModel OrdererModel { get; set; }
-        public SettlementModel SettlementModel { get; set; }
-        public DeliveryModel DeliveryModel { get; set; }
-        public PointModel PointModel { get; set; }
-        public WrappingModel WrappingModel1 { get; set; }
-        public WrappingModel WrappingModel2 { get; set; }
-        public IList<PackageModel> PackageModelList { get; set; }
-        public IList<CouponModel> CouponModelList { get; set; }
-        public IList<ChangeReasonModel> ChangeReasonModelList { get; set; }
-    }
-    [DecodableObject]
-    public class OrdererModel
-    {
-        public string zipCode1 { get; set; }
-        public string zipCode2 { get; set; }
-        public string prefecture { get; set; }
-        public string city { get; set; }
-        public string subAddress { get; set; }
-        public string familyName { get; set; }
-        public string firstName { get; set; }
-        public string familyNameKana { get; set; }
-        public string firstNameKana { get; set; }
-        public string phoneNumber1 { get; set; }
-        public string phoneNumber2 { get; set; }
-        public string phoneNumber3 { get; set; }
-        public string emailAddress { get; set; }
-        public string sex { get; set; }
-        public int? birthYear { get; set; }
-        public int? birthMonth { get; set; }
-        public int? birthDay { get; set; }
-    }
-    public class SettlementModel
-    {
-        public string settlementMethod { get; set; }
-        /// <summary>
-        /// version=2
-        /// </summary>
-        public int rpaySettlementFlag { get; set; }
-        public string cardName { get; set; }
-        public string cardNumber { get; set; }
-        public string cardOwner { get; set; }
-        public string cardYm { get; set; }
-        public int? cardPayType { get; set; }
-        public string cardInstallmentDesc { get; set; }
-    }
-    public class DeliveryModel
-    {
-        /// <summary>
-        /// 以下のいずれか
-        /// ・宅配便
-        /// ・小型宅配便
-        /// ・大型宅配便
-        /// ・クール便
-        /// ・メール便
-        /// ・国際配送
-        /// ・コンビニ受取
-        /// ・ロッカー受取
-        /// ・店頭受取
-        /// ・発送を伴わない
-        /// ・郵便局受取
-        /// </summary>
-        public string deliveryName { get; set; }
-        /// <summary>
-        /// 配送区分
-        /// 0: 選択なし
-        /// 1: 普通
-        /// 2: 冷蔵
-        /// 3: 冷凍
-        /// 4: その他１
-        /// 5: その他２
-        /// 6: その他３
-        /// 7: その他４
-        /// 8: その他５
-        /// </summary>
-        public int? deliveryClass { get; set; }
-    }
-    public class PointModel
-    {
-        /// <summary>
-        /// ポイント利用額
-        /// </summary>
-        public int usedPoint { get; set; }
-    }
-    public class WrappingModel
-    {
-        /// <summary>
-        /// 以下のいずれか
-        /// 1: 包装紙
-        /// 2: リボン
-        /// </summary>
-        public int title { get; set; }
-        public string name { get; set; }
-        public int? price { get; set; }
-        /// <summary>
-        /// 税込別
-        /// 0: 税別
-        /// 1: 税込
-        /// </summary>
-        public int includeTaxFlag { get; set; }
-        /// <summary>
-        /// ラッピング削除フラグ
-        /// </summary>
-        public int deleteWrappingFlag { get; set; }
-    }
-    public class PackageModel
-    {
-        /// <summary>
-        /// 送付先ID
-        /// </summary>
-        public int basketId { get; set; }
-        /// <summary>
-        /// 送料
-        /// </summary>
-        public int postagePrice { get; set; }
-        /// <summary>
-        /// 代引料
-        /// </summary>
-        public int deliveryPrice { get; set; }
-        /// <summary>
-        /// 消費税
-        /// </summary>
-        public int goodsTax { get; set; }
-        /// <summary>
-        /// 商品合計金額
-        /// </summary>
-        public int goodsPrice { get; set; }
-        /// <summary>
-        /// 合計金額
-        /// 送付先に紐付く 商品代金((価格×個数)の商品合計)+のし・ラッピング代+送料+消費税+代引手数料
-        /// ※未確定の場合、-9999になります。
-        /// </summary>
-        public int totalPrice { get; set; }
-        public string noshi { get; set; }
-        /// <summary>
-        /// 0: 送付先モデルを削除しない
-        /// 1: 送付先モデルを削除する
-        /// </summary>
-        public int packageDeleteFlag { get; set; }
-        /// <summary>
-        /// 送付者モデル
-        /// </summary>
-        public SenderModel SenderModel { get; set; }
-        /// <summary>
-        /// 商品モデルリスト
-        /// </summary>
-        public IList<ItemModel> ItemModelList { get; set; }
-        /// <summary>
-        /// 発送モデルリスト
-        /// </summary>
-        public IList<ShippingModel> ShippingModelList { get; set; }
-        /// <summary>
-        /// コンビニ配送モデル 
-        /// 配送方法がコンビニ、郵便局受取の場合、参照可能
-        /// </summary>
-        public DeliveryCVSModel DeliveryCvsModel { get; set; }
-    }
-    public class SenderModel
-    {
-        public string zipCode1 { get; set; }
-        public string zipCode2 { get; set; }
-        public string prefecture { get; set; }
-        public string city { get; set; }
-        public string subAddress { get; set; }
-        public string familyName { get; set; }
-        public string firstName { get; set; }
-        public string familyNameKana { get; set; }
-        public string firstNameKana { get; set; }
-        public string phoneNumber1 { get; set; }
-        public string phoneNumber2 { get; set; }
-        public string phoneNumber3 { get; set; }
-        /// <summary>
-        /// version=2
-        /// </summary>
-        public int isolatedIslandFlag { get; set; }
-    }
-    public class ItemModel
-    {
-        public int itemDetailId { get; set; }
-        public string itemName { get; set; }
-        public int itemId { get; set; }
-        /// <summary>
-        /// 商品番号
-        /// 項目選択肢別在庫が指定された商品の場合、以下のルールで値が表示されます
-        ///     SKU移行前注文：商品番号（店舗様が登録した番号）＋項目選択肢ID（横軸）＋項目選択肢ID（縦軸）
-        ///     SKU移行後注文：商品番号（店舗様が登録した番号）
-        /// </summary>
-        public string itemNumber { get; set; }
-        public string manageNumber { get; set; }
-        public int price { get; set; }
-        public int units { get; set; }
-        public int includePostageFlag { get; set; }
-        /// <summary>
-        /// 0: 税別
-        /// 1: 税込み
-        /// </summary>
-        public int includeTaxFlag { get; set; }
-        /// <summary>
-        /// 0: 代引手数料別
-        /// 1: 代引手数料込み
-        /// </summary>
-        public int includeCashOnDeliveryPostageFlag { get; set; }
-        public string selectedChoice { get; set; }
-        public int pointRate { get; set; }
-        public int pointType { get; set; }
-        public int inventoryType { get; set; }
-        public string delvdateInfo { get; set; }
-        /// <summary>
-        /// 在庫連動オプション
-        /// 0: 商品の設定に従う
-        /// 1: 在庫連動する
-        /// 2: 在庫連動しない
-        /// </summary>
-        public int restoreInventoryFlag { get; set; }
-        /// <summary>
-        /// version=2
-        /// </summary>
-        public int dealFlag { get; set; }
-        /// <summary>
-        /// version=2
-        /// </summary>
-        public int drugFlag { get; set; }
-        /// <summary>
-        /// 商品削除フラグ
-        /// 0: 商品を削除しない
-        /// 1: 商品を削除する
-        /// </summary>
-        public int deleteItemFlag { get; set; }
-        /// <summary>
-        /// 商品税率
-        /// </summary>
-        public decimal taxRate { get; set; }
-        /// <summary>
-        /// 商品毎税込価格
-        /// ・税込商品の場合：
-        /// 商品単価＝商品毎税込価格
-        /// ・税別商品の場合：
-        /// 商品単価＝税別価格
-        /// 商品毎税込単価＝税込価格（商品単価* (1+税率））
-        /// 端数処理は、店舗設定に準ずる
-        /// </summary>
-        public int priceTaxIncl { get; set; }
-        /// <summary>
-        /// 以下のいずれか
-        /// 0: 単品配送ではない
-        /// 1: 単品配送である
-        /// ※Request Parameterの「version」に「4」以降の値を指定すると取得可能
-        /// </summary>
-        public int isSingleItemShipping { get; set; }
-        public IList<SkuModel> SkuModelList { get; set; }
-    }
-    public class ShippingModel
-    {
-        public long shippingDetailId { get; set; }
-        public string shippingNumber { get; set; }
-        /// <summary>
-        /// 1000: その他
-        /// 1001: ヤマト運輸
-        /// 1002: 佐川急便
-        /// 1003: 日本郵便
-        /// 1004: 西濃運輸
-        /// 1005: 西部運輸
-        /// 1006: 福山通運
-        /// 1007: 名鉄運輸
-        /// 1008: トナミ運輸
-        /// 1009: 第一貨物
-        /// 1010: 新潟運輸
-        /// 1011: 中越運送
-        /// 1012: 岡山県貨物運送
-        /// 1013: 久留米運送
-        /// 1014: 山陽自動車運送
-        /// 1015: 日本トラック
-        /// 1016: エコ配
-        /// 1017: EMS
-        /// 1018: DHL
-        /// 1019: FedEx
-        /// 1020: UPS
-        /// 1021: 日本通運
-        /// 1022: TNT
-        /// 1023: OCS
-        /// 1024: USPS
-        /// 1025: SFエクスプレス
-        /// 1026: Aramex
-        /// 1027: SGHグローバル・ジャパン
-        /// </summary>
-        public string deliveryCompany { get; set; }
-        public string deliveryCompanyName { get; set; }
-        public DateTime? shippingDate { get; set; }
-    }
-    public class DeliveryCVSModel
-    {
-        /// <summary>
-        /// 1: ファミリーマート
-        /// 20: ミニストップ
-        /// 40: サークルK
-        /// 41: サンクス
-        /// 50: ローソン
-        /// 60: 郵便局
-        /// 70: スリーエフ
-        /// 71: エブリワン
-        /// 72: ココストア
-        /// 74: セーブオン
-        /// 80: デイリーヤマザキ
-        /// 81: ヤマザキデイリーストア
-        /// 82: ニューヤマザキデイリーストア
-        /// 85: ニューデイズ
-        /// 90: ポプラ
-        /// 91: くらしハウス
-        /// 92: スリーエイト
-        /// 93: 生活彩家
-        /// </summary>
-
-        public int? cvsCode { get; set; }
-        public string storeGenreCode { get; set; }
-        public string storeCode { get; set; }
-        public string storeName { get; set; }
-        public string storeZip { get; set; }
-        public string storePrefecture { get; set; }
-        public string storeAddress { get; set; }
-        public string areaCode { get; set; }
-        public string depo { get; set; }
-
-        public string openTime { get; set; }
-        public string closeTime { get; set; }
-        public string cvsRemarks { get; set; }
-
-    }
-    public class CouponModel
-    {
-        public string couponCode { get; set; }
-        public int itemId { get; set; }
-        public string couponName { get; set; }
-        public string couponSummary { get; set; }
-        public string couponCapital { get; set; }
-        public DateTime expiryDate { get; set; }
-        public int couponPrice { get; set; }
-        public int couponUnit { get; set; }
-        /// <summary>
-        /// クーポン利用金額
-        /// クーポン割引単価 × クーポン利用数
-        /// ※クーポン割引単価もしくはクーポン利用数がnullの場合、-9999になります。
-        /// </summary>
-        public int couponTotalPrice { get; set; }
-        /// <summary>
-        /// 商品明細ID
-        /// </summary>
-        public long itemDetailId { get; set; }
-    }
-    public class ChangeReasonModel
-    {
-        public long changeId { get; set; }
-        public int? changeType { get; set; }
-        public int? changeTypeDetail { get; set; }
-        public int? changeReason { get; set; }
-        public int? changeReasonDetail { get; set; }
-        public DateTime? changeApplyDatetime { get; set; }
-        public DateTime? changeFixDatetime { get; set; }
-        public DateTime? changeCmplDatetime { get; set; }
-
-    }
 
     // ConfirmOrder
-    public class ConfirmOrderResponse
+    public class OrderMessageResponse
     {
         public IList<OrderMessageModel> MessageModelList { get; set; }
+        public override string ToString()
+        {
+            return string.Join(", ",
+                MessageModelList.Select(m => string.Format("{0}:{1},{2}", m.orderNumber, m.messageCode, m.message)));
+        }
     }
-    ///
 
+    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+    [DecodableObject]
+    public class UpdateOrderMemoRequest
+    {
+        /// <summary>
+        /// 注文番号 
+        /// </summary>
+        public string orderNumber { get; set; }
+        /// <summary>
+        /// サブステータスID
+        /// </summary>
+        public long? subStatusId { get; set; }
+        /// <summary>
+        ///	配送区分
+        ///	0: 選択なし
+        ///	1: 普通
+        ///	2: 冷蔵
+        ///	3: 冷凍
+        ///	4: その他1
+        ///	5: その他2
+        ///	6: その他3
+        ///	7: その他4
+        ///	8: その他5
+        /// </summary>
+        public long? deliveryClass { get; set; }
+        /// <summary>
+        /// お届け日指定     no Date	10	-	YYYY-MM-DD	2017-11-30
+        /// </summary>
+        public DateTime? deliveryDate { get; set; }
+        /// <summary>
+        /// お届け時間帯
+        /// 0: なし
+        /// 1: 午前
+        /// 2: 午後
+        /// 9: その他
+        /// h1h2: h1時-h2時(h1は7～24まで任意で数値指定可能。h2は07～24まで任意で数値指定可能)
+        /// </summary>
+        public int? shippingTerm { get; set; }
+        /// <summary>
+        /// ひとことメモ
+        /// </summary>
+        public string memo { get; set; }
+        /// <summary>
+        /// 担当者 
+        /// </summary>
+        [JsonProperty("operator")]
+        public string Operator { get; set; }
+        /// <summary>
+        /// メール差込文(お客様へのメッセージ)
+        /// </summary>
+        public string mailPlugSentence { get; set; }
+    }
+    public class UpdateOrderMemoResponse
+    {
+        public List<Message> MessageModelList { get; set; }
+        public class Message
+        {
+            public string messageType { get; set; }
+            public string messageCode { get; set; }
+            public string message { get; set; }
+            public string orderNumber { get; set; }
+        }
+    }
     // UpdateOrderShipping
     public class UpdateOrderShippingResponse
     {
@@ -694,11 +349,314 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 
 
     // GetPayment
-    public class GetPaymentResponse
+    public class GetPaymentResponse : OrderMessageResponse
     {
-        public IList<OrderMessageModel> MessageModelList { get; set; }
         public OrderModel OrderModel { get; set; }
 
+    }
+    public class OrderModelForPayment
+    {
+        public string orderNumber { get; set; }
+        public List<PaymentModel> PaymentModelList { get; set; }
+    }
+    public class PaymentModel
+    {
+        /// <summary>
+        /// 決済番号 
+        ///  yes String	392	-		502763-20171027-00006701-1
+        /// </summary>
+        public string orderPaymentNumber { get; set; }
+        /// <summary>
+        /// 決済手段 
+        /// 1:  クレジットカード
+        /// 2:  代金引換
+        /// 3:  後払い（選択制決済）
+        /// 4:  ショッピングクレジット／ローン
+        /// 5:  オートローン
+        /// 6:  リース
+        /// 7:  請求書払い
+        /// 8:  ポイント
+        /// 9:  銀行振込
+        /// 12: Apple Pay
+        /// 13: セブンイレブン（前払）
+        /// 14: ローソン、郵便局ATM等（前払）
+        /// 16: Alipay
+        /// 17: PayPal
+        /// 21: 後払い決済（楽天市場の共通決済）
+        /// 27: Alipay（支付宝）	1
+        /// </summary>
+        public int paymentMethod { get; set; }
+        /// <summary>
+        /// 決済額
+        /// </summary>
+        public int paymentAmount { get; set; }
+        /// <summary>
+        /// 決済手数料 
+        /// </summary>
+        public int paymentCharge { get; set; }
+        /// <summary>
+        /// 決済ステータス
+        /// 30000: 決済なし
+        /// 30100: 決済手続き待ち
+        /// 30110: 決済手続き待ち（前処理待ち）
+        /// 30200: 決済手続き依頼
+        /// 30300: 決済手続き完了
+        /// 30400: 決済手続きNG
+        /// 30500: 決済依頼
+        /// 30600: 決済確定
+        /// 30610: 決済確定（取消NG）
+        /// 30700: 決済NG
+        /// 30710: 決済NG（店舗引渡）
+        /// 31100: 決済手続き取消中
+        /// 31110: 決済手続き取消待ち
+        /// 31120: 決済手続き取消待ち（前処理待ち）
+        /// 31200: 決済手続き取消完了
+        /// 31300: 決済手続き取消NG
+        /// 31400: 決済取消中
+        /// 31410: 決済取消待ち
+        /// 31420: 決済取消待ち（前処理待ち）
+        /// 31500: 決済取消完了
+        /// 31800: 決済取消完了（チャージバック）
+        /// </summary>
+        public int paymentStatus { get; set; }
+        /// <summary>
+        /// 決済手続き依頼日時
+        /// </summary>
+        public DateTime? paymentProcReqDatetime { get; set; }
+        /// <summary>
+        /// 決済手続きNG日時 
+        /// </summary>
+        public DateTime? paymentProcNgDatetime { get; set; }
+        /// <summary>
+        /// 決済手続き完了日時
+        /// </summary>
+        public DateTime? paymentProcCmplDatetime { get; set; }
+        /// <summary>
+        /// 決済手続き取消NG日時 
+        /// </summary>
+        public DateTime? paymentProcCancelNgDate { get; set; }
+        /// <summary>
+        /// 決済手続き取消完了日時 
+        /// </summary>
+        public DateTime? paymentProcCancelCmplDatetime { get; set; }
+        /// <summary>
+        /// 決済依頼日時
+        /// </summary>
+        public DateTime? paymentReqDatetime { get; set; }
+        /// <summary>
+        /// 決済NG日時 
+        /// </summary>
+        public DateTime? paymentNgDatetime { get; set; }
+        /// <summary>
+        /// 決済確定日時 
+        /// </summary>
+        public DateTime? paymentFixDatetime { get; set; }
+        /// <summary>
+        /// 決済確定(取消NG)日時 
+        /// </summary>
+        public DateTime? paymentCancelNgDatetime { get; set; }
+        /// <summary>
+        /// 決済取消完了日時 
+        /// </summary>
+        public DateTime? paymentCancelCmplDatetime { get; set; }
+        /// <summary>
+        /// 決済取消確定日時 
+        /// </summary>
+        public DateTime? paymentCancelFixDatetime { get; set; }
+        /// <summary>
+        /// 支払予定日
+        /// </summary>
+        public DateTime? payExpectDate { get; set; }
+        /// <summary>
+        /// マイナス支払予定日 
+        /// </summary>
+        public DateTime? minusPayExpectDate { get; set; }
+        /// <summary>
+        /// 決済機関連携番号 
+        /// </summary>
+        public List<string> paymentOrganizationLinkageNumberList { get; set; }
+        /// <summary>
+        /// カード決済モデル 
+        /// </summary>
+        public PaymentCardModel PaymentCardModel { get; set; }
+        /// <summary>
+        /// マルチ決済モデル 
+        /// </summary>
+        public PaymentMultiModel PaymentMultiModel { get; set; }
+        /// <summary>
+        /// 銀行振込決済モデル 
+        /// </summary>
+        public PaymentBankModel PaymentBankModel { get; set; }
+        /// <summary>
+        /// 後払い決済モデル 
+        /// </summary>
+        public PaymentPayAfterModel PaymentPayAfterModel { get; set; }
+        /// <summary>
+        /// 返金モデルリスト 
+        /// </summary>
+        public List<RefundModel> RefundModelList { get; set; }
+        /// <summary>
+        /// 負担金情報モデルリスト 
+        /// </summary>
+        public List<AdditionalFeeModel> AdditionalFeeModelList { get; set; }
+        /// <summary>
+        /// PayPal決済モデル 
+        /// </summary>
+        public PaymentPaypalModel PaymentPaypalModel { get; set; }
+
+
+    }
+    public class PaymentCardModel
+    {
+        /// <summary>
+        /// 種類
+        /// </summary>
+        public string cardName { get; set; }
+        /// <summary>
+        /// 有効期限 
+        /// </summary>
+        public string cardYm { get; set; }
+        /// <summary>
+        /// 名義人 
+        /// </summary>
+        public string cardOwner { get; set; }
+        /// <summary>
+        /// 番号
+        /// </summary>
+        public string cardNumber { get; set; }
+        /// <summary>
+        /// 支払方法
+        /// 0: 一括払い
+        /// 1: リボ払い
+        /// 2: 分割払い
+        /// 3: その他払い
+        /// 4: ボーナス一括払い
+        /// </summary>
+        public int cardPayType { get; set; }
+        /// <summary>
+        /// 支払回数 
+        /// 103:  3回払い
+        /// 105:  5回払い
+        /// 106:  6回払い
+        /// 110: 10回払い
+        /// 112: 12回払い
+        /// 115: 15回払い
+        /// 118: 18回払い
+        /// 120: 20回払い
+        /// 124: 24回払い
+        /// </summary>
+        public string cardInstallmentDesc { get; set; }
+    }
+    public class PaymentMultiModel
+    {
+        /// <summary>
+        /// 取引日時 
+        /// </summary>
+        public DateTime? eventDatetime { get; set; }
+        /// <summary>
+        /// 収納番号
+        /// </summary>
+        public string rcvgNumber { get; set; }
+        /// <summary>
+        /// 払込票 
+        /// </summary>
+        public string payInfoUrl { get; set; }
+        /// <summary>
+        /// 決済開始URL
+        /// </summary>
+        public string payStartUrl { get; set; }
+    }
+    public class PaymentBankModel
+    {
+        /// <summary>
+        /// 振込日
+        /// </summary>
+        public DateTime? transferDate { get; set; }
+        /// <summary>
+        /// 振込人名カナ
+        /// </summary>
+        public string transferNameKana { get; set; }
+
+    }
+    public class PaymentPayAfterModel
+    {
+        /// <summary>
+        /// 事業者名
+        /// </summary>
+        public string rcvgAgcyTypeName { get; set; }
+        /// <summary>
+        /// お問い合わせ番号
+        /// </summary>
+        public string rcvgNumber { get; set; }
+
+    }
+    public class AdditionalFeeModel
+    {
+        /// <summary>
+        /// 負担金ID
+        /// </summary>
+        long additionalFeeId { get; set; }
+        /// <summary>
+        /// 負担金科目 
+        /// 1: 後払い手数料 2: チャージバック手数料
+        /// </summary>
+        public int additionalFeeType { get; set; }
+        /// <summary>
+        /// 負担者
+        /// 1: 注文者
+        /// 2: 店舗
+        /// </summary>
+        public int payFrom { get; set; }
+        /// <summary>
+        /// 負担金発生日時
+        /// </summary>
+        public DateTime? additionalFeeOccurDatetime { get; set; }
+        /// <summary>
+        /// 負担金
+        /// </summary>
+        public int additionalFeeOccurAmount { get; set; }
+        /// <summary>
+        /// 負担金税率
+        /// </summary>
+        public decimal additionalFeeTaxRate { get; set; }
+    }
+    public class RefundModel
+    {
+        /// <summary>
+        /// 決済額
+        /// </summary>
+        public int paymentAmount { get; set; }
+        /// <summary>
+        /// 決済ステータス
+        /// </summary>
+        public int paymentStatus { get; set; }
+        /// <summary>
+        /// 決済手続き完了日時
+        /// </summary>
+        public DateTime? paymentProcCmplDatetime { get; set; }
+        /// <summary>
+        /// 決済依頼日時
+        /// </summary>
+        public DateTime? paymentReqDatetime { get; set; }
+        /// <summary>
+        /// 決済確定日時
+        /// </summary>
+        public DateTime? paymentFixDatetime { get; set; }
+        /// <summary>
+        /// 支払予定日
+        /// </summary>
+        public DateTime? payExpectDate { get; set; }
+    }
+    public class PaymentPaypalModel
+    {
+        /// <summary>
+        /// 取引日時
+        /// </summary>
+        public DateTime? eventDate { get; set; }
+        /// <summary>
+        /// 請求書ID
+        /// </summary>
+        public string billId { get; set; }
     }
     //
     public class GetSubStatusListResponse
@@ -717,11 +675,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public string subStatusName { get; set; }
         public int? orderby { get; set; }
     }
-    // UpdateOrderSubStatus
-    public class UpdateOrderSubStatusResponse
-    {
-        public IList<OrderMessageModel> MessageModelList { get; set; }
-    }
+
 
     // UpdateOrderShippingAsync
     public class UpdateOrderShippingAsyncResponse
@@ -741,11 +695,16 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public IList<BasketidModel> BasketidModelList { get; set; }
     }
 
-    // CancelOrderAfterShipping
-    public class CancelOrderAfterShippingResponse
+    public class UpdateOrderShippingResultResponse
     {
-        public IList<OrderMessageModel> MessageModelList { get; set; }
+        public List<ResultShippingModel> ResultShippingModelList { get; set; }
     }
+    public class ResultShippingModel
+    {
+        public string orderNumber { get; set; }
+        public List<OrderShippingMessageModel> MessageModelList { get; set; }
+    }
+
 
     /// <summary>
     /// Level 5: skuModel
@@ -779,5 +738,85 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// ※Request Parameterの「version」に「7」以降の値を指定すると取得可能
         /// </summary>
         public string skuInfo { get; set; }
+    }
+
+
+    public class UpdateOrderRemarksResponse
+    {
+        public class Message
+        {
+            public string messageType { get; set; }
+            public string messageCode { get; set; }
+            public string message { get; set; }
+            public string orderNumber { get; set; }
+        }
+
+        public List<Message> MessageModelList { get; set; }
+    }
+
+    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+    [DecodableObject]
+    public class OrderSenderRequest
+    {
+        public string orderNumber { get; set; }
+        public int? reductionReason { get; set; }
+        public int? taxRecalcFlag { get; set; }
+        public WrappingModel WrappingModel1 { get; set; }
+        public WrappingModel WrappingModel2 { get; set; }
+        public IList<PackageModelToUpdate> PackageModelList { get; set; }
+        public IList<CouponModelBase> CouponModelList { get; set; }
+        public int? afterSettlementMethodCode { get; set; }
+
+        [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+        [DecodableObject]
+        public class PackageModelToUpdate
+        {
+            /// <summary>
+            /// 送付先ID
+            /// </summary>
+            public int basketId { get; set; }
+            /// <summary>
+            /// 送料
+            /// </summary>
+            public int? postagePrice { get; set; }
+            /// <summary>
+            /// 送料税率
+            /// </summary>
+            public decimal postageTaxRate { get; set; }
+            /// <summary>
+            /// 代引料
+            /// </summary>
+            public int? deliveryPrice { get; set; }
+            /// <summary>
+            /// 代引料税率
+            /// </summary>
+            public decimal deliveryTaxRate { get; set; }
+            /// <summary>
+            /// 消費税
+            /// </summary>
+            public int? goodsTax { get; set; }
+
+            public string noshi { get; set; }
+            /// <summary>
+            /// 0: 送付先モデルを削除しない
+            /// 1: 送付先モデルを削除する
+            /// </summary>
+            public int? packageDeleteFlag { get; set; }
+            /// <summary>
+            /// 送付者モデル
+            /// </summary>
+            public SenderModelToUpdate SenderModel { get; set; }
+            /// <summary>
+            /// 商品モデルリスト
+            /// </summary>
+            public IList<ItemModelToUpdate> ItemModelList { get; set; }
+        }
+    }
+    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+    public class UpdateOrderRemarksRequest
+    {
+        public string orderNumber { get; set; }
+        public int? giftCheck { get; set; }
+        public string remarks { get; set; }
     }
 }
