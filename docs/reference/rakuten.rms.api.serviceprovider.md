@@ -131,12 +131,12 @@ public NavigationAPI20 GetNavigationAPI20()
 組み合わせ販売API（ItemBundleAPI））
 
 ```csharp
-public void GetItemBundleAPI()
+public ItemBundleAPI GetItemBundleAPI()
 ```
 
-#### Exceptions
+#### Returns
 
-[NotImplementedException](https://docs.microsoft.com/en-us/dotnet/api/system.notimplementedexception)<br>
+[ItemBundleAPI](./rakuten.rms.api.itembundleapi.itembundleapi)<br>
 
 ### **GetCabinetAPI()**
 
@@ -239,8 +239,12 @@ public ShopAPI GetShopAPI()
 店舗ページAPI（ShopPageAPI）
 
 ```csharp
-public void GetShopPageAPI()
+public ShopPageAPI GetShopPageAPI()
 ```
+
+#### Returns
+
+[ShopPageAPI](./rakuten.rms.api.shoppageapi.shoppageapi)<br>
 
 #### Exceptions
 
@@ -251,8 +255,12 @@ public void GetShopPageAPI()
 クーポンAPI（CouponAPI）
 
 ```csharp
-public void GetCouponAPI()
+public CouponAPI GetCouponAPI()
 ```
+
+#### Returns
+
+[CouponAPI](./rakuten.rms.api.couponapi.couponapi)<br>
 
 #### Exceptions
 

@@ -24,6 +24,18 @@ public XmlStatus Status { get; set; }
 
 [XmlStatus](./rakuten.rms.api.xml.xmlstatus)<br>
 
+## Methods
+
+### **ToString()**
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ---
 
 [`< Back`](./)

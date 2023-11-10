@@ -100,6 +100,60 @@
 
 [NewCategory](./rakuten.rms.api.categoryapi20.newcategory)
 
+## Rakuten.RMS.Api.CouponAPI
+
+[Coupon](./rakuten.rms.api.couponapi.coupon)
+
+[CouponAPI](./rakuten.rms.api.couponapi.couponapi)
+
+[CouponDeleteRequest](./rakuten.rms.api.couponapi.coupondeleterequest)
+
+[CouponIssueRequest](./rakuten.rms.api.couponapi.couponissuerequest)
+
+[CouponToDelete](./rakuten.rms.api.couponapi.coupontodelete)
+
+[CouponToIssue](./rakuten.rms.api.couponapi.coupontoissue)
+
+[CouponUpdateRequest](./rakuten.rms.api.couponapi.couponupdaterequest)
+
+[Error](./rakuten.rms.api.couponapi.error)
+
+[IssuedCoupon](./rakuten.rms.api.couponapi.issuedcoupon)
+
+[Item](./rakuten.rms.api.couponapi.item)
+
+[OtherCondition](./rakuten.rms.api.couponapi.othercondition)
+
+[OtherConditions](./rakuten.rms.api.couponapi.otherconditions)
+
+[RequestContainer&lt;TRequestBody&gt;](./rakuten.rms.api.couponapi.requestcontainer-1)
+
+[ResultContainer&lt;TResponseBody&gt;](./rakuten.rms.api.couponapi.resultcontainer-1)
+
+[ResultWithErrorsBase](./rakuten.rms.api.couponapi.resultwitherrorsbase)
+
+[SearchCondition](./rakuten.rms.api.couponapi.searchcondition)
+
+[SearchedCoupons](./rakuten.rms.api.couponapi.searchedcoupons)
+
+[SearchedThanksCoupons](./rakuten.rms.api.couponapi.searchedthankscoupons)
+
+[SearchResponse](./rakuten.rms.api.couponapi.searchresponse)
+
+[SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)
+
+[SearchThanksCouponResponse](./rakuten.rms.api.couponapi.searchthankscouponresponse)
+
+[ThanksAutoGetCondition](./rakuten.rms.api.couponapi.thanksautogetcondition)
+
+[ThanksCoupon](./rakuten.rms.api.couponapi.thankscoupon)
+
+[ThanksCouponId](./rakuten.rms.api.couponapi.thankscouponid)
+
+[ThanksCouponToIssue](./rakuten.rms.api.couponapi.thankscoupontoissue)
+
+[ThanksOtherCondition](./rakuten.rms.api.couponapi.thanksothercondition)
+
 ## Rakuten.RMS.Api.InquiryManagementAPI
 
 [CountResponse](./rakuten.rms.api.inquirymanagementapi.countresponse)
@@ -181,6 +235,22 @@
 [SearchSortKey](./rakuten.rms.api.itemapi20.searchsortkey)
 
 [UpsertItem](./rakuten.rms.api.itemapi20.upsertitem)
+
+## Rakuten.RMS.Api.ItemBundleAPI
+
+[Bundle](./rakuten.rms.api.itembundleapi.bundle)
+
+[BundleItem](./rakuten.rms.api.itembundleapi.bundleitem)
+
+[BundleItemToCreate](./rakuten.rms.api.itembundleapi.bundleitemtocreate)
+
+[BundleListRequest](./rakuten.rms.api.itembundleapi.bundlelistrequest)
+
+[BundleListResponse](./rakuten.rms.api.itembundleapi.bundlelistresponse)
+
+[BundleToCreate](./rakuten.rms.api.itembundleapi.bundletocreate)
+
+[ItemBundleAPI](./rakuten.rms.api.itembundleapi.itembundleapi)
 
 ## Rakuten.RMS.Api.JSON
 
@@ -370,9 +440,53 @@
 
 ## Rakuten.RMS.Api.ShopAPI
 
+[CalendarEvent](./rakuten.rms.api.shopapi.calendarevent)
+
+[CalendarFunction](./rakuten.rms.api.shopapi.calendarfunction)
+
+[DeliverySetInfo](./rakuten.rms.api.shopapi.deliverysetinfo)
+
+[DeliverySetInfoBizModel](./rakuten.rms.api.shopapi.deliverysetinfobizmodel)
+
+[DelvAreaMaster](./rakuten.rms.api.shopapi.delvareamaster)
+
+[DelvAreaMasterBizModel](./rakuten.rms.api.shopapi.delvareamasterbizmodel)
+
 [DelvdateMaster](./rakuten.rms.api.shopapi.delvdatemaster)
 
 [DelvdateMasterBizModel](./rakuten.rms.api.shopapi.delvdatemasterbizmodel)
+
+[EventDatesModel](./rakuten.rms.api.shopapi.eventdatesmodel)
+
+[GoldTop](./rakuten.rms.api.shopapi.goldtop)
+
+[GoldTopBizModel](./rakuten.rms.api.shopapi.goldtopbizmodel)
+
+[LayoutCategoryMap](./rakuten.rms.api.shopapi.layoutcategorymap)
+
+[LayoutCategoryMapBizModel](./rakuten.rms.api.shopapi.layoutcategorymapbizmodel)
+
+[LayoutItemMap](./rakuten.rms.api.shopapi.layoutitemmap)
+
+[LayoutItemMapBizModel](./rakuten.rms.api.shopapi.layoutitemmapbizmodel)
+
+[LayoutLossLeader](./rakuten.rms.api.shopapi.layoutlossleader)
+
+[LayoutLossLeaderBizModel](./rakuten.rms.api.shopapi.layoutlossleaderbizmodel)
+
+[LayoutTextLarge](./rakuten.rms.api.shopapi.layouttextlarge)
+
+[LayoutTextLargeBizModel](./rakuten.rms.api.shopapi.layouttextlargebizmodel)
+
+[LayoutTextSmall](./rakuten.rms.api.shopapi.layouttextsmall)
+
+[LayoutTextSmallBizModel](./rakuten.rms.api.shopapi.layouttextsmallbizmodel)
+
+[LayoutTextSmallList](./rakuten.rms.api.shopapi.layouttextsmalllist)
+
+[MedamaItem](./rakuten.rms.api.shopapi.medamaitem)
+
+[MedamaItems](./rakuten.rms.api.shopapi.medamaitems)
 
 [NaviButton](./rakuten.rms.api.shopapi.navibutton)
 
@@ -390,7 +504,23 @@
 
 [OperationLeadTimeBizModel](./rakuten.rms.api.shopapi.operationleadtimebizmodel)
 
+[RegularScheduleModel](./rakuten.rms.api.shopapi.regularschedulemodel)
+
+[ShipFrom](./rakuten.rms.api.shopapi.shipfrom)
+
+[ShipFromBizModel](./rakuten.rms.api.shopapi.shipfrombizmodel)
+
 [ShopAPI](./rakuten.rms.api.shopapi.shopapi)
+
+[ShopAreaSoryoCharge](./rakuten.rms.api.shopapi.shopareasoryocharge)
+
+[ShopAreaSoryoPattern](./rakuten.rms.api.shopapi.shopareasoryopattern)
+
+[ShopAreaSoryoWrapper](./rakuten.rms.api.shopapi.shopareasoryowrapper)
+
+[ShopAreaSoryoWrapperBizModel](./rakuten.rms.api.shopapi.shopareasoryowrapperbizmodel)
+
+[ShopAreaSoryoWrapperModel](./rakuten.rms.api.shopapi.shopareasoryowrappermodel)
 
 [ShopBizApiException](./rakuten.rms.api.shopapi.shopbizapiexception)
 
@@ -401,6 +531,26 @@
 [ShopBizApiResponseWithResult&lt;TResult&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-1)
 
 [ShopBizApiResponseWithResult&lt;TResult, TResultMessage&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-2)
+
+[ShopCalDesign](./rakuten.rms.api.shopapi.shopcaldesign)
+
+[ShopCalDesignEvent](./rakuten.rms.api.shopapi.shopcaldesignevent)
+
+[ShopCalDesignEvents](./rakuten.rms.api.shopapi.shopcaldesignevents)
+
+[ShopCalendar](./rakuten.rms.api.shopapi.shopcalendar)
+
+[ShopCalendar2](./rakuten.rms.api.shopapi.shopcalendar2)
+
+[ShopCalendarAndDesignBizModel](./rakuten.rms.api.shopapi.shopcalendaranddesignbizmodel)
+
+[ShopCalendarBizModel](./rakuten.rms.api.shopapi.shopcalendarbizmodel)
+
+[ShopCalendarDesign](./rakuten.rms.api.shopapi.shopcalendardesign)
+
+[ShopHoliday](./rakuten.rms.api.shopapi.shopholiday)
+
+[ShopHolidayBizModel](./rakuten.rms.api.shopapi.shopholidaybizmodel)
 
 [ShopLayoutCommon](./rakuten.rms.api.shopapi.shoplayoutcommon)
 
@@ -416,6 +566,70 @@
 
 [ShopLayoutImageBizModelForEdit](./rakuten.rms.api.shopapi.shoplayoutimagebizmodelforedit)
 
+[ShopMaster](./rakuten.rms.api.shopapi.shopmaster)
+
+[ShopMasterBizModel](./rakuten.rms.api.shopapi.shopmasterbizmodel)
+
+[ShopStatus](./rakuten.rms.api.shopapi.shopstatus)
+
+[ShopStatusBizModel](./rakuten.rms.api.shopapi.shopstatusbizmodel)
+
+[Signboard](./rakuten.rms.api.shopapi.signboard)
+
+[SignboardBizModel](./rakuten.rms.api.shopapi.signboardbizmodel)
+
+[SoryoKbn](./rakuten.rms.api.shopapi.soryokbn)
+
+[SoryoKbnBizModel](./rakuten.rms.api.shopapi.soryokbnbizmodel)
+
+[SpBigBanner](./rakuten.rms.api.shopapi.spbigbanner)
+
+[SpBigBannerBizModel](./rakuten.rms.api.shopapi.spbigbannerbizmodel)
+
+[SpBigBannerList](./rakuten.rms.api.shopapi.spbigbannerlist)
+
+[SpCategoryPageBizModel](./rakuten.rms.api.shopapi.spcategorypagebizmodel)
+
+[SpCategoryPageModel](./rakuten.rms.api.shopapi.spcategorypagemodel)
+
+[SpItemPageBizModel](./rakuten.rms.api.shopapi.spitempagebizmodel)
+
+[SpItemPageModel](./rakuten.rms.api.shopapi.spitempagemodel)
+
+[SpMedamaCategory](./rakuten.rms.api.shopapi.spmedamacategory)
+
+[SpMedamaCategory2](./rakuten.rms.api.shopapi.spmedamacategory2)
+
+[SpMedamaCategoryBizModel](./rakuten.rms.api.shopapi.spmedamacategorybizmodel)
+
+[SpMedamaCategoryCommon](./rakuten.rms.api.shopapi.spmedamacategorycommon)
+
+[SpMedamaCategoryList](./rakuten.rms.api.shopapi.spmedamacategorylist)
+
+[SpMedamaCategoryModel](./rakuten.rms.api.shopapi.spmedamacategorymodel)
+
+[SpMedamaItem](./rakuten.rms.api.shopapi.spmedamaitem)
+
+[SpMedamaItemBizModel](./rakuten.rms.api.shopapi.spmedamaitembizmodel)
+
+[SpMedamaItemSettings](./rakuten.rms.api.shopapi.spmedamaitemsettings)
+
+[SpSmallBanner](./rakuten.rms.api.shopapi.spsmallbanner)
+
+[SpSmallBannerBizModel](./rakuten.rms.api.shopapi.spsmallbannerbizmodel)
+
+[SpSmallBannerList](./rakuten.rms.api.shopapi.spsmallbannerlist)
+
+[SpTopPage](./rakuten.rms.api.shopapi.sptoppage)
+
+[SpTopPageBizModel](./rakuten.rms.api.shopapi.sptoppagebizmodel)
+
+[SpTopPageDisplay](./rakuten.rms.api.shopapi.sptoppagedisplay)
+
+[SpTopPageDisplayBizModel](./rakuten.rms.api.shopapi.sptoppagedisplaybizmodel)
+
+[SpTopPageToGet](./rakuten.rms.api.shopapi.sptoppagetoget)
+
 [TopDisplay](./rakuten.rms.api.shopapi.topdisplay)
 
 [TopDisplayBizModel](./rakuten.rms.api.shopapi.topdisplaybizmodel)
@@ -424,7 +638,49 @@
 
 ## Rakuten.RMS.Api.ShopPageAPI
 
+[DisplayFormat](./rakuten.rms.api.shoppageapi.displayformat)
+
+[ImageType](./rakuten.rms.api.shoppageapi.imagetype)
+
+[Layout](./rakuten.rms.api.shoppageapi.layout)
+
+[LayoutModule](./rakuten.rms.api.shoppageapi.layoutmodule)
+
+[LayoutModuleCommon](./rakuten.rms.api.shoppageapi.layoutmodulecommon)
+
+[LayoutModuleHeader](./rakuten.rms.api.shoppageapi.layoutmoduleheader)
+
+[LayoutModuleNavigation](./rakuten.rms.api.shoppageapi.layoutmodulenavigation)
+
+[LayoutModuleType](./rakuten.rms.api.shoppageapi.layoutmoduletype)
+
+[LayoutModuleWidget](./rakuten.rms.api.shoppageapi.layoutmodulewidget)
+
+[LayoutResponse](./rakuten.rms.api.shoppageapi.layoutresponse)
+
+[LayoutStatus](./rakuten.rms.api.shoppageapi.layoutstatus)
+
+[LayoutToReplace](./rakuten.rms.api.shoppageapi.layouttoreplace)
+
+[LayoutToRequest](./rakuten.rms.api.shoppageapi.layouttorequest)
+
+[LayoutType](./rakuten.rms.api.shoppageapi.layouttype)
+
+[Navigation](./rakuten.rms.api.shoppageapi.navigation)
+
+[NavigationRequest](./rakuten.rms.api.shoppageapi.navigationrequest)
+
+[ResultResponse&lt;TResponse&gt;](./rakuten.rms.api.shoppageapi.resultresponse-1)
+
 [ShopPageAPI](./rakuten.rms.api.shoppageapi.shoppageapi)
+
+[Widget](./rakuten.rms.api.shoppageapi.widget)
+
+[WidgetBody](./rakuten.rms.api.shoppageapi.widgetbody)
+
+[WidgetToRequest](./rakuten.rms.api.shoppageapi.widgettorequest)
+
+[WidgetType](./rakuten.rms.api.shoppageapi.widgettype)
 
 ## Rakuten.RMS.Api.SystemEventNotification
 
