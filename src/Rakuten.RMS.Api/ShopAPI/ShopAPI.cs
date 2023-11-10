@@ -89,30 +89,57 @@ namespace Rakuten.RMS.Api.ShopAPI
         public ShopBizApiResponseWithResult<NaviButtonBizModel> EditNaviButton(NaviButtonBizModelRequest request)
             => Post<ShopBizApiResponseWithResult<NaviButtonBizModel>>(request);
 
-        public void GetLayoutTextSmall()
-        {
-            new NotImplementedException();
-        }
-        public void GetLayoutLossLeader()
-        {
-            throw new NotImplementedException();
-        }
-        public void GetLayoutItemMap()
-        {
-            throw new NotImplementedException();
-        }
-        public void GetLayoutCategoryMap()
-        {
-            throw new NotImplementedException();
-        }
+        /// <summary>
+        /// 共通説明文（小）の情報を取得
+        /// </summary>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutTextSmall", EndpointHttpMethod.GET)]
+        public ShopBizApiResponseWithResult<LayoutTextSmallBizModel> GetLayoutTextSmall( int? textSmallId = null)
+            => Get<ShopBizApiResponseWithResult<LayoutTextSmallBizModel>>(textSmallId == null ? null : new NameValueCollection { { "textSmallId", textSmallId.ToString() } });
 
-        public void GetShopCalendar()
+        /// <summary>
+        /// 目玉商品（PC）のテンプレート設定情報のみを取得
+        /// </summary>
+        /// <param name="lossLeaderId">
+        /// lossLeaderId
+        /// </param>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutLossLeader", EndpointHttpMethod.GET)]
+        public IList<LayoutLossLeader> GetLayoutLossLeader(int? lossLeaderId = null )
+            => Get<ShopBizApiResponseWithResult<LayoutLossLeaderBizModel>>(lossLeaderId == null ? null : new NameValueCollection { { "lossLeaderId", lossLeaderId.ToString() } })
+                .Result.layoutLossLeaderList;
+        /// <summary>
+        /// 商品ページ表示項目並び順の情報を取得
+        /// </summary>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutItemMap", EndpointHttpMethod.GET)]
+        public IList<LayoutItemMap> GetLayoutItemMap(int? itemMapId = null)
+            => Get<ShopBizApiResponseWithResult<LayoutItemMapBizModel>>(itemMapId == null ? null : new NameValueCollection { { "itemMapId", itemMapId.ToString() } }).Result.layoutItemMapList;
+        /// <summary>
+        /// カテゴリページ表示項目並び順の情報を取得
+        /// </summary>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutCategoryMap", EndpointHttpMethod.GET)]
+        public IList<LayoutCategoryMap> GetLayoutCategoryMap( int? categoryMapId = null )
+            => Get<ShopBizApiResponseWithResult<LayoutCategoryMapBizModel>>(
+                categoryMapId == null ? null : new NameValueCollection { { "categoryMapId", categoryMapId.ToString() } }).Result.layoutCategoryMapList;
+        /// <summary>
+        /// 営業日カレンダー設定・ショップからの重要なお知らせの情報を取得
+        /// </summary>
+        /// <param name="fromDate"></param>
+        /// <param name="period">取得する期間を指定します。(fromDate ～ fromDate + period)
+        /// デフォルト値は90日。
+        /// 最大値は180日。</param>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopCalendar", EndpointHttpMethod.GET)]
+        public ShopCalendar2 GetShopCalendar( DateTime? fromDate = null, int? period = null )
         {
-            throw new NotImplementedException();
+            var qs = new NameValueCollection();
+            if (fromDate != null) qs.Add("fromDate", fromDate.Value.ToString("yyyy-MM-dd"));
+            if (period != null) qs.Add("period", period.ToString());
+            return Get<ShopBizApiResponseWithResult<ShopCalendarBizModel>>(qs).Result.shopCalendar;
         }
         /// <summary>
-        /// RMS WEB SERVICE : shop.delvdateMaster.get
+        /// 納期情報設定の情報を取得
         /// </summary>
+        /// <param name="delvdateNumber">
+        /// 指定したdelvdateNumberの情報を取得します。指定しない場合はすべての納期情報設定の情報を取得します。
+        /// </param>
         public IList<DelvdateMaster> GetDelvdateMaster(string delvdateNumber = null)
         {
             var url = @"https://api.rms.rakuten.co.jp/es/1.0/shop/delvdateMaster";
@@ -121,156 +148,155 @@ namespace Rakuten.RMS.Api.ShopAPI
             return Get<ShopBizApiResponseWithResult<DelvdateMasterBizModel>>(url)
                 .Result.delvdateMasterList;
         }
-        public void GetDeliverySetInfo()
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/deliverySetInfo", EndpointHttpMethod.GET)]
+        public IList<DeliverySetInfo> GetDeliverySetInfo(int? deliverySetId = null)
+            => Get<ShopBizApiResponseWithResult<DeliverySetInfoBizModel>>(
+                deliverySetId == null ? null : new NameValueCollection { { "deliverySetId", deliverySetId.ToString() } }).Result.deliverySetInfoList;
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/soryoKbn", EndpointHttpMethod.GET)]
+        public SoryoKbnBizModel GetSoryoKbn(int? kbnId = null, int? id = null )
         {
-            throw new NotImplementedException();
+            var qs = new NameValueCollection();
+            if( kbnId != null ) qs.Add("kbnId", kbnId.ToString());
+            if(id != null) qs.Add("id", id.ToString());
+            return Get<ShopBizApiResponseWithResult<SoryoKbnBizModel>>(qs).Result;
         }
-        public void GetSoryoKbn()
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopAreaSoryo", EndpointHttpMethod.GET)]
+        public ShopAreaSoryoWrapper GetShopAreaSoryo(int? patternId = null)
+            => Get<ShopBizApiResponseWithResult<ShopAreaSoryoWrapperModel>>(
+                patternId == null ? null : new NameValueCollection { { "patternId", patternId.ToString() } }).Result.shopAreaSoryoWrapper;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopAreaSoryo", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditShopAreaSoryo(ShopAreaSoryoWrapperBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/delvAreaMaster", EndpointHttpMethod.GET)]
+        public DelvAreaMasterBizModel GetDelvAreaMaster(int? delvAreaId = null)
+            => Get<ShopBizApiResponseWithResult<DelvAreaMasterBizModel>>(
+                delvAreaId == null ? null :
+                new NameValueCollection { { "delvAreaId", delvAreaId.ToString().ToLower() } }).Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutTextLarge", EndpointHttpMethod.GET)]
+        public LayoutTextLargeBizModel GetLayoutTextLarge()
+            => Get<ShopBizApiResponseWithResult<LayoutTextLargeBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutTextLarge", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditLayoutTextLarge(LayoutTextLargeBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/goldTop", EndpointHttpMethod.GET)]
+        public GoldTopBizModel GetGoldTop()
+            => Get<ShopBizApiResponseWithResult<GoldTopBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/goldTop", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditGoldTop(GoldTopBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopMaster", EndpointHttpMethod.GET)]
+        public ShopMasterBizModel GetShopMaster()
+            => Get<ShopBizApiResponseWithResult<ShopMasterBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopCalendarAndDesign", EndpointHttpMethod.GET)]
+        public ShopCalendarAndDesignBizModel GetShopCalendarAndDesign()
+            => Get<ShopBizApiResponseWithResult<ShopCalendarAndDesignBizModel>>().Result;
+
+        /// <summary>
+        /// 営業日カレンダー・カレンダーデザイン設定を登録・更新・削除
+        /// </summary>
+        /// <param name="clearCalendar">clearCalendar=trueを年中無休フラグ（nonHolidayFlag=1）と合わせて使用します。</param>
+        public ShopBizApiResponse EditShopCalendarAndDesign(ShopCalendarAndDesignBizModel model, bool? clearCalendar = null)
+            => Post<ShopBizApiResponse>(
+                "https://api.rms.rakuten.co.jp/es/1.0/shop/shopCalendarAndDesign" +
+                (clearCalendar == null ? null : "?clearCalendar=" + clearCalendar.ToString().ToLower()));
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopHoliday", EndpointHttpMethod.GET)]
+        public ShopHolidayBizModel GetShopHoliday()
+            => Get<ShopBizApiResponseWithResult<ShopHolidayBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopHoliday", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditShopHoliday(ShopHolidayBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spBigBanner", EndpointHttpMethod.GET)]
+        public SpBigBannerBizModel GetSpBigBanner()
+            => Get<ShopBizApiResponseWithResult<SpBigBannerBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spBigBanner", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSpBigBanner(SpBigBannerBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spCategoryPage", EndpointHttpMethod.GET)]
+        public SpCategoryPageBizModel GetSpCategoryPage()
+            => Get<ShopBizApiResponseWithResult<SpCategoryPageBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spCategoryPage", EndpointHttpMethod.POST)]
+        public void EditSpCategoryPage(SpCategoryPageBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spItemPage", EndpointHttpMethod.GET)]
+        public SpItemPageBizModel GetSpItemPage()
+            => Get<ShopBizApiResponseWithResult<SpItemPageBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spItemPage", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSpItemPage(SpItemPageBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spMedamaCategory", EndpointHttpMethod.GET)]
+        public SpMedamaCategoryBizModel GetSpMedamaCategory()
+            => Get<ShopBizApiResponseWithResult<SpMedamaCategoryBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spMedamaCategory", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSpMedamaCategory(SpMedamaCategoryBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spMedamaItem", EndpointHttpMethod.GET)]
+        public ShopBizApiResponse GetSpMedamaItem()
+            => Get<ShopBizApiResponseWithResult<ShopBizApiResponse>>().Result;
+
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spMedamaItem", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSpMedamaItem(SpMedamaItemBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spSmallBanner", EndpointHttpMethod.GET)]
+        public SpSmallBannerBizModel GetSpSmallBanner()
+            => Get<ShopBizApiResponseWithResult<SpSmallBannerBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spSmallBanner", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSpSmallBanner(SpSmallBannerBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spTopPage", EndpointHttpMethod.GET)]
+        public SpTopPageBizModel GetSpTopPage()
+            => Get<ShopBizApiResponseWithResult<SpTopPageBizModel>>().Result;
+
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spTopPage", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSpTopPage(SpTopPageBizModel model)
+            => Post<ShopBizApiResponse>(model);
+
+        /// <summary>
+        /// 2022年4月18日（月）リリースのスマートフォン用トップページへの切替を行ったかを確認
+        /// </summary>
+        /// <returns>0: 従来版スマートフォン用トップページ 1: 2022年4月18日（月）リリースのスマートフォン用トップページ</returns>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/spTopPageDisplay", EndpointHttpMethod.GET)]
+        public int GetSpTopPageDisplay()
         {
-            throw new NotImplementedException();
+            return Get<ShopBizApiResponseWithResult<SpTopPageDisplayBizModel>>().Result.spTopPageDisplay.status;
         }
-        public void GetShopAreaSoryo()
+        /// <summary>
+        /// skuMigration：SKU移行
+        /// pcTopMigration：PC用トップページの移行
+        /// </summary>
+        /// <param name="statusKey"></param>
+        public ShopStatusBizModel GetShopStatus(string statusKey)
         {
-            throw new NotImplementedException();
-        }
-        public void EditShopAreaSoryo()
-        {
-            throw new NotImplementedException();
+            var url = $"https://api.rms.rakuten.co.jp/es/1.0/shop/shopStatus/{statusKey}";
+            return Get<ShopBizApiResponseWithResult<ShopStatusBizModel>>(url).Result;
         }
 
-        public void GetDelvAreaMaster()
+        public ShopBizApiResponse EditShopStatus( string statusKey, ShopStatus status )
         {
-            throw new NotImplementedException();
-        }
-
-        public void GetLayoutTextLarge()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditLayoutTextLarge()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetGoldTop()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditGoldTop()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetShopMaster()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetShopCalendarAndDesign()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditShopCalendarAndDesign()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetShopHoliday()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditShopHoliday()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpBigBanner()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpBigBanner()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpCategoryPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpCategoryPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpItemPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpItemPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpMedamaCategory()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpMedamaCategory()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpMedamaItem()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpMedamaItem()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpSmallBanner()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpSmallBanner()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpTopPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSpTopPage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSpTopPageDisplay()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetShopStatus()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditShopStatus()
-        {
-            throw new NotImplementedException();
+            var url = $"https://api.rms.rakuten.co.jp/es/1.0/shop/shopStatus/{statusKey}";
+            return Post<ShopBizApiResponse>(url, new ShopStatusBizModel { updateModel = status });
         }
 
         /// <summary>
@@ -286,25 +312,28 @@ namespace Rakuten.RMS.Api.ShopAPI
             return Get<ShopBizApiResponseWithResult<OperationLeadTimeBizModel>>(url)
                 .Result.operationLeadTimeList;
         }
-
-        public void GetShipFrom()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSignboard()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EditSignboard()
-        {
-            throw new NotImplementedException();
-        }
-
-
-
-
-
+        /// <summary>
+        /// 出荷元住所を取得
+        /// </summary>
+        /// <param name="shipFromId"></param>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shipFrom", EndpointHttpMethod.GET)]
+        public void GetShipFrom(int? shipFromId = null)
+            => Get<ShopBizApiResponseWithResult<ShipFromBizModel>>(shipFromId == null ? null : new NameValueCollection { { "shipFromId", shipFromId.ToString() } });
+        /// <summary>
+        /// スマートフォン用・PC用新店舗トップページの看板画像URLを取
+        /// </summary>
+        /// <returns></returns>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/signboard", EndpointHttpMethod.GET)]
+        public ShopBizApiResponseWithResult<SignboardBizModel> GetSignboard()
+            => Get<ShopBizApiResponseWithResult<SignboardBizModel>>();
+        /// <summary>
+        /// スマートフォン用小バナー設定の情報を登録・更新・削除・表示順変更
+        /// </summary>
+        /// <param name="spSignboardUrl"></param>
+        /// <param name="pcSignboardUrl"></param>
+        /// <returns></returns>
+        [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/signboard", EndpointHttpMethod.POST)]
+        public ShopBizApiResponse EditSignboard( string spSignboardUrl, string pcSignboardUrl = null )
+            => Post<ShopBizApiResponse>(new { inputModel = new { spSignboardUrl, pcSignboardUrl } });
     }
 }

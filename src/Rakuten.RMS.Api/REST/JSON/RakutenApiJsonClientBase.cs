@@ -7,6 +7,7 @@ using System.Linq;
 using Rakuten.RMS.Api.XML;
 using System.IO;
 using System.Xml.Serialization;
+using System.Web;
 
 namespace Rakuten.RMS.Api.JSON
 {
@@ -24,7 +25,7 @@ namespace Rakuten.RMS.Api.JSON
             {
                 var qs = string.Join("&", queryParameters.Keys.Cast<string>()
                         .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
-                        .Select(k => k + "=" + queryParameters[k]));
+                        .Select(k => k + "=" + HttpUtility.UrlEncode(queryParameters[k])));
                 url += "?" + qs;
             }
             var req = (HttpWebRequest)WebRequest.Create(url);

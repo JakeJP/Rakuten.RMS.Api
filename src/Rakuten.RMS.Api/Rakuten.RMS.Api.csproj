@@ -62,6 +62,9 @@
     <Compile Include="CategoryAPI20\ItemMappingModel.cs" />
     <Compile Include="CategoryAPI20\Models.cs" />
     <Compile Include="CategoryAPI\CategoryAPI.cs" />
+    <Compile Include="CouponAPI\CouponAPI.cs" />
+    <Compile Include="CouponAPI\Models.cs" />
+    <Compile Include="CouponAPI\ThanksCouponToIssue.cs" />
     <Compile Include="InquiryManagementAPI\InquiryManagementAPI.cs" />
     <Compile Include="InquiryManagementAPI\Models.cs" />
     <Compile Include="InventoryAPI20\Models.cs" />
@@ -74,6 +77,8 @@
     <Compile Include="ItemAPI20\SearchCondition.cs" />
     <Compile Include="ItemAPI\ItemAPI.cs" />
     <Compile Include="ItemAPI\ItemModel.cs" />
+    <Compile Include="ItemBundleAPI\ItemBundleAPI.cs" />
+    <Compile Include="ItemBundleAPI\Models.cs" />
     <Compile Include="LicenseManagementAPI\LicenseManagementAPI.cs" />
     <Compile Include="NavigationAPI20\Models.cs" />
     <Compile Include="NavigationAPI20\NavigationAPI20.cs" />
@@ -101,23 +106,46 @@
     <Compile Include="REST\XML\RakutenApiXmlClientBase.cs" />
     <Compile Include="REST\JSON\RakutenApiJsonClientBase.cs" />
     <Compile Include="REST\XML\ResultBase.cs" />
+    <Compile Include="ShopAPI\DeliverySetInfoBizModel.cs" />
+    <Compile Include="ShopAPI\DelvAreaMasterBizModel.cs" />
     <Compile Include="ShopAPI\DelvdateNumber.cs" />
+    <Compile Include="ShopAPI\GoldTopBizModel.cs" />
+    <Compile Include="ShopAPI\LayoutCategoryMapBizModel.cs" />
+    <Compile Include="ShopAPI\LayoutItemMapBizModel.cs" />
+    <Compile Include="ShopAPI\LayoutLossLeaderBizModel.cs" />
+    <Compile Include="ShopAPI\LayoutTextLargeBizModel.cs" />
+    <Compile Include="ShopAPI\LayoutTextSmallBizModel.cs" />
     <Compile Include="ShopAPI\Models.cs" />
     <Compile Include="ShopAPI\NaviButtonBizModel.cs" />
     <Compile Include="ShopAPI\NaviButtonInfoBizModel.cs" />
     <Compile Include="ShopAPI\OperationLeadTime.cs" />
+    <Compile Include="ShopAPI\ShipFromBizModel.cs" />
     <Compile Include="ShopAPI\ShopAPI.cs" />
+    <Compile Include="ShopAPI\ShopAreaSoryoWrapperBizModel.cs" />
+    <Compile Include="ShopAPI\ShopCalendarAndDesignBizModel.cs" />
+    <Compile Include="ShopAPI\ShopCalendarBizModel.cs" />
+    <Compile Include="ShopAPI\ShopHolidayBizModel.cs" />
     <Compile Include="ShopAPI\ShopLayoutCommonBizModel.cs" />
     <Compile Include="ShopAPI\ShopLayoutImageBizModel.cs" />
+    <Compile Include="ShopAPI\ShopMasterBizModel.cs" />
+    <Compile Include="ShopAPI\ShopStatusBizModel.cs" />
+    <Compile Include="ShopAPI\SignboardBizModel.cs" />
+    <Compile Include="ShopAPI\SoryoKbnBizModel.cs" />
+    <Compile Include="ShopAPI\SpBigBannerBizModel.cs" />
+    <Compile Include="ShopAPI\SpCategoryPageBizModel.cs" />
+    <Compile Include="ShopAPI\SpItemPageBizModel.cs" />
+    <Compile Include="ShopAPI\SpMedamaCategoryBizModel.cs" />
+    <Compile Include="ShopAPI\SpMedamaItemBizModel.cs" />
+    <Compile Include="ShopAPI\SpSmallBannerBizModel.cs" />
+    <Compile Include="ShopAPI\SpTopPageBizModel.cs" />
+    <Compile Include="ShopAPI\SpTopPageDisplayBizModel.cs" />
     <Compile Include="ShopAPI\TopDisplayBizModel.cs" />
+    <Compile Include="ShopPageAPI\Models.cs" />
     <Compile Include="ShopPageAPI\ShopPageAPI.cs" />
     <Compile Include="SystemEventNotificationService\Models.cs" />
     <Compile Include="SystemEventNotificationService\Notification.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CouponAPI\" />
-    <Folder Include="ItemBundleAPI\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

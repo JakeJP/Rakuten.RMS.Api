@@ -75,8 +75,7 @@ namespace Rakuten.RMS.Api
         /// <summary>
         /// 組み合わせ販売API（ItemBundleAPI））
         /// </summary>
-        /// <exception cref="NotImplementedException"></exception>
-        public void GetItemBundleAPI() => throw new NotImplementedException();
+        public ItemBundleAPI.ItemBundleAPI GetItemBundleAPI() => new ItemBundleAPI.ItemBundleAPI(this);
         /// <summary>
         /// R-CabinetAPI（CabinetAPI）
         /// </summary>
@@ -119,12 +118,12 @@ namespace Rakuten.RMS.Api
         /// 店舗ページAPI（ShopPageAPI）
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void GetShopPageAPI() => throw new NotImplementedException();
+        public ShopPageAPI.ShopPageAPI GetShopPageAPI() => new ShopPageAPI.ShopPageAPI(this);
         /// <summary>
         /// クーポンAPI（CouponAPI）
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        public void GetCouponAPI() => throw new NotImplementedException();
+        public CouponAPI.CouponAPI GetCouponAPI() => new CouponAPI.CouponAPI(this);
         /// <summary>
         /// ライセンス管理API（LicenseManagementAPI）
         /// </summary>

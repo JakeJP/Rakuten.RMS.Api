@@ -27,7 +27,7 @@ namespace Rakuten.RMS.Api.ReserveAPI
                     if (v != null && (v is DateTime || v is DateTime?))
                         value = ((DateTime)v).ToString("yyyy-MM-dd");
                     else
-                        value = v.ToString();
+                        value = v == null ? null : v.ToString();
                     return new { key, value };
                 })
                 .Where(m => !string.IsNullOrEmpty(m.value))
