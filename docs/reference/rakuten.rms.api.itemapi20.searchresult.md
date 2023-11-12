@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchResult
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **numFound**
-
-```csharp
-public int numFound { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **offset**
-
-```csharp
-public int offset { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **nextCursorMark**
+### <a id="properties-nextcursormark"/>**nextCursorMark**
 
 ```csharp
 public string nextCursorMark { get; set; }
@@ -44,7 +25,27 @@ public string nextCursorMark { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **results**
+### <a id="properties-numfound"/>**numFound**
+
+```csharp
+public int numFound { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-offset"/>**offset**
+
+```csharp
+public int offset { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-results"/>**results**
 
 ```csharp
 public List<Item> results { get; set; }
@@ -56,12 +57,12 @@ public List<Item> results { get; set; }
 
 ## Constructors
 
-### **SearchResult()**
+### <a id="constructors-.ctor"/>**SearchResult()**
 
 ```csharp
 public SearchResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

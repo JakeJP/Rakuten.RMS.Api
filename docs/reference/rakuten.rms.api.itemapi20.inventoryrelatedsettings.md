@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # InventoryRelatedSettings
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **unlimitedInventoryFlag**
-
-```csharp
-public bool unlimitedInventoryFlag { get; set; }
-```
-
-#### Property Value
-
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
-
-### **features**
+### <a id="properties-features"/>**features**
 
 ```csharp
 public Features features { get; set; }
@@ -34,10 +25,20 @@ public Features features { get; set; }
 
 [Features](./rakuten.rms.api.itemapi20.inventoryrelatedsettings.features)<br>
 
-### **variants**
+### <a id="properties-unlimitedinventoryflag"/>**unlimitedInventoryFlag**
 
 ```csharp
-public Dictionary<string, Variant> variants { get; set; }
+public bool unlimitedInventoryFlag { get; set; }
+```
+
+#### Property Value
+
+[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
+
+### <a id="properties-variants"/>**variants**
+
+```csharp
+public Dictionary<String, Variant> variants { get; set; }
 ```
 
 #### Property Value
@@ -46,12 +47,12 @@ public Dictionary<string, Variant> variants { get; set; }
 
 ## Constructors
 
-### **InventoryRelatedSettings()**
+### <a id="constructors-.ctor"/>**InventoryRelatedSettings()**
 
 ```csharp
 public InventoryRelatedSettings()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

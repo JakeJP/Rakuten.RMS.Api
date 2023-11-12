@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CabinetUpdateFileResult
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **ResultCode**
+### <a id="properties-resultcode"/>**ResultCode**
 
 ```csharp
 public int ResultCode { get; set; }
@@ -26,12 +27,12 @@ public int ResultCode { get; set; }
 
 ## Constructors
 
-### **CabinetUpdateFileResult()**
+### <a id="constructors-.ctor"/>**CabinetUpdateFileResult()**
 
 ```csharp
 public CabinetUpdateFileResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

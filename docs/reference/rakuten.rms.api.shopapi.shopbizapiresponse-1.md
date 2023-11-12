@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopBizApiResponse&lt;TResultMessage&gt;
 
@@ -18,7 +19,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **resultCode**
+### <a id="properties-resultcode"/>**resultCode**
 
 ```csharp
 public string resultCode { get; set; }
@@ -28,7 +29,7 @@ public string resultCode { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **resultMessageList**
+### <a id="properties-resultmessagelist"/>**resultMessageList**
 
 ```csharp
 public List<TResultMessage> resultMessageList { get; set; }
@@ -40,12 +41,12 @@ List&lt;TResultMessage&gt;<br>
 
 ## Constructors
 
-### **ShopBizApiResponse()**
+### <a id="constructors-.ctor"/>**ShopBizApiResponse()**
 
 ```csharp
 public ShopBizApiResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

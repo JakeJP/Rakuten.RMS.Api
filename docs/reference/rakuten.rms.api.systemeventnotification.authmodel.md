@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # AuthModel
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **ContractId**
-
-```csharp
-public string ContractId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **ShopUrl**
-
-```csharp
-public string ShopUrl { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **AuthKey**
+### <a id="properties-authkey"/>**AuthKey**
 
 ```csharp
 public string AuthKey { get; set; }
@@ -44,14 +25,34 @@ public string AuthKey { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-contractid"/>**ContractId**
+
+```csharp
+public string ContractId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-shopurl"/>**ShopUrl**
+
+```csharp
+public string ShopUrl { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **AuthModel()**
+### <a id="constructors-.ctor"/>**AuthModel()**
 
 ```csharp
 public AuthModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SystemNotifyModel
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **AuthModel**
-
-```csharp
-public AuthModel AuthModel { get; set; }
-```
-
-#### Property Value
-
-[AuthModel](./rakuten.rms.api.systemeventnotification.authmodel)<br>
-
-### **_NotifyInfoModel**
+### <a id="properties-_notifyinfomodel"/>**_NotifyInfoModel**
 
 ```csharp
 public List<NotifyInfoModel> _NotifyInfoModel { get; set; }
@@ -34,7 +25,17 @@ public List<NotifyInfoModel> _NotifyInfoModel { get; set; }
 
 [List&lt;NotifyInfoModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **NotifyInfoModel**
+### <a id="properties-authmodel"/>**AuthModel**
+
+```csharp
+public AuthModel AuthModel { get; set; }
+```
+
+#### Property Value
+
+[AuthModel](./rakuten.rms.api.systemeventnotification.authmodel)<br>
+
+### <a id="properties-notifyinfomodel"/>**NotifyInfoModel**
 
 ```csharp
 public List<NotifyInfoModel> NotifyInfoModel { get; }
@@ -46,12 +47,12 @@ public List<NotifyInfoModel> NotifyInfoModel { get; }
 
 ## Constructors
 
-### **SystemNotifyModel()**
+### <a id="constructors-.ctor"/>**SystemNotifyModel()**
 
 ```csharp
 public SystemNotifyModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

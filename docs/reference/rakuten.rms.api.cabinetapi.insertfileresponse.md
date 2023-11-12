@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # InsertFileResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **cabinetFileInsertResult**
+### <a id="properties-cabinetfileinsertresult"/>**cabinetFileInsertResult**
 
 ```csharp
 public CabinetInsertFileResult cabinetFileInsertResult { get; set; }
@@ -24,7 +25,7 @@ public CabinetInsertFileResult cabinetFileInsertResult { get; set; }
 
 [CabinetInsertFileResult](./rakuten.rms.api.cabinetapi.cabinetinsertfileresult)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -36,12 +37,12 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **InsertFileResponse()**
+### <a id="constructors-.ctor"/>**InsertFileResponse()**
 
 ```csharp
 public InsertFileResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OrderNotifyModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **AuthModel**
+### <a id="properties-authmodel"/>**AuthModel**
 
 ```csharp
 public AuthModel AuthModel { get; set; }
@@ -24,7 +25,7 @@ public AuthModel AuthModel { get; set; }
 
 [AuthModel](./rakuten.rms.api.systemeventnotification.authmodel)<br>
 
-### **OrderInfoNotifyModel**
+### <a id="properties-orderinfonotifymodel"/>**OrderInfoNotifyModel**
 
 ```csharp
 public List<OrderInfoNotifyModel> OrderInfoNotifyModel { get; set; }
@@ -36,12 +37,12 @@ public List<OrderInfoNotifyModel> OrderInfoNotifyModel { get; set; }
 
 ## Constructors
 
-### **OrderNotifyModel()**
+### <a id="constructors-.ctor"/>**OrderNotifyModel()**
 
 ```csharp
 public OrderNotifyModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

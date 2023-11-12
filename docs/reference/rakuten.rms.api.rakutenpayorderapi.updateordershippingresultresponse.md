@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # UpdateOrderShippingResultResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **ResultShippingModelList**
+### <a id="properties-resultshippingmodellist"/>**ResultShippingModelList**
 
 ```csharp
 public List<ResultShippingModel> ResultShippingModelList { get; set; }
@@ -26,12 +27,12 @@ public List<ResultShippingModel> ResultShippingModelList { get; set; }
 
 ## Constructors
 
-### **UpdateOrderShippingResultResponse()**
+### <a id="constructors-.ctor"/>**UpdateOrderShippingResultResponse()**
 
 ```csharp
 public UpdateOrderShippingResultResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SoryoKbn
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **kbnId**
-
-```csharp
-public int kbnId { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **id**
+### <a id="properties-id"/>**id**
 
 ```csharp
 public int id { get; set; }
@@ -34,7 +25,17 @@ public int id { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **name**
+### <a id="properties-kbnid"/>**kbnId**
+
+```csharp
+public int kbnId { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-name"/>**name**
 
 ```csharp
 public string name { get; set; }
@@ -46,12 +47,12 @@ public string name { get; set; }
 
 ## Constructors
 
-### **SoryoKbn()**
+### <a id="constructors-.ctor"/>**SoryoKbn()**
 
 ```csharp
 public SoryoKbn()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

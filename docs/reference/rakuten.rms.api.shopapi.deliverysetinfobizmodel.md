@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DeliverySetInfoBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **deliverySetInfoList**
+### <a id="properties-deliverysetinfolist"/>**deliverySetInfoList**
 
 ```csharp
 public List<DeliverySetInfo> deliverySetInfoList { get; set; }
@@ -26,12 +27,12 @@ public List<DeliverySetInfo> deliverySetInfoList { get; set; }
 
 ## Constructors
 
-### **DeliverySetInfoBizModel()**
+### <a id="constructors-.ctor"/>**DeliverySetInfoBizModel()**
 
 ```csharp
 public DeliverySetInfoBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

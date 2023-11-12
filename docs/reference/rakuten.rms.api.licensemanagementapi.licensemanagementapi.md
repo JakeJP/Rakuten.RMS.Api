@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LicenseManagementAPI
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **GetExpiryDate(String)**
+### <a id="methods-getexpirydate"/>**GetExpiryDate(String)**
 
 ```csharp
 public DateTime GetExpiryDate(string licenseKey)
@@ -26,9 +27,9 @@ public DateTime GetExpiryDate(string licenseKey)
 
 #### Returns
 
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)
 
-### **GetExpiryDate()**
+### <a id="methods-getexpirydate"/>**GetExpiryDate()**
 
 現在接続に使用している licenseKey の有効期限を取得。
 
@@ -38,8 +39,8 @@ public DateTime GetExpiryDate()
 
 #### Returns
 
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

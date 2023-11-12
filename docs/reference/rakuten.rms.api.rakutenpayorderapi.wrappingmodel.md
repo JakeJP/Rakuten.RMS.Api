@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # WrappingModel
 
@@ -14,41 +15,19 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **title**
+### <a id="properties-deletewrappingflag"/>**deleteWrappingFlag**
 
-以下のいずれか
- 1: 包装紙
- 2: リボン
+ラッピング削除フラグ
 
 ```csharp
-public int title { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **name**
-
-```csharp
-public string name { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **price**
-
-```csharp
-public Nullable<int> price { get; set; }
+public Nullable<Int32> deleteWrappingFlag { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **includeTaxFlag**
+### <a id="properties-includetaxflag"/>**includeTaxFlag**
 
 税込別
  0: 税別
@@ -62,26 +41,48 @@ public int includeTaxFlag { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **deleteWrappingFlag**
-
-ラッピング削除フラグ
+### <a id="properties-name"/>**name**
 
 ```csharp
-public Nullable<int> deleteWrappingFlag { get; set; }
+public string name { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-price"/>**price**
+
+```csharp
+public Nullable<Int32> price { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
+### <a id="properties-title"/>**title**
+
+以下のいずれか
+ 1: 包装紙
+ 2: リボン
+
+```csharp
+public int title { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
 ## Constructors
 
-### **WrappingModel()**
+### <a id="constructors-.ctor"/>**WrappingModel()**
 
 ```csharp
 public WrappingModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

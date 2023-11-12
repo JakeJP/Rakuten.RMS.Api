@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CabinetInsertFileResult
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **FileId**
+### <a id="properties-fileid"/>**FileId**
 
 ```csharp
 public long FileId { get; set; }
@@ -24,7 +25,7 @@ public long FileId { get; set; }
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
-### **ResultCode**
+### <a id="properties-resultcode"/>**ResultCode**
 
 ```csharp
 public int ResultCode { get; set; }
@@ -36,12 +37,12 @@ public int ResultCode { get; set; }
 
 ## Constructors
 
-### **CabinetInsertFileResult()**
+### <a id="constructors-.ctor"/>**CabinetInsertFileResult()**
 
 ```csharp
 public CabinetInsertFileResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

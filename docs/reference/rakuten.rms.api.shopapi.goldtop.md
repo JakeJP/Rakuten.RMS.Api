@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GoldTop
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **pcRedirect**
+### <a id="properties-pcredirect"/>**pcRedirect**
 
 ```csharp
 public int pcRedirect { get; set; }
@@ -24,7 +25,7 @@ public int pcRedirect { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **spRedirect**
+### <a id="properties-spredirect"/>**spRedirect**
 
 ```csharp
 public int spRedirect { get; set; }
@@ -36,12 +37,12 @@ public int spRedirect { get; set; }
 
 ## Constructors
 
-### **GoldTop()**
+### <a id="constructors-.ctor"/>**GoldTop()**
 
 ```csharp
 public GoldTop()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

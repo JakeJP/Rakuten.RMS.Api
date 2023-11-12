@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ReplyResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **result**
+### <a id="properties-result"/>**result**
 
 ```csharp
 public ReplyResult result { get; set; }
@@ -26,12 +27,12 @@ public ReplyResult result { get; set; }
 
 ## Constructors
 
-### **ReplyResponse()**
+### <a id="constructors-.ctor"/>**ReplyResponse()**
 
 ```csharp
 public ReplyResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

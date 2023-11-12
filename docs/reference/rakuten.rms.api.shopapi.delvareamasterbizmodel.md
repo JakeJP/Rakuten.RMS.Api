@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DelvAreaMasterBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **delvAreaMasterList**
+### <a id="properties-delvareamasterlist"/>**delvAreaMasterList**
 
 ```csharp
 public List<DelvAreaMaster> delvAreaMasterList { get; set; }
@@ -26,12 +27,12 @@ public List<DelvAreaMaster> delvAreaMasterList { get; set; }
 
 ## Constructors
 
-### **DelvAreaMasterBizModel()**
+### <a id="constructors-.ctor"/>**DelvAreaMasterBizModel()**
 
 ```csharp
 public DelvAreaMasterBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

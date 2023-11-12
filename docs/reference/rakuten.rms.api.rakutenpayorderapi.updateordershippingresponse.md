@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # UpdateOrderShippingResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **MessageModelList**
+### <a id="properties-messagemodellist"/>**MessageModelList**
 
 ```csharp
 public IList<OrderShippingMessageModel> MessageModelList { get; set; }
@@ -26,12 +27,12 @@ public IList<OrderShippingMessageModel> MessageModelList { get; set; }
 
 ## Constructors
 
-### **UpdateOrderShippingResponse()**
+### <a id="constructors-.ctor"/>**UpdateOrderShippingResponse()**
 
 ```csharp
 public UpdateOrderShippingResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

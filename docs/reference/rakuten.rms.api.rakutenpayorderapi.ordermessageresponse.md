@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OrderMessageResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **MessageModelList**
+### <a id="properties-messagemodellist"/>**MessageModelList**
 
 ```csharp
 public IList<OrderMessageModel> MessageModelList { get; set; }
@@ -26,7 +27,7 @@ public IList<OrderMessageModel> MessageModelList { get; set; }
 
 ## Constructors
 
-### **OrderMessageResponse()**
+### <a id="constructors-.ctor"/>**OrderMessageResponse()**
 
 ```csharp
 public OrderMessageResponse()
@@ -34,7 +35,7 @@ public OrderMessageResponse()
 
 ## Methods
 
-### **ToString()**
+### <a id="methods-tostring"/>**ToString()**
 
 ```csharp
 public string ToString()
@@ -42,8 +43,8 @@ public string ToString()
 
 #### Returns
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

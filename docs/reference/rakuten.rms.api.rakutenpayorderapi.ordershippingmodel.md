@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OrderShippingModel
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **orderNumber**
-
-```csharp
-public string orderNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **BasketidModelList**
+### <a id="properties-basketidmodellist"/>**BasketidModelList**
 
 ```csharp
 public IList<BasketidModel> BasketidModelList { get; set; }
@@ -34,14 +25,24 @@ public IList<BasketidModel> BasketidModelList { get; set; }
 
 [IList&lt;BasketidModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
+### <a id="properties-ordernumber"/>**orderNumber**
+
+```csharp
+public string orderNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **OrderShippingModel()**
+### <a id="constructors-.ctor"/>**OrderShippingModel()**
 
 ```csharp
 public OrderShippingModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

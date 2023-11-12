@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SpTopPageDisplay
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **status**
+### <a id="properties-status"/>**status**
 
 ```csharp
 public int status { get; set; }
@@ -26,12 +27,12 @@ public int status { get; set; }
 
 ## Constructors
 
-### **SpTopPageDisplay()**
+### <a id="constructors-.ctor"/>**SpTopPageDisplay()**
 
 ```csharp
 public SpTopPageDisplay()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

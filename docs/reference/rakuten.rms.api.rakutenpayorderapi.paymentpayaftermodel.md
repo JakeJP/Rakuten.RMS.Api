@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PaymentPayAfterModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **rcvgAgcyTypeName**
+### <a id="properties-rcvgagcytypename"/>**rcvgAgcyTypeName**
 
 事業者名
 
@@ -26,7 +27,7 @@ public string rcvgAgcyTypeName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **rcvgNumber**
+### <a id="properties-rcvgnumber"/>**rcvgNumber**
 
 お問い合わせ番号
 
@@ -40,12 +41,12 @@ public string rcvgNumber { get; set; }
 
 ## Constructors
 
-### **PaymentPayAfterModel()**
+### <a id="constructors-.ctor"/>**PaymentPayAfterModel()**
 
 ```csharp
 public PaymentPayAfterModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

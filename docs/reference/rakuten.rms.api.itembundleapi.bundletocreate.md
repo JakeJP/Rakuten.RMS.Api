@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # BundleToCreate
 
@@ -14,17 +15,31 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **parentItemManageNumber**
+### <a id="properties-bundledescription"/>**bundleDescription**
+
+6	組み合わせ販売説明文
 
 ```csharp
-public string parentItemManageNumber { get; set; }
+public string bundleDescription { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **bundleManageNumber**
+### <a id="properties-bundleitems"/>**bundleItems**
+
+組み合わせ商品リスト
+
+```csharp
+public List<BundleItemToCreate> bundleItems { get; set; }
+```
+
+#### Property Value
+
+[List&lt;BundleItemToCreate&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
+
+### <a id="properties-bundlemanagenumber"/>**bundleManageNumber**
 
 2	組み合わせ管理番号
 
@@ -36,7 +51,19 @@ public string bundleManageNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **bundleState**
+### <a id="properties-bundlename"/>**bundleName**
+
+// 5	組み合わせ管理名称
+
+```csharp
+public string bundleName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-bundlestate"/>**bundleState**
 
 3	表示設定 
  ・ACTIVE
@@ -50,36 +77,10 @@ public string bundleState { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **bundleItems**
-
-組み合わせ商品リスト
+### <a id="properties-parentitemmanagenumber"/>**parentItemManageNumber**
 
 ```csharp
-public List<BundleItemToCreate> bundleItems { get; set; }
-```
-
-#### Property Value
-
-[List&lt;BundleItemToCreate&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
-
-### **bundleName**
-
-// 5	組み合わせ管理名称
-
-```csharp
-public string bundleName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **bundleDescription**
-
-6	組み合わせ販売説明文
-
-```csharp
-public string bundleDescription { get; set; }
+public string parentItemManageNumber { get; set; }
 ```
 
 #### Property Value
@@ -88,12 +89,12 @@ public string bundleDescription { get; set; }
 
 ## Constructors
 
-### **BundleToCreate()**
+### <a id="constructors-.ctor"/>**BundleToCreate()**
 
 ```csharp
 public BundleToCreate()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

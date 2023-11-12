@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CouponDeleteRequest
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **coupon**
+### <a id="properties-coupon"/>**coupon**
 
 ```csharp
 public CouponToDelete coupon { get; set; }
@@ -26,12 +27,12 @@ public CouponToDelete coupon { get; set; }
 
 ## Constructors
 
-### **CouponDeleteRequest()**
+### <a id="constructors-.ctor"/>**CouponDeleteRequest()**
 
 ```csharp
 public CouponDeleteRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

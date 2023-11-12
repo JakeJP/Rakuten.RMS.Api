@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PatchItem
 
@@ -14,57 +15,77 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **itemType**
+### <a id="properties-accesscontrol"/>**accessControl**
 
 ```csharp
-public Nullable<ItemType> itemType { get; set; }
+public AccessControl accessControl { get; set; }
 ```
 
 #### Property Value
 
-[Nullable&lt;ItemType&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+[AccessControl](./rakuten.rms.api.itemapi20.itemcommon.accesscontrol)<br>
 
-### **hideItem**
+### <a id="properties-genreid"/>**genreId**
 
 ```csharp
-public Nullable<bool> hideItem { get; set; }
+public string genreId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-hideitem"/>**hideItem**
+
+```csharp
+public Nullable<Boolean> hideItem { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **unlimitedInventoryFlag**
+### <a id="properties-hideitem"/>**hideItem**
 
 ```csharp
-public Nullable<bool> unlimitedInventoryFlag { get; set; }
+public bool hideItem { get; set; }
 ```
 
 #### Property Value
 
-[Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
 
-### **itemDisplaySequence**
+### <a id="properties-images"/>**images**
 
 ```csharp
-public Nullable<long> itemDisplaySequence { get; set; }
+public IList<Image> images { get; set; }
+```
+
+#### Property Value
+
+[IList&lt;Image&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+### <a id="properties-itemdisplaysequence"/>**itemDisplaySequence**
+
+```csharp
+public Nullable<Int64> itemDisplaySequence { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **variants**
+### <a id="properties-itemdisplaysequence"/>**itemDisplaySequence**
 
 ```csharp
-public Dictionary<string, PatchVariant> variants { get; set; }
+public long itemDisplaySequence { get; set; }
 ```
 
 #### Property Value
 
-[Dictionary&lt;String, PatchVariant&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
-### **itemNumber**
+### <a id="properties-itemnumber"/>**itemNumber**
 
 商品番号
 
@@ -76,61 +97,17 @@ public string itemNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **title**
-
-商品名
+### <a id="properties-itemtype"/>**itemType**
 
 ```csharp
-public string title { get; set; }
+public Nullable<ItemType> itemType { get; set; }
 ```
 
 #### Property Value
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+[Nullable&lt;ItemType&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **tagline**
-
-キャッチコピー
-
-```csharp
-public string tagline { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **productDescription**
-
-```csharp
-public ProductDescription productDescription { get; set; }
-```
-
-#### Property Value
-
-[ProductDescription](./rakuten.rms.api.itemapi20.itemcommon.productdescription)<br>
-
-### **salesDescription**
-
-```csharp
-public string salesDescription { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **precautions**
-
-```csharp
-public Precautions precautions { get; set; }
-```
-
-#### Property Value
-
-[Precautions](./rakuten.rms.api.itemapi20.itemcommon.precautions)<br>
-
-### **itemType**
+### <a id="properties-itemtype"/>**itemType**
 
 ```csharp
 public ItemType itemType { get; set; }
@@ -140,77 +117,67 @@ public ItemType itemType { get; set; }
 
 [ItemType](./rakuten.rms.api.itemapi20.itemcommon.itemtype)<br>
 
-### **images**
+### <a id="properties-layout"/>**layout**
 
 ```csharp
-public IList<Image> images { get; set; }
+public Layout layout { get; set; }
 ```
 
 #### Property Value
 
-[IList&lt;Image&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+[Layout](./rakuten.rms.api.itemapi20.itemcommon.layout)<br>
 
-### **whiteBgImage**
+### <a id="properties-payment"/>**payment**
 
 ```csharp
-public WhiteBgImage whiteBgImage { get; set; }
+public Payment payment { get; set; }
 ```
 
 #### Property Value
 
-[WhiteBgImage](./rakuten.rms.api.itemapi20.itemcommon.whitebgimage)<br>
+[Payment](./rakuten.rms.api.itemapi20.itemcommon.payment)<br>
 
-### **video**
+### <a id="properties-pointcampaign"/>**pointCampaign**
 
 ```csharp
-public Video video { get; set; }
+public PointCampaign pointCampaign { get; set; }
 ```
 
 #### Property Value
 
-[Video](./rakuten.rms.api.itemapi20.itemcommon.video)<br>
+[PointCampaign](./rakuten.rms.api.itemapi20.itemcommon.pointcampaign)<br>
 
-### **genreId**
+### <a id="properties-precautions"/>**precautions**
 
 ```csharp
-public string genreId { get; set; }
+public Precautions precautions { get; set; }
 ```
 
 #### Property Value
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+[Precautions](./rakuten.rms.api.itemapi20.itemcommon.precautions)<br>
 
-### **tags**
+### <a id="properties-productdescription"/>**productDescription**
 
 ```csharp
-public IList<long> tags { get; set; }
+public ProductDescription productDescription { get; set; }
 ```
 
 #### Property Value
 
-[IList&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+[ProductDescription](./rakuten.rms.api.itemapi20.itemcommon.productdescription)<br>
 
-### **hideItem**
+### <a id="properties-purchasableperiod"/>**purchasablePeriod**
 
 ```csharp
-public bool hideItem { get; set; }
+public Period purchasablePeriod { get; set; }
 ```
 
 #### Property Value
 
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
+[Period](./rakuten.rms.api.itemapi20.itemcommon.period)<br>
 
-### **unlimitedInventoryFlag**
-
-```csharp
-public bool unlimitedInventoryFlag { get; set; }
-```
-
-#### Property Value
-
-[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
-
-### **releaseDate**
+### <a id="properties-releasedate"/>**releaseDate**
 
 商品種別を「PRE_ORDER」に更新した場合、必須。
  フォーマットはISO 8601、タイムゾーンは日本標準時（JST）、日まで。
@@ -224,17 +191,17 @@ public Nullable<DateTime> releaseDate { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **purchasablePeriod**
+### <a id="properties-salesdescription"/>**salesDescription**
 
 ```csharp
-public Period purchasablePeriod { get; set; }
+public string salesDescription { get; set; }
 ```
 
 #### Property Value
 
-[Period](./rakuten.rms.api.itemapi20.itemcommon.period)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **subscription**
+### <a id="properties-subscription"/>**subscription**
 
 ```csharp
 public Subscription subscription { get; set; }
@@ -244,57 +211,81 @@ public Subscription subscription { get; set; }
 
 [Subscription](./rakuten.rms.api.itemapi20.itemcommon.subscription)<br>
 
-### **accessControl**
+### <a id="properties-tagline"/>**tagline**
+
+キャッチコピー
 
 ```csharp
-public AccessControl accessControl { get; set; }
+public string tagline { get; set; }
 ```
 
 #### Property Value
 
-[AccessControl](./rakuten.rms.api.itemapi20.itemcommon.accesscontrol)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **payment**
+### <a id="properties-tags"/>**tags**
 
 ```csharp
-public Payment payment { get; set; }
+public IList<Int64> tags { get; set; }
 ```
 
 #### Property Value
 
-[Payment](./rakuten.rms.api.itemapi20.itemcommon.payment)<br>
+[IList&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **pointCampaign**
+### <a id="properties-title"/>**title**
+
+商品名
 
 ```csharp
-public PointCampaign pointCampaign { get; set; }
+public string title { get; set; }
 ```
 
 #### Property Value
 
-[PointCampaign](./rakuten.rms.api.itemapi20.itemcommon.pointcampaign)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **itemDisplaySequence**
+### <a id="properties-unlimitedinventoryflag"/>**unlimitedInventoryFlag**
 
 ```csharp
-public long itemDisplaySequence { get; set; }
+public Nullable<Boolean> unlimitedInventoryFlag { get; set; }
 ```
 
 #### Property Value
 
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+[Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **layout**
+### <a id="properties-unlimitedinventoryflag"/>**unlimitedInventoryFlag**
 
 ```csharp
-public Layout layout { get; set; }
+public bool unlimitedInventoryFlag { get; set; }
 ```
 
 #### Property Value
 
-[Layout](./rakuten.rms.api.itemapi20.itemcommon.layout)<br>
+[Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
 
-### **variantSelectors**
+### <a id="properties-variants"/>**variants**
+
+```csharp
+public Dictionary<String, PatchVariant> variants { get; set; }
+```
+
+#### Property Value
+
+[Dictionary&lt;String, PatchVariant&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)<br>
+
+### <a id="properties-variants"/>**variants**
+
+```csharp
+public Dictionary<String, Variant> variants { get; set; }
+```
+
+#### Property Value
+
+[Dictionary&lt;String, Variant&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)<br>
+
+### <a id="properties-variantselectors"/>**variantSelectors**
 
 ```csharp
 public IList<VariantSelector> variantSelectors { get; set; }
@@ -304,19 +295,29 @@ public IList<VariantSelector> variantSelectors { get; set; }
 
 [IList&lt;VariantSelector&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **variants**
+### <a id="properties-video"/>**video**
 
 ```csharp
-public Dictionary<string, Variant> variants { get; set; }
+public Video video { get; set; }
 ```
 
 #### Property Value
 
-[Dictionary&lt;String, Variant&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)<br>
+[Video](./rakuten.rms.api.itemapi20.itemcommon.video)<br>
+
+### <a id="properties-whitebgimage"/>**whiteBgImage**
+
+```csharp
+public WhiteBgImage whiteBgImage { get; set; }
+```
+
+#### Property Value
+
+[WhiteBgImage](./rakuten.rms.api.itemapi20.itemcommon.whitebgimage)<br>
 
 ## Constructors
 
-### **PatchItem()**
+### <a id="constructors-.ctor"/>**PatchItem()**
 
 ```csharp
 public PatchItem()
@@ -324,23 +325,7 @@ public PatchItem()
 
 ## Methods
 
-### **InitializeVariants()**
-
-```csharp
-public void InitializeVariants()
-```
-
-### **NewVariant()**
-
-```csharp
-public Variant NewVariant()
-```
-
-#### Returns
-
-[Variant](./rakuten.rms.api.itemapi20.itemcommon.variant)<br>
-
-### **AddVariant(String, Variant)**
+### <a id="methods-addvariant"/>**AddVariant(String, Variant)**
 
 ```csharp
 public void AddVariant(string variantId, Variant variant)
@@ -352,6 +337,22 @@ public void AddVariant(string variantId, Variant variant)
 
 `variant` [Variant](./rakuten.rms.api.itemapi20.itemcommon.variant)<br>
 
----
+### <a id="methods-initializevariants"/>**InitializeVariants()**
 
-[`< Back`](./)
+```csharp
+public void InitializeVariants()
+```
+
+### <a id="methods-newvariant"/>**NewVariant()**
+
+```csharp
+public Variant NewVariant()
+```
+
+#### Returns
+
+[Variant](./rakuten.rms.api.itemapi20.itemcommon.variant)
+
+
+- - -
+[**< クラス一覧**](./)

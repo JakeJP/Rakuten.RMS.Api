@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopMaster
 
@@ -14,67 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **shopName**
-
-```csharp
-public string shopName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **url**
-
-```csharp
-public string url { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **companyName**
-
-```csharp
-public string companyName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **presidentName**
-
-```csharp
-public string presidentName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **addressZip**
-
-```csharp
-public string addressZip { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **addressPrefecture**
-
-```csharp
-public string addressPrefecture { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **addressCity**
+### <a id="properties-addresscity"/>**addressCity**
 
 ```csharp
 public string addressCity { get; set; }
@@ -84,7 +25,17 @@ public string addressCity { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **addressStreet**
+### <a id="properties-addressprefecture"/>**addressPrefecture**
+
+```csharp
+public string addressPrefecture { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-addressstreet"/>**addressStreet**
 
 ```csharp
 public string addressStreet { get; set; }
@@ -94,17 +45,17 @@ public string addressStreet { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **companyTel**
+### <a id="properties-addresszip"/>**addressZip**
 
 ```csharp
-public string companyTel { get; set; }
+public string addressZip { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **companyFax**
+### <a id="properties-companyfax"/>**companyFax**
 
 ```csharp
 public string companyFax { get; set; }
@@ -114,67 +65,27 @@ public string companyFax { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **tantouName**
+### <a id="properties-companyname"/>**companyName**
 
 ```csharp
-public string tantouName { get; set; }
+public string companyName { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **tantouPost**
+### <a id="properties-companytel"/>**companyTel**
 
 ```csharp
-public string tantouPost { get; set; }
+public string companyTel { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **tantouTel**
-
-```csharp
-public string tantouTel { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **tantouFax**
-
-```csharp
-public string tantouFax { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **supportTel**
-
-```csharp
-public string supportTel { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **supportFax**
-
-```csharp
-public string supportFax { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **emergencyTel**
+### <a id="properties-emergencytel"/>**emergencyTel**
 
 ```csharp
 public string emergencyTel { get; set; }
@@ -184,7 +95,17 @@ public string emergencyTel { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **secName**
+### <a id="properties-presidentname"/>**presidentName**
+
+```csharp
+public string presidentName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-secname"/>**secName**
 
 ```csharp
 public string secName { get; set; }
@@ -194,14 +115,94 @@ public string secName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-shopname"/>**shopName**
+
+```csharp
+public string shopName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-supportfax"/>**supportFax**
+
+```csharp
+public string supportFax { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-supporttel"/>**supportTel**
+
+```csharp
+public string supportTel { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-tantoufax"/>**tantouFax**
+
+```csharp
+public string tantouFax { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-tantouname"/>**tantouName**
+
+```csharp
+public string tantouName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-tantoupost"/>**tantouPost**
+
+```csharp
+public string tantouPost { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-tantoutel"/>**tantouTel**
+
+```csharp
+public string tantouTel { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-url"/>**url**
+
+```csharp
+public string url { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **ShopMaster()**
+### <a id="constructors-.ctor"/>**ShopMaster()**
 
 ```csharp
 public ShopMaster()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

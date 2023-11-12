@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GetSubStatusListResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **MessageModelList**
+### <a id="properties-messagemodellist"/>**MessageModelList**
 
 ```csharp
 public IList<MessageModel> MessageModelList { get; set; }
@@ -24,7 +25,7 @@ public IList<MessageModel> MessageModelList { get; set; }
 
 [IList&lt;MessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **StatusModelList**
+### <a id="properties-statusmodellist"/>**StatusModelList**
 
 ```csharp
 public IList<StatusModel> StatusModelList { get; set; }
@@ -36,12 +37,12 @@ public IList<StatusModel> StatusModelList { get; set; }
 
 ## Constructors
 
-### **GetSubStatusListResponse()**
+### <a id="constructors-.ctor"/>**GetSubStatusListResponse()**
 
 ```csharp
 public GetSubStatusListResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

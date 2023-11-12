@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # InquiryManagementAPI
 
@@ -16,10 +17,28 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **GetCount(DateTime, DateTime, Nullable&lt;Boolean&gt;)**
+### <a id="methods-getattachment"/>**GetAttachment(String, String)**
+
+問い合わせ返信の添付ファイルを取得
 
 ```csharp
-public int GetCount(DateTime fromDate, DateTime toDate, Nullable<bool> noMerchantReply)
+public Stream GetAttachment(string path, string label)
+```
+
+#### Parameters
+
+`path` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`label` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+#### Returns
+
+[Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream)
+
+### <a id="methods-getcount"/>**GetCount(DateTime, DateTime, Nullable&lt;Boolean&gt;)**
+
+```csharp
+public int GetCount(DateTime fromDate, DateTime toDate, Nullable<Boolean> noMerchantReply)
 ```
 
 #### Parameters
@@ -32,14 +51,14 @@ public int GetCount(DateTime fromDate, DateTime toDate, Nullable<bool> noMerchan
 
 #### Returns
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)
 
-### **GetInquiries(DateTime, DateTime, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)**
+### <a id="methods-getinquiries"/>**GetInquiries(DateTime, DateTime, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;)**
 
 指定された条件の問い合わせリストを取得
 
 ```csharp
-public GetInquiriesResponse GetInquiries(DateTime fromDate, DateTime toDate, Nullable<int> limit, Nullable<int> page, Nullable<bool> noMerchantReply)
+public GetInquiriesResponse GetInquiries(DateTime fromDate, DateTime toDate, Nullable<Int32> limit, Nullable<Int32> page, Nullable<Boolean> noMerchantReply)
 ```
 
 #### Parameters
@@ -56,9 +75,9 @@ public GetInquiriesResponse GetInquiries(DateTime fromDate, DateTime toDate, Nul
 
 #### Returns
 
-[GetInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.getinquiriesresponse)<br>
+[GetInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.getinquiriesresponse)
 
-### **GetInquiry(String)**
+### <a id="methods-getinquiry"/>**GetInquiry(String)**
 
 問い合わせに対する返信を登録
 
@@ -72,9 +91,75 @@ public Inquiry GetInquiry(string inquiryNumber)
 
 #### Returns
 
-[Inquiry](./rakuten.rms.api.inquirymanagementapi.inquiry)<br>
+[Inquiry](./rakuten.rms.api.inquirymanagementapi.inquiry)
 
-### **Reply(String, String, String, IList&lt;Attachment&gt;)**
+### <a id="methods-markinquiriesascomplete"/>**MarkInquiriesAsComplete(IList&lt;String&gt;)**
+
+問い合わせを”完了”状態に変更
+
+```csharp
+public MarkInquiriesResponse MarkInquiriesAsComplete(IList<String> inquiryNumbers)
+```
+
+#### Parameters
+
+`inquiryNumbers` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+#### Returns
+
+[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)
+
+### <a id="methods-markinquiriesasincomplete"/>**MarkInquiriesAsIncomplete(IList&lt;String&gt;)**
+
+問い合わせを”未完了”状態に変更
+
+```csharp
+public MarkInquiriesResponse MarkInquiriesAsIncomplete(IList<String> inquiryNumbers)
+```
+
+#### Parameters
+
+`inquiryNumbers` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+#### Returns
+
+[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)
+
+### <a id="methods-markinquiriesasread"/>**MarkInquiriesAsRead(IList&lt;String&gt;)**
+
+指定された複数の問い合わせを既読状態に変更
+
+```csharp
+public MarkInquiriesResponse MarkInquiriesAsRead(IList<String> inquiryNumbers)
+```
+
+#### Parameters
+
+`inquiryNumbers` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+#### Returns
+
+[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)
+
+### <a id="methods-postattachment"/>**PostAttachment(Stream, String)**
+
+問い合わせ返信に利用する添付ファイルを登録
+
+```csharp
+public Result PostAttachment(Stream file, string contentType)
+```
+
+#### Parameters
+
+`file` [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream)<br>
+
+`contentType` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+#### Returns
+
+[Result](./rakuten.rms.api.inquirymanagementapi.postattachmentresponse.result)
+
+### <a id="methods-reply"/>**Reply(String, String, String, IList&lt;Attachment&gt;)**
 
 問い合わせに対する返信を登録
 
@@ -94,92 +179,8 @@ public ReplyResult Reply(string inquiryNumber, string shopId, string message, IL
 
 #### Returns
 
-[ReplyResult](./rakuten.rms.api.inquirymanagementapi.replyresult)<br>
+[ReplyResult](./rakuten.rms.api.inquirymanagementapi.replyresult)
 
-### **PostAttachment(Stream, String)**
 
-問い合わせ返信に利用する添付ファイルを登録
-
-```csharp
-public Result PostAttachment(Stream file, string contentType)
-```
-
-#### Parameters
-
-`file` [Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream)<br>
-
-`contentType` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-#### Returns
-
-[Result](./rakuten.rms.api.inquirymanagementapi.postattachmentresponse.result)<br>
-
-### **GetAttachment(String, String)**
-
-問い合わせ返信の添付ファイルを取得
-
-```csharp
-public Stream GetAttachment(string path, string label)
-```
-
-#### Parameters
-
-`path` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`label` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-#### Returns
-
-[Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream)<br>
-
-### **MarkInquiriesAsRead(IList&lt;String&gt;)**
-
-指定された複数の問い合わせを既読状態に変更
-
-```csharp
-public MarkInquiriesResponse MarkInquiriesAsRead(IList<string> inquiryNumbers)
-```
-
-#### Parameters
-
-`inquiryNumbers` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-#### Returns
-
-[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)<br>
-
-### **MarkInquiriesAsComplete(IList&lt;String&gt;)**
-
-問い合わせを”完了”状態に変更
-
-```csharp
-public MarkInquiriesResponse MarkInquiriesAsComplete(IList<string> inquiryNumbers)
-```
-
-#### Parameters
-
-`inquiryNumbers` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-#### Returns
-
-[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)<br>
-
-### **MarkInquiriesAsIncomplete(IList&lt;String&gt;)**
-
-問い合わせを”未完了”状態に変更
-
-```csharp
-public MarkInquiriesResponse MarkInquiriesAsIncomplete(IList<string> inquiryNumbers)
-```
-
-#### Parameters
-
-`inquiryNumbers` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-#### Returns
-
-[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)<br>
-
----
-
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

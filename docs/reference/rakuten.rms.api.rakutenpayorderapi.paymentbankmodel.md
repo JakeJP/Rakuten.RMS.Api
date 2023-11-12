@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PaymentBankModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **transferDate**
+### <a id="properties-transferdate"/>**transferDate**
 
 振込日
 
@@ -26,7 +27,7 @@ public Nullable<DateTime> transferDate { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **transferNameKana**
+### <a id="properties-transfernamekana"/>**transferNameKana**
 
 振込人名カナ
 
@@ -40,12 +41,12 @@ public string transferNameKana { get; set; }
 
 ## Constructors
 
-### **PaymentBankModel()**
+### <a id="constructors-.ctor"/>**PaymentBankModel()**
 
 ```csharp
 public PaymentBankModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

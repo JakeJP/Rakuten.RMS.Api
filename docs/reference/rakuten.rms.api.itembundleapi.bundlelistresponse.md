@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # BundleListResponse
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **numberOfBundles**
-
-```csharp
-public int numberOfBundles { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **bundles**
+### <a id="properties-bundles"/>**bundles**
 
 ```csharp
 public List<Bundle> bundles { get; set; }
@@ -34,14 +25,24 @@ public List<Bundle> bundles { get; set; }
 
 [List&lt;Bundle&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-numberofbundles"/>**numberOfBundles**
+
+```csharp
+public int numberOfBundles { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
 ## Constructors
 
-### **BundleListResponse()**
+### <a id="constructors-.ctor"/>**BundleListResponse()**
 
 ```csharp
 public BundleListResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

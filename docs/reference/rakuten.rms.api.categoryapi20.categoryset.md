@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategorySet
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **categorySetId**
-
-```csharp
-public string categorySetId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **title**
-
-```csharp
-public string title { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **categorySetFeatures**
+### <a id="properties-categorysetfeatures"/>**categorySetFeatures**
 
 ```csharp
 public CategorySetFeatures categorySetFeatures { get; set; }
@@ -44,7 +25,17 @@ public CategorySetFeatures categorySetFeatures { get; set; }
 
 [CategorySetFeatures](./rakuten.rms.api.categoryapi20.categorysetfeatures)<br>
 
-### **created**
+### <a id="properties-categorysetid"/>**categorySetId**
+
+```csharp
+public string categorySetId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-created"/>**created**
 
 ```csharp
 public Nullable<DateTime> created { get; set; }
@@ -54,7 +45,17 @@ public Nullable<DateTime> created { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **updated**
+### <a id="properties-title"/>**title**
+
+```csharp
+public string title { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-updated"/>**updated**
 
 ```csharp
 public Nullable<DateTime> updated { get; set; }
@@ -66,12 +67,12 @@ public Nullable<DateTime> updated { get; set; }
 
 ## Constructors
 
-### **CategorySet()**
+### <a id="constructors-.ctor"/>**CategorySet()**
 
 ```csharp
 public CategorySet()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

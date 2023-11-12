@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DelvdateMasterBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **delvdateMasterList**
+### <a id="properties-delvdatemasterlist"/>**delvdateMasterList**
 
 ```csharp
 public List<DelvdateMaster> delvdateMasterList { get; set; }
@@ -26,12 +27,12 @@ public List<DelvdateMaster> delvdateMasterList { get; set; }
 
 ## Constructors
 
-### **DelvdateMasterBizModel()**
+### <a id="constructors-.ctor"/>**DelvdateMasterBizModel()**
 
 ```csharp
 public DelvdateMasterBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

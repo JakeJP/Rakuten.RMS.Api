@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchedCoupons
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **coupons**
+### <a id="properties-coupons"/>**coupons**
 
 ```csharp
 public List<Coupon> coupons { get; set; }
@@ -26,12 +27,12 @@ public List<Coupon> coupons { get; set; }
 
 ## Constructors
 
-### **SearchedCoupons()**
+### <a id="constructors-.ctor"/>**SearchedCoupons()**
 
 ```csharp
 public SearchedCoupons()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

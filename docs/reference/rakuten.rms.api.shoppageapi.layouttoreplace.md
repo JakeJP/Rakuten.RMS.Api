@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutToReplace
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **type**
-
-```csharp
-public LayoutType type { get; set; }
-```
-
-#### Property Value
-
-[LayoutType](./rakuten.rms.api.shoppageapi.layouttype)<br>
-
-### **title**
-
-```csharp
-public string title { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **modules**
+### <a id="properties-modules"/>**modules**
 
 ```csharp
 public List<LayoutModule> modules { get; set; }
@@ -44,14 +25,34 @@ public List<LayoutModule> modules { get; set; }
 
 [List&lt;LayoutModule&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-title"/>**title**
+
+```csharp
+public string title { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-type"/>**type**
+
+```csharp
+public LayoutType type { get; set; }
+```
+
+#### Property Value
+
+[LayoutType](./rakuten.rms.api.shoppageapi.layouttype)<br>
+
 ## Constructors
 
-### **LayoutToReplace()**
+### <a id="constructors-.ctor"/>**LayoutToReplace()**
 
 ```csharp
 public LayoutToReplace()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

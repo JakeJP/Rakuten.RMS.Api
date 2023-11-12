@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PaymentPaypalModel
 
@@ -14,19 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **eventDate**
-
-取引日時
-
-```csharp
-public Nullable<DateTime> eventDate { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **billId**
+### <a id="properties-billid"/>**billId**
 
 請求書ID
 
@@ -38,14 +27,26 @@ public string billId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-eventdate"/>**eventDate**
+
+取引日時
+
+```csharp
+public Nullable<DateTime> eventDate { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
 ## Constructors
 
-### **PaymentPaypalModel()**
+### <a id="constructors-.ctor"/>**PaymentPaypalModel()**
 
 ```csharp
 public PaymentPaypalModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

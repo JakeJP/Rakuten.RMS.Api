@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # InventoryStatusResult
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **quantity**
-
-```csharp
-public long quantity { get; set; }
-```
-
-#### Property Value
-
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-### **created**
+### <a id="properties-created"/>**created**
 
 ```csharp
 public DateTime created { get; set; }
@@ -34,37 +25,7 @@ public DateTime created { get; set; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **updated**
-
-```csharp
-public DateTime updated { get; set; }
-```
-
-#### Property Value
-
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
-
-### **manageNumber**
-
-```csharp
-public string manageNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **variantId**
-
-```csharp
-public string variantId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **errors**
+### <a id="properties-errors"/>**errors**
 
 ```csharp
 public List<ResultError> errors { get; set; }
@@ -74,14 +35,54 @@ public List<ResultError> errors { get; set; }
 
 [List&lt;ResultError&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-managenumber"/>**manageNumber**
+
+```csharp
+public string manageNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-quantity"/>**quantity**
+
+```csharp
+public long quantity { get; set; }
+```
+
+#### Property Value
+
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+### <a id="properties-updated"/>**updated**
+
+```csharp
+public DateTime updated { get; set; }
+```
+
+#### Property Value
+
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+
+### <a id="properties-variantid"/>**variantId**
+
+```csharp
+public string variantId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **InventoryStatusResult()**
+### <a id="constructors-.ctor"/>**InventoryStatusResult()**
 
 ```csharp
 public InventoryStatusResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

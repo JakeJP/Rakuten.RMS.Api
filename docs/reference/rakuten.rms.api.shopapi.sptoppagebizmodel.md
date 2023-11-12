@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SpTopPageBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **updateModel**
+### <a id="properties-updatemodel"/>**updateModel**
 
 ```csharp
 public SpTopPage updateModel { get; set; }
@@ -26,12 +27,12 @@ public SpTopPage updateModel { get; set; }
 
 ## Constructors
 
-### **SpTopPageBizModel()**
+### <a id="constructors-.ctor"/>**SpTopPageBizModel()**
 
 ```csharp
 public SpTopPageBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

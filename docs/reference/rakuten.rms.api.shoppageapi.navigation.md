@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # Navigation
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **navigationId**
+### <a id="properties-navigationid"/>**navigationId**
 
 ```csharp
 public string navigationId { get; set; }
@@ -24,17 +25,7 @@ public string navigationId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **type**
-
-```csharp
-public string type { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **options**
+### <a id="properties-options"/>**options**
 
 ```csharp
 public Option options { get; set; }
@@ -44,14 +35,24 @@ public Option options { get; set; }
 
 [Option](./rakuten.rms.api.shoppageapi.navigationrequest.option)<br>
 
+### <a id="properties-type"/>**type**
+
+```csharp
+public string type { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **Navigation()**
+### <a id="constructors-.ctor"/>**Navigation()**
 
 ```csharp
 public Navigation()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

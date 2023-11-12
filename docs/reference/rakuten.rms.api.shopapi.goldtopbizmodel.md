@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GoldTopBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **insertModel**
+### <a id="properties-insertmodel"/>**insertModel**
 
 ```csharp
 public GoldTop insertModel { get; set; }
@@ -24,7 +25,7 @@ public GoldTop insertModel { get; set; }
 
 [GoldTop](./rakuten.rms.api.shopapi.goldtop)<br>
 
-### **updateModel**
+### <a id="properties-updatemodel"/>**updateModel**
 
 ```csharp
 public GoldTop updateModel { get; set; }
@@ -36,12 +37,12 @@ public GoldTop updateModel { get; set; }
 
 ## Constructors
 
-### **GoldTopBizModel()**
+### <a id="constructors-.ctor"/>**GoldTopBizModel()**
 
 ```csharp
 public GoldTopBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # InventorySku
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **manageNumber**
-
-```csharp
-public string manageNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **variantId**
-
-```csharp
-public string variantId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **errors**
+### <a id="properties-errors"/>**errors**
 
 ```csharp
 public List<ResultError> errors { get; set; }
@@ -44,15 +25,35 @@ public List<ResultError> errors { get; set; }
 
 [List&lt;ResultError&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-managenumber"/>**manageNumber**
+
+```csharp
+public string manageNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-variantid"/>**variantId**
+
+```csharp
+public string variantId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **InventorySku()**
+### <a id="constructors-.ctor"/>**InventorySku()**
 
 ```csharp
 public InventorySku()
 ```
 
-### **InventorySku(String, String)**
+### <a id="constructors-.ctor"/>**InventorySku(String, String)**
 
 ```csharp
 public InventorySku(string manageNumber, string variantId)
@@ -64,6 +65,6 @@ public InventorySku(string manageNumber, string variantId)
 
 `variantId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

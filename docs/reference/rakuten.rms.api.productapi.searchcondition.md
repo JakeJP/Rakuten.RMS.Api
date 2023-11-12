@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchCondition
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **productId**
-
-```csharp
-public string productId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **keyword**
-
-```csharp
-public string keyword { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **genreId**
+### <a id="properties-genreid"/>**genreId**
 
 ```csharp
 public string genreId { get; set; }
@@ -44,7 +25,32 @@ public string genreId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **makerName**
+### <a id="properties-keyword"/>**keyword**
+
+```csharp
+public string keyword { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-limit"/>**limit**
+
+検索結果の取得上限数
+ 例：11件目から25件目の情報を取得する場合は、offset=10、limit=15
+ null の場合はデフォルト値で検索されます。
+ ※値は30まで指定可能です。
+
+```csharp
+public Nullable<Int32> limit { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-makername"/>**makerName**
 
 ```csharp
 public string makerName { get; set; }
@@ -54,17 +60,31 @@ public string makerName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **releaseDateFrom**
+### <a id="properties-offset"/>**offset**
+
+0を基準値とした検索結果取得開始位置
+ 例：11件目から25件目の情報を取得する場合は、offset=10、limit=15
+ null の場合はデフォルト値で検索されます。
 
 ```csharp
-public Nullable<DateTime> releaseDateFrom { get; set; }
+public Nullable<Int32> offset { get; set; }
 ```
 
 #### Property Value
 
-[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **releaseDataTo**
+### <a id="properties-productid"/>**productId**
+
+```csharp
+public string productId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-releasedatato"/>**releaseDataTo**
 
 ```csharp
 public Nullable<DateTime> releaseDataTo { get; set; }
@@ -74,7 +94,17 @@ public Nullable<DateTime> releaseDataTo { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **sortBy**
+### <a id="properties-releasedatefrom"/>**releaseDateFrom**
+
+```csharp
+public Nullable<DateTime> releaseDateFrom { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-sortby"/>**sortBy**
 
 ```csharp
 public string sortBy { get; set; }
@@ -84,55 +114,14 @@ public string sortBy { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **offset**
-
-0を基準値とした検索結果取得開始位置
- 例：11件目から25件目の情報を取得する場合は、offset=10、limit=15
- null の場合はデフォルト値で検索されます。
-
-```csharp
-public Nullable<int> offset { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **limit**
-
-検索結果の取得上限数
- 例：11件目から25件目の情報を取得する場合は、offset=10、limit=15
- null の場合はデフォルト値で検索されます。
- ※値は30まで指定可能です。
-
-```csharp
-public Nullable<int> limit { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
 ## Constructors
 
-### **SearchCondition()**
+### <a id="constructors-.ctor"/>**SearchCondition()**
 
 ```csharp
 public SearchCondition()
 ```
 
-## Methods
 
-### **ToNameValueCollection()**
-
-```csharp
-internal NameValueCollection ToNameValueCollection()
-```
-
-#### Returns
-
-NameValueCollection<br>
-
----
-
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

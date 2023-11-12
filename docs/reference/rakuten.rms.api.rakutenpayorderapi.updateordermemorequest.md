@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # UpdateOrderMemoRequest
 
@@ -14,31 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **orderNumber**
-
-注文番号
-
-```csharp
-public string orderNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **subStatusId**
-
-サブステータスID
-
-```csharp
-public Nullable<long> subStatusId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **deliveryClass**
+### <a id="properties-deliveryclass"/>**deliveryClass**
 
 配送区分
  0: 選択なし
@@ -52,14 +29,14 @@ public Nullable<long> subStatusId { get; set; }
  8: その他5
 
 ```csharp
-public Nullable<long> deliveryClass { get; set; }
+public Nullable<Int64> deliveryClass { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **deliveryDate**
+### <a id="properties-deliverydate"/>**deliveryDate**
 
 お届け日指定 no Date	10	-	YYYY-MM-DD	2017-11-30
 
@@ -71,48 +48,7 @@ public Nullable<DateTime> deliveryDate { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **shippingTerm**
-
-お届け時間帯
- 0: なし
- 1: 午前
- 2: 午後
- 9: その他
- h1h2: h1時-h2時(h1は7～24まで任意で数値指定可能。h2は07～24まで任意で数値指定可能)
-
-```csharp
-public Nullable<int> shippingTerm { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **memo**
-
-ひとことメモ
-
-```csharp
-public string memo { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **Operator**
-
-担当者
-
-```csharp
-public string Operator { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **mailPlugSentence**
+### <a id="properties-mailplugsentence"/>**mailPlugSentence**
 
 メール差込文(お客様へのメッセージ)
 
@@ -124,14 +60,79 @@ public string mailPlugSentence { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-memo"/>**memo**
+
+ひとことメモ
+
+```csharp
+public string memo { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-operator"/>**Operator**
+
+担当者
+
+```csharp
+public string Operator { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-ordernumber"/>**orderNumber**
+
+注文番号
+
+```csharp
+public string orderNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-shippingterm"/>**shippingTerm**
+
+お届け時間帯
+ 0: なし
+ 1: 午前
+ 2: 午後
+ 9: その他
+ h1h2: h1時-h2時(h1は7～24まで任意で数値指定可能。h2は07～24まで任意で数値指定可能)
+
+```csharp
+public Nullable<Int32> shippingTerm { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-substatusid"/>**subStatusId**
+
+サブステータスID
+
+```csharp
+public Nullable<Int64> subStatusId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
 ## Constructors
 
-### **UpdateOrderMemoRequest()**
+### <a id="constructors-.ctor"/>**UpdateOrderMemoRequest()**
 
 ```csharp
 public UpdateOrderMemoRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

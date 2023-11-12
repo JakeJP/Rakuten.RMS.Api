@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SkuModel
 
@@ -16,21 +17,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **variantId**
-
-SKU管理番号
- SKU移行前の注文の場合、値は空になります。
- ※Request Parameterの「version」に「7」以降の値を指定すると取得可能
-
-```csharp
-public string variantId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **merchantDefinedSkuId**
+### <a id="properties-merchantdefinedskuid"/>**merchantDefinedSkuId**
 
 システム連携用SKU番号
  SKU移行前の注文の場合、値は空になります。
@@ -44,7 +31,7 @@ public string merchantDefinedSkuId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **skuInfo**
+### <a id="properties-skuinfo"/>**skuInfo**
 
 SKU情報
  
@@ -67,14 +54,28 @@ public string skuInfo { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-variantid"/>**variantId**
+
+SKU管理番号
+ SKU移行前の注文の場合、値は空になります。
+ ※Request Parameterの「version」に「7」以降の値を指定すると取得可能
+
+```csharp
+public string variantId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **SkuModel()**
+### <a id="constructors-.ctor"/>**SkuModel()**
 
 ```csharp
 public SkuModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

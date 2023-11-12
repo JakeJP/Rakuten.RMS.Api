@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ItemAPI
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Constructors
 
-### **ItemAPI(ServiceProvider)**
+### <a id="constructors-.ctor"/>**ItemAPI(ServiceProvider)**
 
 ```csharp
 public ItemAPI(ServiceProvider provider)
@@ -26,7 +27,7 @@ public ItemAPI(ServiceProvider provider)
 
 ## Methods
 
-### **Get(String)**
+### <a id="methods-get"/>**Get(String)**
 
 ```csharp
 public GetResponse Get(string itemUrl)
@@ -38,9 +39,9 @@ public GetResponse Get(string itemUrl)
 
 #### Returns
 
-[GetResponse](./rakuten.rms.api.itemapi.itemapi.getresponse)<br>
+[GetResponse](./rakuten.rms.api.itemapi.itemapi.getresponse)
 
-### **UpdateItems(IEnumerable&lt;ItemModelToUpdate&gt;)**
+### <a id="methods-updateitems"/>**UpdateItems(IEnumerable&lt;ItemModelToUpdate&gt;)**
 
 ```csharp
 public void UpdateItems(IEnumerable<ItemModelToUpdate> items)
@@ -50,6 +51,6 @@ public void UpdateItems(IEnumerable<ItemModelToUpdate> items)
 
 `items` [IEnumerable&lt;ItemModelToUpdate&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

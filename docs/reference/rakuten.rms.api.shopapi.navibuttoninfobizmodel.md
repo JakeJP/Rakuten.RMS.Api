@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # NaviButtonInfoBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **naviButtonInfoList**
+### <a id="properties-navibuttoninfolist"/>**naviButtonInfoList**
 
 ```csharp
 public List<NaviButtonInfo> naviButtonInfoList { get; set; }
@@ -26,12 +27,12 @@ public List<NaviButtonInfo> naviButtonInfoList { get; set; }
 
 ## Constructors
 
-### **NaviButtonInfoBizModel()**
+### <a id="constructors-.ctor"/>**NaviButtonInfoBizModel()**
 
 ```csharp
 public NaviButtonInfoBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

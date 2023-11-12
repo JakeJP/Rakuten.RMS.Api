@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GenreWithAttributes
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **attributes**
-
-```csharp
-public IList<Attribute> attributes { get; set; }
-```
-
-#### Property Value
-
-[IList&lt;Attribute&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-### **ancestors**
+### <a id="properties-ancestors"/>**ancestors**
 
 ```csharp
 public IList<BaseGenre> ancestors { get; set; }
@@ -34,17 +25,17 @@ public IList<BaseGenre> ancestors { get; set; }
 
 [IList&lt;BaseGenre&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **siblings**
+### <a id="properties-attributes"/>**attributes**
 
 ```csharp
-public IList<BaseGenre> siblings { get; set; }
+public IList<Attribute> attributes { get; set; }
 ```
 
 #### Property Value
 
-[IList&lt;BaseGenre&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+[IList&lt;Attribute&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **children**
+### <a id="properties-children"/>**children**
 
 ```csharp
 public IList<BaseGenre> children { get; set; }
@@ -54,7 +45,7 @@ public IList<BaseGenre> children { get; set; }
 
 [IList&lt;BaseGenre&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **genreId**
+### <a id="properties-genreid"/>**genreId**
 
 ```csharp
 public long genreId { get; set; }
@@ -64,37 +55,17 @@ public long genreId { get; set; }
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
-### **genreIdPath**
+### <a id="properties-genreidpath"/>**genreIdPath**
 
 ```csharp
-public IList<long> genreIdPath { get; set; }
+public IList<Int64> genreIdPath { get; set; }
 ```
 
 #### Property Value
 
 [IList&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **nameJa**
-
-```csharp
-public string nameJa { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **nameJaPath**
-
-```csharp
-public IList<string> nameJaPath { get; set; }
-```
-
-#### Property Value
-
-[IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-### **level**
+### <a id="properties-level"/>**level**
 
 ```csharp
 public int level { get; set; }
@@ -104,7 +75,7 @@ public int level { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **lowest**
+### <a id="properties-lowest"/>**lowest**
 
 ```csharp
 public bool lowest { get; set; }
@@ -114,7 +85,27 @@ public bool lowest { get; set; }
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
 
-### **properties**
+### <a id="properties-nameja"/>**nameJa**
+
+```csharp
+public string nameJa { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-namejapath"/>**nameJaPath**
+
+```csharp
+public IList<String> nameJaPath { get; set; }
+```
+
+#### Property Value
+
+[IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+### <a id="properties-properties"/>**properties**
 
 ```csharp
 public Property properties { get; set; }
@@ -124,14 +115,24 @@ public Property properties { get; set; }
 
 [Property](./rakuten.rms.api.navigationapi20.property)<br>
 
+### <a id="properties-siblings"/>**siblings**
+
+```csharp
+public IList<BaseGenre> siblings { get; set; }
+```
+
+#### Property Value
+
+[IList&lt;BaseGenre&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
 ## Constructors
 
-### **GenreWithAttributes()**
+### <a id="constructors-.ctor"/>**GenreWithAttributes()**
 
 ```csharp
 public GenreWithAttributes()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

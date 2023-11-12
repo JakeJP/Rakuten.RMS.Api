@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategorySetField
 
@@ -22,6 +23,6 @@ Implements [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icom
 | CREATED | 2 | カテゴリセットの登録日時 |
 | UPDATED | 3 | カテゴリセットの更新日時 |
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

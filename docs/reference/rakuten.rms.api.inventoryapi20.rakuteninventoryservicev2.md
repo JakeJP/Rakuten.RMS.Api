@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # RakutenInventoryServiceV2
 
@@ -14,21 +15,21 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Fields
 
-### **MaxUpdateRecord**
-
-```csharp
-public static int MaxUpdateRecord;
-```
-
-### **MaxGetStatusRecord**
+### <a id="fields-maxgetstatusrecord"/>**MaxGetStatusRecord**
 
 ```csharp
 public static int MaxGetStatusRecord;
 ```
 
+### <a id="fields-maxupdaterecord"/>**MaxUpdateRecord**
+
+```csharp
+public static int MaxUpdateRecord;
+```
+
 ## Properties
 
-### **Version**
+### <a id="properties-version"/>**Version**
 
 ```csharp
 public string Version { get; set; }
@@ -40,7 +41,79 @@ public string Version { get; set; }
 
 ## Methods
 
-### **Get(String, String)**
+### <a id="methods-bulkget"/>**BulkGet(InventorySku[])**
+
+商品管理番号とSKU管理番号を指定し、最大で1000件の在庫数を一括で取得できます。
+
+```csharp
+public List<InventoryStatusResult> BulkGet(InventorySku[] inventories)
+```
+
+#### Parameters
+
+`inventories` [InventorySku[]](./rakuten.rms.api.inventoryapi20.inventorysku)<br>
+
+#### Returns
+
+[List&lt;InventoryStatusResult&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)
+
+### <a id="methods-bulkget"/>**BulkGet(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
+
+商品管理番号とSKU管理番号を指定し、最大で1000件の在庫数を一括で取得できます。
+
+```csharp
+public List<InventoryStatusResult> BulkGet(Nullable<Int32> minQuantity, Nullable<Int32> maxQuantity)
+```
+
+#### Parameters
+
+`minQuantity` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+最小在庫数
+
+`maxQuantity` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+最大在庫数
+
+#### Returns
+
+[List&lt;InventoryStatusResult&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)
+
+#### Exceptions
+
+[ErrorResponseException](./rakuten.rms.api.json.errorresponseexception)<br>
+
+### <a id="methods-bulkupsert"/>**BulkUpsert(IEnumerable&lt;InventorySkuUpsert&gt;)**
+
+```csharp
+public ResultBase BulkUpsert(IEnumerable<InventorySkuUpsert> inventories)
+```
+
+#### Parameters
+
+`inventories` [IEnumerable&lt;InventorySkuUpsert&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+
+#### Returns
+
+[ResultBase](./rakuten.rms.api.json.resultbase)
+
+### <a id="methods-delete"/>**Delete(String, String)**
+
+商品管理番号とSKU管理番号を指定し、在庫情報を削除する
+
+```csharp
+public ResultBase Delete(string manageNumber, string variantId)
+```
+
+#### Parameters
+
+`manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`variantId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+#### Returns
+
+[ResultBase](./rakuten.rms.api.json.resultbase)
+
+### <a id="methods-get"/>**Get(String, String)**
 
 https://api.rms.rakuten.co.jp/es/2.0/inventories/manage-numbers/{manageNumber}/variants/{variantId}
  https://api.rms.rakuten.co.jp/es/2.1/inventories/manage-numbers/{manageNumber}/variants/{variantId}
@@ -57,49 +130,9 @@ public InventoryStatusResult Get(string manageNumber, string variantId)
 
 #### Returns
 
-[InventoryStatusResult](./rakuten.rms.api.inventoryapi20.inventorystatusresult)<br>
+[InventoryStatusResult](./rakuten.rms.api.inventoryapi20.inventorystatusresult)
 
-### **BulkGet(InventorySku[])**
-
-商品管理番号とSKU管理番号を指定し、最大で1000件の在庫数を一括で取得できます。
-
-```csharp
-public List<InventoryStatusResult> BulkGet(InventorySku[] inventories)
-```
-
-#### Parameters
-
-`inventories` [InventorySku[]](./rakuten.rms.api.inventoryapi20.inventorysku)<br>
-
-#### Returns
-
-[List&lt;InventoryStatusResult&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
-
-### **BulkGet(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
-
-商品管理番号とSKU管理番号を指定し、最大で1000件の在庫数を一括で取得できます。
-
-```csharp
-public List<InventoryStatusResult> BulkGet(Nullable<int> minQuantity, Nullable<int> maxQuantity)
-```
-
-#### Parameters
-
-`minQuantity` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-最小在庫数
-
-`maxQuantity` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-最大在庫数
-
-#### Returns
-
-[List&lt;InventoryStatusResult&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
-
-#### Exceptions
-
-[ErrorResponseException](./rakuten.rms.api.json.errorresponseexception)<br>
-
-### **Upsert(String, String, UpsertMode, Int32)**
+### <a id="methods-upsert"/>**Upsert(String, String, UpsertMode, Int32)**
 
 ```csharp
 public ResultBase Upsert(string manageNumber, string variantId, UpsertMode mode, int quantity)
@@ -117,40 +150,8 @@ public ResultBase Upsert(string manageNumber, string variantId, UpsertMode mode,
 
 #### Returns
 
-[ResultBase](./rakuten.rms.api.json.resultbase)<br>
+[ResultBase](./rakuten.rms.api.json.resultbase)
 
-### **Delete(String, String)**
 
-商品管理番号とSKU管理番号を指定し、在庫情報を削除する
-
-```csharp
-public ResultBase Delete(string manageNumber, string variantId)
-```
-
-#### Parameters
-
-`manageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`variantId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-#### Returns
-
-[ResultBase](./rakuten.rms.api.json.resultbase)<br>
-
-### **BulkUpsert(IEnumerable&lt;InventorySkuUpsert&gt;)**
-
-```csharp
-public ResultBase BulkUpsert(IEnumerable<InventorySkuUpsert> inventories)
-```
-
-#### Parameters
-
-`inventories` [IEnumerable&lt;InventorySkuUpsert&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
-
-#### Returns
-
-[ResultBase](./rakuten.rms.api.json.resultbase)<br>
-
----
-
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

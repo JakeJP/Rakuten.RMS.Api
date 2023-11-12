@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DeliveryModel
 
@@ -14,7 +15,28 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **deliveryName**
+### <a id="properties-deliveryclass"/>**deliveryClass**
+
+配送区分
+ 0: 選択なし
+ 1: 普通
+ 2: 冷蔵
+ 3: 冷凍
+ 4: その他１
+ 5: その他２
+ 6: その他３
+ 7: その他４
+ 8: その他５
+
+```csharp
+public Nullable<Int32> deliveryClass { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-deliveryname"/>**deliveryName**
 
 以下のいずれか
  ・宅配便
@@ -37,35 +59,14 @@ public string deliveryName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **deliveryClass**
-
-配送区分
- 0: 選択なし
- 1: 普通
- 2: 冷蔵
- 3: 冷凍
- 4: その他１
- 5: その他２
- 6: その他３
- 7: その他４
- 8: その他５
-
-```csharp
-public Nullable<int> deliveryClass { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
 ## Constructors
 
-### **DeliveryModel()**
+### <a id="constructors-.ctor"/>**DeliveryModel()**
 
 ```csharp
 public DeliveryModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

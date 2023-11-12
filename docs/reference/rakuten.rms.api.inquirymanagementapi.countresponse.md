@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CountResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **result**
+### <a id="properties-result"/>**result**
 
 ```csharp
 public Result result { get; set; }
@@ -26,12 +27,12 @@ public Result result { get; set; }
 
 ## Constructors
 
-### **CountResponse()**
+### <a id="constructors-.ctor"/>**CountResponse()**
 
 ```csharp
 public CountResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

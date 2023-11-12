@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryPageViewMode
 
@@ -21,6 +22,6 @@ Implements [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icom
 | GALLERY | 1 | ウィンドウショッピング形式 |
 | PLURAL | 2 | 1ページ複数商品形式 |
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

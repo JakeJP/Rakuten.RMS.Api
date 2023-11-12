@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutId**
+### <a id="properties-layoutid"/>**layoutId**
 
 ```csharp
 public string layoutId { get; set; }
@@ -26,12 +27,12 @@ public string layoutId { get; set; }
 
 ## Constructors
 
-### **LayoutResponse()**
+### <a id="constructors-.ctor"/>**LayoutResponse()**
 
 ```csharp
 public LayoutResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

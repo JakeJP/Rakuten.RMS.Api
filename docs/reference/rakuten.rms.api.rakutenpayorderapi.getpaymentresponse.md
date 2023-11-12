@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GetPaymentResponse
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **OrderModel**
-
-```csharp
-public OrderModel OrderModel { get; set; }
-```
-
-#### Property Value
-
-[OrderModel](./rakuten.rms.api.rakutenpayorderapi.ordermodel)<br>
-
-### **MessageModelList**
+### <a id="properties-messagemodellist"/>**MessageModelList**
 
 ```csharp
 public IList<OrderMessageModel> MessageModelList { get; set; }
@@ -34,14 +25,24 @@ public IList<OrderMessageModel> MessageModelList { get; set; }
 
 [IList&lt;OrderMessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
+### <a id="properties-ordermodel"/>**OrderModel**
+
+```csharp
+public OrderModel OrderModel { get; set; }
+```
+
+#### Property Value
+
+[OrderModel](./rakuten.rms.api.rakutenpayorderapi.ordermodel)<br>
+
 ## Constructors
 
-### **GetPaymentResponse()**
+### <a id="constructors-.ctor"/>**GetPaymentResponse()**
 
 ```csharp
 public GetPaymentResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

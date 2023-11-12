@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DeliveryCVSModel
 
@@ -14,7 +15,27 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **cvsCode**
+### <a id="properties-areacode"/>**areaCode**
+
+```csharp
+public string areaCode { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-closetime"/>**closeTime**
+
+```csharp
+public string closeTime { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-cvscode"/>**cvsCode**
 
 1: ファミリーマート
  20: ミニストップ
@@ -36,114 +57,14 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
  93: 生活彩家
 
 ```csharp
-public Nullable<int> cvsCode { get; set; }
+public Nullable<Int32> cvsCode { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **storeGenreCode**
-
-```csharp
-public string storeGenreCode { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **storeCode**
-
-```csharp
-public string storeCode { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **storeName**
-
-```csharp
-public string storeName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **storeZip**
-
-```csharp
-public string storeZip { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **storePrefecture**
-
-```csharp
-public string storePrefecture { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **storeAddress**
-
-```csharp
-public string storeAddress { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **areaCode**
-
-```csharp
-public string areaCode { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **depo**
-
-```csharp
-public string depo { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **openTime**
-
-```csharp
-public string openTime { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **closeTime**
-
-```csharp
-public string closeTime { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **cvsRemarks**
+### <a id="properties-cvsremarks"/>**cvsRemarks**
 
 ```csharp
 public string cvsRemarks { get; set; }
@@ -153,14 +74,94 @@ public string cvsRemarks { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-depo"/>**depo**
+
+```csharp
+public string depo { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-opentime"/>**openTime**
+
+```csharp
+public string openTime { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-storeaddress"/>**storeAddress**
+
+```csharp
+public string storeAddress { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-storecode"/>**storeCode**
+
+```csharp
+public string storeCode { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-storegenrecode"/>**storeGenreCode**
+
+```csharp
+public string storeGenreCode { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-storename"/>**storeName**
+
+```csharp
+public string storeName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-storeprefecture"/>**storePrefecture**
+
+```csharp
+public string storePrefecture { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-storezip"/>**storeZip**
+
+```csharp
+public string storeZip { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **DeliveryCVSModel()**
+### <a id="constructors-.ctor"/>**DeliveryCVSModel()**
 
 ```csharp
 public DeliveryCVSModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

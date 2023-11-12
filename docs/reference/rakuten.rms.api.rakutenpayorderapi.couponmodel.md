@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CouponModel
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **couponName**
-
-```csharp
-public string couponName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponSummary**
-
-```csharp
-public string couponSummary { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponCapital**
+### <a id="properties-couponcapital"/>**couponCapital**
 
 ```csharp
 public string couponCapital { get; set; }
@@ -44,17 +25,47 @@ public string couponCapital { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **expiryDate**
+### <a id="properties-couponcode"/>**couponCode**
 
 ```csharp
-public DateTime expiryDate { get; set; }
+public string couponCode { get; set; }
 ```
 
 #### Property Value
 
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **couponTotalPrice**
+### <a id="properties-couponname"/>**couponName**
+
+```csharp
+public string couponName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-couponprice"/>**couponPrice**
+
+```csharp
+public int couponPrice { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-couponsummary"/>**couponSummary**
+
+```csharp
+public string couponSummary { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-coupontotalprice"/>**couponTotalPrice**
 
 クーポン利用金額
  クーポン割引単価 × クーポン利用数
@@ -68,7 +79,27 @@ public int couponTotalPrice { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **itemDetailId**
+### <a id="properties-couponunit"/>**couponUnit**
+
+```csharp
+public int couponUnit { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-expirydate"/>**expiryDate**
+
+```csharp
+public DateTime expiryDate { get; set; }
+```
+
+#### Property Value
+
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+
+### <a id="properties-itemdetailid"/>**itemDetailId**
 
 商品明細ID
 
@@ -80,17 +111,7 @@ public long itemDetailId { get; set; }
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
-### **couponCode**
-
-```csharp
-public string couponCode { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **itemId**
+### <a id="properties-itemid"/>**itemId**
 
 ```csharp
 public int itemId { get; set; }
@@ -100,34 +121,14 @@ public int itemId { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **couponPrice**
-
-```csharp
-public int couponPrice { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **couponUnit**
-
-```csharp
-public int couponUnit { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
 ## Constructors
 
-### **CouponModel()**
+### <a id="constructors-.ctor"/>**CouponModel()**
 
 ```csharp
 public CouponModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

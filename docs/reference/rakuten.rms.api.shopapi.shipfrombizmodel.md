@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShipFromBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **shipFromList**
+### <a id="properties-shipfromlist"/>**shipFromList**
 
 ```csharp
 public ShipFrom shipFromList { get; set; }
@@ -26,12 +27,12 @@ public ShipFrom shipFromList { get; set; }
 
 ## Constructors
 
-### **ShipFromBizModel()**
+### <a id="constructors-.ctor"/>**ShipFromBizModel()**
 
 ```csharp
 public ShipFromBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ItemModel
 
@@ -14,82 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **itemId**
-
-```csharp
-public int itemId { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **manageNumber**
-
-```csharp
-public string manageNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **pointRate**
-
-```csharp
-public int pointRate { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **pointType**
-
-```csharp
-public int pointType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **inventoryType**
-
-```csharp
-public int inventoryType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **delvdateInfo**
-
-```csharp
-public string delvdateInfo { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **restoreInventoryFlag**
-
-在庫連動オプション
- 0: 商品の設定に従う
- 1: 在庫連動する
- 2: 在庫連動しない
-
-```csharp
-public int restoreInventoryFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **dealFlag**
+### <a id="properties-dealflag"/>**dealFlag**
 
 version=2
 
@@ -101,19 +27,7 @@ public int dealFlag { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **drugFlag**
-
-version=2
-
-```csharp
-public int drugFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **deleteItemFlag**
+### <a id="properties-deleteitemflag"/>**deleteItemFlag**
 
 商品削除フラグ
  0: 商品を削除しない
@@ -127,7 +41,185 @@ public int deleteItemFlag { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **priceTaxIncl**
+### <a id="properties-deleteitemflag"/>**deleteItemFlag**
+
+```csharp
+public Nullable<Int32> deleteItemFlag { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-delvdateinfo"/>**delvdateInfo**
+
+```csharp
+public string delvdateInfo { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-drugflag"/>**drugFlag**
+
+version=2
+
+```csharp
+public int drugFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-includecashondeliverypostageflag"/>**includeCashOnDeliveryPostageFlag**
+
+0: 代引手数料別
+ 1: 代引手数料込み
+
+```csharp
+public int includeCashOnDeliveryPostageFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-includepostageflag"/>**includePostageFlag**
+
+```csharp
+public int includePostageFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-includetaxflag"/>**includeTaxFlag**
+
+0: 税別
+ 1: 税込み
+
+```csharp
+public int includeTaxFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-inventorytype"/>**inventoryType**
+
+```csharp
+public int inventoryType { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-issingleitemshipping"/>**isSingleItemShipping**
+
+以下のいずれか
+ 0: 単品配送ではない
+ 1: 単品配送である
+ ※Request Parameterの「version」に「4」以降の値を指定すると取得可能
+
+```csharp
+public int isSingleItemShipping { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-itemdetailid"/>**itemDetailId**
+
+```csharp
+public int itemDetailId { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-itemid"/>**itemId**
+
+```csharp
+public int itemId { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-itemname"/>**itemName**
+
+```csharp
+public string itemName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-itemnumber"/>**itemNumber**
+
+商品番号
+ 項目選択肢別在庫が指定された商品の場合、以下のルールで値が表示されます
+ SKU移行前注文：商品番号（店舗様が登録した番号）＋項目選択肢ID（横軸）＋項目選択肢ID（縦軸）
+ SKU移行後注文：商品番号（店舗様が登録した番号）
+
+```csharp
+public string itemNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-managenumber"/>**manageNumber**
+
+```csharp
+public string manageNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-pointrate"/>**pointRate**
+
+```csharp
+public int pointRate { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-pointtype"/>**pointType**
+
+```csharp
+public int pointType { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-price"/>**price**
+
+```csharp
+public int price { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-pricetaxincl"/>**priceTaxIncl**
 
 商品毎税込価格
  ・税込商品の場合：
@@ -145,67 +237,52 @@ public int priceTaxIncl { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **isSingleItemShipping**
+### <a id="properties-restoreinventoryflag"/>**restoreInventoryFlag**
 
-以下のいずれか
- 0: 単品配送ではない
- 1: 単品配送である
- ※Request Parameterの「version」に「4」以降の値を指定すると取得可能
+在庫連動オプション
+ 0: 商品の設定に従う
+ 1: 在庫連動する
+ 2: 在庫連動しない
 
 ```csharp
-public int isSingleItemShipping { get; set; }
+public int restoreInventoryFlag { get; set; }
 ```
 
 #### Property Value
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **itemDetailId**
+### <a id="properties-restoreinventoryflag"/>**restoreInventoryFlag**
 
 ```csharp
-public int itemDetailId { get; set; }
+public Nullable<Int32> restoreInventoryFlag { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **itemName**
+### <a id="properties-selectedchoice"/>**selectedChoice**
 
 ```csharp
-public string itemName { get; set; }
+public string selectedChoice { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **itemNumber**
-
-商品番号
- 項目選択肢別在庫が指定された商品の場合、以下のルールで値が表示されます
- SKU移行前注文：商品番号（店舗様が登録した番号）＋項目選択肢ID（横軸）＋項目選択肢ID（縦軸）
- SKU移行後注文：商品番号（店舗様が登録した番号）
+### <a id="properties-skumodellist"/>**SkuModelList**
 
 ```csharp
-public string itemNumber { get; set; }
+public IList<SkuModel> SkuModelList { get; set; }
 ```
 
 #### Property Value
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+[IList&lt;SkuModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **price**
-
-```csharp
-public int price { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **taxRate**
+### <a id="properties-taxrate"/>**taxRate**
 
 商品税率
  以下のいずれか
@@ -219,7 +296,7 @@ public decimal taxRate { get; set; }
 
 [Decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal)<br>
 
-### **units**
+### <a id="properties-units"/>**units**
 
 ```csharp
 public int units { get; set; }
@@ -229,90 +306,14 @@ public int units { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **includePostageFlag**
-
-```csharp
-public int includePostageFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **includeTaxFlag**
-
-0: 税別
- 1: 税込み
-
-```csharp
-public int includeTaxFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **includeCashOnDeliveryPostageFlag**
-
-0: 代引手数料別
- 1: 代引手数料込み
-
-```csharp
-public int includeCashOnDeliveryPostageFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **selectedChoice**
-
-```csharp
-public string selectedChoice { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **restoreInventoryFlag**
-
-```csharp
-public Nullable<int> restoreInventoryFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **deleteItemFlag**
-
-```csharp
-public Nullable<int> deleteItemFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **SkuModelList**
-
-```csharp
-public IList<SkuModel> SkuModelList { get; set; }
-```
-
-#### Property Value
-
-[IList&lt;SkuModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
 ## Constructors
 
-### **ItemModel()**
+### <a id="constructors-.ctor"/>**ItemModel()**
 
 ```csharp
 public ItemModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

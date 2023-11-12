@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ItemBundleAPI
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **Create(BundleToCreate)**
+### <a id="methods-create"/>**Create(BundleToCreate)**
 
 ```csharp
 public Bundle Create(BundleToCreate bundle)
@@ -26,9 +27,9 @@ public Bundle Create(BundleToCreate bundle)
 
 #### Returns
 
-[Bundle](./rakuten.rms.api.itembundleapi.bundle)<br>
+[Bundle](./rakuten.rms.api.itembundleapi.bundle)
 
-### **Delete(String)**
+### <a id="methods-delete"/>**Delete(String)**
 
 ```csharp
 public void Delete(string bundleManageNumber)
@@ -38,7 +39,7 @@ public void Delete(string bundleManageNumber)
 
 `bundleManageNumber` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **GetBundle(String)**
+### <a id="methods-getbundle"/>**GetBundle(String)**
 
 ```csharp
 public Bundle GetBundle(string bundleManageNumber)
@@ -50,9 +51,9 @@ public Bundle GetBundle(string bundleManageNumber)
 
 #### Returns
 
-[Bundle](./rakuten.rms.api.itembundleapi.bundle)<br>
+[Bundle](./rakuten.rms.api.itembundleapi.bundle)
 
-### **GetBundleList(BundleListRequest)**
+### <a id="methods-getbundlelist"/>**GetBundleList(BundleListRequest)**
 
 ```csharp
 public BundleListResponse GetBundleList(BundleListRequest request)
@@ -64,9 +65,9 @@ public BundleListResponse GetBundleList(BundleListRequest request)
 
 #### Returns
 
-[BundleListResponse](./rakuten.rms.api.itembundleapi.bundlelistresponse)<br>
+[BundleListResponse](./rakuten.rms.api.itembundleapi.bundlelistresponse)
 
-### **Update(String, BundleToCreate)**
+### <a id="methods-update"/>**Update(String, BundleToCreate)**
 
 ```csharp
 public Bundle Update(string bundleManageNumber, BundleToCreate bundle)
@@ -80,8 +81,8 @@ public Bundle Update(string bundleManageNumber, BundleToCreate bundle)
 
 #### Returns
 
-[Bundle](./rakuten.rms.api.itembundleapi.bundle)<br>
+[Bundle](./rakuten.rms.api.itembundleapi.bundle)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

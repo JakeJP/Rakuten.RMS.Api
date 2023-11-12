@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # NavigationAPI20
 
@@ -16,62 +17,10 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **GetVersion()**
+### <a id="methods-getattributesdictionaryvalues"/>**GetAttributesDictionaryValues(Int64, Int64, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
 
 ```csharp
-public Version GetVersion()
-```
-
-#### Returns
-
-[Version](./rakuten.rms.api.navigationapi20.version)<br>
-
-### **GetGenres(Int64, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)**
-
-```csharp
-public GenreResult GetGenres(long genreId, Nullable<bool> showAncestors, Nullable<bool> showSiblings, Nullable<bool> showChildren)
-```
-
-#### Parameters
-
-`genreId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-`showAncestors` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`showSiblings` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`showChildren` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-#### Returns
-
-[GenreResult](./rakuten.rms.api.navigationapi20.genreresult)<br>
-
-### **GetGenreAttributes(Int64, Nullable&lt;Int64&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)**
-
-```csharp
-public AttributeResult GetGenreAttributes(long genreId, Nullable<long> attributeId, Nullable<bool> showAncestors, Nullable<bool> showSiblings, Nullable<bool> showChildren)
-```
-
-#### Parameters
-
-`genreId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-`attributeId` [Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`showAncestors` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`showSiblings` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`showChildren` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-#### Returns
-
-[AttributeResult](./rakuten.rms.api.navigationapi20.attributeresult)<br>
-
-### **GetAttributesDictionaryValues(Int64, Int64, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
-
-```csharp
-public AttributeWithDictionaryResult GetAttributesDictionaryValues(long genreId, long attributeId, Nullable<bool> showAncestors, Nullable<bool> showSiblings, Nullable<bool> showChildren, Nullable<int> page, Nullable<int> limit)
+public AttributeWithDictionaryResult GetAttributesDictionaryValues(long genreId, long attributeId, Nullable<Boolean> showAncestors, Nullable<Boolean> showSiblings, Nullable<Boolean> showChildren, Nullable<Int32> page, Nullable<Int32> limit)
 ```
 
 #### Parameters
@@ -92,8 +41,60 @@ public AttributeWithDictionaryResult GetAttributesDictionaryValues(long genreId,
 
 #### Returns
 
-[AttributeWithDictionaryResult](./rakuten.rms.api.navigationapi20.attributewithdictionaryresult)<br>
+[AttributeWithDictionaryResult](./rakuten.rms.api.navigationapi20.attributewithdictionaryresult)
 
----
+### <a id="methods-getgenreattributes"/>**GetGenreAttributes(Int64, Nullable&lt;Int64&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)**
 
-[`< Back`](./)
+```csharp
+public AttributeResult GetGenreAttributes(long genreId, Nullable<Int64> attributeId, Nullable<Boolean> showAncestors, Nullable<Boolean> showSiblings, Nullable<Boolean> showChildren)
+```
+
+#### Parameters
+
+`genreId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+`attributeId` [Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`showAncestors` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`showSiblings` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`showChildren` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+#### Returns
+
+[AttributeResult](./rakuten.rms.api.navigationapi20.attributeresult)
+
+### <a id="methods-getgenres"/>**GetGenres(Int64, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)**
+
+```csharp
+public GenreResult GetGenres(long genreId, Nullable<Boolean> showAncestors, Nullable<Boolean> showSiblings, Nullable<Boolean> showChildren)
+```
+
+#### Parameters
+
+`genreId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+`showAncestors` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`showSiblings` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`showChildren` [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+#### Returns
+
+[GenreResult](./rakuten.rms.api.navigationapi20.genreresult)
+
+### <a id="methods-getversion"/>**GetVersion()**
+
+```csharp
+public Version GetVersion()
+```
+
+#### Returns
+
+[Version](./rakuten.rms.api.navigationapi20.version)
+
+
+- - -
+[**< クラス一覧**](./)

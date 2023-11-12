@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CalendarEvent
 
@@ -14,20 +15,20 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **regularSchedule**
+### <a id="properties-eventdates"/>**eventDates**
 
 ```csharp
-public List<string> regularSchedule { get; set; }
+public List<String> eventDates { get; set; }
 ```
 
 #### Property Value
 
 [List&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **eventDates**
+### <a id="properties-regularschedule"/>**regularSchedule**
 
 ```csharp
-public List<string> eventDates { get; set; }
+public List<String> regularSchedule { get; set; }
 ```
 
 #### Property Value
@@ -36,12 +37,12 @@ public List<string> eventDates { get; set; }
 
 ## Constructors
 
-### **CalendarEvent()**
+### <a id="constructors-.ctor"/>**CalendarEvent()**
 
 ```csharp
 public CalendarEvent()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

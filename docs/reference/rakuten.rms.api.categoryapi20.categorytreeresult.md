@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryTreeResult
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **categorySet**
+### <a id="properties-categoryset"/>**categorySet**
 
 ```csharp
 public CategorySet categorySet { get; set; }
@@ -24,7 +25,7 @@ public CategorySet categorySet { get; set; }
 
 [CategorySet](./rakuten.rms.api.categoryapi20.categoryset)<br>
 
-### **categorySetId**
+### <a id="properties-categorysetid"/>**categorySetId**
 
 ```csharp
 public string categorySetId { get; set; }
@@ -34,17 +35,7 @@ public string categorySetId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **rootNode**
-
-```csharp
-public RootNode rootNode { get; set; }
-```
-
-#### Property Value
-
-[RootNode](./rakuten.rms.api.categoryapi20.categorytreeresult.rootnode)<br>
-
-### **created**
+### <a id="properties-created"/>**created**
 
 ```csharp
 public DateTime created { get; set; }
@@ -54,7 +45,17 @@ public DateTime created { get; set; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **updated**
+### <a id="properties-rootnode"/>**rootNode**
+
+```csharp
+public RootNode rootNode { get; set; }
+```
+
+#### Property Value
+
+[RootNode](./rakuten.rms.api.categoryapi20.categorytreeresult.rootnode)<br>
+
+### <a id="properties-updated"/>**updated**
 
 ```csharp
 public DateTime updated { get; set; }
@@ -66,12 +67,12 @@ public DateTime updated { get; set; }
 
 ## Constructors
 
-### **CategoryTreeResult()**
+### <a id="constructors-.ctor"/>**CategoryTreeResult()**
 
 ```csharp
 public CategoryTreeResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

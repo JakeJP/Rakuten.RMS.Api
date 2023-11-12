@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DelvdateMaster
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **delvdateNumber**
-
-```csharp
-public string delvdateNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **delvdateCaption**
-
-```csharp
-public string delvdateCaption { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **appointDays**
+### <a id="properties-appointdays"/>**appointDays**
 
 ```csharp
 public long appointDays { get; set; }
@@ -44,14 +25,34 @@ public long appointDays { get; set; }
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
+### <a id="properties-delvdatecaption"/>**delvdateCaption**
+
+```csharp
+public string delvdateCaption { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-delvdatenumber"/>**delvdateNumber**
+
+```csharp
+public string delvdateNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **DelvdateMaster()**
+### <a id="constructors-.ctor"/>**DelvdateMaster()**
 
 ```csharp
 public DelvdateMaster()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

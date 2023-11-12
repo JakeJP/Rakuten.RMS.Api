@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **productSearchResult**
+### <a id="properties-productsearchresult"/>**productSearchResult**
 
 ```csharp
 public ProductSearchResultContainer productSearchResult { get; set; }
@@ -24,7 +25,7 @@ public ProductSearchResultContainer productSearchResult { get; set; }
 
 [ProductSearchResultContainer](./rakuten.rms.api.productapi.searchresponse.productsearchresultcontainer)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -36,12 +37,12 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **SearchResponse()**
+### <a id="constructors-.ctor"/>**SearchResponse()**
 
 ```csharp
 public SearchResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

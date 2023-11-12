@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SortModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **sortColumn**
+### <a id="properties-sortcolumn"/>**sortColumn**
 
 並び替え項目
  以下のいずれか
@@ -28,7 +29,7 @@ public int sortColumn { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **sortDirection**
+### <a id="properties-sortdirection"/>**sortDirection**
 
 並び替え方法
  以下のいずれか
@@ -45,12 +46,12 @@ public int sortDirection { get; set; }
 
 ## Constructors
 
-### **SortModel()**
+### <a id="constructors-.ctor"/>**SortModel()**
 
 ```csharp
 public SortModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

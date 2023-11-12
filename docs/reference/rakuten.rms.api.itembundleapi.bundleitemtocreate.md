@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # BundleItemToCreate
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **itemManageNumber**
+### <a id="properties-itemmanagenumber"/>**itemManageNumber**
 
 ```csharp
 public string itemManageNumber { get; set; }
@@ -24,20 +25,20 @@ public string itemManageNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **mandatory**
+### <a id="properties-mandatory"/>**mandatory**
 
 ```csharp
-public Nullable<bool> mandatory { get; set; }
+public Nullable<Boolean> mandatory { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Boolean&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **sequence**
+### <a id="properties-sequence"/>**sequence**
 
 ```csharp
-public Nullable<int> sequence { get; set; }
+public Nullable<Int32> sequence { get; set; }
 ```
 
 #### Property Value
@@ -46,12 +47,12 @@ public Nullable<int> sequence { get; set; }
 
 ## Constructors
 
-### **BundleItemToCreate()**
+### <a id="constructors-.ctor"/>**BundleItemToCreate()**
 
 ```csharp
 public BundleItemToCreate()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

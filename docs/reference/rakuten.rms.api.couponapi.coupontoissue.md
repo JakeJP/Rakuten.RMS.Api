@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CouponToIssue
 
@@ -14,17 +15,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **couponName**
+### <a id="properties-combineflag"/>**combineFlag**
 
 ```csharp
-public string couponName { get; set; }
+public int combineFlag { get; set; }
 ```
 
 #### Property Value
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **couponCaption**
+### <a id="properties-couponcaption"/>**couponCaption**
 
 ```csharp
 public string couponCaption { get; set; }
@@ -34,17 +35,7 @@ public string couponCaption { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **couponStartDate**
-
-```csharp
-public DateTime couponStartDate { get; set; }
-```
-
-#### Property Value
-
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
-
-### **couponEndDate**
+### <a id="properties-couponenddate"/>**couponEndDate**
 
 ```csharp
 public DateTime couponEndDate { get; set; }
@@ -54,7 +45,7 @@ public DateTime couponEndDate { get; set; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **couponImage**
+### <a id="properties-couponimage"/>**couponImage**
 
 ```csharp
 public string couponImage { get; set; }
@@ -64,7 +55,61 @@ public string couponImage { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **issueCount**
+### <a id="properties-couponname"/>**couponName**
+
+```csharp
+public string couponName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-couponstartdate"/>**couponStartDate**
+
+```csharp
+public DateTime couponStartDate { get; set; }
+```
+
+#### Property Value
+
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+
+### <a id="properties-discountfactor"/>**discountFactor**
+
+```csharp
+public int discountFactor { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-discounttype"/>**discountType**
+
+1： 定額値引き
+ 2： 定率値引き
+ 4： 送料無料
+
+```csharp
+public int discountType { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-displayflag"/>**displayFlag**
+
+```csharp
+public int displayFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-issuecount"/>**issueCount**
 
 ```csharp
 public int issueCount { get; set; }
@@ -74,7 +119,19 @@ public int issueCount { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **itemType**
+### <a id="properties-items"/>**items**
+
+対象商品は3000個まで指定可能です。
+
+```csharp
+public Item[] items { get; set; }
+```
+
+#### Property Value
+
+[Item[]](./rakuten.rms.api.couponapi.item)<br>
+
+### <a id="properties-itemtype"/>**itemType**
 
 discountTypeによって、値が異なります。
  1： 単一商品
@@ -90,31 +147,7 @@ public int itemType { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **discountType**
-
-1： 定額値引き
- 2： 定率値引き
- 4： 送料無料
-
-```csharp
-public int discountType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **discountFactor**
-
-```csharp
-public int discountFactor { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **memberAvailMaxCount**
+### <a id="properties-memberavailmaxcount"/>**memberAvailMaxCount**
 
 ```csharp
 public int memberAvailMaxCount { get; set; }
@@ -124,7 +157,7 @@ public int memberAvailMaxCount { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **multiRankCond**
+### <a id="properties-multirankcond"/>**multiRankCond**
 
 0： 条件なし
  1： レギュラー
@@ -141,39 +174,7 @@ public Int32[] multiRankCond { get; set; }
 
 [Int32[]](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **combineFlag**
-
-```csharp
-public int combineFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **displayFlag**
-
-```csharp
-public int displayFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **items**
-
-対象商品は3000個まで指定可能です。
-
-```csharp
-public Item[] items { get; set; }
-```
-
-#### Property Value
-
-[Item[]](./rakuten.rms.api.couponapi.item)<br>
-
-### **otherConditions**
+### <a id="properties-otherconditions"/>**otherConditions**
 
 ```csharp
 public OtherConditions otherConditions { get; set; }
@@ -185,12 +186,12 @@ public OtherConditions otherConditions { get; set; }
 
 ## Constructors
 
-### **CouponToIssue()**
+### <a id="constructors-.ctor"/>**CouponToIssue()**
 
 ```csharp
 public CouponToIssue()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

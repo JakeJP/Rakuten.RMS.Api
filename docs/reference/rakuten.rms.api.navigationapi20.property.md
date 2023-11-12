@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # Property
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **itemRegisterFlg**
+### <a id="properties-itemregisterflg"/>**itemRegisterFlg**
 
 ```csharp
 public bool itemRegisterFlg { get; set; }
@@ -26,12 +27,12 @@ public bool itemRegisterFlg { get; set; }
 
 ## Constructors
 
-### **Property()**
+### <a id="constructors-.ctor"/>**Property()**
 
 ```csharp
 public Property()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

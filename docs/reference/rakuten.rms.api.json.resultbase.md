@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ResultBase
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **errors**
+### <a id="properties-errors"/>**errors**
 
 ```csharp
 public List<ResultError> errors { get; set; }
@@ -26,12 +27,12 @@ public List<ResultError> errors { get; set; }
 
 ## Constructors
 
-### **ResultBase()**
+### <a id="constructors-.ctor"/>**ResultBase()**
 
 ```csharp
 public ResultBase()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

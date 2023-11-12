@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchCondition
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **couponName**
-
-```csharp
-public string couponName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponCode**
+### <a id="properties-couponcode"/>**couponCode**
 
 ```csharp
 public string couponCode { get; set; }
@@ -34,27 +25,7 @@ public string couponCode { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **itemUrl**
-
-```csharp
-public string itemUrl { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponStartDate**
-
-```csharp
-public Nullable<DateTime> couponStartDate { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **couponEndDate**
+### <a id="properties-couponenddate"/>**couponEndDate**
 
 ```csharp
 public Nullable<DateTime> couponEndDate { get; set; }
@@ -64,20 +35,50 @@ public Nullable<DateTime> couponEndDate { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **hits**
+### <a id="properties-couponname"/>**couponName**
 
 ```csharp
-public Nullable<int> hits { get; set; }
+public string couponName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-couponstartdate"/>**couponStartDate**
+
+```csharp
+public Nullable<DateTime> couponStartDate { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-hits"/>**hits**
+
+```csharp
+public Nullable<Int32> hits { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **page**
+### <a id="properties-itemurl"/>**itemUrl**
 
 ```csharp
-public Nullable<int> page { get; set; }
+public string itemUrl { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-page"/>**page**
+
+```csharp
+public Nullable<Int32> page { get; set; }
 ```
 
 #### Property Value
@@ -86,12 +87,12 @@ public Nullable<int> page { get; set; }
 
 ## Constructors
 
-### **SearchCondition()**
+### <a id="constructors-.ctor"/>**SearchCondition()**
 
 ```csharp
 public SearchCondition()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

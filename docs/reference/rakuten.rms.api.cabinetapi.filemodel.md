@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # FileModel
 
@@ -14,7 +15,117 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **FolderId**
+### <a id="properties-_fileaccessdateraw"/>**_FileAccessDateRaw**
+
+```csharp
+public string _FileAccessDateRaw { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-_timestampraw"/>**_TimeStampRaw**
+
+```csharp
+public string _TimeStampRaw { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-fileaccessdate"/>**FileAccessDate**
+
+```csharp
+public DateTime FileAccessDate { get; }
+```
+
+#### Property Value
+
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+
+### <a id="properties-fileheight"/>**FileHeight**
+
+```csharp
+public int FileHeight { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-fileid"/>**FileId**
+
+```csharp
+public int FileId { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-filename"/>**FileName**
+
+```csharp
+public string FileName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-filepath"/>**FilePath**
+
+```csharp
+public string FilePath { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-filesize"/>**FileSize**
+
+```csharp
+public decimal FileSize { get; set; }
+```
+
+#### Property Value
+
+[Decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal)<br>
+
+### <a id="properties-filetype"/>**FileType**
+
+```csharp
+public int FileType { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-fileurl"/>**FileUrl**
+
+```csharp
+public string FileUrl { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-filewidth"/>**FileWidth**
+
+```csharp
+public int FileWidth { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-folderid"/>**FolderId**
 
 ```csharp
 public long FolderId { get; set; }
@@ -24,7 +135,7 @@ public long FolderId { get; set; }
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
-### **FolderName**
+### <a id="properties-foldername"/>**FolderName**
 
 ```csharp
 public string FolderName { get; set; }
@@ -34,7 +145,7 @@ public string FolderName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **FolderNode**
+### <a id="properties-foldernode"/>**FolderNode**
 
 1 or 2 or 3
 
@@ -46,7 +157,7 @@ public int FolderNode { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **FolderPath**
+### <a id="properties-folderpath"/>**FolderPath**
 
 ```csharp
 public string FolderPath { get; set; }
@@ -56,107 +167,7 @@ public string FolderPath { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **FileId**
-
-```csharp
-public int FileId { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **FileName**
-
-```csharp
-public string FileName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **FileUrl**
-
-```csharp
-public string FileUrl { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **FilePath**
-
-```csharp
-public string FilePath { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **FileType**
-
-```csharp
-public int FileType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **FileSize**
-
-```csharp
-public decimal FileSize { get; set; }
-```
-
-#### Property Value
-
-[Decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal)<br>
-
-### **FileWidth**
-
-```csharp
-public int FileWidth { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **FileHeight**
-
-```csharp
-public int FileHeight { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **FileAccessDate**
-
-```csharp
-public DateTime FileAccessDate { get; }
-```
-
-#### Property Value
-
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
-
-### **_FileAccessDateRaw**
-
-```csharp
-public string _FileAccessDateRaw { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **TimeStamp**
+### <a id="properties-timestamp"/>**TimeStamp**
 
 ```csharp
 public DateTime TimeStamp { get; }
@@ -166,24 +177,14 @@ public DateTime TimeStamp { get; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **_TimeStampRaw**
-
-```csharp
-public string _TimeStampRaw { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
 ## Constructors
 
-### **FileModel()**
+### <a id="constructors-.ctor"/>**FileModel()**
 
 ```csharp
 public FileModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

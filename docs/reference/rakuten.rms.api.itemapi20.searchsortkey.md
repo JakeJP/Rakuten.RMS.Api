@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchSortKey
 
@@ -29,6 +30,6 @@ Implements [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icom
 | reviewCount | 9 | レビュー件数 |
 | reviewAverageRating | 10 | レビュー評価平均点 |
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ValueElement
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Name**
+### <a id="properties-name"/>**Name**
 
 ```csharp
 public string Name { get; set; }
@@ -24,7 +25,7 @@ public string Name { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **Value**
+### <a id="properties-value"/>**Value**
 
 ```csharp
 public string Value { get; set; }
@@ -36,12 +37,12 @@ public string Value { get; set; }
 
 ## Constructors
 
-### **ValueElement()**
+### <a id="constructors-.ctor"/>**ValueElement()**
 
 ```csharp
 public ValueElement()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

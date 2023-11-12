@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopLayoutCommon
 
@@ -14,57 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutCommonId**
-
-```csharp
-public Nullable<long> layoutCommonId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **defaultFlag**
-
-```csharp
-public Nullable<int> defaultFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **name**
-
-```csharp
-public string name { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **lastUpdate**
-
-```csharp
-public Nullable<DateTime> lastUpdate { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **captionHeader**
-
-```csharp
-public string captionHeader { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **captionFooter**
+### <a id="properties-captionfooter"/>**captionFooter**
 
 ```csharp
 public string captionFooter { get; set; }
@@ -74,7 +25,17 @@ public string captionFooter { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **captionLeft**
+### <a id="properties-captionheader"/>**captionHeader**
+
+```csharp
+public string captionHeader { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-captionleft"/>**captionLeft**
 
 ```csharp
 public string captionLeft { get; set; }
@@ -84,14 +45,54 @@ public string captionLeft { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-defaultflag"/>**defaultFlag**
+
+```csharp
+public Nullable<Int32> defaultFlag { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-lastupdate"/>**lastUpdate**
+
+```csharp
+public Nullable<DateTime> lastUpdate { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-layoutcommonid"/>**layoutCommonId**
+
+```csharp
+public Nullable<Int64> layoutCommonId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int64&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-name"/>**name**
+
+```csharp
+public string name { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **ShopLayoutCommon()**
+### <a id="constructors-.ctor"/>**ShopLayoutCommon()**
 
 ```csharp
 public ShopLayoutCommon()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

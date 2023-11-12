@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GetFilesIntrashboxResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Result**
+### <a id="properties-result"/>**Result**
 
 ```csharp
 public cabinetTrashboxFilesGetResult Result { get; set; }
@@ -24,7 +25,7 @@ public cabinetTrashboxFilesGetResult Result { get; set; }
 
 [cabinetTrashboxFilesGetResult](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse.cabinettrashboxfilesgetresult)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -36,12 +37,12 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **GetFilesIntrashboxResponse()**
+### <a id="constructors-.ctor"/>**GetFilesIntrashboxResponse()**
 
 ```csharp
 public GetFilesIntrashboxResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

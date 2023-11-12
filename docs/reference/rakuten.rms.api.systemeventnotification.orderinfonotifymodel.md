@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OrderInfoNotifyModel
 
@@ -14,57 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **OrderNumber**
-
-```csharp
-public string OrderNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **SeqId**
-
-```csharp
-public string SeqId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **OrderDateString**
-
-```csharp
-public string OrderDateString { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **OrderDate**
-
-```csharp
-public DateTime OrderDate { get; set; }
-```
-
-#### Property Value
-
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
-
-### **OrderType**
-
-```csharp
-public int OrderType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **BasketModel**
+### <a id="properties-basketmodel"/>**BasketModel**
 
 ```csharp
 public BasketModel[] BasketModel { get; set; }
@@ -74,14 +25,64 @@ public BasketModel[] BasketModel { get; set; }
 
 [BasketModel[]](./rakuten.rms.api.systemeventnotification.basketmodel)<br>
 
+### <a id="properties-orderdate"/>**OrderDate**
+
+```csharp
+public DateTime OrderDate { get; set; }
+```
+
+#### Property Value
+
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+
+### <a id="properties-orderdatestring"/>**OrderDateString**
+
+```csharp
+public string OrderDateString { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-ordernumber"/>**OrderNumber**
+
+```csharp
+public string OrderNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-ordertype"/>**OrderType**
+
+```csharp
+public int OrderType { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-seqid"/>**SeqId**
+
+```csharp
+public string SeqId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **OrderInfoNotifyModel()**
+### <a id="constructors-.ctor"/>**OrderInfoNotifyModel()**
 
 ```csharp
 public OrderInfoNotifyModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

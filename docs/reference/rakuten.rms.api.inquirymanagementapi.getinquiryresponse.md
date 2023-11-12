@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GetInquiryResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **result**
+### <a id="properties-result"/>**result**
 
 ```csharp
 public Inquiry result { get; set; }
@@ -26,12 +27,12 @@ public Inquiry result { get; set; }
 
 ## Constructors
 
-### **GetInquiryResponse()**
+### <a id="constructors-.ctor"/>**GetInquiryResponse()**
 
 ```csharp
 public GetInquiryResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

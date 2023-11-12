@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopLayoutCommonResultMessage
 
@@ -14,57 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **resourceId**
-
-```csharp
-public string resourceId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **fieldId**
-
-```csharp
-public string fieldId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **validationErrorCode**
-
-```csharp
-public string validationErrorCode { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **minValue**
-
-```csharp
-public string minValue { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **maxValue**
-
-```csharp
-public string maxValue { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **code**
+### <a id="properties-code"/>**code**
 
 ```csharp
 public string code { get; set; }
@@ -74,7 +25,27 @@ public string code { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **message**
+### <a id="properties-fieldid"/>**fieldId**
+
+```csharp
+public string fieldId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-maxvalue"/>**maxValue**
+
+```csharp
+public string maxValue { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-message"/>**message**
 
 ```csharp
 public string message { get; set; }
@@ -84,14 +55,44 @@ public string message { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-minvalue"/>**minValue**
+
+```csharp
+public string minValue { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-resourceid"/>**resourceId**
+
+```csharp
+public string resourceId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-validationerrorcode"/>**validationErrorCode**
+
+```csharp
+public string validationErrorCode { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **ShopLayoutCommonResultMessage()**
+### <a id="constructors-.ctor"/>**ShopLayoutCommonResultMessage()**
 
 ```csharp
 public ShopLayoutCommonResultMessage()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,735 +1,744 @@
-# Rakuten.RMS.Api
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
-## Rakuten.RMS.Api
+[**< ドキュメントトップ**](../)
+- - -
 
-[DecodableObjectAttribute](./rakuten.rms.api.decodableobjectattribute)
+# Assembly Rakuten.RMS.Api
 
-[RakutenRMSApiException](./rakuten.rms.api.rakutenrmsapiexception)
+## Namespace Rakuten.RMS.Api
 
-[ServiceProvider](./rakuten.rms.api.serviceprovider)
+- [DecodableObjectAttribute](./rakuten.rms.api.decodableobjectattribute)
 
-## Rakuten.RMS.Api.CabinetAPI
+- [RakutenRMSApiException](./rakuten.rms.api.rakutenrmsapiexception)
 
-[CabinetAPI](./rakuten.rms.api.cabinetapi.cabinetapi)
+- [ServiceProvider](./rakuten.rms.api.serviceprovider)
 
-[CabinetFileDeleteRequestModel](./rakuten.rms.api.cabinetapi.cabinetfiledeleterequestmodel)
+## Namespace Rakuten.RMS.Api.CabinetAPI
 
-[CabinetFileDeleteResultModel](./rakuten.rms.api.cabinetapi.cabinetfiledeleteresultmodel)
+- [CabinetAPI](./rakuten.rms.api.cabinetapi.cabinetapi)
 
-[CabinetInsertFileResult](./rakuten.rms.api.cabinetapi.cabinetinsertfileresult)
+- [CabinetFileDeleteRequestModel](./rakuten.rms.api.cabinetapi.cabinetfiledeleterequestmodel)
 
-[CabinetUpdateFileResult](./rakuten.rms.api.cabinetapi.cabinetupdatefileresult)
+- [CabinetFileDeleteResultModel](./rakuten.rms.api.cabinetapi.cabinetfiledeleteresultmodel)
 
-[CabinetUsageGetResultModel](./rakuten.rms.api.cabinetapi.cabinetusagegetresultmodel)
+- [CabinetInsertFileResult](./rakuten.rms.api.cabinetapi.cabinetinsertfileresult)
 
-[CreateFolderRequest](./rakuten.rms.api.cabinetapi.createfolderrequest)
+- [CabinetUpdateFileResult](./rakuten.rms.api.cabinetapi.cabinetupdatefileresult)
 
-[CreateFolderResponse](./rakuten.rms.api.cabinetapi.createfolderresponse)
+- [CabinetUsageGetResultModel](./rakuten.rms.api.cabinetapi.cabinetusagegetresultmodel)
 
-[FileModel](./rakuten.rms.api.cabinetapi.filemodel)
+- [CreateFolderRequest](./rakuten.rms.api.cabinetapi.createfolderrequest)
 
-[FolderModel](./rakuten.rms.api.cabinetapi.foldermodel)
+- [CreateFolderResponse](./rakuten.rms.api.cabinetapi.createfolderresponse)
 
-[GetFilesIntrashboxResponse](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse)
+- [FileModel](./rakuten.rms.api.cabinetapi.filemodel)
 
-[GetFilesResponse](./rakuten.rms.api.cabinetapi.getfilesresponse)
+- [FolderModel](./rakuten.rms.api.cabinetapi.foldermodel)
 
-[GetFoldersResponse](./rakuten.rms.api.cabinetapi.getfoldersresponse)
+- [GetFilesIntrashboxResponse](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse)
 
-[GetUsageResponse](./rakuten.rms.api.cabinetapi.getusageresponse)
+- [GetFilesResponse](./rakuten.rms.api.cabinetapi.getfilesresponse)
 
-[InsertFileRequest](./rakuten.rms.api.cabinetapi.insertfilerequest)
+- [GetFoldersResponse](./rakuten.rms.api.cabinetapi.getfoldersresponse)
 
-[InsertFileResponse](./rakuten.rms.api.cabinetapi.insertfileresponse)
+- [GetUsageResponse](./rakuten.rms.api.cabinetapi.getusageresponse)
 
-[RevertFileInTrashboxRequest](./rakuten.rms.api.cabinetapi.revertfileintrashboxrequest)
+- [InsertFileRequest](./rakuten.rms.api.cabinetapi.insertfilerequest)
 
-[RevertFileInTrashboxResponse](./rakuten.rms.api.cabinetapi.revertfileintrashboxresponse)
+- [InsertFileResponse](./rakuten.rms.api.cabinetapi.insertfileresponse)
 
-[SearchFileResponse](./rakuten.rms.api.cabinetapi.searchfileresponse)
+- [RevertFileInTrashboxRequest](./rakuten.rms.api.cabinetapi.revertfileintrashboxrequest)
 
-[UpdateFileRequest](./rakuten.rms.api.cabinetapi.updatefilerequest)
+- [RevertFileInTrashboxResponse](./rakuten.rms.api.cabinetapi.revertfileintrashboxresponse)
 
-[UpdateFileResponse](./rakuten.rms.api.cabinetapi.updatefileresponse)
+- [SearchFileResponse](./rakuten.rms.api.cabinetapi.searchfileresponse)
 
-## Rakuten.RMS.Api.CategoryAPI
+- [UpdateFileRequest](./rakuten.rms.api.cabinetapi.updatefilerequest)
 
-[CategoryAPI](./rakuten.rms.api.categoryapi.categoryapi)
+- [UpdateFileResponse](./rakuten.rms.api.cabinetapi.updatefileresponse)
 
-## Rakuten.RMS.Api.CategoryAPI20
+## Namespace Rakuten.RMS.Api.CategoryAPI
 
-[Breadcrumbs](./rakuten.rms.api.categoryapi20.breadcrumbs)
+- [CategoryAPI](./rakuten.rms.api.categoryapi.categoryapi)
 
-[Category](./rakuten.rms.api.categoryapi20.category)
+## Namespace Rakuten.RMS.Api.CategoryAPI20
 
-[CategoryAPI20](./rakuten.rms.api.categoryapi20.categoryapi20)
+- [Breadcrumbs](./rakuten.rms.api.categoryapi20.breadcrumbs)
 
-[CategoryFeatures](./rakuten.rms.api.categoryapi20.categoryfeatures)
+- [Category](./rakuten.rms.api.categoryapi20.category)
 
-[CategoryField](./rakuten.rms.api.categoryapi20.categoryfield)
+- [CategoryAPI20](./rakuten.rms.api.categoryapi20.categoryapi20)
 
-[CategoryIdTree](./rakuten.rms.api.categoryapi20.categoryidtree)
+- [CategoryFeatures](./rakuten.rms.api.categoryapi20.categoryfeatures)
 
-[CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)
+- [CategoryField](./rakuten.rms.api.categoryapi20.categoryfield)
 
-[CategoryInBreadcrumbs](./rakuten.rms.api.categoryapi20.categoryinbreadcrumbs)
+- [CategoryIdTree](./rakuten.rms.api.categoryapi20.categoryidtree)
 
-[CategoryPageViewMode](./rakuten.rms.api.categoryapi20.categorypageviewmode)
+- [CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)
 
-[CategorySet](./rakuten.rms.api.categoryapi20.categoryset)
+- [CategoryInBreadcrumbs](./rakuten.rms.api.categoryapi20.categoryinbreadcrumbs)
 
-[CategorySetFeatures](./rakuten.rms.api.categoryapi20.categorysetfeatures)
+- [CategoryPageViewMode](./rakuten.rms.api.categoryapi20.categorypageviewmode)
 
-[CategorySetField](./rakuten.rms.api.categoryapi20.categorysetfield)
+- [CategorySet](./rakuten.rms.api.categoryapi20.categoryset)
 
-[CategoryTree](./rakuten.rms.api.categoryapi20.categorytree)
+- [CategorySetFeatures](./rakuten.rms.api.categoryapi20.categorysetfeatures)
 
-[CategoryTreeResult](./rakuten.rms.api.categoryapi20.categorytreeresult)
+- [CategorySetField](./rakuten.rms.api.categoryapi20.categorysetfield)
 
-[CategoryWithBreadcrumbs](./rakuten.rms.api.categoryapi20.categorywithbreadcrumbs)
+- [CategoryTree](./rakuten.rms.api.categoryapi20.categorytree)
 
-[CategoryWithBreadcrumsForMapping](./rakuten.rms.api.categoryapi20.categorywithbreadcrumsformapping)
+- [CategoryTreeResult](./rakuten.rms.api.categoryapi20.categorytreeresult)
 
-[CategoryWithChildren](./rakuten.rms.api.categoryapi20.categorywithchildren)
+- [CategoryWithBreadcrumbs](./rakuten.rms.api.categoryapi20.categorywithbreadcrumbs)
 
-[GetItemMappingResponse](./rakuten.rms.api.categoryapi20.getitemmappingresponse)
+- [CategoryWithBreadcrumsForMapping](./rakuten.rms.api.categoryapi20.categorywithbreadcrumsformapping)
 
-[GetItemMappingWithBreadcrumbResponse](./rakuten.rms.api.categoryapi20.getitemmappingwithbreadcrumbresponse)
+- [CategoryWithChildren](./rakuten.rms.api.categoryapi20.categorywithchildren)
 
-[Layout](./rakuten.rms.api.categoryapi20.layout)
+- [GetItemMappingResponse](./rakuten.rms.api.categoryapi20.getitemmappingresponse)
 
-[NewCategory](./rakuten.rms.api.categoryapi20.newcategory)
+- [GetItemMappingWithBreadcrumbResponse](./rakuten.rms.api.categoryapi20.getitemmappingwithbreadcrumbresponse)
 
-## Rakuten.RMS.Api.CouponAPI
+- [Layout](./rakuten.rms.api.categoryapi20.layout)
 
-[Coupon](./rakuten.rms.api.couponapi.coupon)
+- [NewCategory](./rakuten.rms.api.categoryapi20.newcategory)
 
-[CouponAPI](./rakuten.rms.api.couponapi.couponapi)
+## Namespace Rakuten.RMS.Api.CouponAPI
 
-[CouponDeleteRequest](./rakuten.rms.api.couponapi.coupondeleterequest)
+- [Coupon](./rakuten.rms.api.couponapi.coupon)
 
-[CouponIssueRequest](./rakuten.rms.api.couponapi.couponissuerequest)
+- [CouponAPI](./rakuten.rms.api.couponapi.couponapi)
 
-[CouponToDelete](./rakuten.rms.api.couponapi.coupontodelete)
+- [CouponDeleteRequest](./rakuten.rms.api.couponapi.coupondeleterequest)
 
-[CouponToIssue](./rakuten.rms.api.couponapi.coupontoissue)
+- [CouponIssueRequest](./rakuten.rms.api.couponapi.couponissuerequest)
 
-[CouponUpdateRequest](./rakuten.rms.api.couponapi.couponupdaterequest)
+- [CouponToDelete](./rakuten.rms.api.couponapi.coupontodelete)
 
-[Error](./rakuten.rms.api.couponapi.error)
+- [CouponToIssue](./rakuten.rms.api.couponapi.coupontoissue)
 
-[IssuedCoupon](./rakuten.rms.api.couponapi.issuedcoupon)
+- [CouponUpdateRequest](./rakuten.rms.api.couponapi.couponupdaterequest)
 
-[Item](./rakuten.rms.api.couponapi.item)
+- [Error](./rakuten.rms.api.couponapi.error)
 
-[OtherCondition](./rakuten.rms.api.couponapi.othercondition)
+- [IssuedCoupon](./rakuten.rms.api.couponapi.issuedcoupon)
 
-[OtherConditions](./rakuten.rms.api.couponapi.otherconditions)
+- [Item](./rakuten.rms.api.couponapi.item)
 
-[RequestContainer&lt;TRequestBody&gt;](./rakuten.rms.api.couponapi.requestcontainer-1)
+- [OtherCondition](./rakuten.rms.api.couponapi.othercondition)
 
-[ResultContainer&lt;TResponseBody&gt;](./rakuten.rms.api.couponapi.resultcontainer-1)
+- [OtherConditions](./rakuten.rms.api.couponapi.otherconditions)
 
-[ResultWithErrorsBase](./rakuten.rms.api.couponapi.resultwitherrorsbase)
+- [RequestContainer&lt;TRequestBody&gt;](./rakuten.rms.api.couponapi.requestcontainer-1)
 
-[SearchCondition](./rakuten.rms.api.couponapi.searchcondition)
+- [ResultContainer&lt;TResponseBody&gt;](./rakuten.rms.api.couponapi.resultcontainer-1)
 
-[SearchedCoupons](./rakuten.rms.api.couponapi.searchedcoupons)
+- [ResultWithErrorsBase](./rakuten.rms.api.couponapi.resultwitherrorsbase)
 
-[SearchedThanksCoupons](./rakuten.rms.api.couponapi.searchedthankscoupons)
+- [SearchCondition](./rakuten.rms.api.couponapi.searchcondition)
 
-[SearchResponse](./rakuten.rms.api.couponapi.searchresponse)
+- [SearchedCoupons](./rakuten.rms.api.couponapi.searchedcoupons)
 
-[SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)
+- [SearchedThanksCoupons](./rakuten.rms.api.couponapi.searchedthankscoupons)
 
-[SearchThanksCouponResponse](./rakuten.rms.api.couponapi.searchthankscouponresponse)
+- [SearchResponse](./rakuten.rms.api.couponapi.searchresponse)
 
-[ThanksAutoGetCondition](./rakuten.rms.api.couponapi.thanksautogetcondition)
+- [SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)
 
-[ThanksCoupon](./rakuten.rms.api.couponapi.thankscoupon)
+- [SearchThanksCouponResponse](./rakuten.rms.api.couponapi.searchthankscouponresponse)
 
-[ThanksCouponId](./rakuten.rms.api.couponapi.thankscouponid)
+- [ThanksAutoGetCondition](./rakuten.rms.api.couponapi.thanksautogetcondition)
 
-[ThanksCouponToIssue](./rakuten.rms.api.couponapi.thankscoupontoissue)
+- [ThanksCoupon](./rakuten.rms.api.couponapi.thankscoupon)
 
-[ThanksOtherCondition](./rakuten.rms.api.couponapi.thanksothercondition)
+- [ThanksCouponId](./rakuten.rms.api.couponapi.thankscouponid)
 
-## Rakuten.RMS.Api.InquiryManagementAPI
+- [ThanksCouponToIssue](./rakuten.rms.api.couponapi.thankscoupontoissue)
 
-[CountResponse](./rakuten.rms.api.inquirymanagementapi.countresponse)
+- [ThanksOtherCondition](./rakuten.rms.api.couponapi.thanksothercondition)
 
-[GetInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.getinquiriesresponse)
+## Namespace Rakuten.RMS.Api.InquiryManagementAPI
 
-[GetInquiryResponse](./rakuten.rms.api.inquirymanagementapi.getinquiryresponse)
+- [CountResponse](./rakuten.rms.api.inquirymanagementapi.countresponse)
 
-[Inquiry](./rakuten.rms.api.inquirymanagementapi.inquiry)
+- [GetInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.getinquiriesresponse)
 
-[InquiryErrorResponse](./rakuten.rms.api.inquirymanagementapi.inquiryerrorresponse)
+- [GetInquiryResponse](./rakuten.rms.api.inquirymanagementapi.getinquiryresponse)
 
-[InquiryManagementAPI](./rakuten.rms.api.inquirymanagementapi.inquirymanagementapi)
+- [Inquiry](./rakuten.rms.api.inquirymanagementapi.inquiry)
 
-[MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)
+- [InquiryErrorResponse](./rakuten.rms.api.inquirymanagementapi.inquiryerrorresponse)
 
-[PostAttachmentResponse](./rakuten.rms.api.inquirymanagementapi.postattachmentresponse)
+- [InquiryManagementAPI](./rakuten.rms.api.inquirymanagementapi.inquirymanagementapi)
 
-[ReplyResponse](./rakuten.rms.api.inquirymanagementapi.replyresponse)
+- [MarkInquiriesResponse](./rakuten.rms.api.inquirymanagementapi.markinquiriesresponse)
 
-[ReplyResult](./rakuten.rms.api.inquirymanagementapi.replyresult)
+- [PostAttachmentResponse](./rakuten.rms.api.inquirymanagementapi.postattachmentresponse)
 
-## Rakuten.RMS.Api.InventoryAPI20
+- [ReplyResponse](./rakuten.rms.api.inquirymanagementapi.replyresponse)
 
-[BulkGetResult](./rakuten.rms.api.inventoryapi20.bulkgetresult)
+- [ReplyResult](./rakuten.rms.api.inquirymanagementapi.replyresult)
 
-[InventorySku](./rakuten.rms.api.inventoryapi20.inventorysku)
+## Namespace Rakuten.RMS.Api.InventoryAPI20
 
-[InventorySkuUpsert](./rakuten.rms.api.inventoryapi20.inventoryskuupsert)
+- [BulkGetResult](./rakuten.rms.api.inventoryapi20.bulkgetresult)
 
-[InventorySkuUpsertV21](./rakuten.rms.api.inventoryapi20.inventoryskuupsertv21)
+- [InventorySku](./rakuten.rms.api.inventoryapi20.inventorysku)
 
-[InventoryStatusResult](./rakuten.rms.api.inventoryapi20.inventorystatusresult)
+- [InventorySkuUpsert](./rakuten.rms.api.inventoryapi20.inventoryskuupsert)
 
-[OperationLeadTime](./rakuten.rms.api.inventoryapi20.operationleadtime)
+- [InventorySkuUpsertV21](./rakuten.rms.api.inventoryapi20.inventoryskuupsertv21)
 
-[RakutenInventoryServiceV2](./rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
+- [InventoryStatusResult](./rakuten.rms.api.inventoryapi20.inventorystatusresult)
 
-[UpsertMode](./rakuten.rms.api.inventoryapi20.upsertmode)
+- [OperationLeadTime](./rakuten.rms.api.inventoryapi20.operationleadtime)
 
-## Rakuten.RMS.Api.InventoryAPI21
+- [RakutenInventoryServiceV2](./rakuten.rms.api.inventoryapi20.rakuteninventoryservicev2)
 
-[RakutenInventoryServiceV21](./rakuten.rms.api.inventoryapi21.rakuteninventoryservicev21)
+- [UpsertMode](./rakuten.rms.api.inventoryapi20.upsertmode)
 
-## Rakuten.RMS.Api.ItemAPI
+## Namespace Rakuten.RMS.Api.InventoryAPI21
 
-[ItemAPI](./rakuten.rms.api.itemapi.itemapi)
+- [RakutenInventoryServiceV21](./rakuten.rms.api.inventoryapi21.rakuteninventoryservicev21)
 
-[ItemModelBase](./rakuten.rms.api.itemapi.itemmodelbase)
+## Namespace Rakuten.RMS.Api.ItemAPI
 
-[ItemModelSimpleBase](./rakuten.rms.api.itemapi.itemmodelsimplebase)
+- [ItemAPI](./rakuten.rms.api.itemapi.itemapi)
 
-[ItemModelToGet](./rakuten.rms.api.itemapi.itemmodeltoget)
+- [ItemModelBase](./rakuten.rms.api.itemapi.itemmodelbase)
 
-[ItemModelToInsert](./rakuten.rms.api.itemapi.itemmodeltoinsert)
+- [ItemModelSimpleBase](./rakuten.rms.api.itemapi.itemmodelsimplebase)
 
-[ItemModelToUpdate](./rakuten.rms.api.itemapi.itemmodeltoupdate)
+- [ItemModelToGet](./rakuten.rms.api.itemapi.itemmodeltoget)
 
-[ItemModelToUpdateItems](./rakuten.rms.api.itemapi.itemmodeltoupdateitems)
+- [ItemModelToInsert](./rakuten.rms.api.itemapi.itemmodeltoinsert)
 
-## Rakuten.RMS.Api.ItemAPI20
+- [ItemModelToUpdate](./rakuten.rms.api.itemapi.itemmodeltoupdate)
 
-[InventoryRelatedSettings](./rakuten.rms.api.itemapi20.inventoryrelatedsettings)
+- [ItemModelToUpdateItems](./rakuten.rms.api.itemapi.itemmodeltoupdateitems)
 
-[Item](./rakuten.rms.api.itemapi20.item)
+## Namespace Rakuten.RMS.Api.ItemAPI20
 
-[ItemAPI20](./rakuten.rms.api.itemapi20.itemapi20)
+- [InventoryRelatedSettings](./rakuten.rms.api.itemapi20.inventoryrelatedsettings)
 
-[ItemCommon](./rakuten.rms.api.itemapi20.itemcommon)
+- [Item](./rakuten.rms.api.itemapi20.item)
 
-[PatchItem](./rakuten.rms.api.itemapi20.patchitem)
+- [ItemAPI20](./rakuten.rms.api.itemapi20.itemapi20)
 
-[RequiredAttribute](./rakuten.rms.api.itemapi20.requiredattribute)
+- [ItemCommon](./rakuten.rms.api.itemapi20.itemcommon)
 
-[SearchCondition](./rakuten.rms.api.itemapi20.searchcondition)
+- [PatchItem](./rakuten.rms.api.itemapi20.patchitem)
 
-[SearchResult](./rakuten.rms.api.itemapi20.searchresult)
+- [RequiredAttribute](./rakuten.rms.api.itemapi20.requiredattribute)
 
-[SearchSortKey](./rakuten.rms.api.itemapi20.searchsortkey)
+- [SearchCondition](./rakuten.rms.api.itemapi20.searchcondition)
 
-[UpsertItem](./rakuten.rms.api.itemapi20.upsertitem)
+- [SearchResult](./rakuten.rms.api.itemapi20.searchresult)
 
-## Rakuten.RMS.Api.ItemBundleAPI
+- [SearchSortKey](./rakuten.rms.api.itemapi20.searchsortkey)
 
-[Bundle](./rakuten.rms.api.itembundleapi.bundle)
+- [UpsertItem](./rakuten.rms.api.itemapi20.upsertitem)
 
-[BundleItem](./rakuten.rms.api.itembundleapi.bundleitem)
+## Namespace Rakuten.RMS.Api.ItemBundleAPI
 
-[BundleItemToCreate](./rakuten.rms.api.itembundleapi.bundleitemtocreate)
+- [Bundle](./rakuten.rms.api.itembundleapi.bundle)
 
-[BundleListRequest](./rakuten.rms.api.itembundleapi.bundlelistrequest)
+- [BundleItem](./rakuten.rms.api.itembundleapi.bundleitem)
 
-[BundleListResponse](./rakuten.rms.api.itembundleapi.bundlelistresponse)
+- [BundleItemToCreate](./rakuten.rms.api.itembundleapi.bundleitemtocreate)
 
-[BundleToCreate](./rakuten.rms.api.itembundleapi.bundletocreate)
+- [BundleListRequest](./rakuten.rms.api.itembundleapi.bundlelistrequest)
 
-[ItemBundleAPI](./rakuten.rms.api.itembundleapi.itembundleapi)
+- [BundleListResponse](./rakuten.rms.api.itembundleapi.bundlelistresponse)
 
-## Rakuten.RMS.Api.JSON
+- [BundleToCreate](./rakuten.rms.api.itembundleapi.bundletocreate)
 
-[ErrorMetadata](./rakuten.rms.api.json.errormetadata)
+- [ItemBundleAPI](./rakuten.rms.api.itembundleapi.itembundleapi)
 
-[ErrorResponseException](./rakuten.rms.api.json.errorresponseexception)
+## Namespace Rakuten.RMS.Api.JSON
 
-[ErrorResponseException&lt;TResult&gt;](./rakuten.rms.api.json.errorresponseexception-1)
+- [ErrorMetadata](./rakuten.rms.api.json.errormetadata)
 
-[RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase)
+- [ErrorResponseException](./rakuten.rms.api.json.errorresponseexception)
 
-[ResultBase](./rakuten.rms.api.json.resultbase)
+- [ErrorResponseException&lt;TResult&gt;](./rakuten.rms.api.json.errorresponseexception-1)
 
-[ResultError](./rakuten.rms.api.json.resulterror)
+- [RakutenApiJsonClientBase](./rakuten.rms.api.json.rakutenapijsonclientbase)
 
-## Rakuten.RMS.Api.LicenseManagementAPI
+- [ResultBase](./rakuten.rms.api.json.resultbase)
 
-[LicenseManagementAPI](./rakuten.rms.api.licensemanagementapi.licensemanagementapi)
+- [ResultError](./rakuten.rms.api.json.resulterror)
 
-## Rakuten.RMS.Api.NavigationAPI20
+## Namespace Rakuten.RMS.Api.LicenseManagementAPI
 
-[Attribute](./rakuten.rms.api.navigationapi20.attribute)
+- [LicenseManagementAPI](./rakuten.rms.api.licensemanagementapi.licensemanagementapi)
 
-[AttributeProperty](./rakuten.rms.api.navigationapi20.attributeproperty)
+## Namespace Rakuten.RMS.Api.NavigationAPI20
 
-[AttributeResult](./rakuten.rms.api.navigationapi20.attributeresult)
+- [Attribute](./rakuten.rms.api.navigationapi20.attribute)
 
-[AttributeWithDictionaryResult](./rakuten.rms.api.navigationapi20.attributewithdictionaryresult)
+- [AttributeProperty](./rakuten.rms.api.navigationapi20.attributeproperty)
 
-[AttributeWithDictionaryValues](./rakuten.rms.api.navigationapi20.attributewithdictionaryvalues)
+- [AttributeResult](./rakuten.rms.api.navigationapi20.attributeresult)
 
-[BaseGenre](./rakuten.rms.api.navigationapi20.basegenre)
+- [AttributeWithDictionaryResult](./rakuten.rms.api.navigationapi20.attributewithdictionaryresult)
 
-[DictionaryValue](./rakuten.rms.api.navigationapi20.dictionaryvalue)
+- [AttributeWithDictionaryValues](./rakuten.rms.api.navigationapi20.attributewithdictionaryvalues)
 
-[Genre](./rakuten.rms.api.navigationapi20.genre)
+- [BaseGenre](./rakuten.rms.api.navigationapi20.basegenre)
 
-[GenreResult](./rakuten.rms.api.navigationapi20.genreresult)
+- [DictionaryValue](./rakuten.rms.api.navigationapi20.dictionaryvalue)
 
-[GenreWithAttributes](./rakuten.rms.api.navigationapi20.genrewithattributes)
+- [Genre](./rakuten.rms.api.navigationapi20.genre)
 
-[GenreWithAttributesAndDictionary](./rakuten.rms.api.navigationapi20.genrewithattributesanddictionary)
+- [GenreResult](./rakuten.rms.api.navigationapi20.genreresult)
 
-[NavigationAPI20](./rakuten.rms.api.navigationapi20.navigationapi20)
+- [GenreWithAttributes](./rakuten.rms.api.navigationapi20.genrewithattributes)
 
-[Property](./rakuten.rms.api.navigationapi20.property)
+- [GenreWithAttributesAndDictionary](./rakuten.rms.api.navigationapi20.genrewithattributesanddictionary)
 
-[Version](./rakuten.rms.api.navigationapi20.version)
+- [NavigationAPI20](./rakuten.rms.api.navigationapi20.navigationapi20)
 
-[VersionResult](./rakuten.rms.api.navigationapi20.versionresult)
+- [Property](./rakuten.rms.api.navigationapi20.property)
 
-## Rakuten.RMS.Api.ProductAPI
+- [Version](./rakuten.rms.api.navigationapi20.version)
 
-[ProductAPI](./rakuten.rms.api.productapi.productapi)
+- [VersionResult](./rakuten.rms.api.navigationapi20.versionresult)
 
-[SearchCondition](./rakuten.rms.api.productapi.searchcondition)
+## Namespace Rakuten.RMS.Api.ProductAPI
 
-[SearchResponse](./rakuten.rms.api.productapi.searchresponse)
+- [ProductAPI](./rakuten.rms.api.productapi.productapi)
 
-## Rakuten.RMS.Api.PurchaseItemAPI
+- [SearchCondition](./rakuten.rms.api.productapi.searchcondition)
 
-[PurchaseItemAPI](./rakuten.rms.api.purchaseitemapi.purchaseitemapi)
+- [SearchResponse](./rakuten.rms.api.productapi.searchresponse)
 
-## Rakuten.RMS.Api.RakutenPayOrderAPI
+## Namespace Rakuten.RMS.Api.PurchaseItemAPI
 
-[AdditionalFeeModel](./rakuten.rms.api.rakutenpayorderapi.additionalfeemodel)
+- [PurchaseItemAPI](./rakuten.rms.api.purchaseitemapi.purchaseitemapi)
 
-[BasketidModel](./rakuten.rms.api.rakutenpayorderapi.basketidmodel)
+## Namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 
-[ChangeReasonModel](./rakuten.rms.api.rakutenpayorderapi.changereasonmodel)
+- [AdditionalFeeModel](./rakuten.rms.api.rakutenpayorderapi.additionalfeemodel)
 
-[CouponModel](./rakuten.rms.api.rakutenpayorderapi.couponmodel)
+- [BasketidModel](./rakuten.rms.api.rakutenpayorderapi.basketidmodel)
 
-[CouponModelBase](./rakuten.rms.api.rakutenpayorderapi.couponmodelbase)
+- [ChangeReasonModel](./rakuten.rms.api.rakutenpayorderapi.changereasonmodel)
 
-[DeliveryCVSModel](./rakuten.rms.api.rakutenpayorderapi.deliverycvsmodel)
+- [CouponModel](./rakuten.rms.api.rakutenpayorderapi.couponmodel)
 
-[DeliveryModel](./rakuten.rms.api.rakutenpayorderapi.deliverymodel)
+- [CouponModelBase](./rakuten.rms.api.rakutenpayorderapi.couponmodelbase)
 
-[GetOrderResponse](./rakuten.rms.api.rakutenpayorderapi.getorderresponse)
+- [DeliveryCVSModel](./rakuten.rms.api.rakutenpayorderapi.deliverycvsmodel)
 
-[GetPaymentResponse](./rakuten.rms.api.rakutenpayorderapi.getpaymentresponse)
+- [DeliveryModel](./rakuten.rms.api.rakutenpayorderapi.deliverymodel)
 
-[GetSubStatusListResponse](./rakuten.rms.api.rakutenpayorderapi.getsubstatuslistresponse)
+- [GetOrderResponse](./rakuten.rms.api.rakutenpayorderapi.getorderresponse)
 
-[ItemModel](./rakuten.rms.api.rakutenpayorderapi.itemmodel)
+- [GetPaymentResponse](./rakuten.rms.api.rakutenpayorderapi.getpaymentresponse)
 
-[ItemModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.itemmodeltoupdate)
+- [GetSubStatusListResponse](./rakuten.rms.api.rakutenpayorderapi.getsubstatuslistresponse)
 
-[MessageModel](./rakuten.rms.api.rakutenpayorderapi.messagemodel)
+- [ItemModel](./rakuten.rms.api.rakutenpayorderapi.itemmodel)
 
-[OrdererModel](./rakuten.rms.api.rakutenpayorderapi.orderermodel)
+- [ItemModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.itemmodeltoupdate)
 
-[OrderMessageModel](./rakuten.rms.api.rakutenpayorderapi.ordermessagemodel)
+- [MessageModel](./rakuten.rms.api.rakutenpayorderapi.messagemodel)
 
-[OrderMessageResponse](./rakuten.rms.api.rakutenpayorderapi.ordermessageresponse)
+- [OrdererModel](./rakuten.rms.api.rakutenpayorderapi.orderermodel)
 
-[OrderModel](./rakuten.rms.api.rakutenpayorderapi.ordermodel)
+- [OrderMessageModel](./rakuten.rms.api.rakutenpayorderapi.ordermessagemodel)
 
-[OrderModelForPayment](./rakuten.rms.api.rakutenpayorderapi.ordermodelforpayment)
+- [OrderMessageResponse](./rakuten.rms.api.rakutenpayorderapi.ordermessageresponse)
 
-[OrderSenderRequest](./rakuten.rms.api.rakutenpayorderapi.ordersenderrequest)
+- [OrderModel](./rakuten.rms.api.rakutenpayorderapi.ordermodel)
 
-[OrderShippingMessageModel](./rakuten.rms.api.rakutenpayorderapi.ordershippingmessagemodel)
+- [OrderModelForPayment](./rakuten.rms.api.rakutenpayorderapi.ordermodelforpayment)
 
-[OrderShippingModel](./rakuten.rms.api.rakutenpayorderapi.ordershippingmodel)
+- [OrderSenderRequest](./rakuten.rms.api.rakutenpayorderapi.ordersenderrequest)
 
-[PackageModel](./rakuten.rms.api.rakutenpayorderapi.packagemodel)
+- [OrderShippingMessageModel](./rakuten.rms.api.rakutenpayorderapi.ordershippingmessagemodel)
 
-[PaginationRequestModel](./rakuten.rms.api.rakutenpayorderapi.paginationrequestmodel)
+- [OrderShippingModel](./rakuten.rms.api.rakutenpayorderapi.ordershippingmodel)
 
-[PaginationResponseModel](./rakuten.rms.api.rakutenpayorderapi.paginationresponsemodel)
+- [PackageModel](./rakuten.rms.api.rakutenpayorderapi.packagemodel)
 
-[PaymentBankModel](./rakuten.rms.api.rakutenpayorderapi.paymentbankmodel)
+- [PaginationRequestModel](./rakuten.rms.api.rakutenpayorderapi.paginationrequestmodel)
 
-[PaymentCardModel](./rakuten.rms.api.rakutenpayorderapi.paymentcardmodel)
+- [PaginationResponseModel](./rakuten.rms.api.rakutenpayorderapi.paginationresponsemodel)
 
-[PaymentModel](./rakuten.rms.api.rakutenpayorderapi.paymentmodel)
+- [PaymentBankModel](./rakuten.rms.api.rakutenpayorderapi.paymentbankmodel)
 
-[PaymentMultiModel](./rakuten.rms.api.rakutenpayorderapi.paymentmultimodel)
+- [PaymentCardModel](./rakuten.rms.api.rakutenpayorderapi.paymentcardmodel)
 
-[PaymentPayAfterModel](./rakuten.rms.api.rakutenpayorderapi.paymentpayaftermodel)
+- [PaymentModel](./rakuten.rms.api.rakutenpayorderapi.paymentmodel)
 
-[PaymentPaypalModel](./rakuten.rms.api.rakutenpayorderapi.paymentpaypalmodel)
+- [PaymentMultiModel](./rakuten.rms.api.rakutenpayorderapi.paymentmultimodel)
 
-[PointModel](./rakuten.rms.api.rakutenpayorderapi.pointmodel)
+- [PaymentPayAfterModel](./rakuten.rms.api.rakutenpayorderapi.paymentpayaftermodel)
 
-[RakutenPayOrderService](./rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
+- [PaymentPaypalModel](./rakuten.rms.api.rakutenpayorderapi.paymentpaypalmodel)
 
-[RefundModel](./rakuten.rms.api.rakutenpayorderapi.refundmodel)
+- [PointModel](./rakuten.rms.api.rakutenpayorderapi.pointmodel)
 
-[ResultShippingModel](./rakuten.rms.api.rakutenpayorderapi.resultshippingmodel)
+- [RakutenPayOrderService](./rakuten.rms.api.rakutenpayorderapi.rakutenpayorderservice)
 
-[SearchOrderItemRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderitemrequest)
+- [RefundModel](./rakuten.rms.api.rakutenpayorderapi.refundmodel)
 
-[SearchOrderRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderrequest)
+- [ResultShippingModel](./rakuten.rms.api.rakutenpayorderapi.resultshippingmodel)
 
-[SearchOrderResponse](./rakuten.rms.api.rakutenpayorderapi.searchorderresponse)
+- [SearchOrderItemRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderitemrequest)
 
-[SenderModel](./rakuten.rms.api.rakutenpayorderapi.sendermodel)
+- [SearchOrderRequest](./rakuten.rms.api.rakutenpayorderapi.searchorderrequest)
 
-[SenderModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.sendermodeltoupdate)
+- [SearchOrderResponse](./rakuten.rms.api.rakutenpayorderapi.searchorderresponse)
 
-[SettlementModel](./rakuten.rms.api.rakutenpayorderapi.settlementmodel)
+- [SenderModel](./rakuten.rms.api.rakutenpayorderapi.sendermodel)
 
-[ShippingModel](./rakuten.rms.api.rakutenpayorderapi.shippingmodel)
+- [SenderModelToUpdate](./rakuten.rms.api.rakutenpayorderapi.sendermodeltoupdate)
 
-[SkuModel](./rakuten.rms.api.rakutenpayorderapi.skumodel)
+- [SettlementModel](./rakuten.rms.api.rakutenpayorderapi.settlementmodel)
 
-[SortModel](./rakuten.rms.api.rakutenpayorderapi.sortmodel)
+- [ShippingModel](./rakuten.rms.api.rakutenpayorderapi.shippingmodel)
 
-[StatusModel](./rakuten.rms.api.rakutenpayorderapi.statusmodel)
+- [SkuModel](./rakuten.rms.api.rakutenpayorderapi.skumodel)
 
-[SubStatusModel](./rakuten.rms.api.rakutenpayorderapi.substatusmodel)
+- [SortModel](./rakuten.rms.api.rakutenpayorderapi.sortmodel)
 
-[UpdateOrderMemoRequest](./rakuten.rms.api.rakutenpayorderapi.updateordermemorequest)
+- [StatusModel](./rakuten.rms.api.rakutenpayorderapi.statusmodel)
 
-[UpdateOrderMemoResponse](./rakuten.rms.api.rakutenpayorderapi.updateordermemoresponse)
+- [SubStatusModel](./rakuten.rms.api.rakutenpayorderapi.substatusmodel)
 
-[UpdateOrderRemarksRequest](./rakuten.rms.api.rakutenpayorderapi.updateorderremarksrequest)
+- [UpdateOrderMemoRequest](./rakuten.rms.api.rakutenpayorderapi.updateordermemorequest)
 
-[UpdateOrderRemarksResponse](./rakuten.rms.api.rakutenpayorderapi.updateorderremarksresponse)
+- [UpdateOrderMemoResponse](./rakuten.rms.api.rakutenpayorderapi.updateordermemoresponse)
 
-[UpdateOrderShippingAsyncResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingasyncresponse)
+- [UpdateOrderRemarksRequest](./rakuten.rms.api.rakutenpayorderapi.updateorderremarksrequest)
 
-[UpdateOrderShippingResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresponse)
+- [UpdateOrderRemarksResponse](./rakuten.rms.api.rakutenpayorderapi.updateorderremarksresponse)
 
-[UpdateOrderShippingResultResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresultresponse)
+- [UpdateOrderShippingAsyncResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingasyncresponse)
 
-[WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)
+- [UpdateOrderShippingResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresponse)
 
-## Rakuten.RMS.Api.ReserveAPI
+- [UpdateOrderShippingResultResponse](./rakuten.rms.api.rakutenpayorderapi.updateordershippingresultresponse)
 
-[InfoListRequest](./rakuten.rms.api.reserveapi.infolistrequest)
+- [WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)
 
-[InfoListResponse](./rakuten.rms.api.reserveapi.infolistresponse)
+## Namespace Rakuten.RMS.Api.ReserveAPI
 
-[ReserveAPI](./rakuten.rms.api.reserveapi.reserveapi)
+- [InfoListRequest](./rakuten.rms.api.reserveapi.infolistrequest)
 
-[ReserveKeyListModel](./rakuten.rms.api.reserveapi.reservekeylistmodel)
+- [InfoListResponse](./rakuten.rms.api.reserveapi.infolistresponse)
 
-[ReserveUpdateResponse](./rakuten.rms.api.reserveapi.reserveupdateresponse)
+- [ReserveAPI](./rakuten.rms.api.reserveapi.reserveapi)
 
-## Rakuten.RMS.Api.REST
+- [ReserveKeyListModel](./rakuten.rms.api.reserveapi.reservekeylistmodel)
 
-[RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon)
+- [ReserveUpdateResponse](./rakuten.rms.api.reserveapi.reserveupdateresponse)
 
-## Rakuten.RMS.Api.ShopAPI
+## Namespace Rakuten.RMS.Api.REST
 
-[CalendarEvent](./rakuten.rms.api.shopapi.calendarevent)
+- [RakutenApiClientBaseCommon](./rakuten.rms.api.rest.rakutenapiclientbasecommon)
 
-[CalendarFunction](./rakuten.rms.api.shopapi.calendarfunction)
+## Namespace Rakuten.RMS.Api.ShopAPI
 
-[DeliverySetInfo](./rakuten.rms.api.shopapi.deliverysetinfo)
+- [CalendarEvent](./rakuten.rms.api.shopapi.calendarevent)
 
-[DeliverySetInfoBizModel](./rakuten.rms.api.shopapi.deliverysetinfobizmodel)
+- [CalendarFunction](./rakuten.rms.api.shopapi.calendarfunction)
 
-[DelvAreaMaster](./rakuten.rms.api.shopapi.delvareamaster)
+- [DeliverySetInfo](./rakuten.rms.api.shopapi.deliverysetinfo)
 
-[DelvAreaMasterBizModel](./rakuten.rms.api.shopapi.delvareamasterbizmodel)
+- [DeliverySetInfoBizModel](./rakuten.rms.api.shopapi.deliverysetinfobizmodel)
 
-[DelvdateMaster](./rakuten.rms.api.shopapi.delvdatemaster)
+- [DelvAreaMaster](./rakuten.rms.api.shopapi.delvareamaster)
 
-[DelvdateMasterBizModel](./rakuten.rms.api.shopapi.delvdatemasterbizmodel)
+- [DelvAreaMasterBizModel](./rakuten.rms.api.shopapi.delvareamasterbizmodel)
 
-[EventDatesModel](./rakuten.rms.api.shopapi.eventdatesmodel)
+- [DelvdateMaster](./rakuten.rms.api.shopapi.delvdatemaster)
 
-[GoldTop](./rakuten.rms.api.shopapi.goldtop)
+- [DelvdateMasterBizModel](./rakuten.rms.api.shopapi.delvdatemasterbizmodel)
 
-[GoldTopBizModel](./rakuten.rms.api.shopapi.goldtopbizmodel)
+- [EventDatesModel](./rakuten.rms.api.shopapi.eventdatesmodel)
 
-[LayoutCategoryMap](./rakuten.rms.api.shopapi.layoutcategorymap)
+- [GoldTop](./rakuten.rms.api.shopapi.goldtop)
 
-[LayoutCategoryMapBizModel](./rakuten.rms.api.shopapi.layoutcategorymapbizmodel)
+- [GoldTopBizModel](./rakuten.rms.api.shopapi.goldtopbizmodel)
 
-[LayoutItemMap](./rakuten.rms.api.shopapi.layoutitemmap)
+- [LayoutCategoryMap](./rakuten.rms.api.shopapi.layoutcategorymap)
 
-[LayoutItemMapBizModel](./rakuten.rms.api.shopapi.layoutitemmapbizmodel)
+- [LayoutCategoryMapBizModel](./rakuten.rms.api.shopapi.layoutcategorymapbizmodel)
 
-[LayoutLossLeader](./rakuten.rms.api.shopapi.layoutlossleader)
+- [LayoutItemMap](./rakuten.rms.api.shopapi.layoutitemmap)
 
-[LayoutLossLeaderBizModel](./rakuten.rms.api.shopapi.layoutlossleaderbizmodel)
+- [LayoutItemMapBizModel](./rakuten.rms.api.shopapi.layoutitemmapbizmodel)
 
-[LayoutTextLarge](./rakuten.rms.api.shopapi.layouttextlarge)
+- [LayoutLossLeader](./rakuten.rms.api.shopapi.layoutlossleader)
 
-[LayoutTextLargeBizModel](./rakuten.rms.api.shopapi.layouttextlargebizmodel)
+- [LayoutLossLeaderBizModel](./rakuten.rms.api.shopapi.layoutlossleaderbizmodel)
 
-[LayoutTextSmall](./rakuten.rms.api.shopapi.layouttextsmall)
+- [LayoutTextLarge](./rakuten.rms.api.shopapi.layouttextlarge)
 
-[LayoutTextSmallBizModel](./rakuten.rms.api.shopapi.layouttextsmallbizmodel)
+- [LayoutTextLargeBizModel](./rakuten.rms.api.shopapi.layouttextlargebizmodel)
 
-[LayoutTextSmallList](./rakuten.rms.api.shopapi.layouttextsmalllist)
+- [LayoutTextSmall](./rakuten.rms.api.shopapi.layouttextsmall)
 
-[MedamaItem](./rakuten.rms.api.shopapi.medamaitem)
+- [LayoutTextSmallBizModel](./rakuten.rms.api.shopapi.layouttextsmallbizmodel)
 
-[MedamaItems](./rakuten.rms.api.shopapi.medamaitems)
+- [LayoutTextSmallList](./rakuten.rms.api.shopapi.layouttextsmalllist)
 
-[NaviButton](./rakuten.rms.api.shopapi.navibutton)
+- [MedamaItem](./rakuten.rms.api.shopapi.medamaitem)
 
-[NaviButtonBizModel](./rakuten.rms.api.shopapi.navibuttonbizmodel)
+- [MedamaItems](./rakuten.rms.api.shopapi.medamaitems)
 
-[NaviButtonBizModelRequest](./rakuten.rms.api.shopapi.navibuttonbizmodelrequest)
+- [NaviButton](./rakuten.rms.api.shopapi.navibutton)
 
-[NaviButtonInfo](./rakuten.rms.api.shopapi.navibuttoninfo)
+- [NaviButtonBizModel](./rakuten.rms.api.shopapi.navibuttonbizmodel)
 
-[NaviButtonInfoBizModel](./rakuten.rms.api.shopapi.navibuttoninfobizmodel)
+- [NaviButtonBizModelRequest](./rakuten.rms.api.shopapi.navibuttonbizmodelrequest)
 
-[NaviButtonInfoBizModelRequest](./rakuten.rms.api.shopapi.navibuttoninfobizmodelrequest)
+- [NaviButtonInfo](./rakuten.rms.api.shopapi.navibuttoninfo)
 
-[OperationLeadTime](./rakuten.rms.api.shopapi.operationleadtime)
+- [NaviButtonInfoBizModel](./rakuten.rms.api.shopapi.navibuttoninfobizmodel)
 
-[OperationLeadTimeBizModel](./rakuten.rms.api.shopapi.operationleadtimebizmodel)
+- [NaviButtonInfoBizModelRequest](./rakuten.rms.api.shopapi.navibuttoninfobizmodelrequest)
 
-[RegularScheduleModel](./rakuten.rms.api.shopapi.regularschedulemodel)
+- [OperationLeadTime](./rakuten.rms.api.shopapi.operationleadtime)
 
-[ShipFrom](./rakuten.rms.api.shopapi.shipfrom)
+- [OperationLeadTimeBizModel](./rakuten.rms.api.shopapi.operationleadtimebizmodel)
 
-[ShipFromBizModel](./rakuten.rms.api.shopapi.shipfrombizmodel)
+- [RegularScheduleModel](./rakuten.rms.api.shopapi.regularschedulemodel)
 
-[ShopAPI](./rakuten.rms.api.shopapi.shopapi)
+- [ShipFrom](./rakuten.rms.api.shopapi.shipfrom)
 
-[ShopAreaSoryoCharge](./rakuten.rms.api.shopapi.shopareasoryocharge)
+- [ShipFromBizModel](./rakuten.rms.api.shopapi.shipfrombizmodel)
 
-[ShopAreaSoryoPattern](./rakuten.rms.api.shopapi.shopareasoryopattern)
+- [ShopAPI](./rakuten.rms.api.shopapi.shopapi)
 
-[ShopAreaSoryoWrapper](./rakuten.rms.api.shopapi.shopareasoryowrapper)
+- [ShopAreaSoryoCharge](./rakuten.rms.api.shopapi.shopareasoryocharge)
 
-[ShopAreaSoryoWrapperBizModel](./rakuten.rms.api.shopapi.shopareasoryowrapperbizmodel)
+- [ShopAreaSoryoPattern](./rakuten.rms.api.shopapi.shopareasoryopattern)
 
-[ShopAreaSoryoWrapperModel](./rakuten.rms.api.shopapi.shopareasoryowrappermodel)
+- [ShopAreaSoryoWrapper](./rakuten.rms.api.shopapi.shopareasoryowrapper)
 
-[ShopBizApiException](./rakuten.rms.api.shopapi.shopbizapiexception)
+- [ShopAreaSoryoWrapperBizModel](./rakuten.rms.api.shopapi.shopareasoryowrapperbizmodel)
 
-[ShopBizApiResponse](./rakuten.rms.api.shopapi.shopbizapiresponse)
+- [ShopAreaSoryoWrapperModel](./rakuten.rms.api.shopapi.shopareasoryowrappermodel)
 
-[ShopBizApiResponse&lt;TResultMessage&gt;](./rakuten.rms.api.shopapi.shopbizapiresponse-1)
+- [ShopBizApiException](./rakuten.rms.api.shopapi.shopbizapiexception)
 
-[ShopBizApiResponseWithResult&lt;TResult&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-1)
+- [ShopBizApiResponse](./rakuten.rms.api.shopapi.shopbizapiresponse)
 
-[ShopBizApiResponseWithResult&lt;TResult, TResultMessage&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-2)
+- [ShopBizApiResponse&lt;TResultMessage&gt;](./rakuten.rms.api.shopapi.shopbizapiresponse-1)
 
-[ShopCalDesign](./rakuten.rms.api.shopapi.shopcaldesign)
+- [ShopBizApiResponseWithResult&lt;TResult&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-1)
 
-[ShopCalDesignEvent](./rakuten.rms.api.shopapi.shopcaldesignevent)
+- [ShopBizApiResponseWithResult&lt;TResult, TResultMessage&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-2)
 
-[ShopCalDesignEvents](./rakuten.rms.api.shopapi.shopcaldesignevents)
+- [ShopCalDesign](./rakuten.rms.api.shopapi.shopcaldesign)
 
-[ShopCalendar](./rakuten.rms.api.shopapi.shopcalendar)
+- [ShopCalDesignEvent](./rakuten.rms.api.shopapi.shopcaldesignevent)
 
-[ShopCalendar2](./rakuten.rms.api.shopapi.shopcalendar2)
+- [ShopCalDesignEvents](./rakuten.rms.api.shopapi.shopcaldesignevents)
 
-[ShopCalendarAndDesignBizModel](./rakuten.rms.api.shopapi.shopcalendaranddesignbizmodel)
+- [ShopCalendar](./rakuten.rms.api.shopapi.shopcalendar)
 
-[ShopCalendarBizModel](./rakuten.rms.api.shopapi.shopcalendarbizmodel)
+- [ShopCalendar2](./rakuten.rms.api.shopapi.shopcalendar2)
 
-[ShopCalendarDesign](./rakuten.rms.api.shopapi.shopcalendardesign)
+- [ShopCalendarAndDesignBizModel](./rakuten.rms.api.shopapi.shopcalendaranddesignbizmodel)
 
-[ShopHoliday](./rakuten.rms.api.shopapi.shopholiday)
+- [ShopCalendarBizModel](./rakuten.rms.api.shopapi.shopcalendarbizmodel)
 
-[ShopHolidayBizModel](./rakuten.rms.api.shopapi.shopholidaybizmodel)
+- [ShopCalendarDesign](./rakuten.rms.api.shopapi.shopcalendardesign)
 
-[ShopLayoutCommon](./rakuten.rms.api.shopapi.shoplayoutcommon)
+- [ShopHoliday](./rakuten.rms.api.shopapi.shopholiday)
 
-[ShopLayoutCommonBizModel](./rakuten.rms.api.shopapi.shoplayoutcommonbizmodel)
+- [ShopHolidayBizModel](./rakuten.rms.api.shopapi.shopholidaybizmodel)
 
-[shopLayoutCommonBizModelRequest](./rakuten.rms.api.shopapi.shoplayoutcommonbizmodelrequest)
+- [ShopLayoutCommon](./rakuten.rms.api.shopapi.shoplayoutcommon)
 
-[ShopLayoutCommonResultMessage](./rakuten.rms.api.shopapi.shoplayoutcommonresultmessage)
+- [ShopLayoutCommonBizModel](./rakuten.rms.api.shopapi.shoplayoutcommonbizmodel)
 
-[ShopLayoutImage](./rakuten.rms.api.shopapi.shoplayoutimage)
+- [shopLayoutCommonBizModelRequest](./rakuten.rms.api.shopapi.shoplayoutcommonbizmodelrequest)
 
-[ShopLayoutImageBizModel](./rakuten.rms.api.shopapi.shoplayoutimagebizmodel)
+- [ShopLayoutCommonResultMessage](./rakuten.rms.api.shopapi.shoplayoutcommonresultmessage)
 
-[ShopLayoutImageBizModelForEdit](./rakuten.rms.api.shopapi.shoplayoutimagebizmodelforedit)
+- [ShopLayoutImage](./rakuten.rms.api.shopapi.shoplayoutimage)
 
-[ShopMaster](./rakuten.rms.api.shopapi.shopmaster)
+- [ShopLayoutImageBizModel](./rakuten.rms.api.shopapi.shoplayoutimagebizmodel)
 
-[ShopMasterBizModel](./rakuten.rms.api.shopapi.shopmasterbizmodel)
+- [ShopLayoutImageBizModelForEdit](./rakuten.rms.api.shopapi.shoplayoutimagebizmodelforedit)
 
-[ShopStatus](./rakuten.rms.api.shopapi.shopstatus)
+- [ShopMaster](./rakuten.rms.api.shopapi.shopmaster)
 
-[ShopStatusBizModel](./rakuten.rms.api.shopapi.shopstatusbizmodel)
+- [ShopMasterBizModel](./rakuten.rms.api.shopapi.shopmasterbizmodel)
 
-[Signboard](./rakuten.rms.api.shopapi.signboard)
+- [ShopStatus](./rakuten.rms.api.shopapi.shopstatus)
 
-[SignboardBizModel](./rakuten.rms.api.shopapi.signboardbizmodel)
+- [ShopStatusBizModel](./rakuten.rms.api.shopapi.shopstatusbizmodel)
 
-[SoryoKbn](./rakuten.rms.api.shopapi.soryokbn)
+- [Signboard](./rakuten.rms.api.shopapi.signboard)
 
-[SoryoKbnBizModel](./rakuten.rms.api.shopapi.soryokbnbizmodel)
+- [SignboardBizModel](./rakuten.rms.api.shopapi.signboardbizmodel)
 
-[SpBigBanner](./rakuten.rms.api.shopapi.spbigbanner)
+- [SoryoKbn](./rakuten.rms.api.shopapi.soryokbn)
 
-[SpBigBannerBizModel](./rakuten.rms.api.shopapi.spbigbannerbizmodel)
+- [SoryoKbnBizModel](./rakuten.rms.api.shopapi.soryokbnbizmodel)
 
-[SpBigBannerList](./rakuten.rms.api.shopapi.spbigbannerlist)
+- [SpBigBanner](./rakuten.rms.api.shopapi.spbigbanner)
 
-[SpCategoryPageBizModel](./rakuten.rms.api.shopapi.spcategorypagebizmodel)
+- [SpBigBannerBizModel](./rakuten.rms.api.shopapi.spbigbannerbizmodel)
 
-[SpCategoryPageModel](./rakuten.rms.api.shopapi.spcategorypagemodel)
+- [SpBigBannerList](./rakuten.rms.api.shopapi.spbigbannerlist)
 
-[SpItemPageBizModel](./rakuten.rms.api.shopapi.spitempagebizmodel)
+- [SpCategoryPageBizModel](./rakuten.rms.api.shopapi.spcategorypagebizmodel)
 
-[SpItemPageModel](./rakuten.rms.api.shopapi.spitempagemodel)
+- [SpCategoryPageModel](./rakuten.rms.api.shopapi.spcategorypagemodel)
 
-[SpMedamaCategory](./rakuten.rms.api.shopapi.spmedamacategory)
+- [SpItemPageBizModel](./rakuten.rms.api.shopapi.spitempagebizmodel)
 
-[SpMedamaCategory2](./rakuten.rms.api.shopapi.spmedamacategory2)
+- [SpItemPageModel](./rakuten.rms.api.shopapi.spitempagemodel)
 
-[SpMedamaCategoryBizModel](./rakuten.rms.api.shopapi.spmedamacategorybizmodel)
+- [SpMedamaCategory](./rakuten.rms.api.shopapi.spmedamacategory)
 
-[SpMedamaCategoryCommon](./rakuten.rms.api.shopapi.spmedamacategorycommon)
+- [SpMedamaCategory2](./rakuten.rms.api.shopapi.spmedamacategory2)
 
-[SpMedamaCategoryList](./rakuten.rms.api.shopapi.spmedamacategorylist)
+- [SpMedamaCategoryBizModel](./rakuten.rms.api.shopapi.spmedamacategorybizmodel)
 
-[SpMedamaCategoryModel](./rakuten.rms.api.shopapi.spmedamacategorymodel)
+- [SpMedamaCategoryCommon](./rakuten.rms.api.shopapi.spmedamacategorycommon)
 
-[SpMedamaItem](./rakuten.rms.api.shopapi.spmedamaitem)
+- [SpMedamaCategoryList](./rakuten.rms.api.shopapi.spmedamacategorylist)
 
-[SpMedamaItemBizModel](./rakuten.rms.api.shopapi.spmedamaitembizmodel)
+- [SpMedamaCategoryModel](./rakuten.rms.api.shopapi.spmedamacategorymodel)
 
-[SpMedamaItemSettings](./rakuten.rms.api.shopapi.spmedamaitemsettings)
+- [SpMedamaItem](./rakuten.rms.api.shopapi.spmedamaitem)
 
-[SpSmallBanner](./rakuten.rms.api.shopapi.spsmallbanner)
+- [SpMedamaItemBizModel](./rakuten.rms.api.shopapi.spmedamaitembizmodel)
 
-[SpSmallBannerBizModel](./rakuten.rms.api.shopapi.spsmallbannerbizmodel)
+- [SpMedamaItemSettings](./rakuten.rms.api.shopapi.spmedamaitemsettings)
 
-[SpSmallBannerList](./rakuten.rms.api.shopapi.spsmallbannerlist)
+- [SpSmallBanner](./rakuten.rms.api.shopapi.spsmallbanner)
 
-[SpTopPage](./rakuten.rms.api.shopapi.sptoppage)
+- [SpSmallBannerBizModel](./rakuten.rms.api.shopapi.spsmallbannerbizmodel)
 
-[SpTopPageBizModel](./rakuten.rms.api.shopapi.sptoppagebizmodel)
+- [SpSmallBannerList](./rakuten.rms.api.shopapi.spsmallbannerlist)
 
-[SpTopPageDisplay](./rakuten.rms.api.shopapi.sptoppagedisplay)
+- [SpTopPage](./rakuten.rms.api.shopapi.sptoppage)
 
-[SpTopPageDisplayBizModel](./rakuten.rms.api.shopapi.sptoppagedisplaybizmodel)
+- [SpTopPageBizModel](./rakuten.rms.api.shopapi.sptoppagebizmodel)
 
-[SpTopPageToGet](./rakuten.rms.api.shopapi.sptoppagetoget)
+- [SpTopPageDisplay](./rakuten.rms.api.shopapi.sptoppagedisplay)
 
-[TopDisplay](./rakuten.rms.api.shopapi.topdisplay)
+- [SpTopPageDisplayBizModel](./rakuten.rms.api.shopapi.sptoppagedisplaybizmodel)
 
-[TopDisplayBizModel](./rakuten.rms.api.shopapi.topdisplaybizmodel)
+- [SpTopPageToGet](./rakuten.rms.api.shopapi.sptoppagetoget)
 
-[TopDisplayBizModelRequest](./rakuten.rms.api.shopapi.topdisplaybizmodelrequest)
+- [TopDisplay](./rakuten.rms.api.shopapi.topdisplay)
 
-## Rakuten.RMS.Api.ShopPageAPI
+- [TopDisplayBizModel](./rakuten.rms.api.shopapi.topdisplaybizmodel)
 
-[DisplayFormat](./rakuten.rms.api.shoppageapi.displayformat)
+- [TopDisplayBizModelRequest](./rakuten.rms.api.shopapi.topdisplaybizmodelrequest)
 
-[ImageType](./rakuten.rms.api.shoppageapi.imagetype)
+## Namespace Rakuten.RMS.Api.ShopPageAPI
 
-[Layout](./rakuten.rms.api.shoppageapi.layout)
+- [DisplayFormat](./rakuten.rms.api.shoppageapi.displayformat)
 
-[LayoutModule](./rakuten.rms.api.shoppageapi.layoutmodule)
+- [ImageType](./rakuten.rms.api.shoppageapi.imagetype)
 
-[LayoutModuleCommon](./rakuten.rms.api.shoppageapi.layoutmodulecommon)
+- [Layout](./rakuten.rms.api.shoppageapi.layout)
 
-[LayoutModuleHeader](./rakuten.rms.api.shoppageapi.layoutmoduleheader)
+- [LayoutModule](./rakuten.rms.api.shoppageapi.layoutmodule)
 
-[LayoutModuleNavigation](./rakuten.rms.api.shoppageapi.layoutmodulenavigation)
+- [LayoutModuleCommon](./rakuten.rms.api.shoppageapi.layoutmodulecommon)
 
-[LayoutModuleType](./rakuten.rms.api.shoppageapi.layoutmoduletype)
+- [LayoutModuleHeader](./rakuten.rms.api.shoppageapi.layoutmoduleheader)
 
-[LayoutModuleWidget](./rakuten.rms.api.shoppageapi.layoutmodulewidget)
+- [LayoutModuleNavigation](./rakuten.rms.api.shoppageapi.layoutmodulenavigation)
 
-[LayoutResponse](./rakuten.rms.api.shoppageapi.layoutresponse)
+- [LayoutModuleType](./rakuten.rms.api.shoppageapi.layoutmoduletype)
 
-[LayoutStatus](./rakuten.rms.api.shoppageapi.layoutstatus)
+- [LayoutModuleWidget](./rakuten.rms.api.shoppageapi.layoutmodulewidget)
 
-[LayoutToReplace](./rakuten.rms.api.shoppageapi.layouttoreplace)
+- [LayoutResponse](./rakuten.rms.api.shoppageapi.layoutresponse)
 
-[LayoutToRequest](./rakuten.rms.api.shoppageapi.layouttorequest)
+- [LayoutStatus](./rakuten.rms.api.shoppageapi.layoutstatus)
 
-[LayoutType](./rakuten.rms.api.shoppageapi.layouttype)
+- [LayoutToReplace](./rakuten.rms.api.shoppageapi.layouttoreplace)
 
-[Navigation](./rakuten.rms.api.shoppageapi.navigation)
+- [LayoutToRequest](./rakuten.rms.api.shoppageapi.layouttorequest)
 
-[NavigationRequest](./rakuten.rms.api.shoppageapi.navigationrequest)
+- [LayoutType](./rakuten.rms.api.shoppageapi.layouttype)
 
-[ResultResponse&lt;TResponse&gt;](./rakuten.rms.api.shoppageapi.resultresponse-1)
+- [Navigation](./rakuten.rms.api.shoppageapi.navigation)
 
-[ShopPageAPI](./rakuten.rms.api.shoppageapi.shoppageapi)
+- [NavigationRequest](./rakuten.rms.api.shoppageapi.navigationrequest)
 
-[Widget](./rakuten.rms.api.shoppageapi.widget)
+- [ResultResponse&lt;TResponse&gt;](./rakuten.rms.api.shoppageapi.resultresponse-1)
 
-[WidgetBody](./rakuten.rms.api.shoppageapi.widgetbody)
+- [ShopPageAPI](./rakuten.rms.api.shoppageapi.shoppageapi)
 
-[WidgetToRequest](./rakuten.rms.api.shoppageapi.widgettorequest)
+- [Widget](./rakuten.rms.api.shoppageapi.widget)
 
-[WidgetType](./rakuten.rms.api.shoppageapi.widgettype)
+- [WidgetBody](./rakuten.rms.api.shoppageapi.widgetbody)
 
-## Rakuten.RMS.Api.SystemEventNotification
+- [WidgetToRequest](./rakuten.rms.api.shoppageapi.widgettorequest)
 
-[AuthModel](./rakuten.rms.api.systemeventnotification.authmodel)
+- [WidgetType](./rakuten.rms.api.shoppageapi.widgettype)
 
-[AuthorizationResultModel](./rakuten.rms.api.systemeventnotification.authorizationresultmodel)
+## Namespace Rakuten.RMS.Api.SystemEventNotification
 
-[BasketModel](./rakuten.rms.api.systemeventnotification.basketmodel)
+- [AuthModel](./rakuten.rms.api.systemeventnotification.authmodel)
 
-[CautiousOrderNotifyModel](./rakuten.rms.api.systemeventnotification.cautiousordernotifymodel)
+- [AuthorizationResultModel](./rakuten.rms.api.systemeventnotification.authorizationresultmodel)
 
-[ImageEditCompleteNotifyModel](./rakuten.rms.api.systemeventnotification.imageeditcompletenotifymodel)
+- [BasketModel](./rakuten.rms.api.systemeventnotification.basketmodel)
 
-[Notification](./rakuten.rms.api.systemeventnotification.notification)
+- [CautiousOrderNotifyModel](./rakuten.rms.api.systemeventnotification.cautiousordernotifymodel)
 
-[NotifyInfoModel](./rakuten.rms.api.systemeventnotification.notifyinfomodel)
+- [ImageEditCompleteNotifyModel](./rakuten.rms.api.systemeventnotification.imageeditcompletenotifymodel)
 
-[OrderInfoNotifyModel](./rakuten.rms.api.systemeventnotification.orderinfonotifymodel)
+- [Notification](./rakuten.rms.api.systemeventnotification.notification)
 
-[OrderNotifyModel](./rakuten.rms.api.systemeventnotification.ordernotifymodel)
+- [NotifyInfoModel](./rakuten.rms.api.systemeventnotification.notifyinfomodel)
 
-[ProductEditCompleteNotifyModel](./rakuten.rms.api.systemeventnotification.producteditcompletenotifymodel)
+- [OrderInfoNotifyModel](./rakuten.rms.api.systemeventnotification.orderinfonotifymodel)
 
-[PurchaseHistoryChangeNotifyModel](./rakuten.rms.api.systemeventnotification.purchasehistorychangenotifymodel)
+- [OrderNotifyModel](./rakuten.rms.api.systemeventnotification.ordernotifymodel)
 
-[ResponseModel](./rakuten.rms.api.systemeventnotification.responsemodel)
+- [ProductEditCompleteNotifyModel](./rakuten.rms.api.systemeventnotification.producteditcompletenotifymodel)
 
-[RestockRequestNotifyModel](./rakuten.rms.api.systemeventnotification.restockrequestnotifymodel)
+- [PurchaseHistoryChangeNotifyModel](./rakuten.rms.api.systemeventnotification.purchasehistorychangenotifymodel)
 
-[ResultCode](./rakuten.rms.api.systemeventnotification.resultcode)
+- [ResponseModel](./rakuten.rms.api.systemeventnotification.responsemodel)
 
-[SystemNotifyModel](./rakuten.rms.api.systemeventnotification.systemnotifymodel)
+- [RestockRequestNotifyModel](./rakuten.rms.api.systemeventnotification.restockrequestnotifymodel)
 
-[ValueElement](./rakuten.rms.api.systemeventnotification.valueelement)
+- [ResultCode](./rakuten.rms.api.systemeventnotification.resultcode)
 
-## Rakuten.RMS.Api.XML
+- [SystemNotifyModel](./rakuten.rms.api.systemeventnotification.systemnotifymodel)
 
-[ErrorResponseException](./rakuten.rms.api.xml.errorresponseexception)
+- [ValueElement](./rakuten.rms.api.systemeventnotification.valueelement)
 
-[ErrorResult](./rakuten.rms.api.xml.errorresult)
+## Namespace Rakuten.RMS.Api.XML
 
-[RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase)
+- [ErrorResponseException](./rakuten.rms.api.xml.errorresponseexception)
 
-[ResultBase](./rakuten.rms.api.xml.resultbase)
+- [ErrorResult](./rakuten.rms.api.xml.errorresult)
 
-[ResultMessage](./rakuten.rms.api.xml.resultmessage)
+- [RakutenApiXmlClientBase](./rakuten.rms.api.xml.rakutenapixmlclientbase)
 
-[SystemStatus](./rakuten.rms.api.xml.systemstatus)
+- [ResultBase](./rakuten.rms.api.xml.resultbase)
 
-[XmlStatus](./rakuten.rms.api.xml.xmlstatus)
+- [ResultMessage](./rakuten.rms.api.xml.resultmessage)
 
-[XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)
+- [SystemStatus](./rakuten.rms.api.xml.systemstatus)
+
+- [XmlStatus](./rakuten.rms.api.xml.xmlstatus)
+
+- [XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)
+
+
+- - -
+[**< ドキュメントトップ**](../)

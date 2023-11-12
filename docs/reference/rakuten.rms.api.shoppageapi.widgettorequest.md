@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # WidgetToRequest
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **type**
-
-```csharp
-public WidgetType type { get; set; }
-```
-
-#### Property Value
-
-[WidgetType](./rakuten.rms.api.shoppageapi.widgettype)<br>
-
-### **displayFormat**
-
-```csharp
-public DisplayFormat displayFormat { get; set; }
-```
-
-#### Property Value
-
-[DisplayFormat](./rakuten.rms.api.shoppageapi.displayformat)<br>
-
-### **body**
+### <a id="properties-body"/>**body**
 
 ```csharp
 public List<WidgetBody> body { get; set; }
@@ -44,14 +25,34 @@ public List<WidgetBody> body { get; set; }
 
 [List&lt;WidgetBody&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-displayformat"/>**displayFormat**
+
+```csharp
+public DisplayFormat displayFormat { get; set; }
+```
+
+#### Property Value
+
+[DisplayFormat](./rakuten.rms.api.shoppageapi.displayformat)<br>
+
+### <a id="properties-type"/>**type**
+
+```csharp
+public WidgetType type { get; set; }
+```
+
+#### Property Value
+
+[WidgetType](./rakuten.rms.api.shoppageapi.widgettype)<br>
+
 ## Constructors
 
-### **WidgetToRequest()**
+### <a id="constructors-.ctor"/>**WidgetToRequest()**
 
 ```csharp
 public WidgetToRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

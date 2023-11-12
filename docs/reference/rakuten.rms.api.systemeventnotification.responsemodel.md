@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ResponseModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **ResultCode**
+### <a id="properties-resultcode"/>**ResultCode**
 
 ```csharp
 public string ResultCode { get; set; }
@@ -26,13 +27,13 @@ public string ResultCode { get; set; }
 
 ## Constructors
 
-### **ResponseModel()**
+### <a id="constructors-.ctor"/>**ResponseModel()**
 
 ```csharp
 public ResponseModel()
 ```
 
-### **ResponseModel(ResultCode)**
+### <a id="constructors-.ctor"/>**ResponseModel(ResultCode)**
 
 ```csharp
 public ResponseModel(ResultCode code)
@@ -42,6 +43,6 @@ public ResponseModel(ResultCode code)
 
 `code` [ResultCode](./rakuten.rms.api.systemeventnotification.resultcode)<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

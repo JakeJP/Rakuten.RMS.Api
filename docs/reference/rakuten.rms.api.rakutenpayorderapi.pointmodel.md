@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PointModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **usedPoint**
+### <a id="properties-usedpoint"/>**usedPoint**
 
 ポイント利用額
 
@@ -28,12 +29,12 @@ public int usedPoint { get; set; }
 
 ## Constructors
 
-### **PointModel()**
+### <a id="constructors-.ctor"/>**PointModel()**
 
 ```csharp
 public PointModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

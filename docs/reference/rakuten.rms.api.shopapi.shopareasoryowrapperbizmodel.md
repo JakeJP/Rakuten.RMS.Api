@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopAreaSoryoWrapperBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **insertModel**
+### <a id="properties-insertmodel"/>**insertModel**
 
 ```csharp
 public ShopAreaSoryoWrapper insertModel { get; set; }
@@ -24,7 +25,7 @@ public ShopAreaSoryoWrapper insertModel { get; set; }
 
 [ShopAreaSoryoWrapper](./rakuten.rms.api.shopapi.shopareasoryowrapper)<br>
 
-### **updateModel**
+### <a id="properties-updatemodel"/>**updateModel**
 
 ```csharp
 public ShopAreaSoryoWrapper updateModel { get; set; }
@@ -36,12 +37,12 @@ public ShopAreaSoryoWrapper updateModel { get; set; }
 
 ## Constructors
 
-### **ShopAreaSoryoWrapperBizModel()**
+### <a id="constructors-.ctor"/>**ShopAreaSoryoWrapperBizModel()**
 
 ```csharp
 public ShopAreaSoryoWrapperBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

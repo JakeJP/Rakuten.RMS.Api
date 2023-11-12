@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutModuleNavigation
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **details**
+### <a id="properties-details"/>**details**
 
 ```csharp
 public Details details { get; set; }
@@ -24,7 +25,7 @@ public Details details { get; set; }
 
 [Details](./rakuten.rms.api.shoppageapi.layoutmodulenavigation.details)<br>
 
-### **type**
+### <a id="properties-type"/>**type**
 
 ```csharp
 public LayoutModuleType type { get; set; }
@@ -36,12 +37,12 @@ public LayoutModuleType type { get; set; }
 
 ## Constructors
 
-### **LayoutModuleNavigation()**
+### <a id="constructors-.ctor"/>**LayoutModuleNavigation()**
 
 ```csharp
 public LayoutModuleNavigation()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

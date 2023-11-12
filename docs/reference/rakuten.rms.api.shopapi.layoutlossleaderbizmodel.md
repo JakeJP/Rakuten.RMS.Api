@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutLossLeaderBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutLossLeaderList**
+### <a id="properties-layoutlossleaderlist"/>**layoutLossLeaderList**
 
 ```csharp
 public List<LayoutLossLeader> layoutLossLeaderList { get; set; }
@@ -26,12 +27,12 @@ public List<LayoutLossLeader> layoutLossLeaderList { get; set; }
 
 ## Constructors
 
-### **LayoutLossLeaderBizModel()**
+### <a id="constructors-.ctor"/>**LayoutLossLeaderBizModel()**
 
 ```csharp
 public LayoutLossLeaderBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

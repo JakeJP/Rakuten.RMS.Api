@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DictionaryValue
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **id**
+### <a id="properties-id"/>**id**
 
 ```csharp
 public long id { get; set; }
@@ -24,7 +25,7 @@ public long id { get; set; }
 
 [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
-### **nameJa**
+### <a id="properties-nameja"/>**nameJa**
 
 ```csharp
 public string nameJa { get; set; }
@@ -36,12 +37,12 @@ public string nameJa { get; set; }
 
 ## Constructors
 
-### **DictionaryValue()**
+### <a id="constructors-.ctor"/>**DictionaryValue()**
 
 ```csharp
 public DictionaryValue()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

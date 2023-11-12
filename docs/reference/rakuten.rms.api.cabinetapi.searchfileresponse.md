@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchFileResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **CabinetFilesSearchResult**
+### <a id="properties-cabinetfilessearchresult"/>**CabinetFilesSearchResult**
 
 ```csharp
 public CabinetFilesSearchResultModel CabinetFilesSearchResult { get; set; }
@@ -24,7 +25,7 @@ public CabinetFilesSearchResultModel CabinetFilesSearchResult { get; set; }
 
 [CabinetFilesSearchResultModel](./rakuten.rms.api.cabinetapi.searchfileresponse.cabinetfilessearchresultmodel)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -36,12 +37,12 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **SearchFileResponse()**
+### <a id="constructors-.ctor"/>**SearchFileResponse()**
 
 ```csharp
 public SearchFileResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

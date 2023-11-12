@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ThanksOtherCondition
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **conditionTypeCode**
+### <a id="properties-conditiontypecode"/>**conditionTypeCode**
 
 ```csharp
 public string conditionTypeCode { get; set; }
@@ -24,7 +25,7 @@ public string conditionTypeCode { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **startValue**
+### <a id="properties-startvalue"/>**startValue**
 
 ```csharp
 public string startValue { get; set; }
@@ -36,12 +37,12 @@ public string startValue { get; set; }
 
 ## Constructors
 
-### **ThanksOtherCondition()**
+### <a id="constructors-.ctor"/>**ThanksOtherCondition()**
 
 ```csharp
 public ThanksOtherCondition()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

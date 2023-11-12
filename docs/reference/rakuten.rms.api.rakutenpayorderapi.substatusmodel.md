@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SubStatusModel
 
@@ -14,7 +15,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **subStatusId**
+### <a id="properties-orderby"/>**orderby**
+
+```csharp
+public Nullable<Int32> orderby { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-substatusid"/>**subStatusId**
 
 ```csharp
 public int subStatusId { get; set; }
@@ -24,7 +35,7 @@ public int subStatusId { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **subStatusName**
+### <a id="properties-substatusname"/>**subStatusName**
 
 ```csharp
 public string subStatusName { get; set; }
@@ -34,24 +45,14 @@ public string subStatusName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **orderby**
-
-```csharp
-public Nullable<int> orderby { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
 ## Constructors
 
-### **SubStatusModel()**
+### <a id="constructors-.ctor"/>**SubStatusModel()**
 
 ```csharp
 public SubStatusModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

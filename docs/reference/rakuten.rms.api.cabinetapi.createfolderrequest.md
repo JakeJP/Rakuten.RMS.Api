@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CreateFolderRequest
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **FolderInsertRequest**
+### <a id="properties-folderinsertrequest"/>**FolderInsertRequest**
 
 ```csharp
 public folderInsertRequest FolderInsertRequest { get; set; }
@@ -26,12 +27,12 @@ public folderInsertRequest FolderInsertRequest { get; set; }
 
 ## Constructors
 
-### **CreateFolderRequest()**
+### <a id="constructors-.ctor"/>**CreateFolderRequest()**
 
 ```csharp
 public CreateFolderRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

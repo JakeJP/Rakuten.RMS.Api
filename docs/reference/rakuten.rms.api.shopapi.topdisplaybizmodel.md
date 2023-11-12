@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # TopDisplayBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **topDisplay**
+### <a id="properties-topdisplay"/>**topDisplay**
 
 ```csharp
 public TopDisplay topDisplay { get; set; }
@@ -26,12 +27,12 @@ public TopDisplay topDisplay { get; set; }
 
 ## Constructors
 
-### **TopDisplayBizModel()**
+### <a id="constructors-.ctor"/>**TopDisplayBizModel()**
 
 ```csharp
 public TopDisplayBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

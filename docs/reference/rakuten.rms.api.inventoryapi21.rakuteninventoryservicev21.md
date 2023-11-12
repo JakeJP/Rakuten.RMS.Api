@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # RakutenInventoryServiceV21
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Version**
+### <a id="properties-version"/>**Version**
 
 ```csharp
 public string Version { get; set; }
@@ -24,6 +25,6 @@ public string Version { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

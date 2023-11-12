@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # TopDisplay
 
@@ -14,67 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutCommonId**
-
-```csharp
-public Nullable<int> layoutCommonId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **textSmallId**
-
-```csharp
-public Nullable<int> textSmallId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **lossLeaderId**
-
-```csharp
-public Nullable<int> lossLeaderId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **lossLeadingCategoryId**
-
-```csharp
-public Nullable<int> lossLeadingCategoryId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **textLargeId**
-
-```csharp
-public Nullable<int> textLargeId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **imageUrl**
-
-```csharp
-public string imageUrl { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **imageAlt**
+### <a id="properties-imagealt"/>**imageAlt**
 
 ```csharp
 public string imageAlt { get; set; }
@@ -84,17 +25,47 @@ public string imageAlt { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **upperText**
+### <a id="properties-imageurl"/>**imageUrl**
 
 ```csharp
-public string upperText { get; set; }
+public string imageUrl { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **lowerText**
+### <a id="properties-layoutcommonid"/>**layoutCommonId**
+
+```csharp
+public Nullable<Int32> layoutCommonId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-lossleaderid"/>**lossLeaderId**
+
+```csharp
+public Nullable<Int32> lossLeaderId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-lossleadingcategoryid"/>**lossLeadingCategoryId**
+
+```csharp
+public Nullable<Int32> lossLeadingCategoryId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-lowertext"/>**lowerText**
 
 ```csharp
 public string lowerText { get; set; }
@@ -104,14 +75,44 @@ public string lowerText { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-textlargeid"/>**textLargeId**
+
+```csharp
+public Nullable<Int32> textLargeId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-textsmallid"/>**textSmallId**
+
+```csharp
+public Nullable<Int32> textSmallId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-uppertext"/>**upperText**
+
+```csharp
+public string upperText { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **TopDisplay()**
+### <a id="constructors-.ctor"/>**TopDisplay()**
 
 ```csharp
 public TopDisplay()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

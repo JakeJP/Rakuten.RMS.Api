@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # XmlStatus
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **InterfaceId**
+### <a id="properties-interfaceid"/>**InterfaceId**
 
 ```csharp
 public string InterfaceId { get; set; }
@@ -24,7 +25,37 @@ public string InterfaceId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **SystemStatus**
+### <a id="properties-message"/>**Message**
+
+```csharp
+public string Message { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-requestid"/>**RequestId**
+
+```csharp
+public string RequestId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-requests"/>**requests**
+
+```csharp
+public object requests { get; set; }
+```
+
+#### Property Value
+
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
+
+### <a id="properties-systemstatus"/>**SystemStatus**
 
 OK or NG
 
@@ -36,44 +67,14 @@ public SystemStatus SystemStatus { get; set; }
 
 [SystemStatus](./rakuten.rms.api.xml.systemstatus)<br>
 
-### **Message**
-
-```csharp
-public string Message { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **RequestId**
-
-```csharp
-public string RequestId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **requests**
-
-```csharp
-public object requests { get; set; }
-```
-
-#### Property Value
-
-[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
-
 ## Constructors
 
-### **XmlStatus()**
+### <a id="constructors-.ctor"/>**XmlStatus()**
 
 ```csharp
 public XmlStatus()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

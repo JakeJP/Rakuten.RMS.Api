@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # shopLayoutCommonBizModelRequest
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **insertList**
+### <a id="properties-insertlist"/>**insertList**
 
 ```csharp
 public List<ShopLayoutCommon> insertList { get; set; }
@@ -24,7 +25,7 @@ public List<ShopLayoutCommon> insertList { get; set; }
 
 [List&lt;ShopLayoutCommon&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **updateList**
+### <a id="properties-updatelist"/>**updateList**
 
 ```csharp
 public List<ShopLayoutCommon> updateList { get; set; }
@@ -36,12 +37,12 @@ public List<ShopLayoutCommon> updateList { get; set; }
 
 ## Constructors
 
-### **shopLayoutCommonBizModelRequest()**
+### <a id="constructors-.ctor"/>**shopLayoutCommonBizModelRequest()**
 
 ```csharp
 public shopLayoutCommonBizModelRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

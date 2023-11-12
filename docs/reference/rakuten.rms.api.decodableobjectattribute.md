@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # DecodableObjectAttribute
 
@@ -16,7 +17,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **TypeId**
+### <a id="properties-typeid"/>**TypeId**
 
 ```csharp
 public object TypeId { get; }
@@ -28,12 +29,12 @@ public object TypeId { get; }
 
 ## Constructors
 
-### **DecodableObjectAttribute()**
+### <a id="constructors-.ctor"/>**DecodableObjectAttribute()**
 
 ```csharp
 public DecodableObjectAttribute()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

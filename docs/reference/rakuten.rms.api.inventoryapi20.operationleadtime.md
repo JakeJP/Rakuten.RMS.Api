@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OperationLeadTime
 
@@ -14,20 +15,20 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **normalDeliveryTimeId**
+### <a id="properties-backorderdeliverytimeid"/>**backOrderDeliveryTimeId**
 
 ```csharp
-public Nullable<int> normalDeliveryTimeId { get; set; }
+public Nullable<Int32> backOrderDeliveryTimeId { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **backOrderDeliveryTimeId**
+### <a id="properties-normaldeliverytimeid"/>**normalDeliveryTimeId**
 
 ```csharp
-public Nullable<int> backOrderDeliveryTimeId { get; set; }
+public Nullable<Int32> normalDeliveryTimeId { get; set; }
 ```
 
 #### Property Value
@@ -36,12 +37,12 @@ public Nullable<int> backOrderDeliveryTimeId { get; set; }
 
 ## Constructors
 
-### **OperationLeadTime()**
+### <a id="constructors-.ctor"/>**OperationLeadTime()**
 
 ```csharp
 public OperationLeadTime()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

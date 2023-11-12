@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ResultCode
 
@@ -22,6 +23,6 @@ Implements [IComparable](https://docs.microsoft.com/en-us/dotnet/api/system.icom
 | AuthMismatch | 2 | E-400-101 認証キーが一致しません |
 | UnexpectedError | 3 | E-400-900 配信情報の受信処理で予期せぬエラーが発生しました |
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

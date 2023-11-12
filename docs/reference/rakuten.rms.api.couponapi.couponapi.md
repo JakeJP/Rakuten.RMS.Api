@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CouponAPI
 
@@ -14,65 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **GetRequestXmlAttributeOverrides(Type)**
-
-```csharp
-protected XmlAttributeOverrides GetRequestXmlAttributeOverrides(Type oType)
-```
-
-#### Parameters
-
-`oType` [Type](https://docs.microsoft.com/en-us/dotnet/api/system.type)<br>
-
-#### Returns
-
-XmlAttributeOverrides<br>
-
-### **HandleResponse&lt;TResult, TErrorResult&gt;(HttpWebRequest)**
-
-```csharp
-protected TResult HandleResponse<TResult, TErrorResult>(HttpWebRequest req)
-```
-
-#### Type Parameters
-
-`TResult`<br>
-
-`TErrorResult`<br>
-
-#### Parameters
-
-`req` HttpWebRequest<br>
-
-#### Returns
-
-TResult<br>
-
-### **Issue(CouponToIssue)**
-
-```csharp
-public IssuedCoupon Issue(CouponToIssue coupon)
-```
-
-#### Parameters
-
-`coupon` [CouponToIssue](./rakuten.rms.api.couponapi.coupontoissue)<br>
-
-#### Returns
-
-[IssuedCoupon](./rakuten.rms.api.couponapi.issuedcoupon)<br>
-
-### **Update(Coupon)**
-
-```csharp
-public void Update(Coupon coupon)
-```
-
-#### Parameters
-
-`coupon` [Coupon](./rakuten.rms.api.couponapi.coupon)<br>
-
-### **Delete(String)**
+### <a id="methods-delete"/>**Delete(String)**
 
 ```csharp
 public void Delete(string couponCode)
@@ -82,7 +25,7 @@ public void Delete(string couponCode)
 
 `couponCode` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **Get(String)**
+### <a id="methods-get"/>**Get(String)**
 
 ```csharp
 public Coupon Get(string couponCode)
@@ -94,37 +37,37 @@ public Coupon Get(string couponCode)
 
 #### Returns
 
-[Coupon](./rakuten.rms.api.couponapi.coupon)<br>
+[Coupon](./rakuten.rms.api.couponapi.coupon)
 
-### **Search(SearchCondition)**
+### <a id="methods-getthankscoupon"/>**GetThanksCoupon(Int64)**
 
 ```csharp
-public SearchResponse Search(SearchCondition condition)
+public ThanksCouponToIssue GetThanksCoupon(long thanksCouponId)
 ```
 
 #### Parameters
 
-`condition` [SearchCondition](./rakuten.rms.api.couponapi.searchcondition)<br>
+`thanksCouponId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
 #### Returns
 
-[SearchResponse](./rakuten.rms.api.couponapi.searchresponse)<br>
+[ThanksCouponToIssue](./rakuten.rms.api.couponapi.thankscoupontoissue)
 
-### **SearchAll(SearchCondition)**
+### <a id="methods-issue"/>**Issue(CouponToIssue)**
 
 ```csharp
-public IEnumerable<Coupon> SearchAll(SearchCondition condition)
+public IssuedCoupon Issue(CouponToIssue coupon)
 ```
 
 #### Parameters
 
-`condition` [SearchCondition](./rakuten.rms.api.couponapi.searchcondition)<br>
+`coupon` [CouponToIssue](./rakuten.rms.api.couponapi.coupontoissue)<br>
 
 #### Returns
 
-[IEnumerable&lt;Coupon&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IssuedCoupon](./rakuten.rms.api.couponapi.issuedcoupon)
 
-### **IssueThanksCoupon(ThanksCouponToIssue)**
+### <a id="methods-issuethankscoupon"/>**IssueThanksCoupon(ThanksCouponToIssue)**
 
 ```csharp
 public long IssueThanksCoupon(ThanksCouponToIssue coupon)
@@ -136,9 +79,89 @@ public long IssueThanksCoupon(ThanksCouponToIssue coupon)
 
 #### Returns
 
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)
 
-### **UpdateThanksCoupon(Int64, ThanksCouponToIssue)**
+### <a id="methods-search"/>**Search(SearchCondition)**
+
+```csharp
+public SearchResponse Search(SearchCondition condition)
+```
+
+#### Parameters
+
+`condition` [SearchCondition](./rakuten.rms.api.couponapi.searchcondition)<br>
+
+#### Returns
+
+[SearchResponse](./rakuten.rms.api.couponapi.searchresponse)
+
+### <a id="methods-searchall"/>**SearchAll(SearchCondition)**
+
+```csharp
+public IEnumerable<Coupon> SearchAll(SearchCondition condition)
+```
+
+#### Parameters
+
+`condition` [SearchCondition](./rakuten.rms.api.couponapi.searchcondition)<br>
+
+#### Returns
+
+[IEnumerable&lt;Coupon&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
+
+### <a id="methods-searchallthankscoupon"/>**SearchAllThanksCoupon(SearchThanksCouponCondition)**
+
+```csharp
+public IEnumerable<ThanksCoupon> SearchAllThanksCoupon(SearchThanksCouponCondition condition)
+```
+
+#### Parameters
+
+`condition` [SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)<br>
+
+#### Returns
+
+[IEnumerable&lt;ThanksCoupon&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
+
+### <a id="methods-searchthankscoupon"/>**SearchThanksCoupon(SearchThanksCouponCondition)**
+
+```csharp
+public SearchThanksCouponResponse SearchThanksCoupon(SearchThanksCouponCondition condition)
+```
+
+#### Parameters
+
+`condition` [SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)<br>
+
+#### Returns
+
+[SearchThanksCouponResponse](./rakuten.rms.api.couponapi.searchthankscouponresponse)
+
+### <a id="methods-stopthankscoupon"/>**StopThanksCoupon(Int64)**
+
+```csharp
+public long StopThanksCoupon(long thanksCouponId)
+```
+
+#### Parameters
+
+`thanksCouponId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+#### Returns
+
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)
+
+### <a id="methods-update"/>**Update(Coupon)**
+
+```csharp
+public void Update(Coupon coupon)
+```
+
+#### Parameters
+
+`coupon` [Coupon](./rakuten.rms.api.couponapi.coupon)<br>
+
+### <a id="methods-updatethankscoupon"/>**UpdateThanksCoupon(Int64, ThanksCouponToIssue)**
 
 ```csharp
 public long UpdateThanksCoupon(long thanksCouponId, ThanksCouponToIssue coupon)
@@ -152,64 +175,8 @@ public long UpdateThanksCoupon(long thanksCouponId, ThanksCouponToIssue coupon)
 
 #### Returns
 
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)
 
-### **StopThanksCoupon(Int64)**
 
-```csharp
-public long StopThanksCoupon(long thanksCouponId)
-```
-
-#### Parameters
-
-`thanksCouponId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-#### Returns
-
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-### **GetThanksCoupon(Int64)**
-
-```csharp
-public ThanksCouponToIssue GetThanksCoupon(long thanksCouponId)
-```
-
-#### Parameters
-
-`thanksCouponId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-#### Returns
-
-[ThanksCouponToIssue](./rakuten.rms.api.couponapi.thankscoupontoissue)<br>
-
-### **SearchThanksCoupon(SearchThanksCouponCondition)**
-
-```csharp
-public SearchThanksCouponResponse SearchThanksCoupon(SearchThanksCouponCondition condition)
-```
-
-#### Parameters
-
-`condition` [SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)<br>
-
-#### Returns
-
-[SearchThanksCouponResponse](./rakuten.rms.api.couponapi.searchthankscouponresponse)<br>
-
-### **SearchAllThanksCoupon(SearchThanksCouponCondition)**
-
-```csharp
-public IEnumerable<ThanksCoupon> SearchAllThanksCoupon(SearchThanksCouponCondition condition)
-```
-
-#### Parameters
-
-`condition` [SearchThanksCouponCondition](./rakuten.rms.api.couponapi.searchthankscouponcondition)<br>
-
-#### Returns
-
-[IEnumerable&lt;ThanksCoupon&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
-
----
-
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

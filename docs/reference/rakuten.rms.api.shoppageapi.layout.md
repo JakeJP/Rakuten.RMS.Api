@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # Layout
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutId**
-
-```csharp
-public string layoutId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **createTime**
+### <a id="properties-createtime"/>**createTime**
 
 ```csharp
 public DateTime createTime { get; set; }
@@ -34,27 +25,7 @@ public DateTime createTime { get; set; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **updateTime**
-
-```csharp
-public DateTime updateTime { get; set; }
-```
-
-#### Property Value
-
-[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
-
-### **startTime**
-
-```csharp
-public Nullable<DateTime> startTime { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **endTime**
+### <a id="properties-endtime"/>**endTime**
 
 ```csharp
 public Nullable<DateTime> endTime { get; set; }
@@ -64,27 +35,17 @@ public Nullable<DateTime> endTime { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **type**
+### <a id="properties-layoutid"/>**layoutId**
 
 ```csharp
-public LayoutType type { get; set; }
-```
-
-#### Property Value
-
-[LayoutType](./rakuten.rms.api.shoppageapi.layouttype)<br>
-
-### **title**
-
-```csharp
-public string title { get; set; }
+public string layoutId { get; set; }
 ```
 
 #### Property Value
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **modules**
+### <a id="properties-modules"/>**modules**
 
 ```csharp
 public List<LayoutModule> modules { get; set; }
@@ -94,14 +55,54 @@ public List<LayoutModule> modules { get; set; }
 
 [List&lt;LayoutModule&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-starttime"/>**startTime**
+
+```csharp
+public Nullable<DateTime> startTime { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-title"/>**title**
+
+```csharp
+public string title { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-type"/>**type**
+
+```csharp
+public LayoutType type { get; set; }
+```
+
+#### Property Value
+
+[LayoutType](./rakuten.rms.api.shoppageapi.layouttype)<br>
+
+### <a id="properties-updatetime"/>**updateTime**
+
+```csharp
+public DateTime updateTime { get; set; }
+```
+
+#### Property Value
+
+[DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
+
 ## Constructors
 
-### **Layout()**
+### <a id="constructors-.ctor"/>**Layout()**
 
 ```csharp
 public Layout()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

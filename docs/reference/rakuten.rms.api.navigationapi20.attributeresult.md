@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # AttributeResult
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **version**
-
-```csharp
-public Version version { get; set; }
-```
-
-#### Property Value
-
-[Version](./rakuten.rms.api.navigationapi20.version)<br>
-
-### **genre**
-
-```csharp
-public GenreWithAttributes genre { get; set; }
-```
-
-#### Property Value
-
-[GenreWithAttributes](./rakuten.rms.api.navigationapi20.genrewithattributes)<br>
-
-### **errors**
+### <a id="properties-errors"/>**errors**
 
 ```csharp
 public List<ResultError> errors { get; set; }
@@ -44,14 +25,34 @@ public List<ResultError> errors { get; set; }
 
 [List&lt;ResultError&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-genre"/>**genre**
+
+```csharp
+public GenreWithAttributes genre { get; set; }
+```
+
+#### Property Value
+
+[GenreWithAttributes](./rakuten.rms.api.navigationapi20.genrewithattributes)<br>
+
+### <a id="properties-version"/>**version**
+
+```csharp
+public Version version { get; set; }
+```
+
+#### Property Value
+
+[Version](./rakuten.rms.api.navigationapi20.version)<br>
+
 ## Constructors
 
-### **AttributeResult()**
+### <a id="constructors-.ctor"/>**AttributeResult()**
 
 ```csharp
 public AttributeResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

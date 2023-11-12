@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # BundleItem
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **itemManageNumber**
-
-```csharp
-public string itemManageNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **isDeletedItem**
+### <a id="properties-isdeleteditem"/>**isDeletedItem**
 
 ```csharp
 public bool isDeletedItem { get; set; }
@@ -34,7 +25,17 @@ public bool isDeletedItem { get; set; }
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
 
-### **mandatory**
+### <a id="properties-itemmanagenumber"/>**itemManageNumber**
+
+```csharp
+public string itemManageNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-mandatory"/>**mandatory**
 
 ```csharp
 public bool mandatory { get; set; }
@@ -44,7 +45,7 @@ public bool mandatory { get; set; }
 
 [Boolean](https://docs.microsoft.com/en-us/dotnet/api/system.boolean)<br>
 
-### **sequence**
+### <a id="properties-sequence"/>**sequence**
 
 ```csharp
 public int sequence { get; set; }
@@ -56,12 +57,12 @@ public int sequence { get; set; }
 
 ## Constructors
 
-### **BundleItem()**
+### <a id="constructors-.ctor"/>**BundleItem()**
 
 ```csharp
 public BundleItem()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

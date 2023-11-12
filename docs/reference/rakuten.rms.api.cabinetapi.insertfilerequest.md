@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # InsertFileRequest
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Request**
+### <a id="properties-request"/>**Request**
 
 ```csharp
 public fileInsertRequest Request { get; set; }
@@ -26,12 +27,12 @@ public fileInsertRequest Request { get; set; }
 
 ## Constructors
 
-### **InsertFileRequest()**
+### <a id="constructors-.ctor"/>**InsertFileRequest()**
 
 ```csharp
 public InsertFileRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

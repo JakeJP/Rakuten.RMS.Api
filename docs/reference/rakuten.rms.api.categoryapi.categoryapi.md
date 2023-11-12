@@ -1,12 +1,11 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryAPI
 
 Namespace: Rakuten.RMS.Api.CategoryAPI
-
-カテゴリAPI 2.0（CategoryAPI 2.0）
 
 ```csharp
 public class CategoryAPI : Rakuten.RMS.Api.XML.RakutenApiXmlClientBase
@@ -16,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **GetCategorySets()**
+### <a id="methods-getcategorysets"/>**GetCategorySets()**
 
 ```csharp
 public GetCategorysetsResponse GetCategorySets()
@@ -24,8 +23,8 @@ public GetCategorysetsResponse GetCategorySets()
 
 #### Returns
 
-[GetCategorysetsResponse](./rakuten.rms.api.categoryapi.categoryapi.getcategorysetsresponse)<br>
+[GetCategorysetsResponse](./rakuten.rms.api.categoryapi.categoryapi.getcategorysetsresponse)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CabinetAPI
 
@@ -16,87 +17,46 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **GetUsage()**
-
-R-Cabinetの利用状況を取得
+### <a id="methods-createfolder"/>**CreateFolder(String, String, Nullable&lt;Int32&gt;)**
 
 ```csharp
-public CabinetUsageGetResultModel GetUsage()
-```
-
-#### Returns
-
-[CabinetUsageGetResultModel](./rakuten.rms.api.cabinetapi.cabinetusagegetresultmodel)<br>
-CabinetUsageGetResultModel
-
-#### Exceptions
-
-[InvalidOperationException](https://docs.microsoft.com/en-us/dotnet/api/system.invalidoperationexception)<br>
-
-### **GetFolders(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
-
-フォルダの一覧を取得.ページングを内蔵した GetAllFolders を推奨。
-
-```csharp
-public ResultModel GetFolders(Nullable<int> offset, Nullable<int> limit)
+public long CreateFolder(string folderName, string directoryName, Nullable<Int32> upperFolderId)
 ```
 
 #### Parameters
 
-`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+`folderName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+`directoryName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`upperFolderId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
 #### Returns
 
-[ResultModel](./rakuten.rms.api.cabinetapi.getfoldersresponse.resultmodel)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)
 
-#### Exceptions
+### <a id="methods-deletefile"/>**DeleteFile(Int64)**
 
-[XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)<br>
-
-### **GetAllFolders(Int32)**
-
-ページング処理をラップしたバージョン。通常はこちらのメソッド利用を推奨。
+ファイル削除
+ 成功時はステータスコードを返し、エラー　は例外が発生。
 
 ```csharp
-public IEnumerable<FolderModel> GetAllFolders(int pageSize)
+public int DeleteFile(long fileId)
 ```
 
 #### Parameters
 
-`pageSize` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-※値は100まで指定可能
+`fileId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
 #### Returns
 
-[IEnumerable&lt;FolderModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
-
-### **GetFiles(Int64, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
-
-指定したフォルダ内の画像一覧を取得.ページングを内蔵した GetAllFiles を推奨.
-
-```csharp
-public GetFilesResponseModel GetFiles(long folderId, Nullable<int> offset, Nullable<int> limit)
-```
-
-#### Parameters
-
-`folderId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-#### Returns
-
-[GetFilesResponseModel](./rakuten.rms.api.cabinetapi.getfilesresponse.getfilesresponsemodel)<br>
+ステータスコード
 
 #### Exceptions
 
 [XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)<br>
 
-### **GetAllFiles(Int64, Int32)**
+### <a id="methods-getallfiles"/>**GetAllFiles(Int64, Int32)**
 
 ページング処理を内蔵したバージョン。通常はこちらのメソッド利用を推奨。
 
@@ -113,99 +73,9 @@ public IEnumerable<FileModel> GetAllFiles(long folderId, int pageSize)
 
 #### Returns
 
-[IEnumerable&lt;FileModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IEnumerable&lt;FileModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
 
-### **SearchFile(Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
-
-```csharp
-public CabinetFilesSearchResultModel SearchFile(Nullable<int> fileId, string filePath, string fileName, Nullable<int> folderId, string folderPath, Nullable<int> offset, Nullable<int> limit)
-```
-
-#### Parameters
-
-`fileId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`filePath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`fileName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`folderId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`folderPath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-#### Returns
-
-[CabinetFilesSearchResultModel](./rakuten.rms.api.cabinetapi.searchfileresponse.cabinetfilessearchresultmodel)<br>
-
-### **SearchAllFiles(Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;, String)**
-
-ページング処理を内蔵してすべての FileModel を列挙します。
-
-```csharp
-public IEnumerable<FileModel> SearchAllFiles(Nullable<int> fileId, string filePath, string fileName, Nullable<int> folderId, string folderPath)
-```
-
-#### Parameters
-
-`fileId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`filePath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`fileName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`folderId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`folderPath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-#### Returns
-
-[IEnumerable&lt;FileModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
-
-### **DeleteFile(Int64)**
-
-ファイル削除
- 成功時はステータスコードを返し、エラー　は例外が発生。
-
-```csharp
-public int DeleteFile(long fileId)
-```
-
-#### Parameters
-
-`fileId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-#### Returns
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-ステータスコード
-
-#### Exceptions
-
-[XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)<br>
-
-### **GetFilesInTrashbox(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
-
-削除フォルダ内にある画像の一覧を取得
-
-```csharp
-public GetFilesIntrashboxResponse GetFilesInTrashbox(Nullable<int> offset, Nullable<int> limit)
-```
-
-#### Parameters
-
-`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-#### Returns
-
-[GetFilesIntrashboxResponse](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse)<br>
-
-### **GetAllFilesInTrashbox(Int32)**
+### <a id="methods-getallfilesintrashbox"/>**GetAllFilesInTrashbox(Int32)**
 
 ページングを内蔵したバージョン。
 
@@ -219,37 +89,111 @@ public IEnumerable<FileModel> GetAllFilesInTrashbox(int pageSize)
 
 #### Returns
 
-[IEnumerable&lt;FileModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)<br>
+[IEnumerable&lt;FileModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
 
-### **RevertFileInTrashbox(Int64, Int32)**
+### <a id="methods-getallfolders"/>**GetAllFolders(Int32)**
 
-削除フォルダ内にある画像を指定したフォルダに戻す
+ページング処理をラップしたバージョン。通常はこちらのメソッド利用を推奨。
 
 ```csharp
-public int RevertFileInTrashbox(long fileId, int folderId)
+public IEnumerable<FolderModel> GetAllFolders(int pageSize)
 ```
 
 #### Parameters
 
-`fileId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-`folderId` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+`pageSize` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+※値は100まで指定可能
 
 #### Returns
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-ResultCode
+[IEnumerable&lt;FolderModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
+
+### <a id="methods-getfiles"/>**GetFiles(Int64, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
+
+指定したフォルダ内の画像一覧を取得.ページングを内蔵した GetAllFiles を推奨.
+
+```csharp
+public GetFilesResponseModel GetFiles(long folderId, Nullable<Int32> offset, Nullable<Int32> limit)
+```
+
+#### Parameters
+
+`folderId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+#### Returns
+
+[GetFilesResponseModel](./rakuten.rms.api.cabinetapi.getfilesresponse.getfilesresponsemodel)
 
 #### Exceptions
 
 [XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)<br>
 
-### **InsertFile(Int32, String, Stream, String, Nullable&lt;Boolean&gt;)**
+### <a id="methods-getfilesintrashbox"/>**GetFilesInTrashbox(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
+
+削除フォルダ内にある画像の一覧を取得
+
+```csharp
+public GetFilesIntrashboxResponse GetFilesInTrashbox(Nullable<Int32> offset, Nullable<Int32> limit)
+```
+
+#### Parameters
+
+`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+#### Returns
+
+[GetFilesIntrashboxResponse](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse)
+
+### <a id="methods-getfolders"/>**GetFolders(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
+
+フォルダの一覧を取得.ページングを内蔵した GetAllFolders を推奨。
+
+```csharp
+public ResultModel GetFolders(Nullable<Int32> offset, Nullable<Int32> limit)
+```
+
+#### Parameters
+
+`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+#### Returns
+
+[ResultModel](./rakuten.rms.api.cabinetapi.getfoldersresponse.resultmodel)
+
+#### Exceptions
+
+[XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)<br>
+
+### <a id="methods-getusage"/>**GetUsage()**
+
+R-Cabinetの利用状況を取得
+
+```csharp
+public CabinetUsageGetResultModel GetUsage()
+```
+
+#### Returns
+
+CabinetUsageGetResultModel
+
+#### Exceptions
+
+[InvalidOperationException](https://docs.microsoft.com/en-us/dotnet/api/system.invalidoperationexception)<br>
+
+### <a id="methods-insertfile"/>**InsertFile(Int32, String, Stream, String, Nullable&lt;Boolean&gt;)**
 
 画像ファイルを指定して画像を登録
 
 ```csharp
-public long InsertFile(int folderId, string fileName, Stream file, string filePath, Nullable<bool> overWrite)
+public long InsertFile(int folderId, string fileName, Stream file, string filePath, Nullable<Boolean> overWrite)
 ```
 
 #### Parameters
@@ -283,9 +227,81 @@ public long InsertFile(int folderId, string fileName, Stream file, string filePa
 
 #### Returns
 
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)
 
-### **UpdateFile(Int32, String, Stream, String)**
+### <a id="methods-revertfileintrashbox"/>**RevertFileInTrashbox(Int64, Int32)**
+
+削除フォルダ内にある画像を指定したフォルダに戻す
+
+```csharp
+public int RevertFileInTrashbox(long fileId, int folderId)
+```
+
+#### Parameters
+
+`fileId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+`folderId` [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+#### Returns
+
+ResultCode
+
+#### Exceptions
+
+[XmlStatusException](./rakuten.rms.api.xml.xmlstatusexception)<br>
+
+### <a id="methods-searchallfiles"/>**SearchAllFiles(Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;, String)**
+
+ページング処理を内蔵してすべての FileModel を列挙します。
+
+```csharp
+public IEnumerable<FileModel> SearchAllFiles(Nullable<Int32> fileId, string filePath, string fileName, Nullable<Int32> folderId, string folderPath)
+```
+
+#### Parameters
+
+`fileId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`filePath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`fileName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`folderId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`folderPath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+#### Returns
+
+[IEnumerable&lt;FileModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1)
+
+### <a id="methods-searchfile"/>**SearchFile(Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
+
+```csharp
+public CabinetFilesSearchResultModel SearchFile(Nullable<Int32> fileId, string filePath, string fileName, Nullable<Int32> folderId, string folderPath, Nullable<Int32> offset, Nullable<Int32> limit)
+```
+
+#### Parameters
+
+`fileId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`filePath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`fileName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`folderId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`folderPath` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+`offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+`limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+#### Returns
+
+[CabinetFilesSearchResultModel](./rakuten.rms.api.cabinetapi.searchfileresponse.cabinetfilessearchresultmodel)
+
+### <a id="methods-updatefile"/>**UpdateFile(Int32, String, Stream, String)**
 
 画像IDを指定して画像情報を更新
 
@@ -323,27 +339,8 @@ public int UpdateFile(int fileId, string fileName, Stream file, string filePath)
 
 #### Returns
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 ResultCode
 
-### **CreateFolder(String, String, Nullable&lt;Int32&gt;)**
 
-```csharp
-public long CreateFolder(string folderName, string directoryName, Nullable<int> upperFolderId)
-```
-
-#### Parameters
-
-`folderName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`directoryName` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-`upperFolderId` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-#### Returns
-
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
----
-
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

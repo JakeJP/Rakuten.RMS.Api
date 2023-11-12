@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutTextSmall
 
@@ -14,59 +15,19 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **textSmallId**
-
-```csharp
-public Nullable<int> textSmallId { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **name**
-
-```csharp
-public string name { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **text**
-
-```csharp
-public string text { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **textLink**
-
-```csharp
-public string textLink { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **defaultFlag**
+### <a id="properties-defaultflag"/>**defaultFlag**
 
 0: 自動選択しない 1: 自動選択対象
 
 ```csharp
-public Nullable<int> defaultFlag { get; set; }
+public Nullable<Int32> defaultFlag { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **lastUpdate**
+### <a id="properties-lastupdate"/>**lastUpdate**
 
 ```csharp
 public Nullable<DateTime> lastUpdate { get; set; }
@@ -76,14 +37,54 @@ public Nullable<DateTime> lastUpdate { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
+### <a id="properties-name"/>**name**
+
+```csharp
+public string name { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-text"/>**text**
+
+```csharp
+public string text { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-textlink"/>**textLink**
+
+```csharp
+public string textLink { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-textsmallid"/>**textSmallId**
+
+```csharp
+public Nullable<Int32> textSmallId { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
 ## Constructors
 
-### **LayoutTextSmall()**
+### <a id="constructors-.ctor"/>**LayoutTextSmall()**
 
 ```csharp
 public LayoutTextSmall()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

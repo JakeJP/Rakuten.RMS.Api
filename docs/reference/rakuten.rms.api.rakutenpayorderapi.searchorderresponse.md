@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchOrderResponse
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **MessageModelList**
+### <a id="properties-messagemodellist"/>**MessageModelList**
 
 ```csharp
 public IList<MessageModel> MessageModelList { get; set; }
@@ -24,17 +25,17 @@ public IList<MessageModel> MessageModelList { get; set; }
 
 [IList&lt;MessageModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **orderNumberList**
+### <a id="properties-ordernumberlist"/>**orderNumberList**
 
 ```csharp
-public IList<string> orderNumberList { get; set; }
+public IList<String> orderNumberList { get; set; }
 ```
 
 #### Property Value
 
 [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **PaginationResponseModel**
+### <a id="properties-paginationresponsemodel"/>**PaginationResponseModel**
 
 ```csharp
 public PaginationResponseModel PaginationResponseModel { get; set; }
@@ -46,12 +47,12 @@ public PaginationResponseModel PaginationResponseModel { get; set; }
 
 ## Constructors
 
-### **SearchOrderResponse()**
+### <a id="constructors-.ctor"/>**SearchOrderResponse()**
 
 ```csharp
 public SearchOrderResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

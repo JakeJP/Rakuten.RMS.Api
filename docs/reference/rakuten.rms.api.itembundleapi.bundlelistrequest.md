@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # BundleListRequest
 
@@ -14,7 +15,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **bundleState**
+### <a id="properties-bundlename"/>**bundleName**
+
+```csharp
+public string bundleName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-bundlestate"/>**bundleState**
 
 ・ACTIVE・INACTIVE
 
@@ -26,27 +37,7 @@ public string bundleState { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **pageSize**
-
-```csharp
-public Nullable<int> pageSize { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **pageNumber**
-
-```csharp
-public Nullable<int> pageNumber { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **itemManageNumber**
+### <a id="properties-itemmanagenumber"/>**itemManageNumber**
 
 ```csharp
 public string itemManageNumber { get; set; }
@@ -56,7 +47,27 @@ public string itemManageNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **type**
+### <a id="properties-pagenumber"/>**pageNumber**
+
+```csharp
+public Nullable<Int32> pageNumber { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-pagesize"/>**pageSize**
+
+```csharp
+public Nullable<Int32> pageSize { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-type"/>**type**
 
 ・parent・child
 
@@ -68,24 +79,14 @@ public string type { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **bundleName**
-
-```csharp
-public string bundleName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
 ## Constructors
 
-### **BundleListRequest()**
+### <a id="constructors-.ctor"/>**BundleListRequest()**
 
 ```csharp
 public BundleListRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

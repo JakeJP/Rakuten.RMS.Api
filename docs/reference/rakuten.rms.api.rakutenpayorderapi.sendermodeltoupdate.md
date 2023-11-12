@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SenderModelToUpdate
 
@@ -14,37 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **zipCode1**
-
-```csharp
-public string zipCode1 { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **zipCode2**
-
-```csharp
-public string zipCode2 { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **prefecture**
-
-```csharp
-public string prefecture { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **city**
+### <a id="properties-city"/>**city**
 
 ```csharp
 public string city { get; set; }
@@ -54,17 +25,7 @@ public string city { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **subAddress**
-
-```csharp
-public string subAddress { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **familyName**
+### <a id="properties-familyname"/>**familyName**
 
 ```csharp
 public string familyName { get; set; }
@@ -74,17 +35,7 @@ public string familyName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **firstName**
-
-```csharp
-public string firstName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **familyNameKana**
+### <a id="properties-familynamekana"/>**familyNameKana**
 
 ```csharp
 public string familyNameKana { get; set; }
@@ -94,7 +45,17 @@ public string familyNameKana { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **firstNameKana**
+### <a id="properties-firstname"/>**firstName**
+
+```csharp
+public string firstName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-firstnamekana"/>**firstNameKana**
 
 ```csharp
 public string firstNameKana { get; set; }
@@ -104,7 +65,7 @@ public string firstNameKana { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **phoneNumber1**
+### <a id="properties-phonenumber1"/>**phoneNumber1**
 
 ```csharp
 public string phoneNumber1 { get; set; }
@@ -114,7 +75,7 @@ public string phoneNumber1 { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **phoneNumber2**
+### <a id="properties-phonenumber2"/>**phoneNumber2**
 
 ```csharp
 public string phoneNumber2 { get; set; }
@@ -124,7 +85,7 @@ public string phoneNumber2 { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **phoneNumber3**
+### <a id="properties-phonenumber3"/>**phoneNumber3**
 
 ```csharp
 public string phoneNumber3 { get; set; }
@@ -134,14 +95,54 @@ public string phoneNumber3 { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-prefecture"/>**prefecture**
+
+```csharp
+public string prefecture { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-subaddress"/>**subAddress**
+
+```csharp
+public string subAddress { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-zipcode1"/>**zipCode1**
+
+```csharp
+public string zipCode1 { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-zipcode2"/>**zipCode2**
+
+```csharp
+public string zipCode2 { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **SenderModelToUpdate()**
+### <a id="constructors-.ctor"/>**SenderModelToUpdate()**
 
 ```csharp
 public SenderModelToUpdate()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

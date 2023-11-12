@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SpSmallBanner
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **smallBannerPosition**
-
-```csharp
-public int smallBannerPosition { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **smallBannerImageUrl**
-
-```csharp
-public string smallBannerImageUrl { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **smallBannerAltMessage**
+### <a id="properties-smallbanneraltmessage"/>**smallBannerAltMessage**
 
 ```csharp
 public string smallBannerAltMessage { get; set; }
@@ -44,7 +25,17 @@ public string smallBannerAltMessage { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **smallBannerLinkUrl**
+### <a id="properties-smallbannerimageurl"/>**smallBannerImageUrl**
+
+```csharp
+public string smallBannerImageUrl { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-smallbannerlinkurl"/>**smallBannerLinkUrl**
 
 ```csharp
 public string smallBannerLinkUrl { get; set; }
@@ -54,14 +45,24 @@ public string smallBannerLinkUrl { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-smallbannerposition"/>**smallBannerPosition**
+
+```csharp
+public int smallBannerPosition { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
 ## Constructors
 
-### **SpSmallBanner()**
+### <a id="constructors-.ctor"/>**SpSmallBanner()**
 
 ```csharp
 public SpSmallBanner()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

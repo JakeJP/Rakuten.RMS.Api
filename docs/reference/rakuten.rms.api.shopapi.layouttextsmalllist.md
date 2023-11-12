@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutTextSmallList
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutTextSmall**
+### <a id="properties-layouttextsmall"/>**layoutTextSmall**
 
 ```csharp
 public LayoutTextSmall layoutTextSmall { get; set; }
@@ -26,12 +27,12 @@ public LayoutTextSmall layoutTextSmall { get; set; }
 
 ## Constructors
 
-### **LayoutTextSmallList()**
+### <a id="constructors-.ctor"/>**LayoutTextSmallList()**
 
 ```csharp
 public LayoutTextSmallList()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

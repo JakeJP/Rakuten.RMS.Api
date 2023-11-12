@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # Breadcrumbs
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **categorySet**
-
-```csharp
-public CategorySet categorySet { get; set; }
-```
-
-#### Property Value
-
-[CategorySet](./rakuten.rms.api.categoryapi20.categoryset)<br>
-
-### **breadcrumbList**
+### <a id="properties-breadcrumblist"/>**breadcrumbList**
 
 ```csharp
 public List<CategoryInBreadcrumbs> breadcrumbList { get; set; }
@@ -34,14 +25,24 @@ public List<CategoryInBreadcrumbs> breadcrumbList { get; set; }
 
 [List&lt;CategoryInBreadcrumbs&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-categoryset"/>**categorySet**
+
+```csharp
+public CategorySet categorySet { get; set; }
+```
+
+#### Property Value
+
+[CategorySet](./rakuten.rms.api.categoryapi20.categoryset)<br>
+
 ## Constructors
 
-### **Breadcrumbs()**
+### <a id="constructors-.ctor"/>**Breadcrumbs()**
 
 ```csharp
 public Breadcrumbs()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

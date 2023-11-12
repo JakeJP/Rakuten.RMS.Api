@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SpSmallBannerList
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **spSmallBanner**
+### <a id="properties-spsmallbanner"/>**spSmallBanner**
 
 ```csharp
 public SpSmallBanner spSmallBanner { get; set; }
@@ -26,12 +27,12 @@ public SpSmallBanner spSmallBanner { get; set; }
 
 ## Constructors
 
-### **SpSmallBannerList()**
+### <a id="constructors-.ctor"/>**SpSmallBannerList()**
 
 ```csharp
 public SpSmallBannerList()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

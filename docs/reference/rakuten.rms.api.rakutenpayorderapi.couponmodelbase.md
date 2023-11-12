@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CouponModelBase
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **couponCode**
+### <a id="properties-couponcode"/>**couponCode**
 
 ```csharp
 public string couponCode { get; set; }
@@ -24,17 +25,7 @@ public string couponCode { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **itemId**
-
-```csharp
-public int itemId { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **couponPrice**
+### <a id="properties-couponprice"/>**couponPrice**
 
 ```csharp
 public int couponPrice { get; set; }
@@ -44,7 +35,7 @@ public int couponPrice { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **couponUnit**
+### <a id="properties-couponunit"/>**couponUnit**
 
 ```csharp
 public int couponUnit { get; set; }
@@ -54,14 +45,24 @@ public int couponUnit { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
+### <a id="properties-itemid"/>**itemId**
+
+```csharp
+public int itemId { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
 ## Constructors
 
-### **CouponModelBase()**
+### <a id="constructors-.ctor"/>**CouponModelBase()**
 
 ```csharp
 public CouponModelBase()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ResultBase
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -26,7 +27,7 @@ public XmlStatus Status { get; set; }
 
 ## Methods
 
-### **ToString()**
+### <a id="methods-tostring"/>**ToString()**
 
 ```csharp
 public string ToString()
@@ -34,8 +35,8 @@ public string ToString()
 
 #### Returns
 
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopCalendar2
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **businessHoliday**
+### <a id="properties-businessholiday"/>**businessHoliday**
 
 ```csharp
 public CalendarEvent businessHoliday { get; set; }
@@ -24,7 +25,7 @@ public CalendarEvent businessHoliday { get; set; }
 
 [CalendarEvent](./rakuten.rms.api.shopapi.calendarevent)<br>
 
-### **shippingHoliday**
+### <a id="properties-shippingholiday"/>**shippingHoliday**
 
 ```csharp
 public CalendarEvent shippingHoliday { get; set; }
@@ -34,7 +35,7 @@ public CalendarEvent shippingHoliday { get; set; }
 
 [CalendarEvent](./rakuten.rms.api.shopapi.calendarevent)<br>
 
-### **shippingOnly**
+### <a id="properties-shippingonly"/>**shippingOnly**
 
 ```csharp
 public CalendarEvent shippingOnly { get; set; }
@@ -44,7 +45,7 @@ public CalendarEvent shippingOnly { get; set; }
 
 [CalendarEvent](./rakuten.rms.api.shopapi.calendarevent)<br>
 
-### **shopHoliday**
+### <a id="properties-shopholiday"/>**shopHoliday**
 
 ```csharp
 public ShopHoliday shopHoliday { get; set; }
@@ -56,12 +57,12 @@ public ShopHoliday shopHoliday { get; set; }
 
 ## Constructors
 
-### **ShopCalendar2()**
+### <a id="constructors-.ctor"/>**ShopCalendar2()**
 
 ```csharp
 public ShopCalendar2()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

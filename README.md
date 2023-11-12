@@ -94,37 +94,18 @@ var orderList = orderApi.GetOrder( new [] { "123456-12341234-1234567890" } );
 
 Python.NET を使用して Python からAPIにアクセスることができます。
 
-- .NET のランタイムバージョンによっては、ServicePointManager を通じて
-  SSL/TLS プロトコル対応を明示する必要があります。
-- .NET の IList, IEnumerable, ICollection などとの変換をサポートするため Python.Runtime.Codecs の使用を登録します。
+[Python.NET を使用して Python から使用するための環境の構築と使用方法の詳細](https://jakejp.github.io/Rakuten.RMS.Api/Python) 
+
+Python から使用では、list や パラメータのクラスオブジェクトの指定が簡単になります。
+
+注文データの取得の例
 
 ```python
-import clr
-import pythonnet
-import Python.Runtime
-from System.Net import ServicePointManager, SecurityProtocolType 
-
-# Rakuten.RMS.Api.DLL への参照
-clr.AddReference('Rakuten.RMS.Api')
-
-from Rakuten.RMS.Api import ServiceProvider
-
-# TLS 1.2 対応
-ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12
-
-# IList, IEnumerable, ICollection の変換処理対応
-Python.Runtime.Codecs.ListDecoder.Register()
-Python.Runtime.Codecs.SequenceDecoder.Register()
-Python.Runtime.Codecs.IterableDecoder.Register()
-
 sp = ServiceProvider('SPxxxxxxxxxxxxxxxxx','SLxxxxxxxxxxxxxx')
 api = sp.GetRakutenPayOrderAPI()
 
 orders = api.GetOrder( ["123456-12341234-1234567890"])
-
 ```
-[Python.NET 環境の構築と使用方法の詳細](https://jakejp.github.io/Rakuten.RMS.Api/Python)
-
 
 ### システム通知イベント
 

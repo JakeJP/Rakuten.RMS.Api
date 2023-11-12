@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # Error
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **code**
+### <a id="properties-code"/>**code**
 
 ```csharp
 public string code { get; set; }
@@ -24,7 +25,7 @@ public string code { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **message**
+### <a id="properties-message"/>**message**
 
 ```csharp
 public string message { get; set; }
@@ -36,12 +37,12 @@ public string message { get; set; }
 
 ## Constructors
 
-### **Error()**
+### <a id="constructors-.ctor"/>**Error()**
 
 ```csharp
 public Error()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

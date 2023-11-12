@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopAreaSoryoPattern
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **patternId**
+### <a id="properties-patternid"/>**patternId**
 
 ```csharp
 public int patternId { get; set; }
@@ -24,7 +25,7 @@ public int patternId { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **patternName**
+### <a id="properties-patternname"/>**patternName**
 
 ```csharp
 public string patternName { get; set; }
@@ -34,7 +35,7 @@ public string patternName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **shopAreaSoryoChargeList**
+### <a id="properties-shopareasoryochargelist"/>**shopAreaSoryoChargeList**
 
 ```csharp
 public List<ShopAreaSoryoCharge> shopAreaSoryoChargeList { get; set; }
@@ -46,12 +47,12 @@ public List<ShopAreaSoryoCharge> shopAreaSoryoChargeList { get; set; }
 
 ## Constructors
 
-### **ShopAreaSoryoPattern()**
+### <a id="constructors-.ctor"/>**ShopAreaSoryoPattern()**
 
 ```csharp
 public ShopAreaSoryoPattern()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

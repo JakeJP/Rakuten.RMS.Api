@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutTextLarge
 
@@ -14,17 +15,19 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **textLargeId**
+### <a id="properties-defaultflag"/>**defaultFlag**
+
+0: 自動選択しない 1: 自動選択対象
 
 ```csharp
-public Nullable<int> textLargeId { get; set; }
+public Nullable<Int32> defaultFlag { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **name**
+### <a id="properties-name"/>**name**
 
 ```csharp
 public string name { get; set; }
@@ -34,7 +37,7 @@ public string name { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **text**
+### <a id="properties-text"/>**text**
 
 ```csharp
 public string text { get; set; }
@@ -44,12 +47,10 @@ public string text { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **defaultFlag**
-
-0: 自動選択しない 1: 自動選択対象
+### <a id="properties-textlargeid"/>**textLargeId**
 
 ```csharp
-public Nullable<int> defaultFlag { get; set; }
+public Nullable<Int32> textLargeId { get; set; }
 ```
 
 #### Property Value
@@ -58,12 +59,12 @@ public Nullable<int> defaultFlag { get; set; }
 
 ## Constructors
 
-### **LayoutTextLarge()**
+### <a id="constructors-.ctor"/>**LayoutTextLarge()**
 
 ```csharp
 public LayoutTextLarge()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

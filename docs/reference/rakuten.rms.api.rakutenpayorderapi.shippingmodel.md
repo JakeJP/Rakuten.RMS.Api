@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShippingModel
 
@@ -14,27 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **shippingDetailId**
-
-```csharp
-public long shippingDetailId { get; set; }
-```
-
-#### Property Value
-
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
-
-### **shippingNumber**
-
-```csharp
-public string shippingNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **deliveryCompany**
+### <a id="properties-deliverycompany"/>**deliveryCompany**
 
 1000: その他
  1001: ヤマト運輸
@@ -73,7 +54,7 @@ public string deliveryCompany { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **deliveryCompanyName**
+### <a id="properties-deliverycompanyname"/>**deliveryCompanyName**
 
 ```csharp
 public string deliveryCompanyName { get; set; }
@@ -83,7 +64,7 @@ public string deliveryCompanyName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **shippingDate**
+### <a id="properties-shippingdate"/>**shippingDate**
 
 ```csharp
 public Nullable<DateTime> shippingDate { get; set; }
@@ -93,14 +74,34 @@ public Nullable<DateTime> shippingDate { get; set; }
 
 [Nullable&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
+### <a id="properties-shippingdetailid"/>**shippingDetailId**
+
+```csharp
+public long shippingDetailId { get; set; }
+```
+
+#### Property Value
+
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+### <a id="properties-shippingnumber"/>**shippingNumber**
+
+```csharp
+public string shippingNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **ShippingModel()**
+### <a id="constructors-.ctor"/>**ShippingModel()**
 
 ```csharp
 public ShippingModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

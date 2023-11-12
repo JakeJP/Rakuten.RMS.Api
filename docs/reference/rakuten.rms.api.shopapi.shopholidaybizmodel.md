@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopHolidayBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **inputModel**
+### <a id="properties-inputmodel"/>**inputModel**
 
 ```csharp
 public InputModel inputModel { get; set; }
@@ -26,12 +27,12 @@ public InputModel inputModel { get; set; }
 
 ## Constructors
 
-### **ShopHolidayBizModel()**
+### <a id="constructors-.ctor"/>**ShopHolidayBizModel()**
 
 ```csharp
 public ShopHolidayBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

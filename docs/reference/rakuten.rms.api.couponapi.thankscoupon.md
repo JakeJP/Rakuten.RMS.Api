@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ThanksCoupon
 
@@ -14,67 +15,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **thanksCouponId**
+### <a id="properties-combineflag"/>**combineFlag**
 
 ```csharp
-public long thanksCouponId { get; set; }
+public int combineFlag { get; set; }
 ```
 
 #### Property Value
 
-[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **shopId**
-
-```csharp
-public string shopId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **shopName**
-
-```csharp
-public string shopName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **shopUrl**
-
-```csharp
-public string shopUrl { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponImage**
-
-```csharp
-public string couponImage { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponName**
-
-```csharp
-public string couponName { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **couponCaption**
+### <a id="properties-couponcaption"/>**couponCaption**
 
 ```csharp
 public string couponCaption { get; set; }
@@ -84,7 +35,57 @@ public string couponCaption { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **discountType**
+### <a id="properties-couponimage"/>**couponImage**
+
+```csharp
+public string couponImage { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-couponname"/>**couponName**
+
+```csharp
+public string couponName { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-couponterm"/>**couponTerm**
+
+```csharp
+public int couponTerm { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-couponunavailableterm"/>**couponUnavailableTerm**
+
+```csharp
+public int couponUnavailableTerm { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-discountfactor"/>**discountFactor**
+
+```csharp
+public int discountFactor { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-discounttype"/>**discountType**
 
 1： 定額値引き
  2： 定率値引き
@@ -98,37 +99,7 @@ public int discountType { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **discountFactor**
-
-```csharp
-public int discountFactor { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **couponUnavailableTerm**
-
-```csharp
-public int couponUnavailableTerm { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **couponTerm**
-
-```csharp
-public int couponTerm { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **memberAvailMaxCount**
+### <a id="properties-memberavailmaxcount"/>**memberAvailMaxCount**
 
 ```csharp
 public int memberAvailMaxCount { get; set; }
@@ -138,27 +109,37 @@ public int memberAvailMaxCount { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **combineFlag**
+### <a id="properties-shopid"/>**shopId**
 
 ```csharp
-public int combineFlag { get; set; }
+public string shopId { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **thanksOtherConditions**
+### <a id="properties-shopname"/>**shopName**
 
 ```csharp
-public List<ThanksOtherCondition> thanksOtherConditions { get; set; }
+public string shopName { get; set; }
 ```
 
 #### Property Value
 
-[List&lt;ThanksOtherCondition&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **thanksAutoGetConditions**
+### <a id="properties-shopurl"/>**shopUrl**
+
+```csharp
+public string shopUrl { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-thanksautogetconditions"/>**thanksAutoGetConditions**
 
 ```csharp
 public List<ThanksAutoGetCondition> thanksAutoGetConditions { get; set; }
@@ -168,14 +149,34 @@ public List<ThanksAutoGetCondition> thanksAutoGetConditions { get; set; }
 
 [List&lt;ThanksAutoGetCondition&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-thankscouponid"/>**thanksCouponId**
+
+```csharp
+public long thanksCouponId { get; set; }
+```
+
+#### Property Value
+
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+### <a id="properties-thanksotherconditions"/>**thanksOtherConditions**
+
+```csharp
+public List<ThanksOtherCondition> thanksOtherConditions { get; set; }
+```
+
+#### Property Value
+
+[List&lt;ThanksOtherCondition&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
+
 ## Constructors
 
-### **ThanksCoupon()**
+### <a id="constructors-.ctor"/>**ThanksCoupon()**
 
 ```csharp
 public ThanksCoupon()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

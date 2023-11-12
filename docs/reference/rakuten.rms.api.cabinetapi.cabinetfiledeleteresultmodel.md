@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CabinetFileDeleteResultModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **CabinetFileDeleteResult**
+### <a id="properties-cabinetfiledeleteresult"/>**CabinetFileDeleteResult**
 
 ```csharp
 public cabinetFileDeleteResult CabinetFileDeleteResult { get; set; }
@@ -24,7 +25,7 @@ public cabinetFileDeleteResult CabinetFileDeleteResult { get; set; }
 
 [cabinetFileDeleteResult](./rakuten.rms.api.cabinetapi.cabinetfiledeleteresultmodel.cabinetfiledeleteresult)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -36,12 +37,12 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **CabinetFileDeleteResultModel()**
+### <a id="constructors-.ctor"/>**CabinetFileDeleteResultModel()**
 
 ```csharp
 public CabinetFileDeleteResultModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

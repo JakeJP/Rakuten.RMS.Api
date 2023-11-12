@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopAreaSoryoCharge
 
@@ -14,7 +15,19 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **regionId**
+### <a id="properties-charge"/>**charge**
+
+送料
+
+```csharp
+public int charge { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-regionid"/>**regionId**
 
 地域ID
  1: 北海道
@@ -39,26 +52,14 @@ public int regionId { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **charge**
-
-送料
-
-```csharp
-public int charge { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
 ## Constructors
 
-### **ShopAreaSoryoCharge()**
+### <a id="constructors-.ctor"/>**ShopAreaSoryoCharge()**
 
 ```csharp
 public ShopAreaSoryoCharge()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

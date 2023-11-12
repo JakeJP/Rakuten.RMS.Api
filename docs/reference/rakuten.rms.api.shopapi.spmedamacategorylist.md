@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SpMedamaCategoryList
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **spMedamaCategory**
+### <a id="properties-spmedamacategory"/>**spMedamaCategory**
 
 ```csharp
 public SpMedamaCategory2 spMedamaCategory { get; set; }
@@ -26,12 +27,12 @@ public SpMedamaCategory2 spMedamaCategory { get; set; }
 
 ## Constructors
 
-### **SpMedamaCategoryList()**
+### <a id="constructors-.ctor"/>**SpMedamaCategoryList()**
 
 ```csharp
 public SpMedamaCategoryList()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SpMedamaItem
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **spMedamaItemSettings**
-
-```csharp
-public SpMedamaItemSettings spMedamaItemSettings { get; set; }
-```
-
-#### Property Value
-
-[SpMedamaItemSettings](./rakuten.rms.api.shopapi.spmedamaitemsettings)<br>
-
-### **medamaItems**
+### <a id="properties-medamaitems"/>**medamaItems**
 
 ```csharp
 public MedamaItems medamaItems { get; set; }
@@ -34,14 +25,24 @@ public MedamaItems medamaItems { get; set; }
 
 [MedamaItems](./rakuten.rms.api.shopapi.medamaitems)<br>
 
+### <a id="properties-spmedamaitemsettings"/>**spMedamaItemSettings**
+
+```csharp
+public SpMedamaItemSettings spMedamaItemSettings { get; set; }
+```
+
+#### Property Value
+
+[SpMedamaItemSettings](./rakuten.rms.api.shopapi.spmedamaitemsettings)<br>
+
 ## Constructors
 
-### **SpMedamaItem()**
+### <a id="constructors-.ctor"/>**SpMedamaItem()**
 
 ```csharp
 public SpMedamaItem()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PurchaseItemAPI
 
@@ -16,7 +17,23 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Methods
 
-### **SearchOrderItem(SearchOrderItemRequest)**
+### <a id="methods-getorderitem"/>**GetOrderItem(IList&lt;String&gt;)**
+
+購入された商品に関連する情報の取得
+
+```csharp
+public GetOrderResponse GetOrderItem(IList<String> orderNumberList)
+```
+
+#### Parameters
+
+`orderNumberList` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+#### Returns
+
+[GetOrderResponse](./rakuten.rms.api.rakutenpayorderapi.getorderresponse)
+
+### <a id="methods-searchorderitem"/>**SearchOrderItem(SearchOrderItemRequest)**
 
 注文検索
 
@@ -30,24 +47,8 @@ public SearchOrderResponse SearchOrderItem(SearchOrderItemRequest request)
 
 #### Returns
 
-[SearchOrderResponse](./rakuten.rms.api.rakutenpayorderapi.searchorderresponse)<br>
+[SearchOrderResponse](./rakuten.rms.api.rakutenpayorderapi.searchorderresponse)
 
-### **GetOrderItem(IList&lt;String&gt;)**
 
-購入された商品に関連する情報の取得
-
-```csharp
-public GetOrderResponse GetOrderItem(IList<string> orderNumberList)
-```
-
-#### Parameters
-
-`orderNumberList` [IList&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-#### Returns
-
-[GetOrderResponse](./rakuten.rms.api.rakutenpayorderapi.getorderresponse)<br>
-
----
-
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

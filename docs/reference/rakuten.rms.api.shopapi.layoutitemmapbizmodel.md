@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutItemMapBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **layoutItemMapList**
+### <a id="properties-layoutitemmaplist"/>**layoutItemMapList**
 
 ```csharp
 public List<LayoutItemMap> layoutItemMapList { get; set; }
@@ -26,12 +27,12 @@ public List<LayoutItemMap> layoutItemMapList { get; set; }
 
 ## Constructors
 
-### **LayoutItemMapBizModel()**
+### <a id="constructors-.ctor"/>**LayoutItemMapBizModel()**
 
 ```csharp
 public LayoutItemMapBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

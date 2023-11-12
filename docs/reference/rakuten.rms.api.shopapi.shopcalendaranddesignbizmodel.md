@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopCalendarAndDesignBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **shopCalendar**
+### <a id="properties-shopcalendar"/>**shopCalendar**
 
 ```csharp
 public ShopCalendar shopCalendar { get; set; }
@@ -24,7 +25,7 @@ public ShopCalendar shopCalendar { get; set; }
 
 [ShopCalendar](./rakuten.rms.api.shopapi.shopcalendar)<br>
 
-### **shopCalendarDesign**
+### <a id="properties-shopcalendardesign"/>**shopCalendarDesign**
 
 ```csharp
 public ShopCalendarDesign shopCalendarDesign { get; set; }
@@ -36,12 +37,12 @@ public ShopCalendarDesign shopCalendarDesign { get; set; }
 
 ## Constructors
 
-### **ShopCalendarAndDesignBizModel()**
+### <a id="constructors-.ctor"/>**ShopCalendarAndDesignBizModel()**
 
 ```csharp
 public ShopCalendarAndDesignBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

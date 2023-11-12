@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopStatus
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **statusKey**
+### <a id="properties-statuskey"/>**statusKey**
 
 ```csharp
 public string statusKey { get; set; }
@@ -24,7 +25,7 @@ public string statusKey { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **statusValue**
+### <a id="properties-statusvalue"/>**statusValue**
 
 ```csharp
 public string statusValue { get; set; }
@@ -36,12 +37,12 @@ public string statusValue { get; set; }
 
 ## Constructors
 
-### **ShopStatus()**
+### <a id="constructors-.ctor"/>**ShopStatus()**
 
 ```csharp
 public ShopStatus()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

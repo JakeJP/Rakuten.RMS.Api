@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # EventDatesModel
 
@@ -14,12 +15,12 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **eventDates**
+### <a id="properties-eventdates"/>**eventDates**
 
 個別の日付一覧 YYYYMMDD
 
 ```csharp
-public List<string> eventDates { get; set; }
+public List<String> eventDates { get; set; }
 ```
 
 #### Property Value
@@ -28,12 +29,12 @@ public List<string> eventDates { get; set; }
 
 ## Constructors
 
-### **EventDatesModel()**
+### <a id="constructors-.ctor"/>**EventDatesModel()**
 
 ```csharp
 public EventDatesModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

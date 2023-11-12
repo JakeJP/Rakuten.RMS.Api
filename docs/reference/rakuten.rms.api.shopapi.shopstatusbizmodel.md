@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopStatusBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **updateModel**
+### <a id="properties-updatemodel"/>**updateModel**
 
 ```csharp
 public ShopStatus updateModel { get; set; }
@@ -26,12 +27,12 @@ public ShopStatus updateModel { get; set; }
 
 ## Constructors
 
-### **ShopStatusBizModel()**
+### <a id="constructors-.ctor"/>**ShopStatusBizModel()**
 
 ```csharp
 public ShopStatusBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # MedamaItems
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **medamaItem**
+### <a id="properties-medamaitem"/>**medamaItem**
 
 ```csharp
 public MedamaItem medamaItem { get; set; }
@@ -26,12 +27,12 @@ public MedamaItem medamaItem { get; set; }
 
 ## Constructors
 
-### **MedamaItems()**
+### <a id="constructors-.ctor"/>**MedamaItems()**
 
 ```csharp
 public MedamaItems()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

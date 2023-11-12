@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ErrorResponseException&lt;TResult&gt;
 
@@ -19,47 +20,7 @@ Implements [ISerializable](https://docs.microsoft.com/en-us/dotnet/api/system.ru
 
 ## Properties
 
-### **Error**
-
-```csharp
-public TResult Error { get; set; }
-```
-
-#### Property Value
-
-TResult<br>
-
-### **Message**
-
-```csharp
-public string Message { get; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **Error**
-
-```csharp
-public object Error { get; set; }
-```
-
-#### Property Value
-
-[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
-
-### **TargetSite**
-
-```csharp
-public MethodBase TargetSite { get; }
-```
-
-#### Property Value
-
-[MethodBase](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase)<br>
-
-### **Data**
+### <a id="properties-data"/>**Data**
 
 ```csharp
 public IDictionary Data { get; }
@@ -69,17 +30,27 @@ public IDictionary Data { get; }
 
 [IDictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.idictionary)<br>
 
-### **InnerException**
+### <a id="properties-error"/>**Error**
 
 ```csharp
-public Exception InnerException { get; }
+public TResult Error { get; set; }
 ```
 
 #### Property Value
 
-[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)<br>
+TResult<br>
 
-### **HelpLink**
+### <a id="properties-error"/>**Error**
+
+```csharp
+public object Error { get; set; }
+```
+
+#### Property Value
+
+[Object](https://docs.microsoft.com/en-us/dotnet/api/system.object)<br>
+
+### <a id="properties-helplink"/>**HelpLink**
 
 ```csharp
 public string HelpLink { get; set; }
@@ -89,17 +60,7 @@ public string HelpLink { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **Source**
-
-```csharp
-public string Source { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **HResult**
+### <a id="properties-hresult"/>**HResult**
 
 ```csharp
 public int HResult { get; set; }
@@ -109,7 +70,37 @@ public int HResult { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **StackTrace**
+### <a id="properties-innerexception"/>**InnerException**
+
+```csharp
+public Exception InnerException { get; }
+```
+
+#### Property Value
+
+[Exception](https://docs.microsoft.com/en-us/dotnet/api/system.exception)<br>
+
+### <a id="properties-message"/>**Message**
+
+```csharp
+public string Message { get; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-source"/>**Source**
+
+```csharp
+public string Source { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-stacktrace"/>**StackTrace**
 
 ```csharp
 public string StackTrace { get; }
@@ -119,9 +110,19 @@ public string StackTrace { get; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-targetsite"/>**TargetSite**
+
+```csharp
+public MethodBase TargetSite { get; }
+```
+
+#### Property Value
+
+[MethodBase](https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase)<br>
+
 ## Constructors
 
-### **ErrorResponseException(TResult)**
+### <a id="constructors-.ctor"/>**ErrorResponseException(TResult)**
 
 ```csharp
 public ErrorResponseException(TResult error)
@@ -131,6 +132,6 @@ public ErrorResponseException(TResult error)
 
 `error` TResult<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

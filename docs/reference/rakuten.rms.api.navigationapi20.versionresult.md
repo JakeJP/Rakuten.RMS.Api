@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # VersionResult
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **version**
-
-```csharp
-public Version version { get; set; }
-```
-
-#### Property Value
-
-[Version](./rakuten.rms.api.navigationapi20.version)<br>
-
-### **errors**
+### <a id="properties-errors"/>**errors**
 
 ```csharp
 public List<ResultError> errors { get; set; }
@@ -34,14 +25,24 @@ public List<ResultError> errors { get; set; }
 
 [List&lt;ResultError&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
+### <a id="properties-version"/>**version**
+
+```csharp
+public Version version { get; set; }
+```
+
+#### Property Value
+
+[Version](./rakuten.rms.api.navigationapi20.version)<br>
+
 ## Constructors
 
-### **VersionResult()**
+### <a id="constructors-.ctor"/>**VersionResult()**
 
 ```csharp
 public VersionResult()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

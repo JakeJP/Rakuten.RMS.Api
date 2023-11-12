@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryTree
 
@@ -18,7 +19,7 @@ Implements [IList&lt;CategoryWithChildren&gt;](https://docs.microsoft.com/en-us/
 
 ## Properties
 
-### **Capacity**
+### <a id="properties-capacity"/>**Capacity**
 
 ```csharp
 public int Capacity { get; set; }
@@ -28,7 +29,7 @@ public int Capacity { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **Count**
+### <a id="properties-count"/>**Count**
 
 ```csharp
 public int Count { get; }
@@ -38,7 +39,7 @@ public int Count { get; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **Item**
+### <a id="properties-item"/>**Item**
 
 ```csharp
 public CategoryWithChildren Item { get; set; }
@@ -50,7 +51,7 @@ public CategoryWithChildren Item { get; set; }
 
 ## Constructors
 
-### **CategoryTree()**
+### <a id="constructors-.ctor"/>**CategoryTree()**
 
 ```csharp
 public CategoryTree()
@@ -58,7 +59,7 @@ public CategoryTree()
 
 ## Methods
 
-### **ToCategoryIdTree()**
+### <a id="methods-tocategoryidtree"/>**ToCategoryIdTree()**
 
 更新用のオブジェクトモデルに変換します。
 
@@ -68,8 +69,8 @@ public CategoryIdTree ToCategoryIdTree()
 
 #### Returns
 
-[CategoryIdTree](./rakuten.rms.api.categoryapi20.categoryidtree)<br>
+[CategoryIdTree](./rakuten.rms.api.categoryapi20.categoryidtree)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

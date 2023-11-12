@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # PaginationRequestModel
 
@@ -14,19 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **requestRecordsAmount**
-
-1ページあたりの取得結果数 最大 1,000 件まで指定可能
-
-```csharp
-public int requestRecordsAmount { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **requestPage**
+### <a id="properties-requestpage"/>**requestPage**
 
 リクエストページ番号
 
@@ -38,7 +27,19 @@ public int requestPage { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **SortModelList**
+### <a id="properties-requestrecordsamount"/>**requestRecordsAmount**
+
+1ページあたりの取得結果数 最大 1,000 件まで指定可能
+
+```csharp
+public int requestRecordsAmount { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-sortmodellist"/>**SortModelList**
 
 ```csharp
 public IList<SortModel> SortModelList { get; set; }
@@ -50,12 +51,12 @@ public IList<SortModel> SortModelList { get; set; }
 
 ## Constructors
 
-### **PaginationRequestModel()**
+### <a id="constructors-.ctor"/>**PaginationRequestModel()**
 
 ```csharp
 public PaginationRequestModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

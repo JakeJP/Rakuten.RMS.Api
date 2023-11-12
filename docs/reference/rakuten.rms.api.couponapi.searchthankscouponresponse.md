@@ -1,20 +1,21 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # SearchThanksCouponResponse
 
 Namespace: Rakuten.RMS.Api.CouponAPI
 
 ```csharp
-public class SearchThanksCouponResponse : ResultContainer`1
+public class SearchThanksCouponResponse : ResultContainer<SearchedThanksCoupons>
 ```
 
 Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) → [ResultBase](./rakuten.rms.api.xml.resultbase) → [ResultWithErrorsBase](./rakuten.rms.api.couponapi.resultwitherrorsbase) → [ResultContainer&lt;SearchedThanksCoupons&gt;](./rakuten.rms.api.couponapi.resultcontainer-1) → [SearchThanksCouponResponse](./rakuten.rms.api.couponapi.searchthankscouponresponse)
 
 ## Properties
 
-### **allCount**
+### <a id="properties-allcount"/>**allCount**
 
 ```csharp
 public int allCount { get; set; }
@@ -24,7 +25,7 @@ public int allCount { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **Content**
+### <a id="properties-content"/>**Content**
 
 ```csharp
 public SearchedThanksCoupons Content { get; set; }
@@ -34,7 +35,7 @@ public SearchedThanksCoupons Content { get; set; }
 
 [SearchedThanksCoupons](./rakuten.rms.api.couponapi.searchedthankscoupons)<br>
 
-### **Errors**
+### <a id="properties-errors"/>**Errors**
 
 ```csharp
 public List<Error> Errors { get; set; }
@@ -44,7 +45,7 @@ public List<Error> Errors { get; set; }
 
 [List&lt;Error&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -56,12 +57,12 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **SearchThanksCouponResponse()**
+### <a id="constructors-.ctor"/>**SearchThanksCouponResponse()**
 
 ```csharp
 public SearchThanksCouponResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

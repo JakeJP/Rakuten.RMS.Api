@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopLayoutImage
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **signboardPath**
+### <a id="properties-signboardpath"/>**signboardPath**
 
 ```csharp
 public string signboardPath { get; set; }
@@ -26,12 +27,12 @@ public string signboardPath { get; set; }
 
 ## Constructors
 
-### **ShopLayoutImage()**
+### <a id="constructors-.ctor"/>**ShopLayoutImage()**
 
 ```csharp
 public ShopLayoutImage()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

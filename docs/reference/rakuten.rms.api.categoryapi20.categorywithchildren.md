@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryWithChildren
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **category**
+### <a id="properties-category"/>**category**
 
 ```csharp
 public Category category { get; set; }
@@ -24,7 +25,7 @@ public Category category { get; set; }
 
 [Category](./rakuten.rms.api.categoryapi20.category)<br>
 
-### **children**
+### <a id="properties-children"/>**children**
 
 ```csharp
 public List<CategoryWithChildren> children { get; set; }
@@ -36,12 +37,12 @@ public List<CategoryWithChildren> children { get; set; }
 
 ## Constructors
 
-### **CategoryWithChildren()**
+### <a id="constructors-.ctor"/>**CategoryWithChildren()**
 
 ```csharp
 public CategoryWithChildren()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

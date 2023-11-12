@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ReserveKeyListModel
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **reserveNumber**
-
-```csharp
-public string reserveNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **detailId**
+### <a id="properties-detailid"/>**detailId**
 
 ```csharp
 public int detailId { get; set; }
@@ -34,14 +25,24 @@ public int detailId { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
+### <a id="properties-reservenumber"/>**reserveNumber**
+
+```csharp
+public string reserveNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
 ## Constructors
 
-### **ReserveKeyListModel()**
+### <a id="constructors-.ctor"/>**ReserveKeyListModel()**
 
 ```csharp
 public ReserveKeyListModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

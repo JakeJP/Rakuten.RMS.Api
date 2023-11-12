@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ItemModelToUpdate
 
@@ -14,7 +15,53 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **itemDetailId**
+### <a id="properties-deleteitemflag"/>**deleteItemFlag**
+
+```csharp
+public Nullable<Int32> deleteItemFlag { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-includecashondeliverypostageflag"/>**includeCashOnDeliveryPostageFlag**
+
+0: 代引手数料別
+ 1: 代引手数料込み
+
+```csharp
+public int includeCashOnDeliveryPostageFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-includepostageflag"/>**includePostageFlag**
+
+```csharp
+public int includePostageFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-includetaxflag"/>**includeTaxFlag**
+
+0: 税別
+ 1: 税込み
+
+```csharp
+public int includeTaxFlag { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
+### <a id="properties-itemdetailid"/>**itemDetailId**
 
 ```csharp
 public int itemDetailId { get; set; }
@@ -24,7 +71,7 @@ public int itemDetailId { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **itemName**
+### <a id="properties-itemname"/>**itemName**
 
 ```csharp
 public string itemName { get; set; }
@@ -34,7 +81,7 @@ public string itemName { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **itemNumber**
+### <a id="properties-itemnumber"/>**itemNumber**
 
 商品番号
  項目選択肢別在庫が指定された商品の場合、以下のルールで値が表示されます
@@ -49,7 +96,7 @@ public string itemNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **price**
+### <a id="properties-price"/>**price**
 
 ```csharp
 public int price { get; set; }
@@ -59,7 +106,37 @@ public int price { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **taxRate**
+### <a id="properties-restoreinventoryflag"/>**restoreInventoryFlag**
+
+```csharp
+public Nullable<Int32> restoreInventoryFlag { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-selectedchoice"/>**selectedChoice**
+
+```csharp
+public string selectedChoice { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-skumodellist"/>**SkuModelList**
+
+```csharp
+public IList<SkuModel> SkuModelList { get; set; }
+```
+
+#### Property Value
+
+[IList&lt;SkuModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+### <a id="properties-taxrate"/>**taxRate**
 
 商品税率
  以下のいずれか
@@ -73,7 +150,7 @@ public decimal taxRate { get; set; }
 
 [Decimal](https://docs.microsoft.com/en-us/dotnet/api/system.decimal)<br>
 
-### **units**
+### <a id="properties-units"/>**units**
 
 ```csharp
 public int units { get; set; }
@@ -83,90 +160,14 @@ public int units { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **includePostageFlag**
-
-```csharp
-public int includePostageFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **includeTaxFlag**
-
-0: 税別
- 1: 税込み
-
-```csharp
-public int includeTaxFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **includeCashOnDeliveryPostageFlag**
-
-0: 代引手数料別
- 1: 代引手数料込み
-
-```csharp
-public int includeCashOnDeliveryPostageFlag { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **selectedChoice**
-
-```csharp
-public string selectedChoice { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **restoreInventoryFlag**
-
-```csharp
-public Nullable<int> restoreInventoryFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **deleteItemFlag**
-
-```csharp
-public Nullable<int> deleteItemFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **SkuModelList**
-
-```csharp
-public IList<SkuModel> SkuModelList { get; set; }
-```
-
-#### Property Value
-
-[IList&lt;SkuModel&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
 ## Constructors
 
-### **ItemModelToUpdate()**
+### <a id="constructors-.ctor"/>**ItemModelToUpdate()**
 
 ```csharp
 public ItemModelToUpdate()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

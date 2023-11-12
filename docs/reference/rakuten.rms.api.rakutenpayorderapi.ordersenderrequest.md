@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OrderSenderRequest
 
@@ -14,67 +15,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **orderNumber**
+### <a id="properties-aftersettlementmethodcode"/>**afterSettlementMethodCode**
 
 ```csharp
-public string orderNumber { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **reductionReason**
-
-```csharp
-public Nullable<int> reductionReason { get; set; }
+public Nullable<Int32> afterSettlementMethodCode { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
-### **taxRecalcFlag**
-
-```csharp
-public Nullable<int> taxRecalcFlag { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **WrappingModel1**
-
-```csharp
-public WrappingModel WrappingModel1 { get; set; }
-```
-
-#### Property Value
-
-[WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)<br>
-
-### **WrappingModel2**
-
-```csharp
-public WrappingModel WrappingModel2 { get; set; }
-```
-
-#### Property Value
-
-[WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)<br>
-
-### **PackageModelList**
-
-```csharp
-public IList<PackageModelToUpdate> PackageModelList { get; set; }
-```
-
-#### Property Value
-
-[IList&lt;PackageModelToUpdate&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
-
-### **CouponModelList**
+### <a id="properties-couponmodellist"/>**CouponModelList**
 
 ```csharp
 public IList<CouponModelBase> CouponModelList { get; set; }
@@ -84,24 +35,74 @@ public IList<CouponModelBase> CouponModelList { get; set; }
 
 [IList&lt;CouponModelBase&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
-### **afterSettlementMethodCode**
+### <a id="properties-ordernumber"/>**orderNumber**
 
 ```csharp
-public Nullable<int> afterSettlementMethodCode { get; set; }
+public string orderNumber { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-packagemodellist"/>**PackageModelList**
+
+```csharp
+public IList<PackageModelToUpdate> PackageModelList { get; set; }
+```
+
+#### Property Value
+
+[IList&lt;PackageModelToUpdate&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+
+### <a id="properties-reductionreason"/>**reductionReason**
+
+```csharp
+public Nullable<Int32> reductionReason { get; set; }
 ```
 
 #### Property Value
 
 [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
 
+### <a id="properties-taxrecalcflag"/>**taxRecalcFlag**
+
+```csharp
+public Nullable<Int32> taxRecalcFlag { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-wrappingmodel1"/>**WrappingModel1**
+
+```csharp
+public WrappingModel WrappingModel1 { get; set; }
+```
+
+#### Property Value
+
+[WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)<br>
+
+### <a id="properties-wrappingmodel2"/>**WrappingModel2**
+
+```csharp
+public WrappingModel WrappingModel2 { get; set; }
+```
+
+#### Property Value
+
+[WrappingModel](./rakuten.rms.api.rakutenpayorderapi.wrappingmodel)<br>
+
 ## Constructors
 
-### **OrderSenderRequest()**
+### <a id="constructors-.ctor"/>**OrderSenderRequest()**
 
 ```csharp
 public OrderSenderRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

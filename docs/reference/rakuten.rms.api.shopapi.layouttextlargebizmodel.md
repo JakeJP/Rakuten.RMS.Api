@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutTextLargeBizModel
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **insertList**
+### <a id="properties-insertlist"/>**insertList**
 
 ```csharp
 public List<LayoutTextLarge> insertList { get; set; }
@@ -24,7 +25,7 @@ public List<LayoutTextLarge> insertList { get; set; }
 
 [List&lt;LayoutTextLarge&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **updateList**
+### <a id="properties-updatelist"/>**updateList**
 
 ```csharp
 public List<LayoutTextLarge> updateList { get; set; }
@@ -36,12 +37,12 @@ public List<LayoutTextLarge> updateList { get; set; }
 
 ## Constructors
 
-### **LayoutTextLargeBizModel()**
+### <a id="constructors-.ctor"/>**LayoutTextLargeBizModel()**
 
 ```csharp
 public LayoutTextLargeBizModel()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GetUsageResponse
 
@@ -14,17 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Status**
-
-```csharp
-public XmlStatus Status { get; set; }
-```
-
-#### Property Value
-
-[XmlStatus](./rakuten.rms.api.xml.xmlstatus)<br>
-
-### **Result**
+### <a id="properties-result"/>**Result**
 
 ```csharp
 public CabinetUsageGetResultModel Result { get; set; }
@@ -34,14 +25,24 @@ public CabinetUsageGetResultModel Result { get; set; }
 
 [CabinetUsageGetResultModel](./rakuten.rms.api.cabinetapi.cabinetusagegetresultmodel)<br>
 
+### <a id="properties-status"/>**Status**
+
+```csharp
+public XmlStatus Status { get; set; }
+```
+
+#### Property Value
+
+[XmlStatus](./rakuten.rms.api.xml.xmlstatus)<br>
+
 ## Constructors
 
-### **GetUsageResponse()**
+### <a id="constructors-.ctor"/>**GetUsageResponse()**
 
 ```csharp
 public GetUsageResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

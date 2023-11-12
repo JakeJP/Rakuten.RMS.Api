@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryIdWithChildren
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **categoryId**
+### <a id="properties-categoryid"/>**categoryId**
 
 ```csharp
 public string categoryId { get; set; }
@@ -24,7 +25,7 @@ public string categoryId { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **children**
+### <a id="properties-children"/>**children**
 
 ```csharp
 public IList<CategoryIdWithChildren> children { get; set; }
@@ -36,13 +37,13 @@ public IList<CategoryIdWithChildren> children { get; set; }
 
 ## Constructors
 
-### **CategoryIdWithChildren()**
+### <a id="constructors-.ctor"/>**CategoryIdWithChildren()**
 
 ```csharp
 public CategoryIdWithChildren()
 ```
 
-### **CategoryIdWithChildren(String, IList&lt;CategoryIdWithChildren&gt;)**
+### <a id="constructors-.ctor"/>**CategoryIdWithChildren(String, IList&lt;CategoryIdWithChildren&gt;)**
 
 ```csharp
 public CategoryIdWithChildren(string categoryId, IList<CategoryIdWithChildren> children)
@@ -56,7 +57,7 @@ public CategoryIdWithChildren(string categoryId, IList<CategoryIdWithChildren> c
 
 ## Methods
 
-### **Add(CategoryIdWithChildren)**
+### <a id="methods-add"/>**Add(CategoryIdWithChildren)**
 
 ```csharp
 public void Add(CategoryIdWithChildren child)
@@ -66,7 +67,7 @@ public void Add(CategoryIdWithChildren child)
 
 `child` [CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)<br>
 
-### **Add(String, IList&lt;CategoryIdWithChildren&gt;)**
+### <a id="methods-add"/>**Add(String, IList&lt;CategoryIdWithChildren&gt;)**
 
 ```csharp
 public void Add(string categoryId, IList<CategoryIdWithChildren> children)
@@ -78,6 +79,6 @@ public void Add(string categoryId, IList<CategoryIdWithChildren> children)
 
 `children` [IList&lt;CategoryIdWithChildren&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

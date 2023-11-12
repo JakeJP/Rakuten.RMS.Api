@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategoryIdTree
 
@@ -23,7 +24,7 @@ Implements [IList&lt;CategoryIdWithChildren&gt;](https://docs.microsoft.com/en-u
 
 ## Properties
 
-### **Capacity**
+### <a id="properties-capacity"/>**Capacity**
 
 ```csharp
 public int Capacity { get; set; }
@@ -33,7 +34,7 @@ public int Capacity { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **Count**
+### <a id="properties-count"/>**Count**
 
 ```csharp
 public int Count { get; }
@@ -43,7 +44,7 @@ public int Count { get; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
-### **Item**
+### <a id="properties-item"/>**Item**
 
 ```csharp
 public CategoryIdWithChildren Item { get; set; }
@@ -55,7 +56,7 @@ public CategoryIdWithChildren Item { get; set; }
 
 ## Constructors
 
-### **CategoryIdTree()**
+### <a id="constructors-.ctor"/>**CategoryIdTree()**
 
 ```csharp
 public CategoryIdTree()
@@ -63,7 +64,7 @@ public CategoryIdTree()
 
 ## Methods
 
-### **Add(String)**
+### <a id="methods-add"/>**Add(String)**
 
 ```csharp
 public void Add(string categoryId)
@@ -73,7 +74,7 @@ public void Add(string categoryId)
 
 `categoryId` [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **Find(String)**
+### <a id="methods-find"/>**Find(String)**
 
 カテゴリーツリーから再帰的に目的のカテゴリーIDを検索見つけます。
 
@@ -87,9 +88,9 @@ public CategoryIdWithChildren Find(string categoryId)
 
 #### Returns
 
-[CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)<br>
+[CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)
 
-### **Remove(String)**
+### <a id="methods-remove"/>**Remove(String)**
 
 カテゴリツリーから指定したカテゴリIDを削除。
  該当のカテゴリは階層構造を再帰的に検索される。
@@ -105,20 +106,19 @@ public CategoryIdWithChildren Remove(string categoryId)
 
 #### Returns
 
-[CategoryIdWithChildren](./rakuten.rms.api.categoryapi20.categoryidwithchildren)<br>
 削除されたカテゴリ（ツリー上のノード）このオブジェクトを同じツリーの別ノードに Add することが可能。
 
 #### Exceptions
 
 [IndexOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/system.indexoutofrangeexception)<br>
 
-### **Remove(IList&lt;String&gt;)**
+### <a id="methods-remove"/>**Remove(IList&lt;String&gt;)**
 
 カテゴリツリーから指定したカテゴリIDを複数一度に削除。
  該当のカテゴリは階層構造を再帰的に検索される。
 
 ```csharp
-public IList<CategoryIdWithChildren> Remove(IList<string> categoryIds)
+public IList<CategoryIdWithChildren> Remove(IList<String> categoryIds)
 ```
 
 #### Parameters
@@ -127,8 +127,8 @@ public IList<CategoryIdWithChildren> Remove(IList<string> categoryIds)
 
 #### Returns
 
-[IList&lt;CategoryIdWithChildren&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)<br>
+[IList&lt;CategoryIdWithChildren&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1)
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

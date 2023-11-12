@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # WidgetBody
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **caption**
+### <a id="properties-caption"/>**caption**
 
 ```csharp
 public string caption { get; set; }
@@ -24,17 +25,7 @@ public string caption { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **imageType**
-
-```csharp
-public ImageType imageType { get; set; }
-```
-
-#### Property Value
-
-[ImageType](./rakuten.rms.api.shoppageapi.imagetype)<br>
-
-### **imagePath**
+### <a id="properties-imagepath"/>**imagePath**
 
 ```csharp
 public string imagePath { get; set; }
@@ -44,7 +35,17 @@ public string imagePath { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **linkUrl**
+### <a id="properties-imagetype"/>**imageType**
+
+```csharp
+public ImageType imageType { get; set; }
+```
+
+#### Property Value
+
+[ImageType](./rakuten.rms.api.shoppageapi.imagetype)<br>
+
+### <a id="properties-linkurl"/>**linkUrl**
 
 ```csharp
 public string linkUrl { get; set; }
@@ -56,12 +57,12 @@ public string linkUrl { get; set; }
 
 ## Constructors
 
-### **WidgetBody()**
+### <a id="constructors-.ctor"/>**WidgetBody()**
 
 ```csharp
 public WidgetBody()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

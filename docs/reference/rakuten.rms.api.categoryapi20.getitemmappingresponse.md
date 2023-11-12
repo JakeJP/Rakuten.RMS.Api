@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # GetItemMappingResponse
 
@@ -16,27 +17,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **categoryIds**
+### <a id="properties-categoryids"/>**categoryIds**
 
 ```csharp
-public List<string> categoryIds { get; set; }
+public List<String> categoryIds { get; set; }
 ```
 
 #### Property Value
 
 [List&lt;String&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **mainPluralCategoryId**
-
-```csharp
-public string mainPluralCategoryId { get; set; }
-```
-
-#### Property Value
-
-[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
-
-### **created**
+### <a id="properties-created"/>**created**
 
 ```csharp
 public DateTime created { get; set; }
@@ -46,7 +37,17 @@ public DateTime created { get; set; }
 
 [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime)<br>
 
-### **updated**
+### <a id="properties-mainpluralcategoryid"/>**mainPluralCategoryId**
+
+```csharp
+public string mainPluralCategoryId { get; set; }
+```
+
+#### Property Value
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
+
+### <a id="properties-updated"/>**updated**
 
 ```csharp
 public DateTime updated { get; set; }
@@ -58,12 +59,12 @@ public DateTime updated { get; set; }
 
 ## Constructors
 
-### **GetItemMappingResponse()**
+### <a id="constructors-.ctor"/>**GetItemMappingResponse()**
 
 ```csharp
 public GetItemMappingResponse()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OtherCondition
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **conditionTypeCode**
+### <a id="properties-conditiontypecode"/>**conditionTypeCode**
 
 RS001： デバイス指定（設定のない場合は自動的に設定される）
  RS002： 販売方法(設定のない場合は自動的に設定される）
@@ -31,7 +32,7 @@ public string conditionTypeCode { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **startValue**
+### <a id="properties-startvalue"/>**startValue**
 
 0： PC （設定のない場合は自動的に設定される）
  1： モバイル （設定のない場合は自動的に設定される）
@@ -49,12 +50,12 @@ public string startValue { get; set; }
 
 ## Constructors
 
-### **OtherCondition()**
+### <a id="constructors-.ctor"/>**OtherCondition()**
 
 ```csharp
 public OtherCondition()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

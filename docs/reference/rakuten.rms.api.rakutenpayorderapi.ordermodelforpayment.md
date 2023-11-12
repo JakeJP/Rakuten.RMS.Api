@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # OrderModelForPayment
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **orderNumber**
+### <a id="properties-ordernumber"/>**orderNumber**
 
 ```csharp
 public string orderNumber { get; set; }
@@ -24,7 +25,7 @@ public string orderNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **PaymentModelList**
+### <a id="properties-paymentmodellist"/>**PaymentModelList**
 
 ```csharp
 public List<PaymentModel> PaymentModelList { get; set; }
@@ -36,12 +37,12 @@ public List<PaymentModel> PaymentModelList { get; set; }
 
 ## Constructors
 
-### **OrderModelForPayment()**
+### <a id="constructors-.ctor"/>**OrderModelForPayment()**
 
 ```csharp
 public OrderModelForPayment()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

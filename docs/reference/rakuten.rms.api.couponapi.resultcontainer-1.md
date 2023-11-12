@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ResultContainer&lt;TResponseBody&gt;
 
@@ -18,7 +19,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **Content**
+### <a id="properties-content"/>**Content**
 
 ```csharp
 public TResponseBody Content { get; set; }
@@ -28,7 +29,7 @@ public TResponseBody Content { get; set; }
 
 TResponseBody<br>
 
-### **Errors**
+### <a id="properties-errors"/>**Errors**
 
 ```csharp
 public List<Error> Errors { get; set; }
@@ -38,7 +39,7 @@ public List<Error> Errors { get; set; }
 
 [List&lt;Error&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
 
-### **Status**
+### <a id="properties-status"/>**Status**
 
 ```csharp
 public XmlStatus Status { get; set; }
@@ -50,7 +51,7 @@ public XmlStatus Status { get; set; }
 
 ## Constructors
 
-### **ResultContainer(TResponseBody)**
+### <a id="constructors-.ctor"/>**ResultContainer(TResponseBody)**
 
 ```csharp
 public ResultContainer(TResponseBody responseBody)
@@ -60,6 +61,6 @@ public ResultContainer(TResponseBody responseBody)
 
 `responseBody` TResponseBody<br>
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

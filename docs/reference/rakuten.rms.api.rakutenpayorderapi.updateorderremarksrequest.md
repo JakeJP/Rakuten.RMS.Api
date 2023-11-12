@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # UpdateOrderRemarksRequest
 
@@ -14,7 +15,17 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **orderNumber**
+### <a id="properties-giftcheck"/>**giftCheck**
+
+```csharp
+public Nullable<Int32> giftCheck { get; set; }
+```
+
+#### Property Value
+
+[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+
+### <a id="properties-ordernumber"/>**orderNumber**
 
 ```csharp
 public string orderNumber { get; set; }
@@ -24,17 +35,7 @@ public string orderNumber { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
-### **giftCheck**
-
-```csharp
-public Nullable<int> giftCheck { get; set; }
-```
-
-#### Property Value
-
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
-
-### **remarks**
+### <a id="properties-remarks"/>**remarks**
 
 ```csharp
 public string remarks { get; set; }
@@ -46,12 +47,12 @@ public string remarks { get; set; }
 
 ## Constructors
 
-### **UpdateOrderRemarksRequest()**
+### <a id="constructors-.ctor"/>**UpdateOrderRemarksRequest()**
 
 ```csharp
 public UpdateOrderRemarksRequest()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

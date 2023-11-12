@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # CategorySetFeatures
 
@@ -14,10 +15,10 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **display**
+### <a id="properties-display"/>**display**
 
 ```csharp
-public Nullable<bool> display { get; set; }
+public Nullable<Boolean> display { get; set; }
 ```
 
 #### Property Value
@@ -26,12 +27,12 @@ public Nullable<bool> display { get; set; }
 
 ## Constructors
 
-### **CategorySetFeatures()**
+### <a id="constructors-.ctor"/>**CategorySetFeatures()**
 
 ```csharp
 public CategorySetFeatures()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

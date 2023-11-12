@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopCalDesignEvent
 
@@ -14,19 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **eventType**
-
-1：休業日 2：受注・お問い合わせ業務のみ 3：発送業務のみ
-
-```csharp
-public int eventType { get; set; }
-```
-
-#### Property Value
-
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
-
-### **eventColor**
+### <a id="properties-eventcolor"/>**eventColor**
 
 000000〜FFFFFF
 
@@ -38,14 +27,26 @@ public string eventColor { get; set; }
 
 [String](https://docs.microsoft.com/en-us/dotnet/api/system.string)<br>
 
+### <a id="properties-eventtype"/>**eventType**
+
+1：休業日 2：受注・お問い合わせ業務のみ 3：発送業務のみ
+
+```csharp
+public int eventType { get; set; }
+```
+
+#### Property Value
+
+[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+
 ## Constructors
 
-### **ShopCalDesignEvent()**
+### <a id="constructors-.ctor"/>**ShopCalDesignEvent()**
 
 ```csharp
 public ShopCalDesignEvent()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

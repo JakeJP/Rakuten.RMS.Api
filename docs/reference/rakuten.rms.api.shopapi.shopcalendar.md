@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # ShopCalendar
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **businessHoliday**
+### <a id="properties-businessholiday"/>**businessHoliday**
 
 休業日設定
 
@@ -26,7 +27,7 @@ public CalendarFunction businessHoliday { get; set; }
 
 [CalendarFunction](./rakuten.rms.api.shopapi.calendarfunction)<br>
 
-### **shippingHoliday**
+### <a id="properties-shippingholiday"/>**shippingHoliday**
 
 受注・お問い合わせ業務のみ設定
 
@@ -38,7 +39,7 @@ public CalendarFunction shippingHoliday { get; set; }
 
 [CalendarFunction](./rakuten.rms.api.shopapi.calendarfunction)<br>
 
-### **shippingOnly**
+### <a id="properties-shippingonly"/>**shippingOnly**
 
 発送業務のみ設定
 
@@ -52,12 +53,12 @@ public CalendarFunction shippingOnly { get; set; }
 
 ## Constructors
 
-### **ShopCalendar()**
+### <a id="constructors-.ctor"/>**ShopCalendar()**
 
 ```csharp
 public ShopCalendar()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)

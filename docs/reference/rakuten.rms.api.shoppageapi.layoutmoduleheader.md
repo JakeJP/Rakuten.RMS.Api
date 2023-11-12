@@ -1,6 +1,7 @@
-[`< Back`](./)
+<img align="left" style="height: 2em;" src="https://webservice.rakuten.co.jp/favicon.ico"><em>Rakuten RMS WEB API client for .NET</em>
 
----
+[**< クラス一覧**](./)
+- - -
 
 # LayoutModuleHeader
 
@@ -14,7 +15,7 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 
 ## Properties
 
-### **type**
+### <a id="properties-type"/>**type**
 
 ```csharp
 public LayoutModuleType type { get; set; }
@@ -26,12 +27,12 @@ public LayoutModuleType type { get; set; }
 
 ## Constructors
 
-### **LayoutModuleHeader()**
+### <a id="constructors-.ctor"/>**LayoutModuleHeader()**
 
 ```csharp
 public LayoutModuleHeader()
 ```
 
----
 
-[`< Back`](./)
+- - -
+[**< クラス一覧**](./)
