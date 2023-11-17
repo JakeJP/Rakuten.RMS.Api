@@ -429,7 +429,7 @@ public LayoutTextLargeBizModel GetLayoutTextLarge()
 共通説明文（小）の情報を取得
 
 ```csharp
-public ShopBizApiResponseWithResult<LayoutTextSmallBizModel> GetLayoutTextSmall(Nullable<Int32> textSmallId)
+public LayoutTextSmallList GetLayoutTextSmall(Nullable<Int32> textSmallId)
 ```
 
 #### Parameters
@@ -438,7 +438,7 @@ public ShopBizApiResponseWithResult<LayoutTextSmallBizModel> GetLayoutTextSmall(
 
 #### Returns
 
-[ShopBizApiResponseWithResult&lt;LayoutTextSmallBizModel&gt;](./rakuten.rms.api.shopapi.shopbizapiresponsewithresult-1)
+[LayoutTextSmallList](./rakuten.rms.api.shopapi.layouttextsmalllist)
 
 ### <a id="methods-getnavibutton"/>**GetNaviButton()**
 
@@ -574,12 +574,12 @@ public ShopLayoutImage GetShopLayoutImage()
 ### <a id="methods-getshopmaster"/>**GetShopMaster()**
 
 ```csharp
-public ShopMasterBizModel GetShopMaster()
+public ShopMaster GetShopMaster()
 ```
 
 #### Returns
 
-[ShopMasterBizModel](./rakuten.rms.api.shopapi.shopmasterbizmodel)
+[ShopMaster](./rakuten.rms.api.shopapi.shopmaster)
 
 ### <a id="methods-getshopstatus"/>**GetShopStatus(String)**
 

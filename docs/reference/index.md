@@ -239,6 +239,8 @@
 
 - [SearchSortKey](./rakuten.rms.api.itemapi20.searchsortkey)
 
+- [SortOrder](./rakuten.rms.api.itemapi20.sortorder)
+
 - [UpsertItem](./rakuten.rms.api.itemapi20.upsertitem)
 
 ## Namespace Rakuten.RMS.Api.ItemBundleAPI

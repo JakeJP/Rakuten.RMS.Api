@@ -33,6 +33,18 @@ public List<ResultMessage> Errors { get; set; }
 public ErrorResult()
 ```
 
+## Methods
+
+### <a id="methods-tostring"/>**ToString()**
+
+```csharp
+public string ToString()
+```
+
+#### Returns
+
+[String](https://docs.microsoft.com/en-us/dotnet/api/system.string)
+
 
 - - -
 [**< クラス一覧**](./)

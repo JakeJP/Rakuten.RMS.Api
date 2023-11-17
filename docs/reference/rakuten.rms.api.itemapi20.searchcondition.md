@@ -338,12 +338,12 @@ public Nullable<SearchSortKey> sortKey { get; set; }
 ### <a id="properties-sortorder"/>**sortOrder**
 
 ```csharp
-public Nullable<Int32> sortOrder { get; set; }
+public SortOrder sortOrder { get; set; }
 ```
 
 #### Property Value
 
-[Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+[SortOrder](./rakuten.rms.api.itemapi20.sortorder)<br>
 
 ### <a id="properties-standardpricefrom"/>**standardPriceFrom**
 

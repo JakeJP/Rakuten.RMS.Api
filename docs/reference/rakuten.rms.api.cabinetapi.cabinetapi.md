@@ -121,8 +121,10 @@ public GetFilesResponseModel GetFiles(long folderId, Nullable<Int32> offset, Nul
 `folderId` [Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
 `offset` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+1を基準値とした検索結果取得ページ数
 
 `limit` [Nullable&lt;Int32&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1)<br>
+※最大値100
 
 #### Returns
 
@@ -137,7 +139,7 @@ public GetFilesResponseModel GetFiles(long folderId, Nullable<Int32> offset, Nul
 削除フォルダ内にある画像の一覧を取得
 
 ```csharp
-public GetFilesIntrashboxResponse GetFilesInTrashbox(Nullable<Int32> offset, Nullable<Int32> limit)
+public cabinetTrashboxFilesGetResult GetFilesInTrashbox(Nullable<Int32> offset, Nullable<Int32> limit)
 ```
 
 #### Parameters
@@ -148,7 +150,7 @@ public GetFilesIntrashboxResponse GetFilesInTrashbox(Nullable<Int32> offset, Nul
 
 #### Returns
 
-[GetFilesIntrashboxResponse](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse)
+[cabinetTrashboxFilesGetResult](./rakuten.rms.api.cabinetapi.getfilesintrashboxresponse.cabinettrashboxfilesgetresult)
 
 ### <a id="methods-getfolders"/>**GetFolders(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)**
 
