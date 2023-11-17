@@ -12,6 +12,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("shopMasterBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class ShopMasterBizModel
     {
+        [XmlElement("shopMaster", Namespace ="")]
         public ShopMaster shopMaster { get; set; }
     }
     public class ShopMaster

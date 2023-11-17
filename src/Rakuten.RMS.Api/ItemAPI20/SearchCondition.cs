@@ -48,7 +48,8 @@ namespace Rakuten.RMS.Api.ItemAPI20
         public DateTime? updatedTo { get; set; }
         [JsonConverter(typeof(StringEnumConverter))]
         public SearchSortKey? sortKey {  get; set; }
-        public int? sortOrder {  get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public SortOrder sortOrder {  get; set; }
         public int? offset {  get; set; }
         public int? hits {  get; set; }
         public string cursorMark { get; set; }
@@ -102,6 +103,11 @@ namespace Rakuten.RMS.Api.ItemAPI20
         /// レビュー評価平均点
         /// </summary>
         reviewAverageRating
+    }
+    public enum SortOrder
+    {
+        asc,
+        desc
     }
     public class SearchResult
     {

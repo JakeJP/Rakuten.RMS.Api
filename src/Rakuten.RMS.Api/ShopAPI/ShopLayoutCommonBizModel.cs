@@ -12,7 +12,8 @@ namespace Rakuten.RMS.Api.ShopAPI
 
     public class ShopLayoutCommonBizModel
     {
-        [XmlArrayItem("shopLayoutCommon")]
+        [XmlArray(Namespace = "")]
+        [XmlArrayItem("shopLayoutCommon",Namespace = "")]
         public List<ShopLayoutCommon> shopLayoutCommonList { get; set; }
     }
     public class ShopLayoutCommon

@@ -10,7 +10,8 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("layoutCategoryMapBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class LayoutCategoryMapBizModel
     {
-        [XmlArrayItem("layoutCategoryMap")]
+        [XmlArray(Namespace = "")]
+        [XmlArrayItem("layoutCategoryMap", Namespace = "")]
         public List<LayoutCategoryMap> layoutCategoryMapList { get; set; }
     }
     public class LayoutCategoryMap

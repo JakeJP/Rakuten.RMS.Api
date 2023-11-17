@@ -16,6 +16,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("shopAreaSoryoWrapperBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class ShopAreaSoryoWrapperModel
     {
+        [XmlElement(Namespace ="")]
         public ShopAreaSoryoWrapper shopAreaSoryoWrapper { get; set; }
     }
     public class ShopAreaSoryoWrapper

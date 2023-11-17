@@ -12,6 +12,10 @@ namespace Rakuten.RMS.Api.XML
     {
         [XmlElement("element")]
         public List<ResultMessage> Errors { get; set; }
+        public override string ToString()
+        {
+            return string.Join(", ", Errors.Select(e => e.ToString()));
+        }
     }
     public class ResultMessage
     {

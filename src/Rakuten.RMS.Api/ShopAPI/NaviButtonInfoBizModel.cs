@@ -11,7 +11,8 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType(TypeName = "naviButtonInfoBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class NaviButtonInfoBizModel
     {
-        [XmlArrayItem("naviButtonInfo")]
+        [XmlArray("naviButtonInfoList", Namespace = "")]
+        [XmlArrayItem("naviButtonInfo", Namespace ="")]
         public List<NaviButtonInfo> naviButtonInfoList { get;set;}
     }
     public class NaviButtonInfo

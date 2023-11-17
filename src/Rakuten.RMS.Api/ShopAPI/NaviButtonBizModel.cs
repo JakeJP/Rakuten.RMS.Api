@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType(TypeName = "naviButtonBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class NaviButtonBizModel
     {
+        [XmlElement(Namespace = "")]
         public NaviButton naviButton { get; set; }
     }
     [DecodableObject]

@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("deliverySetInfoBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class DeliverySetInfoBizModel
     {
+        [XmlArray(Namespace ="")]
         [XmlArrayItem("deliverySetInfo")]
         public List<DeliverySetInfo> deliverySetInfoList { get; set; }
     }

@@ -11,7 +11,8 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("layoutLossLeaderBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class LayoutLossLeaderBizModel
     {
-        [XmlArrayItem("layoutLossLeader")]
+        [XmlArray(Namespace = "")]
+        [XmlArrayItem("layoutLossLeader", Namespace = "")]
         public List<LayoutLossLeader> layoutLossLeaderList { get; set; }
     }
     public class LayoutLossLeader

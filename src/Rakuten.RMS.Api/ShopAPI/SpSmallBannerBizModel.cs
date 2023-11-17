@@ -11,6 +11,7 @@ namespace Rakuten.RMS.Api.ShopAPI
 
     public class SpSmallBannerBizModel
     {
+        [XmlElement(Namespace = "")]
         public SpSmallBannerList replaceList { get; set; }
     }
 

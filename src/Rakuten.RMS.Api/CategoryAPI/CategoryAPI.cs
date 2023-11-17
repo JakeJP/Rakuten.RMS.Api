@@ -3,9 +3,6 @@ using System.Xml;
 using System.Xml.Serialization;
 namespace Rakuten.RMS.Api.CategoryAPI
 {
-    /// <summary>
-    /// カテゴリAPI 2.0（CategoryAPI 2.0）
-    /// </summary>
     public class CategoryAPI : RakutenApiXmlClientBase
     {
         internal CategoryAPI(ServiceProvider provider) : base(provider)

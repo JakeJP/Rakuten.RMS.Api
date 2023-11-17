@@ -19,29 +19,34 @@ namespace Rakuten.RMS.Api.XML
         {
         }
         protected virtual TResult Get<TResult>(string url, NameValueCollection queryParameters = null, string httpMethod = null)
+            => Get<TResult,ErrorResult>(url, queryParameters, httpMethod);
+
+        protected virtual TResult Get<TResult,TErrorResult>(string url, NameValueCollection queryParameters = null, string httpMethod = null)
         {
             var qs = queryParameters != null ? string.Join("&", queryParameters.Keys.Cast<string>()
                         .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
                         .Select(k => k + "=" + HttpUtility.UrlEncode(queryParameters[k]))) : null;
             if (!string.IsNullOrEmpty(qs))
                 url += "?" + qs;
-            return GetInternal<TResult>(url, httpMethod: httpMethod);
+            return GetInternal<TResult,TErrorResult>(url, httpMethod: httpMethod);
 
         }
         protected TResult Get<TResult>(NameValueCollection queryParameters = null, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null)
+            => Get<TResult, ErrorResult>(queryParameters, methodName);
+        protected TResult Get<TResult,TErrorResult>(NameValueCollection queryParameters = null, [System.Runtime.CompilerServices.CallerMemberName] string methodName = null)
         {
             var method = GetType().GetMethod(methodName, System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public);
             var endpoint = (EndpointDefinitionAttribute)method.GetCustomAttributes(typeof(EndpointDefinitionAttribute), true).First();
-            return Get<TResult>(endpoint.Url, queryParameters, httpMethod: endpoint.Method.ToString() );
+            return Get<TResult,TErrorResult>(endpoint.Url, queryParameters, httpMethod: endpoint.Method.ToString() );
         }
-        private TResult GetInternal<TResult>(string url, string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'", string httpMethod = null)
+        private TResult GetInternal<TResult, TErrorResult>(string url, string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'", string httpMethod = null)
         {
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.Method = httpMethod ?? "GET";
             req.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
             req.Accept = "application/xml";
 
-            return HandleResponse<TResult, ErrorResult>(req);
+            return HandleResponse<TResult,TErrorResult>(req);
         }
         private static XmlSerializerNamespaces emptyNamespaces = new XmlSerializerNamespaces(new[] { new XmlQualifiedName("", "") });
         protected virtual XmlSerializerNamespaces GetNamespaces() => emptyNamespaces;
@@ -109,18 +114,26 @@ namespace Rakuten.RMS.Api.XML
                     if ((int)response.StatusCode >= 200 && (int)response.StatusCode < 300)
                     {// successful
                         var sz = new XmlSerializer(typeof(TResult), overrides: GetRequestXmlAttributeOverrides(typeof(TResult)));
+#if false && DEBUG
+                        var _allText = sr.ReadToEnd();
+                        using (var ssr = new StringReader(_allText))
+                        {
+                            return (TResult)sz.Deserialize(ssr);
+                        }
+#else
                         return (TResult)sz.Deserialize(sr);
+#endif
                     }
                     else
                     {
                         var allText = sr.ReadToEnd();
                         using (var ssr = new StringReader(allText))
                         {
-                            if (typeof(ErrorResult).IsAssignableFrom(typeof(TErrorResult)))
+                            if (typeof(ResultBase).IsAssignableFrom(typeof(TResult)))
                             {
-                                var sz = new XmlSerializer(typeof(ErrorResult));
-                                var errorResult = (ErrorResult)sz.Deserialize(ssr);
-                                throw new RakutenRMSApiException(string.Join(", ", errorResult.Errors.Select(e => e.ToString())));
+                                var sz = new XmlSerializer(typeof(TResult), overrides: GetRequestXmlAttributeOverrides(typeof(TResult)));
+                                var errorResult = (TResult)sz.Deserialize(ssr);
+                                throw new RakutenRMSApiException(errorResult.ToString(), errorResult);
                             }
                             else
                             {

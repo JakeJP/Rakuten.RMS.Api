@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("shopStatusBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class ShopStatusBizModel
     {
+        [XmlElement(Namespace = "")]
         public ShopStatus updateModel { get; set; }
 
     }

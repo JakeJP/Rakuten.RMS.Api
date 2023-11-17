@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("shopHolidayBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class ShopHolidayBizModel
     {
+        [XmlElement(Namespace = "")]
         public InputModel inputModel { get; set; }
         public class InputModel
         {

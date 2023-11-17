@@ -93,8 +93,9 @@ namespace Rakuten.RMS.Api.ShopAPI
         /// 共通説明文（小）の情報を取得
         /// </summary>
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/layoutTextSmall", EndpointHttpMethod.GET)]
-        public ShopBizApiResponseWithResult<LayoutTextSmallBizModel> GetLayoutTextSmall( int? textSmallId = null)
-            => Get<ShopBizApiResponseWithResult<LayoutTextSmallBizModel>>(textSmallId == null ? null : new NameValueCollection { { "textSmallId", textSmallId.ToString() } });
+        public LayoutTextSmallList GetLayoutTextSmall( int? textSmallId = null)
+            => Get<ShopBizApiResponseWithResult<LayoutTextSmallBizModel>>(textSmallId == null ? null : new NameValueCollection { { "textSmallId", textSmallId.ToString() } })
+            .Result.layoutTextSmallList;
 
         /// <summary>
         /// 目玉商品（PC）のテンプレート設定情報のみを取得
@@ -192,8 +193,8 @@ namespace Rakuten.RMS.Api.ShopAPI
             => Post<ShopBizApiResponse>(model);
 
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopMaster", EndpointHttpMethod.GET)]
-        public ShopMasterBizModel GetShopMaster()
-            => Get<ShopBizApiResponseWithResult<ShopMasterBizModel>>().Result;
+        public ShopMaster GetShopMaster()
+            => Get<ShopBizApiResponseWithResult<ShopMasterBizModel>>().Result.shopMaster;
 
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/shop/shopCalendarAndDesign", EndpointHttpMethod.GET)]
         public ShopCalendarAndDesignBizModel GetShopCalendarAndDesign()

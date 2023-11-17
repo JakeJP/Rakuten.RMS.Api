@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType(TypeName = "signboardBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class SignboardBizModel
     {
+        [XmlElement(Namespace = "")]
         public Signboard signboard {  get; set; }
     }
     public class Signboard

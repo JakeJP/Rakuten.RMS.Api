@@ -10,9 +10,9 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("layoutTextLargeBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class LayoutTextLargeBizModel
     {
-        [XmlArrayItem("layoutTextLarge")]
+        [XmlArrayItem("layoutTextLarge", Namespace ="")]
         public List<LayoutTextLarge> insertList { get; set; }
-        [XmlArrayItem("layoutTextLarge")]
+        [XmlArrayItem("layoutTextLarge", Namespace = "")]
         public List<LayoutTextLarge> updateList {  get; set; }
     }
     public class LayoutTextLarge

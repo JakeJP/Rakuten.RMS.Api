@@ -11,6 +11,7 @@ namespace Rakuten.RMS.Api.ShopAPI
 
     public class LayoutTextSmallBizModel
     {
+        [XmlElement(Namespace = "")]
         public LayoutTextSmallList layoutTextSmallList { get; set; }
     }
     public class LayoutTextSmallList

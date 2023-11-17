@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("shopCalendarBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class ShopCalendarBizModel
     {
+        [XmlElement(Namespace = "")] 
         public ShopCalendar2 shopCalendar { get; set; }
     }
     public class ShopCalendar2

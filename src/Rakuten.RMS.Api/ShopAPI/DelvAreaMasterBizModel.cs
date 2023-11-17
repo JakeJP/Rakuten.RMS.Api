@@ -10,6 +10,7 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("delvAreaMasterBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class DelvAreaMasterBizModel
     {
+        [XmlArray(Namespace ="")]
         [XmlArrayItem("delvAreaMaster")]
         public List<DelvAreaMaster> delvAreaMasterList { get; set; }
     }

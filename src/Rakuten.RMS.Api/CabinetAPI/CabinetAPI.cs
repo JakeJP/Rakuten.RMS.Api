@@ -73,14 +73,14 @@ namespace Rakuten.RMS.Api.CabinetAPI
         /// 指定したフォルダ内の画像一覧を取得.ページングを内蔵した GetAllFiles を推奨.
         /// </summary>
         /// <param name="folderId"></param>
-        /// <param name="offset"></param>
-        /// <param name="limit"></param>
+        /// <param name="offset">1を基準値とした検索結果取得ページ数</param>
+        /// <param name="limit">※最大値100</param>
         /// <returns></returns>
         /// <exception cref="XmlStatusException"></exception>
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/cabinet/folder/files/get", EndpointHttpMethod.GET)]
         public GetFilesResponseModel GetFiles(long folderId, int? offset = null, int? limit = null)
         {
-            var response = Get<GetFilesResponse>(new NameValueCollection {
+            var response = Get<GetFilesResponse,ResultBase>(new NameValueCollection {
                 { "folderId", folderId.ToString() },
                 { "offset", offset?.ToString() },
                 { "limit", limit?.ToString() }
@@ -176,13 +176,13 @@ namespace Rakuten.RMS.Api.CabinetAPI
         /// <param name="limit"></param>
         /// <returns></returns>
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/cabinet/trashbox/files/get", EndpointHttpMethod.GET)]
-        public GetFilesIntrashboxResponse GetFilesInTrashbox(int? offset = null, int? limit = null)
+        public GetFilesIntrashboxResponse.cabinetTrashboxFilesGetResult GetFilesInTrashbox(int? offset = null, int? limit = null)
         {
             return Get<GetFilesIntrashboxResponse>(new NameValueCollection
             {
                 { "offset", offset?.ToString() },
                 { "limit", limit?.ToString() }
-            });
+            }).Result;
         }
         /// <summary>
         /// ページングを内蔵したバージョン。
@@ -195,9 +195,9 @@ namespace Rakuten.RMS.Api.CabinetAPI
             while (true)
             {
                 var res = GetFilesInTrashbox(offset, pageSize);
-                foreach( var f in res.Result.Files )
+                foreach( var f in res.Files )
                     yield return f;
-                if (res.Result.FileAllCount <= offset * pageSize)
+                if (res.FileAllCount <= offset * pageSize)
                     break;
                 offset++;
             }

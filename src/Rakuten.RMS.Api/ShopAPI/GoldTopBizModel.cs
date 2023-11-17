@@ -10,7 +10,9 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("goldTopBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class GoldTopBizModel
     {
+        [XmlElement(Namespace = "")]
         public GoldTop insertModel { get; set; }
+        [XmlElement(Namespace = "")]
         public GoldTop updateModel { get; set; }
     }
     public class GoldTop

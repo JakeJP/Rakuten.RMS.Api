@@ -11,6 +11,7 @@ namespace Rakuten.RMS.Api.ShopAPI
 
     public class SpTopPageDisplayBizModel
     {
+        [XmlElement(Namespace = "")]
         public SpTopPageDisplay spTopPageDisplay {  get; set; }
     }
     public class SpTopPageDisplay

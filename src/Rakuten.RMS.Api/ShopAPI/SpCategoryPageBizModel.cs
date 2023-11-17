@@ -10,6 +10,8 @@ namespace Rakuten.RMS.Api.ShopAPI
     [XmlType("spCategoryPageBizModel", Namespace = ShopAPI.ModelNamespace)]
     public class SpCategoryPageBizModel
     {
+        [XmlElement(Namespace = "")]
+
         public SpCategoryPageModel updateModel {  get; set; }
     }
     public class SpCategoryPageModel
