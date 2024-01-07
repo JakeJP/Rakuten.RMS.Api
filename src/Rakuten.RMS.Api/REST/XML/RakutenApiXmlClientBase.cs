@@ -7,7 +7,6 @@ using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -25,7 +24,7 @@ namespace Rakuten.RMS.Api.XML
         {
             var qs = queryParameters != null ? string.Join("&", queryParameters.Keys.Cast<string>()
                         .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
-                        .Select(k => k + "=" + HttpUtility.UrlEncode(queryParameters[k]))) : null;
+                        .Select(k => k + "=" + Uri.EscapeDataString(queryParameters[k]))) : null;
             if (!string.IsNullOrEmpty(qs))
                 url += "?" + qs;
             return GetInternal<TResult,TErrorResult>(url, httpMethod: httpMethod);

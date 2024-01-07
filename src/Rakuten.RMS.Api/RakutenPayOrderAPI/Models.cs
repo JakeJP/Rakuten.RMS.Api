@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
-using Rakuten.RMS.Api.NavigationAPI20;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using Rakuten.RMS.Api.JSON;
 
 namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 {
@@ -33,7 +32,9 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// 6: 決済確定日
         /// </summary>
         public int dateType { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime startDatetime { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime endDatetime { get; set; }
         public IList<int> orderTypeList { get; set; }
         /// 0: なし
@@ -162,6 +163,13 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public IList<MessageModel> MessageModelList { get; set; }
         public IList<string> orderNumberList { get; set; }
         public PaginationResponseModel PaginationResponseModel { get; set; }
+        public override string ToString()
+        {
+            if (MessageModelList != null)
+                return string.Join(", ", MessageModelList.Select(m => string.Format("{0}:{1} - {2}", m.messageType, m.messageCode, m.message)));
+            else
+                return base.ToString();
+        }
     }
     public class MessageModel
     {
@@ -247,6 +255,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <summary>
         /// お届け日指定     no Date	10	-	YYYY-MM-DD	2017-11-30
         /// </summary>
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd")]
         public DateTime? deliveryDate { get; set; }
         /// <summary>
         /// お届け時間帯
@@ -286,12 +295,20 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     public class UpdateOrderShippingResponse
     {
         public IList<OrderShippingMessageModel> MessageModelList { get; set; }
+        public override string ToString()
+        {
+            if (MessageModelList == null)
+                return base.ToString();
+            return string.Join(", ", MessageModelList.Select(m=>
+                string.Format("{0}: {1} {2} {3} {4}", m.messageType, m.messageCode, m.message, m.dataNumber, m.shippingDetailId )));
+        }
     }
     [DecodableObject]
     public class BasketidModel
     {
-        public int basketId { get; set; }
+        public long basketId { get; set; }
         public IList<ShippingModel> ShippingModelList { get; set; }
+        [DecodableObject]
         public class ShippingModel
         {
             public long? shippingDetailId { get; set; }
@@ -327,6 +344,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
             /// 1027: SGHグローバル・ジャパン
             /// </summary>
             public string deliveryCompany { get; set; }
+            [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd")]
             public DateTime? shippingDate { get; set; }
             /// <summary>
             /// 0: 発送情報を削除しない
@@ -774,7 +792,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
             /// <summary>
             /// 送付先ID
             /// </summary>
-            public int basketId { get; set; }
+            public long basketId { get; set; }
             /// <summary>
             /// 送料
             /// </summary>

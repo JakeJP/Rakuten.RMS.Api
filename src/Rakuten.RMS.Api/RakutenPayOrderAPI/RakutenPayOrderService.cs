@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using Rakuten.RMS.Api.JSON;
 
 namespace Rakuten.RMS.Api.RakutenPayOrderAPI
@@ -12,9 +13,20 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     {
         internal RakutenPayOrderService(ServiceProvider provider) : base(provider) { }
 
+        protected override TResult HandleResponse<TResult, TErrorResult>(HttpWebRequest req)
+        {
+            var result = base.HandleResponse<TResult, TErrorResult>(req);
+            if( result is OrderMessageResponse)
+            {
+                var mm = result as OrderMessageResponse;
+                if (mm.MessageModelList != null && mm.MessageModelList.Any(m => m.messageType == "ERROR"))
+                    throw new RakutenRMSApiException(result.ToString(), result);
+            }
+            return result;
+        }
         public SearchOrderResponse SearchOrder(SearchOrderRequest request)
         {
-            return PostRequest<SearchOrderResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/searchOrder/", request);
+            return PostRequest<SearchOrderResponse,SearchOrderResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/searchOrder/", request);
         }
         /// <summary>
         /// 複数の注文番号を指定して注文の詳細を取得する。
@@ -77,9 +89,9 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <returns></returns>
         public IEnumerable<OrderShippingMessageModel> UpdateOrderShipping(string orderNumber, IEnumerable<BasketidModel> BasketidModelList)
         {
-            return PostRequest<UpdateOrderShippingResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/updateOrderShipping/",
-                new { orderNumber = orderNumber, BasketidModelList = BasketidModelList },
-                dateFormtString: "yyyy'-'MM'-'dd")?.MessageModelList;
+            return PostRequest<UpdateOrderShippingResponse,UpdateOrderShippingResponse>("https://api.rms.rakuten.co.jp/es/2.0/order/updateOrderShipping/",
+                new { orderNumber = orderNumber, BasketidModelList = BasketidModelList })?
+                    .MessageModelList;
         }
         /// <summary>
         /// ・配送方法（宅急便・国際配送・ゆうパック・自社配送・バイク便・その他配送方法１・その他配送方法２・その他配送方法３

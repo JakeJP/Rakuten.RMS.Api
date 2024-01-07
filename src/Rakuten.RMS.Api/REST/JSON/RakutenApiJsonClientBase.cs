@@ -4,10 +4,8 @@ using System.Net;
 using System.Text;
 using System.Collections.Specialized;
 using System.Linq;
-using Rakuten.RMS.Api.XML;
 using System.IO;
-using System.Xml.Serialization;
-using System.Web;
+
 
 namespace Rakuten.RMS.Api.JSON
 {
@@ -25,7 +23,7 @@ namespace Rakuten.RMS.Api.JSON
             {
                 var qs = string.Join("&", queryParameters.Keys.Cast<string>()
                         .Where(k => !string.IsNullOrEmpty(queryParameters[k]))
-                        .Select(k => k + "=" + HttpUtility.UrlEncode(queryParameters[k])));
+                        .Select(k => k + "=" + Uri.EscapeDataString(queryParameters[k])));
                 url += "?" + qs;
             }
             var req = (HttpWebRequest)WebRequest.Create(url);
@@ -35,10 +33,10 @@ namespace Rakuten.RMS.Api.JSON
             return HandleResponse<TResult,TErrorResult>(req);
 
         }
-        protected TResult PostRequest<TResult>(string url, object request, string method = "POST", string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
-            => PostRequest<TResult, ResultBase>(url, request, method, dateFormtString);
+        protected TResult PostRequest<TResult>(string url, object request, string method = "POST", string dateFormatString = null )
+            => PostRequest<TResult, ResultBase>(url, request, method, dateFormatString);
 
-        protected TResult PostRequest<TResult,TErrorResult>(string url, object request, string method = "POST", string dateFormtString = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'+0900'")
+        protected TResult PostRequest<TResult,TErrorResult>(string url, object request, string method = "POST", string dateFormatString = null)
         {
             var req = (HttpWebRequest)WebRequest.Create(url);
             req.ContentType = "application/json; charset=utf-8";
@@ -46,7 +44,8 @@ namespace Rakuten.RMS.Api.JSON
             req.Headers.Add("Authorization", provider.AuthorizationHeaderValue);
             var sz = new JsonSerializer();
             sz.NullValueHandling = NullValueHandling.Ignore;
-            sz.DateFormatString = dateFormtString;
+            if(!string.IsNullOrEmpty(dateFormatString))
+                sz.DateFormatString = dateFormatString;
             var sb = new StringBuilder();
             using (var sw = new System.IO.StringWriter(sb))
             {
@@ -103,7 +102,7 @@ namespace Rakuten.RMS.Api.JSON
                             else 
                             {
                                 if( typeof(ResultBase).IsAssignableFrom(typeof(TResult)))
-                                    return sz.Deserialize<TResult>(rd);
+                                    throw new ErrorResponseException((ResultBase)(object)sz.Deserialize<TResult>(rd));
                                 else if (typeof(ResultBase).IsAssignableFrom(typeof(TErrorResult)))
                                     throw new ErrorResponseException((ResultBase)(object)sz.Deserialize<TErrorResult>(rd));
                                 else

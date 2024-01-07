@@ -1,8 +1,9 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Rakuten.RMS.Api.JSON;
 
 namespace Rakuten.RMS.Api.ItemAPI20
 {
@@ -63,6 +64,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         [DisplayName("キャッチコピー")]
         public string tagline { get; set; }
 
+        [DecodableObject]
         public class ProductDescription
         {
             [DisplayName("PC用商品説明文")]
@@ -75,6 +77,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         public ProductDescription productDescription { get; set; }
         [DisplayName("PC用販売説明文")]
         public string salesDescription { get; set; }
+        [DecodableObject]
         public class Precautions
         {
             [DisplayName("医薬品説明文")]
@@ -100,6 +103,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             GOLD,
             ABSOLUTE // only for Category API?
         }
+        [DecodableObject]
         public class WhiteBgImage
         {
             [JsonConverter(typeof(StringEnumConverter))]
@@ -110,6 +114,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [DisplayName("画像URL")]
             public string location { get; set; }
         }
+        [DecodableObject]
         public class Image : WhiteBgImage
         {
             [DisplayName("画像名（ALT）")]
@@ -124,6 +129,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         {
             HTML
         }
+        [DecodableObject]
         public class VideoParameters
         {
             /// <summary>
@@ -134,6 +140,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [DisplayName("動画のURL")]
             public string value { get; set; }
         }
+        [DecodableObject]
         public class Video
         {
             [Required]
@@ -159,6 +166,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             MULTIPLE_SELECTION,
             FREE_TEXT
         }
+        [DecodableObject]
         public class CustomizationOption
         {
             [Required]
@@ -174,6 +182,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [DisplayName("Select/Checkbox用選択肢リスト")]
             public IList<OptionSelection> selections { get; set; }
         }
+        [DecodableObject]
         public class OptionSelection
         {
             [DisplayName("商品オプション選択肢名")]
@@ -181,23 +190,28 @@ namespace Rakuten.RMS.Api.ItemAPI20
         }
         /// <summary>
         /// 商品種別を「PRE_ORDER」に更新した場合、必須。
-        /// フォーマットはISO 8601、タイムゾーンは日本標準時（JST）、日まで。
-        /// 定期購入商品の場合は設定不可
+        /// フォーマットはISO 8601、タイムゾーンは日本標準時（JST）、日まで。定期購入商品の場合は設定不可
+        /// comment) タイムゾーンは +09:00 のみ (+0900 はエラー)
         /// </summary>
         [Required(conditional: true)]
         [DisplayName("予約商品発売日")]
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy-MM-dd+09:00")]
         public DateTime? releaseDate { get; set; }
+        [DecodableObject]
         public class Period
         {
             [Required]
             [DisplayName("開始日時")]
+            [JsonConverter(typeof(DateTimeFormatConverter), "yyyy-MM-ddTHH:mm:ss+09:00")]
             public DateTime? start { get; set; }
             [Required]
             [DisplayName("終了日時")]
+            [JsonConverter(typeof(DateTimeFormatConverter), "yyyy-MM-ddTHH:mm:ss+09:00")]
             public DateTime? end { get; set; }
         }
         [DisplayName("販売期間指定")]
         public Period purchasablePeriod { get; set; }
+        [DecodableObject]
         public class Subscription
         {
             [DisplayName("お届け日付指定フラグ")]
@@ -225,6 +239,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             VISIBLE,
             HIDDEN
         }
+        [DecodableObject]
         public class Feature
         {
             [JsonConverter(typeof(StringEnumConverter))]
@@ -256,6 +271,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         [DisplayName("アクセスコントロール")]
         public AccessControl accessControl { get; set; }
 
+        [DecodableObject]
         public class Payment
         {
             [DisplayName("決済情報")]
@@ -267,6 +283,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         }
         [DisplayName("決済情報")]
         public Payment payment { get; set; }
+        [DecodableObject]
         public class PointCampaign
         {
             [DisplayName("ポイント変倍適用期間")]
@@ -293,6 +310,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         public PointCampaign pointCampaign { get; set; }
         [DisplayName("店舗内カテゴリでの表示順位")]
         public long itemDisplaySequence { get; set; }
+        [DecodableObject]
         public class Layout
         {
             [DisplayName("商品ページレイアウト")]
@@ -310,6 +328,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
         }
         [DisplayName("レイアウト設定")]
         public Layout layout { get; set; }
+        [DecodableObject]
         public class VariantSelector
         {
             public class Value
@@ -328,6 +347,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             public List<Value> values { get; set; }
         }
         public IList<VariantSelector> variantSelectors { get; set; }
+        [DecodableObject]
         public class Variant
         {
             //public string variantId { get; set; }
@@ -348,6 +368,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             public int? backOrderDeliveryDateId { get; set; }
             [DisplayName("注文受付数")]
             public int? orderQuantityLimit { get; set; }
+            [DecodableObject]
             public class ReferencePrice
             {
                 public enum DisplayType
@@ -380,6 +401,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             }
             [DisplayName("表示価格")]
             public ReferencePrice referencePrice { get; set; }
+            [DecodableObject]
             public class Feature
             {
                 [DisplayName("\t再入荷お知らせボタン")]
@@ -394,6 +416,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             [Required(conditional: true)]
             [DisplayName("販売価格")]
             public string standardPrice { get; set; }
+            [DecodableObject]
             public class SubscriptionPrice
             {
                 [Required]
@@ -408,6 +431,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             public SubscriptionPrice subscriptionPrice { get; set; }
             [DisplayName("セット商品用カタログID")]
             public IList<string> articleNumberForSet { get; set; }
+            [DecodableObject]
             [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
             public class ArticleNumber
             {
@@ -420,6 +444,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             }
             [DisplayName("カタログID情報")]
             public ArticleNumber articleNumber { get; set; }
+            [DecodableObject]
             public class PostageSegment
             {
                 /// <summary>
@@ -436,6 +461,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
                 public int? overseas { get; set; }
             }
             [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+            [DecodableObject]
             public class Shipping
             {
                 [DisplayName("個別送料")]
@@ -458,6 +484,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             public Shipping shipping { get; set; }
             [DisplayName("送料情報")]
             public int asurakuDeliveryId { get; set; }
+            [DecodableObject]
             public class Spec
             {
                 [Required]
@@ -470,6 +497,7 @@ namespace Rakuten.RMS.Api.ItemAPI20
             }
             [DisplayName("送料区分1（ローカル）")]
             public IList<Spec> specs { get; set; }
+            [DecodableObject]
             public class Attribute
             {
                 [Required]

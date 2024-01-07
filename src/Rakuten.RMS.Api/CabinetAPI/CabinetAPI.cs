@@ -112,7 +112,7 @@ namespace Rakuten.RMS.Api.CabinetAPI
         }
 
         [EndpointDefinition("https://api.rms.rakuten.co.jp/es/1.0/cabinet/files/search", EndpointHttpMethod.GET)]
-        public SearchFileResponse.CabinetFilesSearchResultModel SearchFile(int? fileId, string filePath, string fileName, int? folderId, string folderPath, int? offset = null, int? limit = null)
+        public SearchFileResponse.CabinetFilesSearchResultModel SearchFile(int? fileId = null, string filePath = null, string fileName = null, int? folderId = null, string folderPath = null, int? offset = null, int? limit = null)
         {
             var res = Get<SearchFileResponse>(new NameValueCollection {
                 { "fileId", fileId?.ToString() }, { "filePath", filePath?.ToString() }, { "fileName", fileName?.ToString() },

@@ -46,7 +46,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
@@ -92,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReserveAPI\Models.cs" />
     <Compile Include="ReserveAPI\ReserveAPI.cs" />
+    <Compile Include="REST\JSON\DateTimeFormatConverter.cs" />
     <Compile Include="REST\JSON\ErrorResponseException.cs" />
     <Compile Include="REST\JSON\ResultBase.cs" />
     <Compile Include="REST\JSON\ResultError.cs" />
@@ -142,8 +142,6 @@
     <Compile Include="ShopAPI\TopDisplayBizModel.cs" />
     <Compile Include="ShopPageAPI\Models.cs" />
     <Compile Include="ShopPageAPI\ShopPageAPI.cs" />
-    <Compile Include="SystemEventNotificationService\Models.cs" />
-    <Compile Include="SystemEventNotificationService\Notification.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

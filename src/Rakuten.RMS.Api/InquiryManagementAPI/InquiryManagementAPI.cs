@@ -9,7 +9,7 @@ using System.Net.Mail;
 using System.Text;
 
 using Rakuten.RMS.Api.JSON;
-using System.Web;
+
 
 namespace Rakuten.RMS.Api.InquiryManagementAPI
 {
@@ -104,7 +104,7 @@ namespace Rakuten.RMS.Api.InquiryManagementAPI
         /// <param name="label"></param>
         /// <returns></returns>
         public Stream GetAttachment(string path, string label)
-            => GetRequest<Stream,InquiryErrorResponse>($"https://api.rms.rakuten.co.jp/es/1.0/inquirymng-api/attachment?path={HttpUtility.UrlEncode(path)}&label={HttpUtility.UrlEncode(label)}");
+            => GetRequest<Stream,InquiryErrorResponse>($"https://api.rms.rakuten.co.jp/es/1.0/inquirymng-api/attachment?path={Uri.EscapeDataString(path)}&label={Uri.EscapeDataString(label)}");
 
         /// <summary>
         /// 指定された複数の問い合わせを既読状態に変更

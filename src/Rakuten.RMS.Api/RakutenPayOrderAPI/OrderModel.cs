@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-
+using Rakuten.RMS.Api.JSON;
 
 namespace Rakuten.RMS.Api.RakutenPayOrderAPI
 {
@@ -11,10 +11,15 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public int orderProgress { get; set; }
         public int? subStatusId { get; set; }
         public string subStatusName { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime orderDatetime { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime? shopOrderCfmDatetime { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime? orderFixDatetime { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime? shippingInstDatetime { get; set; }
+        [JsonConverter(typeof(DateTimeFormatConverter), "yyyy'-'MM'-'dd'T'HH':'mm':'ss+0900")]
         public DateTime? shippingCmplRptDatetime { get; set; }
         public DateTime? cancelDueDate { get; set; }
         public DateTime? deliveryDate { get; set; }
@@ -65,6 +70,15 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         public string mailPlugSentence { get; set; }
         public int modifyFlag { get; set; }
         public int isTaxRecalc { get; set; }
+        /// <summary>
+        /// 領収書発行回数
+        /// </summary>
+        public long receiptIssueCount { get; set; }
+        /// <summary>
+        /// 領収書発行履歴リスト
+        /// </summary>
+        public List<DateTime> receiptIssueHistoryList { get; set; }
+        //
         public OrdererModel OrdererModel { get; set; }
         public SettlementModel SettlementModel { get; set; }
         public DeliveryModel DeliveryModel { get; set; }
@@ -176,7 +190,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
         /// <summary>
         /// 送付先ID
         /// </summary>
-        public int basketId { get; set; }
+        public long basketId { get; set; }
         /// <summary>
         /// 送料
         /// </summary>
@@ -288,7 +302,7 @@ namespace Rakuten.RMS.Api.RakutenPayOrderAPI
     [DecodableObject]
     public class ItemModelToUpdate
     {
-        public int itemDetailId { get; set; }
+        public long itemDetailId { get; set; }
         public string itemName { get; set; }
         /// <summary>
         /// 商品番号
