@@ -20,12 +20,12 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 送付先ID
 
 ```csharp
-public int basketId { get; set; }
+public long basketId { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
 ### <a id="properties-defaultdeliverycompanycode"/>**defaultDeliveryCompanyCode**
 

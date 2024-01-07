@@ -431,6 +431,30 @@ public int rakutenMemberFlag { get; set; }
 
 [Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
 
+### <a id="properties-receiptissuecount"/>**receiptIssueCount**
+
+領収書発行回数
+
+```csharp
+public long receiptIssueCount { get; set; }
+```
+
+#### Property Value
+
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
+
+### <a id="properties-receiptissuehistorylist"/>**receiptIssueHistoryList**
+
+領収書発行履歴リスト
+
+```csharp
+public List<DateTime> receiptIssueHistoryList { get; set; }
+```
+
+#### Property Value
+
+[List&lt;DateTime&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)<br>
+
 ### <a id="properties-remarks"/>**remarks**
 
 ```csharp

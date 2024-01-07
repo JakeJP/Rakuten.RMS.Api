@@ -150,8 +150,8 @@ public Period purchasablePeriod { get; set; }
 ### <a id="properties-releasedate"/>**releaseDate**
 
 商品種別を「PRE_ORDER」に更新した場合、必須。
- フォーマットはISO 8601、タイムゾーンは日本標準時（JST）、日まで。
- 定期購入商品の場合は設定不可
+ フォーマットはISO 8601、タイムゾーンは日本標準時（JST）、日まで。定期購入商品の場合は設定不可
+ comment) タイムゾーンは +09:00 のみ (+0900 はエラー)
 
 ```csharp
 public Nullable<DateTime> releaseDate { get; set; }

@@ -64,12 +64,12 @@ public int includeTaxFlag { get; set; }
 ### <a id="properties-itemdetailid"/>**itemDetailId**
 
 ```csharp
-public int itemDetailId { get; set; }
+public long itemDetailId { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
 ### <a id="properties-itemname"/>**itemName**
 

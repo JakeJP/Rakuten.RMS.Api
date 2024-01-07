@@ -18,12 +18,12 @@ Inheritance [Object](https://docs.microsoft.com/en-us/dotnet/api/system.object) 
 ### <a id="properties-basketid"/>**basketId**
 
 ```csharp
-public int basketId { get; set; }
+public long basketId { get; set; }
 ```
 
 #### Property Value
 
-[Int32](https://docs.microsoft.com/en-us/dotnet/api/system.int32)<br>
+[Int64](https://docs.microsoft.com/en-us/dotnet/api/system.int64)<br>
 
 ### <a id="properties-shippingmodellist"/>**ShippingModelList**
 

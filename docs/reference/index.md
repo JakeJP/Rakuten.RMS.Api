@@ -261,6 +261,8 @@
 
 ## Namespace Rakuten.RMS.Api.JSON
 
+- [DateTimeFormatConverter](./rakuten.rms.api.json.datetimeformatconverter)
+
 - [ErrorMetadata](./rakuten.rms.api.json.errormetadata)
 
 - [ErrorResponseException](./rakuten.rms.api.json.errorresponseexception)
@@ -688,40 +690,6 @@
 - [WidgetToRequest](./rakuten.rms.api.shoppageapi.widgettorequest)
 
 - [WidgetType](./rakuten.rms.api.shoppageapi.widgettype)
-
-## Namespace Rakuten.RMS.Api.SystemEventNotification
-
-- [AuthModel](./rakuten.rms.api.systemeventnotification.authmodel)
-
-- [AuthorizationResultModel](./rakuten.rms.api.systemeventnotification.authorizationresultmodel)
-
-- [BasketModel](./rakuten.rms.api.systemeventnotification.basketmodel)
-
-- [CautiousOrderNotifyModel](./rakuten.rms.api.systemeventnotification.cautiousordernotifymodel)
-
-- [ImageEditCompleteNotifyModel](./rakuten.rms.api.systemeventnotification.imageeditcompletenotifymodel)
-
-- [Notification](./rakuten.rms.api.systemeventnotification.notification)
-
-- [NotifyInfoModel](./rakuten.rms.api.systemeventnotification.notifyinfomodel)
-
-- [OrderInfoNotifyModel](./rakuten.rms.api.systemeventnotification.orderinfonotifymodel)
-
-- [OrderNotifyModel](./rakuten.rms.api.systemeventnotification.ordernotifymodel)
-
-- [ProductEditCompleteNotifyModel](./rakuten.rms.api.systemeventnotification.producteditcompletenotifymodel)
-
-- [PurchaseHistoryChangeNotifyModel](./rakuten.rms.api.systemeventnotification.purchasehistorychangenotifymodel)
-
-- [ResponseModel](./rakuten.rms.api.systemeventnotification.responsemodel)
-
-- [RestockRequestNotifyModel](./rakuten.rms.api.systemeventnotification.restockrequestnotifymodel)
-
-- [ResultCode](./rakuten.rms.api.systemeventnotification.resultcode)
-
-- [SystemNotifyModel](./rakuten.rms.api.systemeventnotification.systemnotifymodel)
-
-- [ValueElement](./rakuten.rms.api.systemeventnotification.valueelement)
 
 ## Namespace Rakuten.RMS.Api.XML
 
